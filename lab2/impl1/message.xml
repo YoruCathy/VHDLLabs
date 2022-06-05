@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BaliMessageLog>
+    <Task name="MapVerilogSimFile">
+        <Message>
+            <ID>35400250</ID>
+            <Severity>Info</Severity>
+            <Dynamic>0</Dynamic>
+        </Message>
+    </Task>
+    <Task name="MapVHDLSimFile">
+        <Message>
+            <ID>35400250</ID>
+            <Severity>Info</Severity>
+            <Dynamic>0</Dynamic>
+        </Message>
+    </Task>
+    <Task name="IBIS">
+        <Message>
+            <ID>1191031</ID>
+            <Severity>Info</Severity>
+        </Message>
+    </Task>
+    <Task name="Lattice_Synthesis">
+        <Message>
+            <ID>35002000</ID>
+            <Severity>Info</Severity>
+        </Message>
+        <Message>
+            <ID>35001781</ID>
+            <Severity>Info</Severity>
+        </Message>
+        <Message>
+            <ID>35921504</ID>
+            <Severity>Info</Severity>
+            <Dynamic></Dynamic>
+            <Dynamic>C:/Users/70735/Desktop/lab2/impl1</Dynamic>
+        </Message>
+        <Message>
+            <ID>35921012</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/70735/desktop/lab2/impl1/source/lab2.vhd(5): </Dynamic>
+            <Dynamic>lab2</Dynamic>
+            <Navigation>c:/users/70735/desktop/lab2/impl1/source/lab2.vhd</Navigation>
+            <Navigation>5</Navigation>
+        </Message>
+        <Message>
+            <ID>35921010</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/70735/desktop/lab2/impl1/source/lab2.vhd(12): </Dynamic>
+            <Dynamic>default_arch</Dynamic>
+            <Navigation>c:/users/70735/desktop/lab2/impl1/source/lab2.vhd</Navigation>
+            <Navigation>12</Navigation>
+        </Message>
+        <Message>
+            <ID>35921205</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/70735/desktop/lab2/impl1/source/lab2.vhd(9): </Dynamic>
+            <Dynamic>Lab2</Dynamic>
+            <Dynamic>Default_arch</Dynamic>
+            <Navigation>c:/users/70735/desktop/lab2/impl1/source/lab2.vhd</Navigation>
+            <Navigation>9</Navigation>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>LED_SIG</Dynamic>
+        </Message>
+        <Message>
+            <ID>35931013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/70735/desktop/lab2/impl1/source/lab2.vhd(114): </Dynamic>
+            <Dynamic>a[30]</Dynamic>
+            <Navigation>c:/users/70735/desktop/lab2/impl1/source/lab2.vhd</Navigation>
+            <Navigation>114</Navigation>
+        </Message>
+        <Message>
+            <ID>35935013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/70735/desktop/lab2/impl1/source/lab2.vhd(133): </Dynamic>
+            <Dynamic>cur1__i0</Dynamic>
+            <Navigation>c:/users/70735/desktop/lab2/impl1/source/lab2.vhd</Navigation>
+            <Navigation>133</Navigation>
+        </Message>
+        <Message>
+            <ID>35935013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/70735/desktop/lab2/impl1/source/lab2.vhd(103): </Dynamic>
+            <Dynamic>LIGHT_CTL_i1</Dynamic>
+            <Navigation>c:/users/70735/desktop/lab2/impl1/source/lab2.vhd</Navigation>
+            <Navigation>103</Navigation>
+        </Message>
+        <Message>
+            <ID>35001611</ID>
+            <Severity>Warning</Severity>
+        </Message>
+    </Task>
+    <Task name="PAR">
+        <Message>
+            <ID>61061008</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>clk_c</Dynamic>
+            <Dynamic>Primary</Dynamic>
+            <Dynamic>clk</Dynamic>
+            <Dynamic>C1</Dynamic>
+            <Dynamic>Primary</Dynamic>
+        </Message>
+        <Message>
+            <ID>61061008</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>brightness_in_c</Dynamic>
+            <Dynamic>Secondary</Dynamic>
+            <Dynamic>brightness_in</Dynamic>
+            <Dynamic>N14</Dynamic>
+            <Dynamic>Secondary</Dynamic>
+        </Message>
+        <Message>
+            <ID>61061008</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>speed_up_in_c</Dynamic>
+            <Dynamic>Secondary</Dynamic>
+            <Dynamic>speed_up_in</Dynamic>
+            <Dynamic>M14</Dynamic>
+            <Dynamic>Secondary</Dynamic>
+        </Message>
+        <Message>
+            <ID>61061008</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>speed_down_in_c</Dynamic>
+            <Dynamic>Secondary</Dynamic>
+            <Dynamic>speed_down_in</Dynamic>
+            <Dynamic>M13</Dynamic>
+            <Dynamic>Secondary</Dynamic>
+        </Message>
+    </Task>
+    <Task name="TimingSimFileVHD">
+        <Message>
+            <ID>35400250</ID>
+            <Severity>Info</Severity>
+            <Dynamic>0</Dynamic>
+        </Message>
+    </Task>
+    <Task name="TimingSimFileVlg">
+        <Message>
+            <ID>35400250</ID>
+            <Severity>Info</Severity>
+            <Dynamic>0</Dynamic>
+        </Message>
+    </Task>
+</BaliMessageLog>

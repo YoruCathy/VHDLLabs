@@ -1,0 +1,370 @@
+
+Loading design for application trce from file lab1_impl1_map.ncd.
+Design name: Lab1
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-4000HC
+Package:     CSBGA132
+Performance: 4
+Loading device for application trce from file 'xo2c4000.nph' in environment: E:/Diamond/diamond/3.10_x64/ispfpga.
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 34.4.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.10.0.111.2
+Wed Dec 09 21:39:09 2020
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o lab1_impl1.tw1 -gui -msgset C:/Users/70735/Desktop/lab1/promote.xml lab1_impl1_map.ncd lab1_impl1.prf 
+Design file:     lab1_impl1_map.ncd
+Preference file: lab1_impl1.prf
+Device,speed:    LCMXO2-4000HC,4
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+Report Type:     based on TRACE automatically generated preferences
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Preference: FREQUENCY NET "sck_c_c" 90.736000 MHz ;
+            4096 items scored, 4096 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error: The following path exceeds requirements by 3.680ns (weighted slack = -488.642ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              scan_state_i0  (from state_clk +)
+   Destination:    FF         Data in        row_i4  (to sck_c_c +)
+
+   Delay:               3.415ns  (27.7% logic, 72.3% route), 2 logic levels.
+
+ Constraint Details:
+
+      3.415ns physical path delay SLICE_132 to SLICE_131 exceeds
+      (delay constraint based on source clock period of 2.501ns and destination clock period of 11.021ns)
+      0.083ns delay constraint less
+      0.348ns M_SET requirement (totaling -0.265ns) by 3.680ns
+
+ Physical Path Details:
+
+      Data path SLICE_132 to SLICE_131:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452  SLICE_132.CLK to   SLICE_132.Q0 SLICE_132 (from state_clk)
+ROUTE         4   e 1.234   SLICE_132.Q0 to   SLICE_123.A0 scan_state_0
+CTOF_DEL    ---     0.495   SLICE_123.A0 to   SLICE_123.F0 SLICE_123
+ROUTE         3   e 1.234   SLICE_123.F0 to   SLICE_131.M0 scan_state_1_N_24_0 (to sck_c_c)
+                  --------
+                    3.415   (27.7% logic, 72.3% route), 2 logic levels.
+
+Warning:   2.001MHz is the maximum frequency for this preference.
+
+
+================================================================================
+Preference: FREQUENCY NET "state_clk" 399.840000 MHz ;
+            3 items scored, 1 timing error detected.
+--------------------------------------------------------------------------------
+
+
+Error: The following path exceeds requirements by 1.262ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              scan_state_i0  (from state_clk +)
+   Destination:    FF         Data in        scan_state_i0  (to state_clk +)
+
+   Delay:               3.415ns  (27.7% logic, 72.3% route), 2 logic levels.
+
+ Constraint Details:
+
+      3.415ns physical path delay SLICE_132 to SLICE_132 exceeds
+      2.501ns delay constraint less
+      0.348ns M_SET requirement (totaling 2.153ns) by 1.262ns
+
+ Physical Path Details:
+
+      Data path SLICE_132 to SLICE_132:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452  SLICE_132.CLK to   SLICE_132.Q0 SLICE_132 (from state_clk)
+ROUTE         4   e 1.234   SLICE_132.Q0 to   SLICE_123.A0 scan_state_0
+CTOF_DEL    ---     0.495   SLICE_123.A0 to   SLICE_123.F0 SLICE_123
+ROUTE         3   e 1.234   SLICE_123.F0 to   SLICE_132.M0 scan_state_1_N_24_0 (to state_clk)
+                  --------
+                    3.415   (27.7% logic, 72.3% route), 2 logic levels.
+
+Warning: 265.745MHz is the maximum frequency for this preference.
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference                              |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "sck_c_c" 90.736000 MHz ; |   90.736 MHz|    2.001 MHz|   2 *
+                                        |             |             |
+FREQUENCY NET "state_clk" 399.840000    |             |             |
+MHz ;                                   |  399.840 MHz|  265.745 MHz|   2 *
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+2 preferences(marked by "*" above) not met.
+
+----------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+----------------------------------------------------------------------------
+n8240                                   |      94|    4086|     99.73%
+                                        |        |        |
+n7238                                   |       3|    4054|     98.95%
+                                        |        |        |
+n8237                                   |      33|    4014|     97.97%
+                                        |        |        |
+n60_adj_63                              |       1|    3780|     92.26%
+                                        |        |        |
+n8260                                   |       5|    3378|     82.45%
+                                        |        |        |
+n58_adj_64                              |       1|    3322|     81.08%
+                                        |        |        |
+n60                                     |       1|    2892|     70.59%
+                                        |        |        |
+n58                                     |       1|    2214|     54.04%
+                                        |        |        |
+n54                                     |       1|    2156|     52.62%
+                                        |        |        |
+n44_adj_42                              |       1|    1088|     26.56%
+                                        |        |        |
+n44                                     |       1|    1076|     26.26%
+                                        |        |        |
+n54_adj_36                              |       1|     904|     22.06%
+                                        |        |        |
+location_31_N_633_10                    |       2|     836|     20.41%
+                                        |        |        |
+location_31_N_633_13                    |       2|     836|     20.41%
+                                        |        |        |
+location_31_N_633_15                    |       2|     836|     20.41%
+                                        |        |        |
+n7165                                   |       1|     708|     17.28%
+                                        |        |        |
+n3317                                   |       3|     708|     17.28%
+                                        |        |        |
+n7166                                   |       1|     708|     17.28%
+                                        |        |        |
+n7164                                   |       1|     705|     17.21%
+                                        |        |        |
+n7163                                   |       1|     699|     17.06%
+                                        |        |        |
+n7162                                   |       1|     693|     16.91%
+                                        |        |        |
+n7161                                   |       1|     687|     16.77%
+                                        |        |        |
+n7160                                   |       1|     681|     16.62%
+                                        |        |        |
+n7159                                   |       1|     672|     16.40%
+                                        |        |        |
+n7158                                   |       1|     660|     16.11%
+                                        |        |        |
+n7157                                   |       1|     648|     15.82%
+                                        |        |        |
+n7156                                   |       1|     636|     15.52%
+                                        |        |        |
+location_23                             |       6|     557|     13.60%
+                                        |        |        |
+location_15                             |       6|     540|     13.18%
+                                        |        |        |
+clk_N_600_enable_2                      |       1|     538|     13.13%
+                                        |        |        |
+n7155                                   |       1|     528|     12.89%
+                                        |        |        |
+n55_adj_35                              |       1|     462|     11.28%
+                                        |        |        |
+n52_adj_37                              |       1|     444|     10.84%
+                                        |        |        |
+n48_adj_40                              |       1|     444|     10.84%
+                                        |        |        |
+----------------------------------------------------------------------------
+
+
+Clock Domains Analysis
+------------------------
+
+Found 2 clocks:
+
+Clock Domain: state_clk   Source: SLICE_141.Q0   Loads: 3
+   Covered under: FREQUENCY NET "state_clk" 399.840000 MHz ;
+
+Clock Domain: sck_c_c   Source: clk.PAD   Loads: 76
+   Covered under: FREQUENCY NET "sck_c_c" 90.736000 MHz ;
+
+   Data transfers from:
+   Clock Domain: state_clk   Source: SLICE_141.Q0
+      Covered under: FREQUENCY NET "sck_c_c" 90.736000 MHz ;   Transfers: 2
+
+
+Timing summary (Setup):
+---------------
+
+Timing errors: 4097  Score: 34769379
+Cumulative negative slack: 34769379
+
+Constraints cover 225696 paths, 3 nets, and 1696 connections (91.87% coverage)
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.10.0.111.2
+Wed Dec 09 21:39:11 2020
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o lab1_impl1.tw1 -gui -msgset C:/Users/70735/Desktop/lab1/promote.xml lab1_impl1_map.ncd lab1_impl1.prf 
+Design file:     lab1_impl1_map.ncd
+Preference file: lab1_impl1.prf
+Device,speed:    LCMXO2-4000HC,M
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Preference: FREQUENCY NET "sck_c_c" 90.736000 MHz ;
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.447ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              cnt_debounce_1025_1026__i15  (from sck_c_c +)
+   Destination:    FF         Data in        cnt_debounce_1025_1026__i15  (to sck_c_c +)
+
+   Delay:               0.434ns  (53.9% logic, 46.1% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.434ns physical path delay SLICE_0 to SLICE_0 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint requirement (totaling -0.013ns) by 0.447ns
+
+ Physical Path Details:
+
+      Data path SLICE_0 to SLICE_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133    SLICE_0.CLK to     SLICE_0.Q1 SLICE_0 (from sck_c_c)
+ROUTE         2   e 0.199     SLICE_0.Q1 to     SLICE_0.A1 cnt_debounce_14
+CTOF_DEL    ---     0.101     SLICE_0.A1 to     SLICE_0.F1 SLICE_0
+ROUTE         1   e 0.001     SLICE_0.F1 to    SLICE_0.DI1 n76_adj_19 (to sck_c_c)
+                  --------
+                    0.434   (53.9% logic, 46.1% route), 2 logic levels.
+
+
+================================================================================
+Preference: FREQUENCY NET "state_clk" 399.840000 MHz ;
+            3 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.447ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              scan_state_i1  (from state_clk +)
+   Destination:    FF         Data in        scan_state_i1  (to state_clk +)
+
+   Delay:               0.434ns  (53.9% logic, 46.1% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.434ns physical path delay SLICE_133 to SLICE_133 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint requirement (totaling -0.013ns) by 0.447ns
+
+ Physical Path Details:
+
+      Data path SLICE_133 to SLICE_133:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133  SLICE_133.CLK to   SLICE_133.Q0 SLICE_133 (from state_clk)
+ROUTE         3   e 0.199   SLICE_133.Q0 to   SLICE_133.B0 scan_state_1
+CTOF_DEL    ---     0.101   SLICE_133.B0 to   SLICE_133.F0 SLICE_133
+ROUTE         1   e 0.001   SLICE_133.F0 to  SLICE_133.DI0 scan_state_1_N_24_1 (to state_clk)
+                  --------
+                    0.434   (53.9% logic, 46.1% route), 2 logic levels.
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference(MIN Delays)                  |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "sck_c_c" 90.736000 MHz ; |     0.000 ns|     0.447 ns|   2  
+                                        |             |             |
+FREQUENCY NET "state_clk" 399.840000    |             |             |
+MHz ;                                   |     0.000 ns|     0.447 ns|   2  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+Clock Domains Analysis
+------------------------
+
+Found 2 clocks:
+
+Clock Domain: state_clk   Source: SLICE_141.Q0   Loads: 3
+   Covered under: FREQUENCY NET "state_clk" 399.840000 MHz ;
+
+Clock Domain: sck_c_c   Source: clk.PAD   Loads: 76
+   Covered under: FREQUENCY NET "sck_c_c" 90.736000 MHz ;
+
+   Data transfers from:
+   Clock Domain: state_clk   Source: SLICE_141.Q0
+      Covered under: FREQUENCY NET "sck_c_c" 90.736000 MHz ;   Transfers: 2
+
+
+Timing summary (Hold):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 225696 paths, 3 nets, and 1749 connections (94.75% coverage)
+
+
+
+Timing summary (Setup and Hold):
+---------------
+
+Timing errors: 4097 (setup), 0 (hold)
+Score: 34769379 (setup), 0 (hold)
+Cumulative negative slack: 34769379 (34769379+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+

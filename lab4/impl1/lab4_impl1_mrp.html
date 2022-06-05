@@ -1,0 +1,656 @@
+<HTML>
+<HEAD><TITLE>Project Summary</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Mrp"></A>
+             Lattice Mapping Report File for Design Module 'TOP'
+
+
+
+<A name="mrp_di"></A><B><U><big>Design Information</big></U></B>
+
+Command line:   map -a MachXO2 -p LCMXO2-4000HC -t CSBGA132 -s 4 -oc Commercial
+     lab4_impl1.ngd -o lab4_impl1_map.ncd -pr lab4_impl1.prf -mp lab4_impl1.mrp
+     -lpf C:/Users/70735/Desktop/lab4/impl1/lab4_impl1.lpf -lpf
+     C:/Users/70735/Desktop/lab4/lab4.lpf -c 0 -gui -msgset
+     C:/Users/70735/Desktop/lab4/promote.xml 
+Target Vendor:  LATTICE
+Target Device:  LCMXO2-4000HCCSBGA132
+Target Performance:   4
+Mapper:  xo2c00,  version:  Diamond (64-bit) 3.10.0.111.2
+Mapped on:  12/09/20  21:50:54
+
+
+<A name="mrp_ds"></A><B><U><big>Design Summary</big></U></B>
+   Number of registers:    266 out of  4635 (6%)
+      PFU registers:          266 out of  4320 (6%)
+      PIO registers:            0 out of   315 (0%)
+   Number of SLICEs:       283 out of  2160 (13%)
+      SLICEs as Logic/ROM:    283 out of  2160 (13%)
+      SLICEs as RAM:            0 out of  1620 (0%)
+      SLICEs as Carry:         84 out of  2160 (4%)
+   Number of LUT4s:        562 out of  4320 (13%)
+      Number used as logic LUTs:        394
+      Number used as distributed RAM:     0
+      Number used as ripple logic:      168
+      Number used as shift registers:     0
+   Number of PIO sites used: 22 + 4(JTAG) out of 105 (25%)
+   Number of block RAMs:  0 out of 10 (0%)
+   Number of GSRs:  1 out of 1 (100%)
+   EFB used :       No
+   JTAG used :      No
+   Readback used :  No
+   Oscillator used :  No
+   Startup used :   No
+   POR :            On
+   Bandgap :        On
+   Number of Power Controller:  0 out of 1 (0%)
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 6 (0%)
+   Number of Dynamic Bank Controller (BCLVDSO):  0 out of 1 (0%)
+   Number of DCCA:  0 out of 8 (0%)
+   Number of DCMA:  0 out of 2 (0%)
+   Number of PLLs:  0 out of 2 (0%)
+   Number of DQSDLLs:  0 out of 2 (0%)
+   Number of CLKDIVC:  0 out of 4 (0%)
+   Number of ECLKSYNCA:  0 out of 4 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
+     distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and
+     ripple logic.
+   Number of clocks:  3
+     Net Clkout200: 1 loads, 1 rising, 0 falling (Driver: U5/Clk2_22 )
+     Net Clock_top_c: 155 loads, 152 rising, 3 falling (Driver: PIO Clock_top )
+     Net Clkout1M: 3 loads, 3 rising, 0 falling (Driver: U5/Clk1_20 )
+
+   Number of Clock Enables:  27
+     Net Rst1_c: 18 loads, 18 LSLICEs
+     Net Clock_top_c_enable_89: 3 loads, 3 LSLICEs
+     Net Mod1_c: 1 loads, 1 LSLICEs
+     Net Clock_top_c_enable_57: 8 loads, 8 LSLICEs
+     Net Clock_top_c_enable_49: 1 loads, 1 LSLICEs
+     Net Clock_top_c_enable_59: 1 loads, 1 LSLICEs
+     Net Clock_top_c_enable_73: 3 loads, 3 LSLICEs
+     Net Clock_top_c_enable_92: 2 loads, 2 LSLICEs
+     Net Clock_top_c_enable_83: 7 loads, 7 LSLICEs
+     Net U2/Clock_top_c_enable_95: 3 loads, 3 LSLICEs
+     Net U2/Clock_top_c_enable_87: 4 loads, 4 LSLICEs
+     Net U2/Clock_top_c_enable_61: 3 loads, 3 LSLICEs
+     Net U2/clr: 17 loads, 17 LSLICEs
+     Net U2/Clock_top_c_enable_86: 3 loads, 3 LSLICEs
+     Net U2/Clock_top_c_enable_76: 4 loads, 4 LSLICEs
+     Net U2/Clock_top_c_enable_85: 3 loads, 3 LSLICEs
+     Net U2/Clock_top_c_enable_103: 3 loads, 3 LSLICEs
+     Net U4/Clock_top_c_enable_52: 3 loads, 3 LSLICEs
+     Net U4/Clkout1M_enable_1: 1 loads, 1 LSLICEs
+     Net U1/Clock_top_c_enable_60: 2 loads, 2 LSLICEs
+     Net U1/key_get_4__N_121: 3 loads, 3 LSLICEs
+     Net U1/Clock_top_c_enable_33: 2 loads, 2 LSLICEs
+     Net U1/Clock_top_c_enable_12: 2 loads, 2 LSLICEs
+     Net U1/num_cnt_2__N_115: 1 loads, 1 LSLICEs
+     Net U1/Clock_top_c_enable_56: 1 loads, 1 LSLICEs
+     Net U1/Clock_top_c_enable_98: 3 loads, 3 LSLICEs
+     Net U1/Clock_top_c_enable_102: 2 loads, 2 LSLICEs
+   Number of LSRs:  19
+     Net Mod1_c: 10 loads, 10 LSLICEs
+     Net n2519: 8 loads, 8 LSLICEs
+     Net n7: 2 loads, 2 LSLICEs
+     Net n3634: 1 loads, 1 LSLICEs
+     Net U3/n2588: 2 loads, 2 LSLICEs
+     Net U2/n2537: 17 loads, 17 LSLICEs
+     Net U2/n2553: 2 loads, 2 LSLICEs
+     Net U2/one_sec_cnt_23__N_407: 13 loads, 13 LSLICEs
+     Net U2/n2955: 2 loads, 2 LSLICEs
+     Net U2/n2521: 1 loads, 1 LSLICEs
+     Net U2/n2591: 1 loads, 1 LSLICEs
+     Net U2/n2590: 1 loads, 1 LSLICEs
+     Net U2/n2815: 2 loads, 2 LSLICEs
+     Net U4/n2551: 3 loads, 3 LSLICEs
+     Net U1/num_cnt_2: 1 loads, 1 LSLICEs
+     Net U1/n1483: 2 loads, 2 LSLICEs
+     Net U1/n2527: 11 loads, 11 LSLICEs
+     Net U1/key_get_temp_4__N_122: 3 loads, 3 LSLICEs
+     Net U1/n1481: 3 loads, 3 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net Rst1_c: 61 loads
+     Net segstate_0: 24 loads
+     Net sclk_out_N_515: 22 loads
+     Net Keyout1_0: 21 loads
+     Net U2/Clock_status_0: 21 loads
+     Net Clock_status_1: 20 loads
+
+     Net n9: 20 loads
+     Net U2/clr: 18 loads
+     Net Keyout1_1: 17 loads
+     Net s21_0: 17 loads
+
+
+
+
+   Number of warnings:  0
+   Number of errors:    0
+     
+
+
+
+
+<A name="mrp_dwe"></A><B><U><big>Design Errors/Warnings</big></U></B>
+
+   No errors or warnings present.
+
+
+
+<A name="mrp_ioa"></A><B><U><big>IO (PIO) Attributes</big></U></B>
+
++---------------------+-----------+-----------+------------+
+| IO Name             | Direction | Levelmode | IO         |
+|                     |           |  IO_TYPE  | Register   |
++---------------------+-----------+-----------+------------+
+| rclk_out1           | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| row1[0]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| row1[1]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| row1[2]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| row1[3]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led[0]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led[1]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led[2]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led[3]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led[4]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led[5]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led[6]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led[7]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| sclk_out1           | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| ser_out1            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| Clock_top           | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+
+| Rst1                | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| Mod1                | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| column1[3]          | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| column1[2]          | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| column1[1]          | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| column1[0]          | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+
+
+
+<A name="mrp_rm"></A><B><U><big>Removed logic</big></U></B>
+
+Block i6555 undriven or does not drive anything - clipped.
+Signal Clk_N_41 was merged into signal Clock_top_c
+Signal Clock_top_c_enable_31 was merged into signal Mod1_c
+Signal GND_net undriven or does not drive anything - clipped.
+Signal VCC_net undriven or does not drive anything - clipped.
+Signal U1/Clk_cnt_798_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal U1/Clk_cnt_798_add_4_1/CI undriven or does not drive anything - clipped.
+Signal U1/Clk_cnt_798_add_4_15/S1 undriven or does not drive anything - clipped.
+     
+Signal U1/Clk_cnt_798_add_4_15/CO undriven or does not drive anything - clipped.
+     
+Signal U1/Delay_cnt_800_add_4_1/S0 undriven or does not drive anything -
+     clipped.
+Signal U1/Delay_cnt_800_add_4_1/CI undriven or does not drive anything -
+     clipped.
+Signal U1/Delay_cnt_800_add_4_21/S1 undriven or does not drive anything -
+     clipped.
+Signal U1/Delay_cnt_800_add_4_21/CO undriven or does not drive anything -
+     clipped.
+Signal U5/cnt_200_811_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal U5/cnt_200_811_add_4_1/CI undriven or does not drive anything - clipped.
+Signal U5/cnt_200_811_add_4_15/S1 undriven or does not drive anything - clipped.
+     
+Signal U5/cnt_200_811_add_4_15/CO undriven or does not drive anything - clipped.
+     
+Signal U2/add_8_1/S0 undriven or does not drive anything - clipped.
+Signal U2/add_8_1/CI undriven or does not drive anything - clipped.
+Signal U2/mode_802_add_4_33/S1 undriven or does not drive anything - clipped.
+Signal U2/mode_802_add_4_33/CO undriven or does not drive anything - clipped.
+Signal U2/add_8_19/S1 undriven or does not drive anything - clipped.
+Signal U2/add_8_19/CO undriven or does not drive anything - clipped.
+Signal U2/mode_802_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal U2/mode_802_add_4_1/CI undriven or does not drive anything - clipped.
+Signal U2/one_sec_cnt_808_add_4_25/S1 undriven or does not drive anything -
+     clipped.
+Signal U2/one_sec_cnt_808_add_4_25/CO undriven or does not drive anything -
+     clipped.
+Signal U2/add_4810_1/S1 undriven or does not drive anything - clipped.
+Signal U2/add_4810_1/S0 undriven or does not drive anything - clipped.
+Signal U2/add_4810_1/CI undriven or does not drive anything - clipped.
+
+Signal U2/add_4810_3/S1 undriven or does not drive anything - clipped.
+Signal U2/add_4810_3/S0 undriven or does not drive anything - clipped.
+Signal U2/add_4810_5/S1 undriven or does not drive anything - clipped.
+Signal U2/add_4810_5/S0 undriven or does not drive anything - clipped.
+Signal U2/add_4810_7/S1 undriven or does not drive anything - clipped.
+Signal U2/add_4810_7/S0 undriven or does not drive anything - clipped.
+Signal U2/add_4810_9/S1 undriven or does not drive anything - clipped.
+Signal U2/add_4810_9/S0 undriven or does not drive anything - clipped.
+Signal U2/add_4810_11/S1 undriven or does not drive anything - clipped.
+Signal U2/add_4810_11/S0 undriven or does not drive anything - clipped.
+Signal U2/add_4810_13/S1 undriven or does not drive anything - clipped.
+Signal U2/add_4810_13/S0 undriven or does not drive anything - clipped.
+Signal U2/add_4810_15/S1 undriven or does not drive anything - clipped.
+Signal U2/add_4810_15/S0 undriven or does not drive anything - clipped.
+Signal U2/add_4810_17/S1 undriven or does not drive anything - clipped.
+Signal U2/add_4810_17/S0 undriven or does not drive anything - clipped.
+Signal U2/add_4810_19/S1 undriven or does not drive anything - clipped.
+Signal U2/add_4810_19/S0 undriven or does not drive anything - clipped.
+Signal U2/add_4810_21/S1 undriven or does not drive anything - clipped.
+Signal U2/add_4810_21/S0 undriven or does not drive anything - clipped.
+Signal U2/add_4810_23/S1 undriven or does not drive anything - clipped.
+Signal U2/add_4810_23/S0 undriven or does not drive anything - clipped.
+Signal U2/add_4810_25/S1 undriven or does not drive anything - clipped.
+Signal U2/add_4810_25/S0 undriven or does not drive anything - clipped.
+Signal U2/add_4810_27/S1 undriven or does not drive anything - clipped.
+Signal U2/add_4810_27/S0 undriven or does not drive anything - clipped.
+Signal U2/add_4810_29/S1 undriven or does not drive anything - clipped.
+Signal U2/add_4810_29/S0 undriven or does not drive anything - clipped.
+Signal U2/add_4810_31/S1 undriven or does not drive anything - clipped.
+Signal U2/add_4810_31/S0 undriven or does not drive anything - clipped.
+Signal U2/add_4810_33/S0 undriven or does not drive anything - clipped.
+Signal U2/add_4810_33/CO undriven or does not drive anything - clipped.
+Signal U2/one_sec_cnt_808_add_4_1/S0 undriven or does not drive anything -
+     clipped.
+Signal U2/one_sec_cnt_808_add_4_1/CI undriven or does not drive anything -
+     clipped.
+Block i6552 was optimized away.
+Block i1913_1_lut was optimized away.
+Block i1 was optimized away.
+
+
+
+<A name="mrp_mem"></A><B><U><big>Memory Usage</big></U></B>
+
+
+     
+
+
+
+<A name="mrp_gsr"></A><B><U><big>GSR Usage</big></U></B>
+---------
+
+GSR Component:
+   The Global Set Reset (GSR) resource has been used to implement a global reset
+        of the design. The reset signal used for GSR control is 'Rst1_c'.
+        
+
+     GSR Property:
+   The design components with GSR property set to ENABLED will respond to global
+
+        set reset while the components with GSR property set to DISABLED will
+        not.
+        
+
+     Components with disabled GSR Property
+-------------------------------------
+
+     These components have the GSR property set to DISABLED. The components will
+     not respond to the reset signal 'Rst1_c' via the GSR component.
+
+     Type and number of components of the type: 
+   Register = 171 
+
+     Type and instance name of component: 
+   Register : number_in1_i0_i0
+   Register : digit1_i0_i5
+   Register : number_in1_i0_i3
+   Register : number_in1_i0_i2
+   Register : number_in1_i0_i1
+   Register : digit1_i0_i7
+   Register : digit1_i0_i6
+   Register : digit1_i0_i4
+   Register : digit1_i0_i3
+   Register : digit1_i0_i2
+   Register : U3/seg_number_out_i0_i0
+   Register : U3/number_in_reg_i0_i0
+   Register : U3/seg_number_out_i0_i2
+   Register : U3/seg_number_out_i0_i4
+   Register : U3/seg_number_out_i0_i5
+   Register : U3/seg_number_out_i0_i6
+   Register : U3/number_in_reg_i0_i3
+   Register : U3/number_in_reg_i0_i2
+   Register : U3/number_in_reg_i0_i1
+   Register : U3/seg_number_out_i0_i7
+   Register : U3/seg_number_out_i0_i3
+   Register : U3/seg_number_out_i0_i1
+   Register : U2/mode_802__i31
+   Register : U2/COUNT1_i0
+   Register : U2/mode_802__i22
+   Register : U2/clr_179
+   Register : U2/mode_802__i0
+   Register : U2/mode_802__i25
+   Register : U2/mode_802__i26
+   Register : U2/mode_802__i1
+   Register : U2/mode_802__i2
+   Register : U2/mode_802__i3
+   Register : U2/mode_802__i5
+   Register : U2/mode_802__i6
+   Register : U2/mode_802__i7
+   Register : U2/mode_802__i11
+   Register : U2/mode_802__i17
+   Register : U2/mode_802__i18
+   Register : U2/mode_802__i12
+   Register : U2/mode_802__i19
+   Register : U2/mode_802__i13
+   Register : U2/mode_802__i8
+
+   Register : U2/mode_802__i14
+   Register : U2/mode_802__i20
+   Register : U2/mode_802__i15
+   Register : U2/mode_802__i9
+   Register : U2/mode_802__i16
+   Register : U2/mode_802__i10
+   Register : U2/mode_802__i21
+   Register : U2/mode_802__i23
+   Register : U2/mode_802__i27
+   Register : U2/mode_802__i28
+   Register : U2/mode_802__i29
+   Register : U2/mode_802__i24
+   Register : U2/mode_802__i4
+   Register : U2/COUNT1_i17
+   Register : U2/COUNT1_i16
+   Register : U2/COUNT1_i15
+   Register : U2/COUNT1_i14
+   Register : U2/COUNT1_i13
+   Register : U2/COUNT1_i12
+   Register : U2/COUNT1_i11
+   Register : U2/COUNT1_i10
+   Register : U2/COUNT1_i9
+   Register : U2/COUNT1_i8
+   Register : U2/COUNT1_i7
+   Register : U2/COUNT1_i6
+   Register : U2/COUNT1_i5
+   Register : U2/COUNT1_i4
+   Register : U2/COUNT1_i3
+   Register : U2/COUNT1_i2
+   Register : U2/COUNT1_i1
+   Register : U2/mode_802__i30
+   Register : U4/number_reg_i0_i0
+   Register : U4/write_times_counter_809__i0
+   Register : U4/data_reg__i15
+   Register : U4/data_reg__i14
+   Register : U4/data_reg__i13
+   Register : U4/data_reg__i12
+   Register : U4/data_reg__i11
+   Register : U4/data_reg__i10
+   Register : U4/data_reg__i8
+   Register : U4/data_reg__i7
+   Register : U4/data_reg__i9
+   Register : U4/data_reg__i6
+   Register : U4/data_reg__i5
+   Register : U4/data_reg__i4
+   Register : U4/data_reg__i3
+   Register : U4/data_reg__i2
+   Register : U4/data_reg__i1
+   Register : U4/write_times_counter_809__i3
+   Register : U4/write_times_counter_809__i1
+   Register : U4/write_times_counter_809__i2
+   Register : U4/write_times_counter_809__i4
+   Register : U4/data_reg__i0
+   Register : U4/digit_reg_i0_i7
+   Register : U4/digit_reg_i0_i6
+   Register : U4/digit_reg_i0_i5
+
+   Register : U4/digit_reg_i0_i4
+   Register : U4/digit_reg_i0_i3
+   Register : U4/digit_reg_i0_i2
+   Register : U4/number_reg_i0_i7
+   Register : U4/number_reg_i0_i6
+   Register : U4/number_reg_i0_i5
+   Register : U4/number_reg_i0_i4
+   Register : U4/number_reg_i0_i3
+   Register : U4/number_reg_i0_i2
+   Register : U4/number_reg_i0_i1
+   Register : U1/R_cache_i0_i10
+   Register : U1/R_cache_i0_i0
+   Register : U1/ROW_i1
+   Register : U1/R_cache_i0_i9
+   Register : U1/R_cache_i0_i8
+   Register : U1/R_cache_i0_i7
+   Register : U1/R_cache_i0_i6
+   Register : U1/R_cache_i0_i5
+   Register : U1/R_cache_i0_i4
+   Register : U1/R_cache_i0_i3
+   Register : U1/num_cnt__i0
+   Register : U1/Clk_cnt_798__i0
+   Register : U1/R_cache_i0_i2
+   Register : U1/Delay_cnt_800__i14
+   Register : U1/Delay_cnt_800__i0
+   Register : U1/R_cache_i0_i1
+   Register : U1/Delay_cnt_800__i1
+   Register : U1/Delay_cnt_800__i2
+   Register : U1/Delay_cnt_800__i3
+   Register : U1/Delay_cnt_800__i4
+   Register : U1/Delay_cnt_800__i5
+   Register : U1/Delay_cnt_800__i6
+   Register : U1/Delay_cnt_800__i7
+   Register : U1/Delay_cnt_800__i8
+   Register : U1/Delay_cnt_800__i9
+   Register : U1/Delay_cnt_800__i10
+   Register : U1/Delay_cnt_800__i11
+   Register : U1/Delay_cnt_800__i12
+   Register : U1/Delay_cnt_800__i13
+   Register : U1/Delay_cnt_800__i15
+   Register : U1/Delay_cnt_800__i16
+   Register : U1/Delay_cnt_800__i17
+   Register : U1/Delay_cnt_800__i18
+   Register : U1/Delay_cnt_800__i19
+   Register : U1/refresh_flag_92
+   Register : U1/R_cache_i0_i11
+   Register : U1/Clk_cnt_798__i13
+   Register : U1/Clk_cnt_798__i12
+   Register : U1/Clk_cnt_798__i11
+   Register : U1/Clk_cnt_798__i10
+   Register : U1/Clk_cnt_798__i9
+   Register : U1/Clk_cnt_798__i8
+   Register : U1/Clk_cnt_798__i7
+   Register : U1/Clk_cnt_798__i6
+   Register : U1/Clk_cnt_798__i5
+   Register : U1/Clk_cnt_798__i4
+
+   Register : U1/Clk_cnt_798__i3
+   Register : U1/Clk_cnt_798__i2
+   Register : U1/Clk_cnt_798__i1
+   Register : U1/num_cnt__i2
+   Register : U1/num_cnt__i1
+   Register : U1/key_out__i4
+   Register : U1/key_out__i3
+   Register : U1/ROW_i4
+   Register : U1/key_out__i2
+   Register : U1/key_out__i1
+   Register : U1/key_out__i0
+   Register : U1/ROW_i3
+   Register : U1/ROW_i2
+   Register : U1/R_cache_i0_i15
+   Register : U1/R_cache_i0_i14
+   Register : U1/R_cache_i0_i13
+   Register : U1/R_cache_i0_i12
+
+     Components with synchronous local reset also reset by asynchronous GSR
+----------------------------------------------------------------------
+
+     These components have the GSR property set to ENABLED and the local reset
+     is synchronous. The components will respond to the synchronous local reset
+     and to the unrelated asynchronous reset signal 'Rst1_c' via the GSR
+     component.
+
+     Type and number of components of the type: 
+   Register = 59 
+
+     Type and instance name of component: 
+   Register : U2/s1_803__i1
+   Register : U2/s1_803__i3
+   Register : U2/h1_807__i0
+   Register : U2/s2_812__i1
+   Register : U2/s2_812__i2
+   Register : U2/h1_807__i3
+   Register : U2/h1_807__i2
+   Register : U2/m2_805__i2
+   Register : U2/h2_806__i2
+   Register : U2/m1_804__i1
+   Register : U2/m1_804__i3
+   Register : U2/m2_805__i1
+   Register : U2/one_sec_cnt_808__i0
+   Register : U2/one_sec_cnt_808__i1
+   Register : U2/one_sec_cnt_808__i2
+   Register : U2/one_sec_cnt_808__i3
+   Register : U2/one_sec_cnt_808__i4
+   Register : U2/one_sec_cnt_808__i5
+   Register : U2/one_sec_cnt_808__i6
+   Register : U2/one_sec_cnt_808__i7
+   Register : U2/one_sec_cnt_808__i8
+   Register : U2/one_sec_cnt_808__i9
+   Register : U2/one_sec_cnt_808__i10
+   Register : U2/one_sec_cnt_808__i11
+   Register : U2/one_sec_cnt_808__i12
+   Register : U2/one_sec_cnt_808__i13
+
+   Register : U2/one_sec_cnt_808__i14
+   Register : U2/one_sec_cnt_808__i15
+   Register : U2/one_sec_cnt_808__i16
+   Register : U2/one_sec_cnt_808__i17
+   Register : U2/one_sec_cnt_808__i18
+   Register : U2/one_sec_cnt_808__i19
+   Register : U2/one_sec_cnt_808__i20
+   Register : U2/one_sec_cnt_808__i21
+   Register : U2/one_sec_cnt_808__i22
+   Register : U2/one_sec_cnt_808__i23
+   Register : U5/cnt_200_811__i12
+   Register : U5/cnt_200_811__i11
+   Register : U5/cnt_200_811__i10
+   Register : U5/cnt_200_811__i9
+   Register : U5/cnt_200_811__i8
+   Register : U5/cnt_200_811__i7
+   Register : U5/cnt_200_811__i6
+   Register : U5/cnt_200_811__i5
+   Register : U5/cnt_200_811__i4
+   Register : U5/cnt_200_811__i3
+   Register : U5/cnt_200_811__i2
+   Register : U5/cnt_200_811__i1
+   Register : U5/cnt_1M_810__i0
+   Register : U5/cnt_200_811__i13
+   Register : U5/cnt_200_811__i0
+   Register : U5/cnt_1M_810__i1
+   Register : U5/cnt_1M_810__i2
+   Register : U5/cnt_1M_810__i3
+   Register : U1/key_get_temp__i0
+   Register : U1/key_get_temp__i4
+   Register : U1/key_get_temp__i3
+   Register : U1/key_get_temp__i2
+   Register : U1/key_get_temp__i1
+
+
+
+<A name="mrp_runtime"></A><B><U><big>Run Time and Memory Usage</big></U></B>
+-------------------------
+
+   Total CPU Time: 3 secs  
+   Total REAL Time: 4 secs  
+   Peak Memory Usage: 53 MB
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+     Copyright (c) 1995 AT&T Corp.   All rights reserved.
+     Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+     Copyright (c) 2001 Agere Systems   All rights reserved.
+     Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights
+     reserved.
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

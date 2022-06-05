@@ -1,0 +1,4 @@
+MESSAGE "File: C:\Users\70735\Desktop\CPU\CPU\testbench.vhd" 
+MESSAGE "Compile Entity "testbench"" 
+MESSAGE "Compile Architecture "testmain" of Entity "testbench"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]" 

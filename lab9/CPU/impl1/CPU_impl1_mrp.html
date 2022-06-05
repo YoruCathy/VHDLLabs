@@ -1,0 +1,371 @@
+<HTML>
+<HEAD><TITLE>Project Summary</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Mrp"></A>
+          Lattice Mapping Report File for Design Module 'cpu2system'
+
+
+
+<A name="mrp_di"></A><B><U><big>Design Information</big></U></B>
+
+Command line:   map -a MachXO2 -p LCMXO2-4000HC -t CSBGA132 -s 4 -oc Commercial
+     CPU_impl1.ngd -o CPU_impl1_map.ncd -pr CPU_impl1.prf -mp CPU_impl1.mrp -lpf
+     C:/Users/70735/Desktop/CPU/impl1/CPU_impl1.lpf -lpf
+     C:/Users/70735/Desktop/CPU/CPU.lpf -c 0 -gui -msgset
+     C:/Users/70735/Desktop/CPU/promote.xml 
+Target Vendor:  LATTICE
+Target Device:  LCMXO2-4000HCCSBGA132
+Target Performance:   4
+Mapper:  xo2c00,  version:  Diamond (64-bit) 3.10.0.111.2
+Mapped on:  12/09/20  16:43:18
+
+
+<A name="mrp_ds"></A><B><U><big>Design Summary</big></U></B>
+   Number of registers:    536 out of  4635 (12%)
+      PFU registers:          536 out of  4320 (12%)
+      PIO registers:            0 out of   315 (0%)
+   Number of SLICEs:       406 out of  2160 (19%)
+      SLICEs as Logic/ROM:    406 out of  2160 (19%)
+      SLICEs as RAM:            0 out of  1620 (0%)
+      SLICEs as Carry:          6 out of  2160 (0%)
+   Number of LUT4s:        399 out of  4320 (9%)
+      Number used as logic LUTs:        387
+      Number used as distributed RAM:     0
+      Number used as ripple logic:       12
+      Number used as shift registers:     0
+   Number of PIO sites used: 20 + 4(JTAG) out of 105 (23%)
+   Number of block RAMs:  0 out of 10 (0%)
+   Number of GSRs:  1 out of 1 (100%)
+   EFB used :       No
+   JTAG used :      No
+   Readback used :  No
+   Oscillator used :  No
+   Startup used :   No
+   POR :            On
+   Bandgap :        On
+   Number of Power Controller:  0 out of 1 (0%)
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 6 (0%)
+   Number of Dynamic Bank Controller (BCLVDSO):  0 out of 1 (0%)
+   Number of DCCA:  0 out of 8 (0%)
+   Number of DCMA:  0 out of 2 (0%)
+   Number of PLLs:  0 out of 2 (0%)
+   Number of DQSDLLs:  0 out of 2 (0%)
+   Number of CLKDIVC:  0 out of 4 (0%)
+   Number of ECLKSYNCA:  0 out of 4 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
+     distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and
+     ripple logic.
+   Number of clocks:  2
+     Net clk_c: 14 loads, 14 rising, 0 falling (Driver: PIO clk )
+     Net CPU/we_N_63: 256 loads, 256 rising, 0 falling (Driver:
+     CPU/i2203_2_lut_2_lut_3_lut_4_lut )
+
+   Number of Clock Enables:  67
+     Net CPU/clk_c_enable_15: 4 loads, 4 LSLICEs
+     Net CPU/clk_c_enable_7: 3 loads, 3 LSLICEs
+     Net CPU/clk_c_enable_8: 1 loads, 1 LSLICEs
+     Net we_N_63_enable_259: 4 loads, 4 LSLICEs
+     Net we_N_63_enable_315: 4 loads, 4 LSLICEs
+     Net we_N_63_enable_187: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_481: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_452: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_219: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_512: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_137: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_416: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_136: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_135: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_134: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_144: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_133: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_132: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_131: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_130: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_143: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_129: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_160: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_407: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_395: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_386: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_377: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_368: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_359: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_351: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_343: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_336: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_329: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_322: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_308: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_301: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_294: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_287: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_280: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_273: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_266: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_252: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_245: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_238: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_231: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_224: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_216: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_201: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_173: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_213: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_202: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_188: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_174: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_511: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_504: 4 loads, 4 LSLICEs
+
+     Net RAM/we_N_63_enable_497: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_490: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_483: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_474: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_465: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_455: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_446: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_437: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_428: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_420: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_405: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_379: 4 loads, 4 LSLICEs
+   Number of LSRs:  2
+     Net CPU/n2304: 2 loads, 2 LSLICEs
+     Net CPU/n804: 1 loads, 1 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net adrram_0: 265 loads
+     Net adrram_1: 136 loads
+     Net adrram_2: 132 loads
+     Net adrram_5: 73 loads
+     Net data_6: 68 loads
+     Net data_7: 68 loads
+     Net data_0: 66 loads
+     Net data_2: 66 loads
+     Net data_4: 66 loads
+     Net data_5: 66 loads
+
+
+
+
+   Number of warnings:  0
+   Number of errors:    0
+     
+
+
+
+
+<A name="mrp_dwe"></A><B><U><big>Design Errors/Warnings</big></U></B>
+
+   No errors or warnings present.
+
+
+
+<A name="mrp_ioa"></A><B><U><big>IO (PIO) Attributes</big></U></B>
+
++---------------------+-----------+-----------+------------+
+| IO Name             | Direction | Levelmode | IO         |
+|                     |           |  IO_TYPE  | Register   |
++---------------------+-----------+-----------+------------+
+| disp2[2]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| disp2[3]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| disp2[4]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| disp2[5]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| disp2[6]            | OUTPUT    | LVCMOS33  |            |
+
++---------------------+-----------+-----------+------------+
+| disp2[7]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| disp2[8]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| akku_o[0]           | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| akku_o[1]           | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| akku_o[2]           | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| akku_o[3]           | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| akku_o[4]           | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| akku_o[5]           | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| akku_o[6]           | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| akku_o[7]           | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| akku_o[8]           | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| reset               | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| clk                 | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| disp2[0]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| disp2[1]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+
+
+
+<A name="mrp_rm"></A><B><U><big>Removed logic</big></U></B>
+
+Block i2444 undriven or does not drive anything - clipped.
+Signal VCC_net undriven or does not drive anything - clipped.
+Signal CPU/add_91_1/S1 undriven or does not drive anything - clipped.
+Signal CPU/add_91_1/S0 undriven or does not drive anything - clipped.
+Signal CPU/add_91_1/CI undriven or does not drive anything - clipped.
+Signal CPU/add_91_cout/S1 undriven or does not drive anything - clipped.
+Signal CPU/add_91_cout/CO undriven or does not drive anything - clipped.
+
+
+
+<A name="mrp_mem"></A><B><U><big>Memory Usage</big></U></B>
+
+
+     
+
+
+
+<A name="mrp_gsr"></A><B><U><big>GSR Usage</big></U></B>
+---------
+
+GSR Component:
+   The Global Set Reset (GSR) resource has been used to implement a global reset
+        of the design. The reset signal used for GSR control is 'reset_c'.
+        
+
+
+     GSR Property:
+   The design components with GSR property set to ENABLED will respond to global
+        set reset while the components with GSR property set to DISABLED will
+        not.
+        
+
+     Components with synchronous local reset also reset by asynchronous GSR
+----------------------------------------------------------------------
+
+     These components have the GSR property set to ENABLED and the local reset
+     is synchronous. The components will respond to the synchronous local reset
+     and to the unrelated asynchronous reset signal 'reset_c' via the GSR
+     component.
+
+     Type and number of components of the type: 
+   Register = 3 
+
+     Type and instance name of component: 
+   Register : CPU/states__i2
+   Register : CPU/states__i1
+   Register : CPU/states__i0
+
+
+
+<A name="mrp_runtime"></A><B><U><big>Run Time and Memory Usage</big></U></B>
+-------------------------
+
+   Total CPU Time: 5 secs  
+   Total REAL Time: 5 secs  
+   Peak Memory Usage: 54 MB
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+     Copyright (c) 1995 AT&T Corp.   All rights reserved.
+     Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+     Copyright (c) 2001 Agere Systems   All rights reserved.
+     Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights
+     reserved.
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

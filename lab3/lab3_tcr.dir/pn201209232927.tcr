@@ -1,0 +1,5 @@
+#Start recording tcl command: 12/9/2020 21:40:33
+#Project Location: C:/Users/70735/Desktop/lab3; Project name: lab3
+prj_project open "C:/Users/70735/Desktop/lab3/lab3.ldf"
+prj_run Export -impl impl1 -forceAll
+#Stop recording: 12/9/2020 23:29:27

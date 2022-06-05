@@ -1,0 +1,24 @@
+----------------------------------------------------------------------
+Report for cell Lab2.TECH
+Register bits:  198 of 4635 (4.272%)
+I/O cells:      6
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               AND2         8          100.0
+                              CCU2D       202          100.0
+                             FADD2B       125          100.0
+                            FD1P3AX        11          100.0
+                            FD1P3AY         7          100.0
+                            FD1P3IX        11          100.0
+                            FD1P3JX         4          100.0
+                            FD1S3AX        18          100.0
+                            FD1S3DX        54          100.0
+                            FD1S3IX        93          100.0
+                                GSR         1          100.0
+                                 IB         5          100.0
+                               LUT4        80          100.0
+                              MULT2       108          100.0
+                                ND2        18          100.0
+                                 OB         1          100.0
+                              PFUMX         1          100.0
+                              TOTAL       747

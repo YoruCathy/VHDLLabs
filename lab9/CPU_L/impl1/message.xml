@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BaliMessageLog>
+    <Task name="MapVerilogSimFile">
+        <Message>
+            <ID>35400250</ID>
+            <Severity>Info</Severity>
+            <Dynamic>0</Dynamic>
+        </Message>
+    </Task>
+    <Task name="MapVHDLSimFile">
+        <Message>
+            <ID>35400250</ID>
+            <Severity>Info</Severity>
+            <Dynamic>0</Dynamic>
+        </Message>
+    </Task>
+    <Task name="IBIS">
+        <Message>
+            <ID>1191031</ID>
+            <Severity>Info</Severity>
+        </Message>
+    </Task>
+    <Task name="Lattice_Synthesis">
+        <Message>
+            <ID>35002000</ID>
+            <Severity>Info</Severity>
+        </Message>
+        <Message>
+            <ID>35001781</ID>
+            <Severity>Info</Severity>
+        </Message>
+        <Message>
+            <ID>35921504</ID>
+            <Severity>Info</Severity>
+            <Dynamic></Dynamic>
+            <Dynamic>C:/Users/70735/Desktop/CPU_L/impl1</Dynamic>
+        </Message>
+        <Message>
+            <ID>35921012</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/70735/desktop/cpu_l/cpu2system.vhd(7): </Dynamic>
+            <Dynamic>cpu2system</Dynamic>
+            <Navigation>c:/users/70735/desktop/cpu_l/cpu2system.vhd</Navigation>
+            <Navigation>7</Navigation>
+        </Message>
+        <Message>
+            <ID>35921010</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/70735/desktop/cpu_l/cpu2system.vhd(14): </Dynamic>
+            <Dynamic>arch</Dynamic>
+            <Navigation>c:/users/70735/desktop/cpu_l/cpu2system.vhd</Navigation>
+            <Navigation>14</Navigation>
+        </Message>
+        <Message>
+            <ID>35921012</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/70735/desktop/cpu_l/sram64kx8_lcm.vhd(5): </Dynamic>
+            <Dynamic>sram64kx8</Dynamic>
+            <Navigation>c:/users/70735/desktop/cpu_l/sram64kx8_lcm.vhd</Navigation>
+            <Navigation>5</Navigation>
+        </Message>
+        <Message>
+            <ID>35921010</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/70735/desktop/cpu_l/sram64kx8_lcm.vhd(15): </Dynamic>
+            <Dynamic>sram_syn</Dynamic>
+            <Navigation>c:/users/70735/desktop/cpu_l/sram64kx8_lcm.vhd</Navigation>
+            <Navigation>15</Navigation>
+        </Message>
+        <Message>
+            <ID>35921012</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/70735/desktop/cpu_l/tb02cpu2.vhd(9): </Dynamic>
+            <Dynamic>cpu8bit2</Dynamic>
+            <Navigation>c:/users/70735/desktop/cpu_l/tb02cpu2.vhd</Navigation>
+            <Navigation>9</Navigation>
+        </Message>
+        <Message>
+            <ID>35921010</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/70735/desktop/cpu_l/tb02cpu2.vhd(20): </Dynamic>
+            <Dynamic>cpu_arch</Dynamic>
+            <Navigation>c:/users/70735/desktop/cpu_l/tb02cpu2.vhd</Navigation>
+            <Navigation>20</Navigation>
+        </Message>
+        <Message>
+            <ID>35921205</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/70735/desktop/cpu_l/cpu2system.vhd(12): </Dynamic>
+            <Dynamic>cpu2system</Dynamic>
+            <Dynamic>arch</Dynamic>
+            <Navigation>c:/users/70735/desktop/cpu_l/cpu2system.vhd</Navigation>
+            <Navigation>12</Navigation>
+        </Message>
+        <Message>
+            <ID>35001611</ID>
+            <Severity>Warning</Severity>
+        </Message>
+    </Task>
+    <Task name="PAR">
+        <Message>
+            <ID>61001101</ID>
+            <Severity>Warning</Severity>
+        </Message>
+        <Message>
+            <ID>61061008</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>clk_c</Dynamic>
+            <Dynamic>Primary</Dynamic>
+            <Dynamic>clk</Dynamic>
+            <Dynamic>C1</Dynamic>
+            <Dynamic>Primary</Dynamic>
+        </Message>
+    </Task>
+    <Task name="TimingSimFileVHD">
+        <Message>
+            <ID>35400250</ID>
+            <Severity>Info</Severity>
+            <Dynamic>0</Dynamic>
+        </Message>
+    </Task>
+    <Task name="TimingSimFileVlg">
+        <Message>
+            <ID>35400250</ID>
+            <Severity>Info</Severity>
+            <Dynamic>0</Dynamic>
+        </Message>
+    </Task>
+</BaliMessageLog>

@@ -1,0 +1,22 @@
+----------------------------------------------------------------------
+Report for cell ds18B20.TECH
+Register bits:  96 of 4635 (2.071%)
+I/O cells:      9
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                 BB         1          100.0
+                              CCU2D       415          100.0
+                            FD1P3AX        27          100.0
+                            FD1P3IX        29          100.0
+                            FD1P3JX         2          100.0
+                            FD1S3AX         6          100.0
+                            FD1S3IX        28          100.0
+                            FD1S3JX         4          100.0
+                                GSR         1          100.0
+                                 IB         2          100.0
+                                INV         2          100.0
+                            L6MUX21         4          100.0
+                               LUT4      1409          100.0
+                                 OB         6          100.0
+                              PFUMX        43          100.0
+                              TOTAL      1979

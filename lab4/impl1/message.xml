@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BaliMessageLog>
+    <Task name="MapVerilogSimFile">
+        <Message>
+            <ID>35400250</ID>
+            <Severity>Info</Severity>
+            <Dynamic>0</Dynamic>
+        </Message>
+    </Task>
+    <Task name="MapVHDLSimFile">
+        <Message>
+            <ID>35400250</ID>
+            <Severity>Info</Severity>
+            <Dynamic>0</Dynamic>
+        </Message>
+    </Task>
+    <Task name="IBIS">
+        <Message>
+            <ID>1191031</ID>
+            <Severity>Info</Severity>
+        </Message>
+    </Task>
+    <Task name="Lattice_Synthesis">
+        <Message>
+            <ID>35002000</ID>
+            <Severity>Info</Severity>
+        </Message>
+        <Message>
+            <ID>35001781</ID>
+            <Severity>Info</Severity>
+        </Message>
+        <Message>
+            <ID>35921504</ID>
+            <Severity>Info</Severity>
+            <Dynamic></Dynamic>
+            <Dynamic>C:/Users/70735/Desktop/lab4/impl1</Dynamic>
+        </Message>
+        <Message>
+            <ID>35921012</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/70735/desktop/lab4/impl1/source/clock_div.vhd(6): </Dynamic>
+            <Dynamic>clock_div</Dynamic>
+            <Navigation>c:/users/70735/desktop/lab4/impl1/source/clock_div.vhd</Navigation>
+            <Navigation>6</Navigation>
+        </Message>
+        <Message>
+            <ID>35921010</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/70735/desktop/lab4/impl1/source/clock_div.vhd(15): </Dynamic>
+            <Dynamic>behavior</Dynamic>
+            <Navigation>c:/users/70735/desktop/lab4/impl1/source/clock_div.vhd</Navigation>
+            <Navigation>15</Navigation>
+        </Message>
+        <Message>
+            <ID>35921012</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/70735/desktop/lab4/impl1/source/clock_logic.vhd(6): </Dynamic>
+            <Dynamic>clock_logic</Dynamic>
+            <Navigation>c:/users/70735/desktop/lab4/impl1/source/clock_logic.vhd</Navigation>
+            <Navigation>6</Navigation>
+        </Message>
+        <Message>
+            <ID>35921010</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/70735/desktop/lab4/impl1/source/clock_logic.vhd(22): </Dynamic>
+            <Dynamic>clock_logic_arch</Dynamic>
+            <Navigation>c:/users/70735/desktop/lab4/impl1/source/clock_logic.vhd</Navigation>
+            <Navigation>22</Navigation>
+        </Message>
+        <Message>
+            <ID>35921012</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/70735/desktop/lab4/impl1/source/top.vhd(7): </Dynamic>
+            <Dynamic>top</Dynamic>
+            <Navigation>c:/users/70735/desktop/lab4/impl1/source/top.vhd</Navigation>
+            <Navigation>7</Navigation>
+        </Message>
+        <Message>
+            <ID>35921010</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/70735/desktop/lab4/impl1/source/top.vhd(21): </Dynamic>
+            <Dynamic>clock_top_arch</Dynamic>
+            <Navigation>c:/users/70735/desktop/lab4/impl1/source/top.vhd</Navigation>
+            <Navigation>21</Navigation>
+        </Message>
+        <Message>
+            <ID>35921012</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/70735/desktop/lab4/impl1/source/display.vhd(6): </Dynamic>
+            <Dynamic>display</Dynamic>
+            <Navigation>c:/users/70735/desktop/lab4/impl1/source/display.vhd</Navigation>
+            <Navigation>6</Navigation>
+        </Message>
+        <Message>
+            <ID>35921010</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/70735/desktop/lab4/impl1/source/display.vhd(18): </Dynamic>
+            <Dynamic>default_arch</Dynamic>
+            <Navigation>c:/users/70735/desktop/lab4/impl1/source/display.vhd</Navigation>
+            <Navigation>18</Navigation>
+        </Message>
+        <Message>
+            <ID>35921012</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/70735/desktop/lab4/impl1/source/code_shape_provider.vhd(6): </Dynamic>
+            <Dynamic>code_shape_provider</Dynamic>
+            <Navigation>c:/users/70735/desktop/lab4/impl1/source/code_shape_provider.vhd</Navigation>
+            <Navigation>6</Navigation>
+        </Message>
+        <Message>
+            <ID>35921010</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/70735/desktop/lab4/impl1/source/code_shape_provider.vhd(17): </Dynamic>
+            <Dynamic>default_arch</Dynamic>
+            <Navigation>c:/users/70735/desktop/lab4/impl1/source/code_shape_provider.vhd</Navigation>
+            <Navigation>17</Navigation>
+        </Message>
+        <Message>
+            <ID>35921012</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/70735/desktop/lab4/impl1/source/matrix_button_input.vhd(6): </Dynamic>
+            <Dynamic>matrix_button_input</Dynamic>
+            <Navigation>c:/users/70735/desktop/lab4/impl1/source/matrix_button_input.vhd</Navigation>
+            <Navigation>6</Navigation>
+        </Message>
+        <Message>
+            <ID>35921010</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/70735/desktop/lab4/impl1/source/matrix_button_input.vhd(16): </Dynamic>
+            <Dynamic>default_arch</Dynamic>
+            <Navigation>c:/users/70735/desktop/lab4/impl1/source/matrix_button_input.vhd</Navigation>
+            <Navigation>16</Navigation>
+        </Message>
+        <Message>
+            <ID>35921205</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/70735/desktop/lab4/impl1/source/top.vhd(19): </Dynamic>
+            <Dynamic>TOP</Dynamic>
+            <Dynamic>Clock_TOP_arch</Dynamic>
+            <Navigation>c:/users/70735/desktop/lab4/impl1/source/top.vhd</Navigation>
+            <Navigation>19</Navigation>
+        </Message>
+        <Message>
+            <ID>35001774</ID>
+            <Severity>Info</Severity>
+            <Dynamic>\U4/data_state</Dynamic>
+            <Dynamic>one-hot</Dynamic>
+        </Message>
+        <Message>
+            <ID>35935013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/70735/desktop/lab4/impl1/source/top.vhd(198): </Dynamic>
+            <Dynamic>digit1_i0_i1</Dynamic>
+            <Navigation>c:/users/70735/desktop/lab4/impl1/source/top.vhd</Navigation>
+            <Navigation>198</Navigation>
+        </Message>
+        <Message>
+            <ID>35935013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/70735/desktop/lab4/impl1/source/display.vhd(62): </Dynamic>
+            <Dynamic>\U4/digit_reg_i0_i0</Dynamic>
+            <Navigation>c:/users/70735/desktop/lab4/impl1/source/display.vhd</Navigation>
+            <Navigation>62</Navigation>
+        </Message>
+        <Message>
+            <ID>35001611</ID>
+            <Severity>Warning</Severity>
+        </Message>
+    </Task>
+    <Task name="PAR">
+        <Message>
+            <ID>61061008</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>Clock_top_c</Dynamic>
+            <Dynamic>Primary</Dynamic>
+            <Dynamic>Clock_top</Dynamic>
+            <Dynamic>C1</Dynamic>
+            <Dynamic>Primary</Dynamic>
+        </Message>
+        <Message>
+            <ID>61061008</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>Rst1_c</Dynamic>
+            <Dynamic>Secondary</Dynamic>
+            <Dynamic>Rst1</Dynamic>
+            <Dynamic>L14</Dynamic>
+            <Dynamic>Secondary</Dynamic>
+        </Message>
+        <Message>
+            <ID>61061008</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>Mod1_c</Dynamic>
+            <Dynamic>Secondary</Dynamic>
+            <Dynamic>Mod1</Dynamic>
+            <Dynamic>N14</Dynamic>
+            <Dynamic>Secondary</Dynamic>
+        </Message>
+        <Message>
+            <ID>66011008</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>
+   Signal=Clkout200 loads=6 clock_loads=1
+   Signal=Clkout1M loads=7 clock_loads=3</Dynamic>
+        </Message>
+        <Message>
+            <ID>66011008</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>
+   Signal=Clkout200 loads=6 clock_loads=1
+   Signal=Clkout1M loads=7 clock_loads=3</Dynamic>
+        </Message>
+    </Task>
+    <Task name="TimingSimFileVHD">
+        <Message>
+            <ID>35400250</ID>
+            <Severity>Info</Severity>
+            <Dynamic>0</Dynamic>
+        </Message>
+    </Task>
+    <Task name="TimingSimFileVlg">
+        <Message>
+            <ID>35400250</ID>
+            <Severity>Info</Severity>
+            <Dynamic>0</Dynamic>
+        </Message>
+    </Task>
+</BaliMessageLog>

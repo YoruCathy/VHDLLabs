@@ -1,0 +1,367 @@
+--------------------------------------------------------------------------------
+Lattice Synthesis Timing Report, Version  
+Wed Dec 09 16:53:07 2020
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Design:     cpu2system
+Constraint file:  
+Report level:    verbose report, limited to 3 items per constraint
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk1 [get_nets clk_c]
+            4096 items scored, 4096 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 9.537ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             \CPU/adreg_i3  (from clk_c +)
+   Destination:    FD1P3AX    D              \CPU/akku_i9  (to clk_c +)
+
+   Delay:                  14.377ns  (34.9% logic, 65.1% route), 13 logic levels.
+
+ Constraint Details:
+
+     14.377ns data_path \CPU/adreg_i3 to \CPU/akku_i9 violates
+      5.000ns delay constraint less
+      0.160ns L_S requirement (totaling 4.840ns) by 9.537ns
+
+ Path Details: \CPU/adreg_i3 to \CPU/akku_i9
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              \CPU/adreg_i3 (from clk_c)
+Route       102   e 1.350                                  adrram[2]
+MUXL5       ---     0.233             SD to Z              \RAM/i1458
+Route         1   e 0.941                                  \RAM/n1561
+MUXL5       ---     0.233             D1 to Z              \RAM/i1461
+Route         1   e 0.941                                  \RAM/n1564
+LUT4        ---     0.493              A to Z              \RAM/i1463_3_lut
+Route         1   e 0.020                                  \RAM/n1566
+MUXL5       ---     0.233           BLUT to Z              \RAM/i115111_i1
+Route         1   e 0.941                                  \RAM/data_7__N_66[0]
+LUT4        ---     0.493              A to Z              \RAM/Select_644_i3_4_lut
+Route        67   e 2.270                                  data[0]
+LUT4        ---     0.493              B to Z              \CPU/i2200_2_lut
+Route         1   e 0.941                                  \CPU/akku_o_8__N_36[0]
+A1_TO_FCO   ---     0.827           C[2] to COUT           \CPU/add_91_3
+Route         1   e 0.020                                  \CPU/n1485
+FCI_TO_FCO  ---     0.157            CIN to COUT           \CPU/add_91_5
+Route         1   e 0.020                                  \CPU/n1486
+FCI_TO_FCO  ---     0.157            CIN to COUT           \CPU/add_91_7
+Route         1   e 0.020                                  \CPU/n1487
+FCI_TO_FCO  ---     0.157            CIN to COUT           \CPU/add_91_9
+Route         1   e 0.020                                  \CPU/n1488
+FCI_TO_F    ---     0.598            CIN to S[2]           \CPU/add_91_cout
+Route         1   e 0.941                                  \CPU/akku_o_8__N_44[8]
+LUT4        ---     0.493              A to Z              \CPU/i1131_2_lut
+Route         1   e 0.941                                  \CPU/akku_o_8__N_11[8]
+                  --------
+                   14.377  (34.9% logic, 65.1% route), 13 logic levels.
+
+
+Error:  The following path violates requirements by 9.537ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             \CPU/adreg_i3  (from clk_c +)
+   Destination:    FD1P3AX    D              \CPU/akku_i9  (to clk_c +)
+
+   Delay:                  14.377ns  (34.9% logic, 65.1% route), 13 logic levels.
+
+ Constraint Details:
+
+     14.377ns data_path \CPU/adreg_i3 to \CPU/akku_i9 violates
+      5.000ns delay constraint less
+      0.160ns L_S requirement (totaling 4.840ns) by 9.537ns
+
+ Path Details: \CPU/adreg_i3 to \CPU/akku_i9
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              \CPU/adreg_i3 (from clk_c)
+Route       102   e 1.350                                  adrram[2]
+MUXL5       ---     0.233             SD to Z              \RAM/i1892
+Route         1   e 0.941                                  \RAM/n1995
+MUXL5       ---     0.233             D1 to Z              \RAM/i1895
+Route         1   e 0.941                                  \RAM/n1998
+LUT4        ---     0.493              A to Z              \RAM/i1897_3_lut
+Route         1   e 0.020                                  \RAM/n2000
+MUXL5       ---     0.233           ALUT to Z              \RAM/i115714_i1
+Route         1   e 0.941                                  \RAM/data_7__N_66[1]
+LUT4        ---     0.493              A to Z              \RAM/Select_643_i3_4_lut
+Route        67   e 2.270                                  data[1]
+LUT4        ---     0.493              B to Z              \CPU/i2176_2_lut
+Route         1   e 0.941                                  \CPU/akku_o_8__N_36[1]
+A1_TO_FCO   ---     0.827           C[2] to COUT           \CPU/add_91_3
+Route         1   e 0.020                                  \CPU/n1485
+FCI_TO_FCO  ---     0.157            CIN to COUT           \CPU/add_91_5
+Route         1   e 0.020                                  \CPU/n1486
+FCI_TO_FCO  ---     0.157            CIN to COUT           \CPU/add_91_7
+Route         1   e 0.020                                  \CPU/n1487
+FCI_TO_FCO  ---     0.157            CIN to COUT           \CPU/add_91_9
+Route         1   e 0.020                                  \CPU/n1488
+FCI_TO_F    ---     0.598            CIN to S[2]           \CPU/add_91_cout
+Route         1   e 0.941                                  \CPU/akku_o_8__N_44[8]
+LUT4        ---     0.493              A to Z              \CPU/i1131_2_lut
+Route         1   e 0.941                                  \CPU/akku_o_8__N_11[8]
+                  --------
+                   14.377  (34.9% logic, 65.1% route), 13 logic levels.
+
+
+Error:  The following path violates requirements by 9.537ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             \CPU/adreg_i3  (from clk_c +)
+   Destination:    FD1P3AX    D              \CPU/akku_i9  (to clk_c +)
+
+   Delay:                  14.377ns  (34.9% logic, 65.1% route), 13 logic levels.
+
+ Constraint Details:
+
+     14.377ns data_path \CPU/adreg_i3 to \CPU/akku_i9 violates
+      5.000ns delay constraint less
+      0.160ns L_S requirement (totaling 4.840ns) by 9.537ns
+
+ Path Details: \CPU/adreg_i3 to \CPU/akku_i9
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              \CPU/adreg_i3 (from clk_c)
+Route       102   e 1.350                                  adrram[2]
+MUXL5       ---     0.233             SD to Z              \RAM/i1457
+Route         1   e 0.941                                  \RAM/n1560
+MUXL5       ---     0.233             D0 to Z              \RAM/i1461
+Route         1   e 0.941                                  \RAM/n1564
+LUT4        ---     0.493              A to Z              \RAM/i1463_3_lut
+Route         1   e 0.020                                  \RAM/n1566
+MUXL5       ---     0.233           BLUT to Z              \RAM/i115111_i1
+Route         1   e 0.941                                  \RAM/data_7__N_66[0]
+LUT4        ---     0.493              A to Z              \RAM/Select_644_i3_4_lut
+Route        67   e 2.270                                  data[0]
+LUT4        ---     0.493              B to Z              \CPU/i2200_2_lut
+Route         1   e 0.941                                  \CPU/akku_o_8__N_36[0]
+A1_TO_FCO   ---     0.827           C[2] to COUT           \CPU/add_91_3
+Route         1   e 0.020                                  \CPU/n1485
+FCI_TO_FCO  ---     0.157            CIN to COUT           \CPU/add_91_5
+Route         1   e 0.020                                  \CPU/n1486
+FCI_TO_FCO  ---     0.157            CIN to COUT           \CPU/add_91_7
+Route         1   e 0.020                                  \CPU/n1487
+FCI_TO_FCO  ---     0.157            CIN to COUT           \CPU/add_91_9
+Route         1   e 0.020                                  \CPU/n1488
+FCI_TO_F    ---     0.598            CIN to S[2]           \CPU/add_91_cout
+Route         1   e 0.941                                  \CPU/akku_o_8__N_44[8]
+LUT4        ---     0.493              A to Z              \CPU/i1131_2_lut
+Route         1   e 0.941                                  \CPU/akku_o_8__N_11[8]
+                  --------
+                   14.377  (34.9% logic, 65.1% route), 13 logic levels.
+
+Warning: 14.537 ns is the maximum delay for this constraint.
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk0 [get_nets we_N_63]
+            3200 items scored, 3200 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 4.111ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3AX    CK             \RAM/mem[42]_i0_i6  (from we_N_63 +)
+   Destination:    FD1P3AX    D              \RAM/mem[42]_i0_i6  (to we_N_63 +)
+
+   Delay:                   8.951ns  (31.9% logic, 68.1% route), 8 logic levels.
+
+ Constraint Details:
+
+      8.951ns data_path \RAM/mem[42]_i0_i6 to \RAM/mem[42]_i0_i6 violates
+      5.000ns delay constraint less
+      0.160ns L_S requirement (totaling 4.840ns) by 4.111ns
+
+ Path Details: \RAM/mem[42]_i0_i6 to \RAM/mem[42]_i0_i6
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              \RAM/mem[42]_i0_i6 (from we_N_63)
+Route         1   e 0.941                                  \RAM/mem[42][6]
+LUT4        ---     0.493              A to Z              \RAM/i1717_3_lut
+Route         1   e 0.020                                  \RAM/n1820
+MUXL5       ---     0.233           ALUT to Z              \RAM/i1730
+Route         1   e 0.020                                  \RAM/n1833
+MUXL5       ---     0.233             D0 to Z              \RAM/i1737
+Route         1   e 0.941                                  \RAM/n1840
+MUXL5       ---     0.233             D1 to Z              \RAM/i1740
+Route         1   e 0.941                                  \RAM/n1843
+LUT4        ---     0.493              A to Z              \RAM/i1742_3_lut
+Route         1   e 0.020                                  \RAM/n1845
+MUXL5       ---     0.233           ALUT to Z              \RAM/i118729_i1
+Route         1   e 0.941                                  \RAM/data_7__N_66[6]
+LUT4        ---     0.493              A to Z              \RAM/Select_638_i3_4_lut
+Route        69   e 2.272                                  data[6]
+                  --------
+                    8.951  (31.9% logic, 68.1% route), 8 logic levels.
+
+
+Error:  The following path violates requirements by 4.111ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3AX    CK             \RAM/mem[42]_i0_i6  (from we_N_63 +)
+   Destination:    FD1P3AX    D              \RAM/mem[52]_i0_i6  (to we_N_63 +)
+
+   Delay:                   8.951ns  (31.9% logic, 68.1% route), 8 logic levels.
+
+ Constraint Details:
+
+      8.951ns data_path \RAM/mem[42]_i0_i6 to \RAM/mem[52]_i0_i6 violates
+      5.000ns delay constraint less
+      0.160ns L_S requirement (totaling 4.840ns) by 4.111ns
+
+ Path Details: \RAM/mem[42]_i0_i6 to \RAM/mem[52]_i0_i6
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              \RAM/mem[42]_i0_i6 (from we_N_63)
+Route         1   e 0.941                                  \RAM/mem[42][6]
+LUT4        ---     0.493              A to Z              \RAM/i1717_3_lut
+Route         1   e 0.020                                  \RAM/n1820
+MUXL5       ---     0.233           ALUT to Z              \RAM/i1730
+Route         1   e 0.020                                  \RAM/n1833
+MUXL5       ---     0.233             D0 to Z              \RAM/i1737
+Route         1   e 0.941                                  \RAM/n1840
+MUXL5       ---     0.233             D1 to Z              \RAM/i1740
+Route         1   e 0.941                                  \RAM/n1843
+LUT4        ---     0.493              A to Z              \RAM/i1742_3_lut
+Route         1   e 0.020                                  \RAM/n1845
+MUXL5       ---     0.233           ALUT to Z              \RAM/i118729_i1
+Route         1   e 0.941                                  \RAM/data_7__N_66[6]
+LUT4        ---     0.493              A to Z              \RAM/Select_638_i3_4_lut
+Route        69   e 2.272                                  data[6]
+                  --------
+                    8.951  (31.9% logic, 68.1% route), 8 logic levels.
+
+
+Error:  The following path violates requirements by 4.111ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3AX    CK             \RAM/mem[42]_i0_i6  (from we_N_63 +)
+   Destination:    FD1P3AX    D              \RAM/mem[41]_i0_i6  (to we_N_63 +)
+
+   Delay:                   8.951ns  (31.9% logic, 68.1% route), 8 logic levels.
+
+ Constraint Details:
+
+      8.951ns data_path \RAM/mem[42]_i0_i6 to \RAM/mem[41]_i0_i6 violates
+      5.000ns delay constraint less
+      0.160ns L_S requirement (totaling 4.840ns) by 4.111ns
+
+ Path Details: \RAM/mem[42]_i0_i6 to \RAM/mem[41]_i0_i6
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              \RAM/mem[42]_i0_i6 (from we_N_63)
+Route         1   e 0.941                                  \RAM/mem[42][6]
+LUT4        ---     0.493              A to Z              \RAM/i1717_3_lut
+Route         1   e 0.020                                  \RAM/n1820
+MUXL5       ---     0.233           ALUT to Z              \RAM/i1730
+Route         1   e 0.020                                  \RAM/n1833
+MUXL5       ---     0.233             D0 to Z              \RAM/i1737
+Route         1   e 0.941                                  \RAM/n1840
+MUXL5       ---     0.233             D1 to Z              \RAM/i1740
+Route         1   e 0.941                                  \RAM/n1843
+LUT4        ---     0.493              A to Z              \RAM/i1742_3_lut
+Route         1   e 0.020                                  \RAM/n1845
+MUXL5       ---     0.233           ALUT to Z              \RAM/i118729_i1
+Route         1   e 0.941                                  \RAM/data_7__N_66[6]
+LUT4        ---     0.493              A to Z              \RAM/Select_638_i3_4_lut
+Route        69   e 2.272                                  data[6]
+                  --------
+                    8.951  (31.9% logic, 68.1% route), 8 logic levels.
+
+Warning: 9.111 ns is the maximum delay for this constraint.
+
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk1 [get_nets clk_c]                   |     5.000 ns|    14.537 ns|    13 *
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets we_N_63]                 |     5.000 ns|     9.111 ns|     8 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+2 constraints not met.
+
+--------------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+--------------------------------------------------------------------------------
+adrram[0]                               |     266|    2176|     29.82%
+                                        |        |        |
+\CPU/n1486                              |       1|    2116|     29.00%
+                                        |        |        |
+data[7]                                 |      70|    1978|     27.11%
+                                        |        |        |
+\RAM/data_7__N_66[7]                    |       1|    1973|     27.04%
+                                        |        |        |
+\CPU/n1487                              |       1|    1958|     26.84%
+                                        |        |        |
+data[6]                                 |      69|    1722|     23.60%
+                                        |        |        |
+\RAM/data_7__N_66[6]                    |       1|    1717|     23.53%
+                                        |        |        |
+\CPU/n1485                              |       1|    1436|     19.68%
+                                        |        |        |
+\CPU/akku_o_8__N_11[8]                  |       1|    1058|     14.50%
+                                        |        |        |
+\CPU/akku_o_8__N_44[8]                  |       1|    1058|     14.50%
+                                        |        |        |
+\CPU/n1488                              |       1|    1058|     14.50%
+                                        |        |        |
+\RAM/n1783                              |       1|    1018|     13.95%
+                                        |        |        |
+adrram[1]                               |     167|     966|     13.24%
+                                        |        |        |
+\RAM/n1752                              |       1|     954|     13.08%
+                                        |        |        |
+\RAM/n1814                              |       1|     954|     13.08%
+                                        |        |        |
+data[0]                                 |      67|     841|     11.53%
+                                        |        |        |
+data[1]                                 |      67|     835|     11.44%
+                                        |        |        |
+\RAM/data_7__N_66[0]                    |       1|     823|     11.28%
+                                        |        |        |
+\RAM/data_7__N_66[1]                    |       1|     817|     11.20%
+                                        |        |        |
+\RAM/n1845                              |       1|     762|     10.44%
+                                        |        |        |
+--------------------------------------------------------------------------------
+
+
+Timing summary:
+---------------
+
+Timing errors: 7296  Score: 43099118
+
+Constraints cover  40537 paths, 1097 nets, and 2758 connections (77.5% coverage)
+
+
+Peak memory: 92725248 bytes, TRCE: 10108928 bytes, DLYMAN: 327680 bytes
+CPU_TIME_REPORT: 0 secs 

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BuildStatus>
+    <Strategy name="Strategy1">
+        <Milestone name="Export" build_result="0" build_time="0">
+            <Task name="Bitgen" build_result="2" update_result="0" update_time="1607568582"/>
+            <Task name="Jedecgen" build_result="2" update_result="0" update_time="1607568588"/>
+            <Task name="IBIS" build_result="2" update_result="0" update_time="1607568569"/>
+            <Task name="TimingSimFileVlg" build_result="2" update_result="0" update_time="1607568573"/>
+            <Task name="TimingSimFileVHD" build_result="2" update_result="0" update_time="1607568576"/>
+        </Milestone>
+        <Milestone name="Map" build_result="2" build_time="1607568424">
+            <Task name="Map" build_result="2" update_result="0" update_time="1607568424"/>
+            <Task name="MapTrace" build_result="2" update_result="0" update_time="1607568425"/>
+            <Task name="MapVerilogSimFile" build_result="2" update_result="0" update_time="1607568428"/>
+            <Task name="MapVHDLSimFile" build_result="2" update_result="0" update_time="1607568430"/>
+        </Milestone>
+        <Milestone name="PAR" build_result="2" build_time="1607568563">
+            <Task name="PAR" build_result="2" update_result="0" update_time="1607568563"/>
+            <Task name="PARTrace" build_result="2" update_result="0" update_time="1607568565"/>
+            <Task name="IOTiming" build_result="2" update_result="0" update_time="1607568569"/>
+        </Milestone>
+        <Milestone name="Synthesis" build_result="2" build_time="1607568356">
+            <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1607568356"/>
+            <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1607568356"/>
+        </Milestone>
+        <Milestone name="TOOL_Report" build_result="0" build_time="0">
+            <Task name="HDLE" build_result="2" update_result="0" update_time="1525939886"/>
+        </Milestone>
+        <Report name=".vdbs/6_impltp_map.vdb" last_build_time="1607568424" last_build_size="304828"/>
+        <Report name=".vdbs/TEMPERATURE_impltp_map.vdb" last_build_time="1494120895" last_build_size="337031"/>
+        <Report name="6_impltp.bgn" last_build_time="1607568588" last_build_size="4258"/>
+        <Report name="6_impltp.bit" last_build_time="1607568582" last_build_size="40550"/>
+        <Report name="6_impltp.ior" last_build_time="1607568569" last_build_size="2259"/>
+        <Report name="6_impltp.jed" last_build_time="1607568588" last_build_size="849238"/>
+        <Report name="6_impltp.lsedata" last_build_time="1607568347" last_build_size="547432"/>
+        <Report name="6_impltp.ncd" last_build_time="1607568563" last_build_size="1924138"/>
+        <Report name="6_impltp.ngd" last_build_time="1607568356" last_build_size="1213964"/>
+        <Report name="6_impltp.tw1" last_build_time="1607568425" last_build_size="80653"/>
+        <Report name="6_impltp.twr" last_build_time="1607568565" last_build_size="495494"/>
+        <Report name="6_impltp_map.ncd" last_build_time="1607568423" last_build_size="1261907"/>
+        <Report name="6_impltp_mapvho.sdf" last_build_time="1607568430" last_build_size="1275535"/>
+        <Report name="6_impltp_mapvho.vho" last_build_time="1607568430" last_build_size="7687206"/>
+        <Report name="6_impltp_mapvo.sdf" last_build_time="1607568428" last_build_size="1259030"/>
+        <Report name="6_impltp_mapvo.vo" last_build_time="1607568427" last_build_size="1068174"/>
+        <Report name="6_impltp_vho.sdf" last_build_time="1607568576" last_build_size="1401956"/>
+        <Report name="6_impltp_vho.vho" last_build_time="1607568576" last_build_size="7971281"/>
+        <Report name="6_impltp_vo.sdf" last_build_time="1607568572" last_build_size="1385249"/>
+        <Report name="6_impltp_vo.vo" last_build_time="1607568572" last_build_size="1140441"/>
+        <Report name="IBIS/6_impltp.ibs" last_build_time="1607568569" last_build_size="113401"/>
+        <Report name="TEMPERATURE_impltp.bgn" last_build_time="1494120915" last_build_size="4248"/>
+        <Report name="TEMPERATURE_impltp.jed" last_build_time="1494120915" last_build_size="849246"/>
+        <Report name="TEMPERATURE_impltp.lsedata" last_build_time="1494120863" last_build_size="547432"/>
+        <Report name="TEMPERATURE_impltp.ncd" last_build_time="1494120911" last_build_size="1846694"/>
+        <Report name="TEMPERATURE_impltp.ngd" last_build_time="1494120875" last_build_size="1202166"/>
+        <Report name="TEMPERATURE_impltp.tw1" last_build_time="1496047805" last_build_size="80318"/>
+        <Report name="TEMPERATURE_impltp_map.ncd" last_build_time="1494120893" last_build_size="1246775"/>
+    </Strategy>
+</BuildStatus>

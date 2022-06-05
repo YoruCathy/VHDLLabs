@@ -1,0 +1,1 @@
+E:/Diamond/diamond/3.10_x64/bin/nt64/moduleparser.exe -PROJ CPU -pf E:/Diamond/diamond/3.10_x64/cae_library/synthesis/vhdl/machxo2.vhd -lib machxo2 -pkg E:/Diamond/diamond/3.10_x64/cae_library/vhdl_packages/vdbs -lst C:/Users/70735/Desktop/CPU/CPU/source_files.lst

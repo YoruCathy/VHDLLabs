@@ -1,0 +1,259 @@
+<HTML>
+<HEAD><TITLE>Synthesis and Ngdbuild Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Syn"></A><B><U><big>Synthesis and Ngdbuild  Report</big></U></B>
+synthesis:  version Diamond (64-bit) 3.10.0.111.2
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights reserved.
+Wed Dec 09 16:52:59 2020
+
+
+Command Line:  synthesis -f CPU_L_impl1_lattice.synproj -gui 
+
+Synthesis options:
+The -a option is MachXO2.
+The -s option is 4.
+The -t option is CSBGA132.
+The -d option is LCMXO2-4000HC.
+Using package CSBGA132.
+Using performance grade 4.
+                                                          
+
+##########################################################
+
+### Lattice Family : MachXO2
+
+### Device  : LCMXO2-4000HC
+
+### Package : CSBGA132
+
+### Speed   : 4
+
+##########################################################
+
+                                                          
+
+INFO - synthesis: User-Selected Strategy Settings
+Optimization goal = Balanced
+Top-level module name = cpu2system.
+Target frequency = 200.000000 MHz.
+Maximum fanout = 1000.
+Timing path count = 3
+BRAM utilization = 100.000000 %
+DSP usage = true
+DSP utilization = 100.000000 %
+fsm_encoding_style = auto
+resolve_mixed_drivers = 0
+fix_gated_clocks = 1
+
+Mux style = Auto
+Use Carry Chain = true
+carry_chain_length = 0
+Loop Limit = 1950.
+Use IO Insertion = TRUE
+Use IO Reg = AUTO
+
+Resource Sharing = TRUE
+Propagate Constants = TRUE
+Remove Duplicate Registers = TRUE
+force_gsr = auto
+ROM style = auto
+RAM style = auto
+The -comp option is FALSE.
+The -syn option is FALSE.
+-p E:/Diamond/diamond/3.10_x64/ispfpga/xo2c00/data (searchpath added)
+-p C:/Users/70735/Desktop/CPU_L/impl1 (searchpath added)
+-p C:/Users/70735/Desktop/CPU_L (searchpath added)
+VHDL library = work
+VHDL design file = C:/Users/70735/Desktop/CPU_L/cpu2system.vhd
+VHDL design file = C:/Users/70735/Desktop/CPU_L/sram64kx8_lcm.vhd
+VHDL design file = C:/Users/70735/Desktop/CPU_L/tb02cpu2.vhd
+NGD file = CPU_L_impl1.ngd
+-sdc option: SDC file input not used.
+-lpf option: Output file option is ON.
+Hardtimer checking is enabled (default). The -dt option is not used.
+The -r option is OFF. [ Remove LOC Properties is OFF. ]
+Technology check ok...
+
+Analyzing Verilog file E:/Diamond/diamond/3.10_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v. VERI-1482
+Compile design.
+Compile Design Begin
+INFO - synthesis: The default VHDL library search path is now "C:/Users/70735/Desktop/CPU_L/impl1". VHDL-1504
+Analyzing VHDL file c:/users/70735/desktop/cpu_l/cpu2system.vhd. VHDL-1481
+INFO - synthesis: c:/users/70735/desktop/cpu_l/cpu2system.vhd(7): analyzing entity cpu2system. VHDL-1012
+INFO - synthesis: c:/users/70735/desktop/cpu_l/cpu2system.vhd(14): analyzing architecture arch. VHDL-1010
+unit cpu2system is not yet analyzed. VHDL-1485
+Analyzing VHDL file c:/users/70735/desktop/cpu_l/sram64kx8_lcm.vhd. VHDL-1481
+INFO - synthesis: c:/users/70735/desktop/cpu_l/sram64kx8_lcm.vhd(5): analyzing entity sram64kx8. VHDL-1012
+INFO - synthesis: c:/users/70735/desktop/cpu_l/sram64kx8_lcm.vhd(15): analyzing architecture sram_syn. VHDL-1010
+unit cpu2system is not yet analyzed. VHDL-1485
+Analyzing VHDL file c:/users/70735/desktop/cpu_l/tb02cpu2.vhd. VHDL-1481
+INFO - synthesis: c:/users/70735/desktop/cpu_l/tb02cpu2.vhd(9): analyzing entity cpu8bit2. VHDL-1012
+INFO - synthesis: c:/users/70735/desktop/cpu_l/tb02cpu2.vhd(20): analyzing architecture cpu_arch. VHDL-1010
+unit cpu2system is not yet analyzed. VHDL-1485
+unit cpu2system is not yet analyzed. VHDL-1485
+c:/users/70735/desktop/cpu_l/cpu2system.vhd(7): executing cpu2system(arch)
+
+WARNING - synthesis: c:/users/70735/desktop/cpu_l/cpu2system.vhd(12): replacing existing netlist cpu2system(arch). VHDL-1205
+Top module name (VHDL): cpu2system
+Loading NGL library 'E:/Diamond/diamond/3.10_x64/ispfpga/xo2c00a/data/xo2alib.ngl'...
+Loading NGL library 'E:/Diamond/diamond/3.10_x64/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library 'E:/Diamond/diamond/3.10_x64/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library 'E:/Diamond/diamond/3.10_x64/ispfpga/or5g00/data/orc5glib.ngl'...
+Loading device for application map from file 'xo2c4000.nph' in environment: E:/Diamond/diamond/3.10_x64/ispfpga.
+Package Status:                     Final          Version 1.44.
+Top-level module name = cpu2system.
+
+
+
+GSR instance connected to net reset_c.
+Applying 200.000000 MHz constraint to all clocks
+
+WARNING - synthesis: No user .sdc file.
+Results of NGD DRC are available in cpu2system_drc.log.
+Loading NGL library 'E:/Diamond/diamond/3.10_x64/ispfpga/xo2c00a/data/xo2alib.ngl'...
+Loading NGL library 'E:/Diamond/diamond/3.10_x64/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library 'E:/Diamond/diamond/3.10_x64/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library 'E:/Diamond/diamond/3.10_x64/ispfpga/or5g00/data/orc5glib.ngl'...
+All blocks are expanded and NGD expansion is successful.
+Writing NGD file CPU_L_impl1.ngd.
+
+################### Begin Area Report (cpu2system)######################
+Number of register bits => 536 of 4635 (11 % )
+CCU2D => 6
+FD1P3AX => 387
+FD1P3AY => 140
+FD1S3AX => 6
+FD1S3IX => 3
+GSR => 1
+IB => 2
+L6MUX21 => 96
+LUT4 => 387
+OB => 9
+PFUMX => 136
+################### End Area Report ##################
+
+################### Begin BlackBox Report ######################
+TSALL => 1
+################### End BlackBox Report ##################
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 2
+  Net : CPU/we_N_63, loads : 512
+  Net : clk_c, loads : 26
+Clock Enable Nets
+Number of Clock Enables: 67
+Top 10 highest fanout Clock Enables:
+  Net : RAM/we_N_63_enable_259, loads : 8
+  Net : CPU/clk_c_enable_10, loads : 8
+  Net : RAM/we_N_63_enable_266, loads : 8
+  Net : RAM/we_N_63_enable_414, loads : 8
+  Net : RAM/we_N_63_enable_154, loads : 8
+  Net : RAM/we_N_63_enable_273, loads : 8
+  Net : RAM/we_N_63_enable_512, loads : 8
+  Net : RAM/we_N_63_enable_280, loads : 8
+  Net : RAM/we_N_63_enable_133, loads : 8
+  Net : RAM/we_N_63_enable_287, loads : 8
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : CPU/adrram_0, loads : 265
+  Net : CPU/adrram_1, loads : 166
+  Net : CPU/adrram_2, loads : 101
+  Net : RAM/data_7, loads : 69
+  Net : RAM/data_6, loads : 68
+  Net : CPU/adrram_3, loads : 68
+  Net : RAM/data_5, loads : 66
+  Net : RAM/data_4, loads : 66
+  Net : RAM/data_3, loads : 66
+  Net : RAM/data_2, loads : 66
+################### End Clock Report ##################
+
+<A name="lse_trs"></A><B><U><big>Timing Report Summary</big></U></B>
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk1 [get_nets clk_c]                   |  200.000 MHz|   68.790 MHz|    13 *
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets we_N_63]                 |  200.000 MHz|  109.757 MHz|     8 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+2 constraints not met.
+
+
+Peak Memory Usage: 89.105  MB
+
+--------------------------------------------------------------
+Elapsed CPU time for LSE flow : 8.984  secs
+--------------------------------------------------------------
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

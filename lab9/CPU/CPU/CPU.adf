@@ -1,0 +1,55 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=3
+Current Config=compile
+[Configurations]
+compile=work
+[Library]
+CPU=.\CPU\CPU.lib
+[Settings]
+AccessRead=1
+AccessReadWrite=0
+AccessACCB=0
+AccessACCR=0
+AccessReadWriteSLP=0
+AccessReadTopLevel=0
+DisableC=1
+ENABLE_ADV_DATAFLOW=0
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+[LocalVerilogSets]
+EnableSLP=1
+EnableDebug=0
+PriorityLibNames=pmi_work
+LibNames=ovi_machxo2
+[LocalVhdlSets]
+CompileWithDebug=0
+[$LibMap$]
+cpu=.
+work=.
+[LocalVerilogDirs]
+Count=0
+[DefineMacro]
+Global=
+[Files]
+/..\sram64kx8_syn.vhd=-1
+/..\tb02cpu2.vhd=-1
+/..\cpu2system.vhd=-1
+/..\testbench.vhd=-1
+/untitled.asdb=-1
+/untitled.awc=-1
+[Files.Data]
+.\sram64kx8_syn.vhd=VHDL Source Code
+.\tb02cpu2.vhd=VHDL Source Code
+.\cpu2system.vhd=VHDL Source Code
+.\testbench.vhd=VHDL Source Code
+.\src\untitled.asdb=Accelerated Waveform File
+.\src\untitled.awc=Accelerated Waveform Configuration
+[SpecTracer]
+WindowVisible=0
+[HierarchyViewer]
+HierarchyInformation=testbench|testmain|0 
+ShowHide=ShowTopLevel
+Selected=

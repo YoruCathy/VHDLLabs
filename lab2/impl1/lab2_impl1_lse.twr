@@ -1,0 +1,333 @@
+--------------------------------------------------------------------------------
+Lattice Synthesis Timing Report, Version  
+Mon Dec 07 20:56:29 2020
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Design:     Lab2
+Constraint file:  
+Report level:    verbose report, limited to 3 items per constraint
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk0 [get_nets clk_c]
+            4096 items scored, 4096 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 31.528ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3IX    CK             LIGHT_CTL_i2  (from clk_c +)
+   Destination:    FD1S3IX    CD             cur1__i3  (to clk_c +)
+
+   Delay:                  36.368ns  (33.6% logic, 66.4% route), 24 logic levels.
+
+ Constraint Details:
+
+     36.368ns data_path LIGHT_CTL_i2 to cur1__i3 violates
+      5.000ns delay constraint less
+      0.160ns L_S requirement (totaling 4.840ns) by 31.528ns
+
+ Path Details: LIGHT_CTL_i2 to cur1__i3
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              LIGHT_CTL_i2 (from clk_c)
+Route        71   e 2.331                                  LIGHT_CTL[2]
+LUT4        ---     0.493              B to Z              AND2_t54
+Route         1   e 0.941                                  mult_31s_19s_0_pp_0_2
+LUT4        ---     0.493                to                Cadd_mult_31s_19s_0_0_1
+Route         1   e 0.941                                  mult_31s_19s_0_pp_1_3
+LUT4        ---     0.493                to                mult_31s_19s_0_add_0_2
+Route         1   e 0.941                                  mult_31s_19s_0_pp_1_5
+LUT4        ---     0.493                to                mult_31s_19s_0_add_0_3
+Route         1   e 0.941                                  mult_31s_19s_0_pp_1_7
+LUT4        ---     0.493                to                mult_31s_19s_0_add_0_4
+Route         1   e 0.941                                  mult_31s_19s_0_pp_1_9
+LUT4        ---     0.493                to                mult_31s_19s_0_add_0_5
+Route         1   e 0.941                                  s_mult_31s_19s_0_0_10
+LUT4        ---     0.493                to                mult_31s_19s_0_add_5_4
+Route         1   e 0.941                                  mult_31s_19s_0_pp_4_9
+LUT4        ---     0.493                to                mult_31s_19s_0_add_8_2
+Route         1   e 0.941                                  s_mult_31s_19s_0_5_12
+LUT4        ---     0.493                to                mult_31s_19s_0_add_8_3
+Route         1   e 0.941                                  s_mult_31s_19s_0_5_14
+LUT4        ---     0.493                to                mult_31s_19s_0_add_8_4
+Route         1   e 0.941                                  s_mult_31s_19s_0_5_16
+LUT4        ---     0.493                to                mult_31s_19s_0_add_8_5
+Route         1   e 0.941                                  s_mult_31s_19s_0_5_18
+LUT4        ---     0.493                to                mult_31s_19s_0_add_8_6
+Route         1   e 0.941                                  mult_31s_19s_0_pp_8_17
+LUT4        ---     0.493                to                t_mult_31s_19s_0_add_9_2
+Route         1   e 0.941                                  s_mult_31s_19s_0_8_20
+LUT4        ---     0.493                to                t_mult_31s_19s_0_add_9_3
+Route         1   e 0.941                                  s_mult_31s_19s_0_8_22
+LUT4        ---     0.493                to                t_mult_31s_19s_0_add_9_4
+Route         1   e 0.941                                  s_mult_31s_19s_0_8_24
+LUT4        ---     0.493                to                t_mult_31s_19s_0_add_9_5
+Route         1   e 0.941                                  s_mult_31s_19s_0_8_26
+LUT4        ---     0.493                to                t_mult_31s_19s_0_add_9_6
+Route         1   e 0.941                                  s_mult_31s_19s_0_8_28
+LUT4        ---     0.493                to                t_mult_31s_19s_0_add_9_7
+Route         1   e 0.941                                  s_mult_31s_19s_0_8_30
+LUT4        ---     0.493                to                t_mult_31s_19s_0_add_9_8
+Route         1   e 0.941                                  s_mult_31s_19s_0_8_32
+LUT4        ---     0.493                to                t_mult_31s_19s_0_add_9_9
+Route         1   e 0.941                                  n1024
+A1_TO_FCO   ---     0.827           B[2] to COUT           sub_330_add_2_29
+Route         1   e 0.020                                  n3941
+FCI_TO_F    ---     0.598            CIN to S[2]           sub_330_add_2_cout
+Route         1   e 0.941                                  n2479
+LUT4        ---     0.493              A to Z              i272_2_lut
+Route        29   e 2.034                                  n1844
+                  --------
+                   36.368  (33.6% logic, 66.4% route), 24 logic levels.
+
+
+Error:  The following path violates requirements by 31.528ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3IX    CK             LIGHT_CTL_i2  (from clk_c +)
+   Destination:    FD1S3IX    CD             cur1__i3  (to clk_c +)
+
+   Delay:                  36.368ns  (33.6% logic, 66.4% route), 24 logic levels.
+
+ Constraint Details:
+
+     36.368ns data_path LIGHT_CTL_i2 to cur1__i3 violates
+      5.000ns delay constraint less
+      0.160ns L_S requirement (totaling 4.840ns) by 31.528ns
+
+ Path Details: LIGHT_CTL_i2 to cur1__i3
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              LIGHT_CTL_i2 (from clk_c)
+Route        71   e 2.331                                  LIGHT_CTL[2]
+LUT4        ---     0.493              B to Z              AND2_t54
+Route         1   e 0.941                                  mult_31s_19s_0_pp_0_2
+LUT4        ---     0.493                to                Cadd_mult_31s_19s_0_0_1
+Route         1   e 0.941                                  mult_31s_19s_0_pp_1_3
+LUT4        ---     0.493                to                mult_31s_19s_0_add_0_2
+Route         1   e 0.941                                  mult_31s_19s_0_pp_1_5
+LUT4        ---     0.493                to                mult_31s_19s_0_add_0_3
+Route         1   e 0.941                                  mult_31s_19s_0_pp_2_5
+LUT4        ---     0.493                to                mult_31s_19s_0_add_5_2
+Route         1   e 0.941                                  co_mult_31s_19s_0_5_2
+LUT4        ---     0.493                to                mult_31s_19s_0_add_5_3
+Route         1   e 0.941                                  s_mult_31s_19s_0_5_8
+LUT4        ---     0.493                to                Cadd_mult_31s_19s_0_8_1
+Route         1   e 0.941                                  mult_31s_19s_0_pp_4_9
+LUT4        ---     0.493                to                mult_31s_19s_0_add_8_2
+Route         1   e 0.941                                  s_mult_31s_19s_0_5_12
+LUT4        ---     0.493                to                mult_31s_19s_0_add_8_3
+Route         1   e 0.941                                  s_mult_31s_19s_0_5_14
+LUT4        ---     0.493                to                mult_31s_19s_0_add_8_4
+Route         1   e 0.941                                  s_mult_31s_19s_0_5_16
+LUT4        ---     0.493                to                mult_31s_19s_0_add_8_5
+Route         1   e 0.941                                  s_mult_31s_19s_0_5_18
+LUT4        ---     0.493                to                mult_31s_19s_0_add_8_6
+Route         1   e 0.941                                  s_mult_31s_19s_0_5_20
+LUT4        ---     0.493                to                mult_31s_19s_0_add_8_7
+Route         1   e 0.941                                  s_mult_31s_19s_0_8_20
+LUT4        ---     0.493                to                t_mult_31s_19s_0_add_9_3
+Route         1   e 0.941                                  s_mult_31s_19s_0_8_22
+LUT4        ---     0.493                to                t_mult_31s_19s_0_add_9_4
+Route         1   e 0.941                                  s_mult_31s_19s_0_8_24
+LUT4        ---     0.493                to                t_mult_31s_19s_0_add_9_5
+Route         1   e 0.941                                  s_mult_31s_19s_0_8_26
+LUT4        ---     0.493                to                t_mult_31s_19s_0_add_9_6
+Route         1   e 0.941                                  s_mult_31s_19s_0_8_28
+LUT4        ---     0.493                to                t_mult_31s_19s_0_add_9_7
+Route         1   e 0.941                                  s_mult_31s_19s_0_8_30
+LUT4        ---     0.493                to                t_mult_31s_19s_0_add_9_8
+Route         1   e 0.941                                  s_mult_31s_19s_0_8_32
+LUT4        ---     0.493                to                t_mult_31s_19s_0_add_9_9
+Route         1   e 0.941                                  n1024
+A1_TO_FCO   ---     0.827           B[2] to COUT           sub_330_add_2_29
+Route         1   e 0.020                                  n3941
+FCI_TO_F    ---     0.598            CIN to S[2]           sub_330_add_2_cout
+Route         1   e 0.941                                  n2479
+LUT4        ---     0.493              A to Z              i272_2_lut
+Route        29   e 2.034                                  n1844
+                  --------
+                   36.368  (33.6% logic, 66.4% route), 24 logic levels.
+
+
+Error:  The following path violates requirements by 31.528ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3IX    CK             LIGHT_CTL_i2  (from clk_c +)
+   Destination:    FD1S3IX    CD             cur1__i3  (to clk_c +)
+
+   Delay:                  36.368ns  (33.6% logic, 66.4% route), 24 logic levels.
+
+ Constraint Details:
+
+     36.368ns data_path LIGHT_CTL_i2 to cur1__i3 violates
+      5.000ns delay constraint less
+      0.160ns L_S requirement (totaling 4.840ns) by 31.528ns
+
+ Path Details: LIGHT_CTL_i2 to cur1__i3
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              LIGHT_CTL_i2 (from clk_c)
+Route        71   e 2.331                                  LIGHT_CTL[2]
+LUT4        ---     0.493              B to Z              AND2_t54
+Route         1   e 0.941                                  mult_31s_19s_0_pp_0_2
+LUT4        ---     0.493                to                Cadd_mult_31s_19s_0_0_1
+Route         1   e 0.941                                  mult_31s_19s_0_pp_1_3
+LUT4        ---     0.493                to                mult_31s_19s_0_add_0_2
+Route         1   e 0.941                                  mult_31s_19s_0_pp_1_5
+LUT4        ---     0.493                to                mult_31s_19s_0_add_0_3
+Route         1   e 0.941                                  mult_31s_19s_0_pp_2_5
+LUT4        ---     0.493                to                mult_31s_19s_0_add_5_2
+Route         1   e 0.941                                  co_mult_31s_19s_0_5_2
+LUT4        ---     0.493                to                mult_31s_19s_0_add_5_3
+Route         1   e 0.941                                  s_mult_31s_19s_0_0_10
+LUT4        ---     0.493                to                mult_31s_19s_0_add_5_4
+Route         1   e 0.941                                  mult_31s_19s_0_pp_4_9
+LUT4        ---     0.493                to                mult_31s_19s_0_add_8_2
+Route         1   e 0.941                                  s_mult_31s_19s_0_5_12
+LUT4        ---     0.493                to                mult_31s_19s_0_add_8_3
+Route         1   e 0.941                                  s_mult_31s_19s_0_5_14
+LUT4        ---     0.493                to                mult_31s_19s_0_add_8_4
+Route         1   e 0.941                                  s_mult_31s_19s_0_5_16
+LUT4        ---     0.493                to                mult_31s_19s_0_add_8_5
+Route         1   e 0.941                                  s_mult_31s_19s_0_8_16
+LUT4        ---     0.493                to                Cadd_t_mult_31s_19s_0_9_1
+Route         1   e 0.941                                  mult_31s_19s_0_pp_8_17
+LUT4        ---     0.493                to                t_mult_31s_19s_0_add_9_2
+Route         1   e 0.941                                  s_mult_31s_19s_0_8_20
+LUT4        ---     0.493                to                t_mult_31s_19s_0_add_9_3
+Route         1   e 0.941                                  s_mult_31s_19s_0_8_22
+LUT4        ---     0.493                to                t_mult_31s_19s_0_add_9_4
+Route         1   e 0.941                                  s_mult_31s_19s_0_8_24
+LUT4        ---     0.493                to                t_mult_31s_19s_0_add_9_5
+Route         1   e 0.941                                  s_mult_31s_19s_0_8_26
+LUT4        ---     0.493                to                t_mult_31s_19s_0_add_9_6
+Route         1   e 0.941                                  s_mult_31s_19s_0_8_28
+LUT4        ---     0.493                to                t_mult_31s_19s_0_add_9_7
+Route         1   e 0.941                                  s_mult_31s_19s_0_8_30
+LUT4        ---     0.493                to                t_mult_31s_19s_0_add_9_8
+Route         1   e 0.941                                  s_mult_31s_19s_0_8_32
+LUT4        ---     0.493                to                t_mult_31s_19s_0_add_9_9
+Route         1   e 0.941                                  n1024
+A1_TO_FCO   ---     0.827           B[2] to COUT           sub_330_add_2_29
+Route         1   e 0.020                                  n3941
+FCI_TO_F    ---     0.598            CIN to S[2]           sub_330_add_2_cout
+Route         1   e 0.941                                  n2479
+LUT4        ---     0.493              A to Z              i272_2_lut
+Route        29   e 2.034                                  n1844
+                  --------
+                   36.368  (33.6% logic, 66.4% route), 24 logic levels.
+
+Warning: 36.528 ns is the maximum delay for this constraint.
+
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets clk_c]                   |     5.000 ns|    36.528 ns|    24 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+1 constraints not met.
+
+--------------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+--------------------------------------------------------------------------------
+LIGHT_CTL[2]                            |      71|    4096|     99.00%
+                                        |        |        |
+mult_31s_19s_0_pp_0_2                   |       1|    4096|     99.00%
+                                        |        |        |
+mult_31s_19s_0_pp_1_3                   |       1|    4096|     99.00%
+                                        |        |        |
+n1024                                   |       1|    4096|     99.00%
+                                        |        |        |
+n1844                                   |      29|    4096|     99.00%
+                                        |        |        |
+n2479                                   |       1|    4096|     99.00%
+                                        |        |        |
+n3941                                   |       1|    4096|     99.00%
+                                        |        |        |
+s_mult_31s_19s_0_8_24                   |       1|    4096|     99.00%
+                                        |        |        |
+s_mult_31s_19s_0_8_26                   |       1|    4096|     99.00%
+                                        |        |        |
+s_mult_31s_19s_0_8_28                   |       1|    4096|     99.00%
+                                        |        |        |
+s_mult_31s_19s_0_8_30                   |       1|    4096|     99.00%
+                                        |        |        |
+s_mult_31s_19s_0_8_32                   |       1|    4096|     99.00%
+                                        |        |        |
+s_mult_31s_19s_0_5_16                   |       1|    4090|     99.85%
+                                        |        |        |
+s_mult_31s_19s_0_8_22                   |       1|    4090|     99.85%
+                                        |        |        |
+s_mult_31s_19s_0_5_14                   |       1|    3927|     95.87%
+                                        |        |        |
+s_mult_31s_19s_0_8_20                   |       1|    3899|     95.19%
+                                        |        |        |
+mult_31s_19s_0_pp_1_5                   |       1|    3620|     88.38%
+                                        |        |        |
+s_mult_31s_19s_0_5_12                   |       1|    3350|     81.79%
+                                        |        |        |
+mult_31s_19s_0_pp_8_17                  |       1|    3227|     78.78%
+                                        |        |        |
+mult_31s_19s_0_pp_1_7                   |       1|    2668|     65.14%
+                                        |        |        |
+s_mult_31s_19s_0_0_10                   |       1|    2606|     63.62%
+                                        |        |        |
+s_mult_31s_19s_0_5_18                   |       1|    2423|     59.16%
+                                        |        |        |
+co_mult_31s_19s_0_5_2                   |       1|    2380|     58.11%
+                                        |        |        |
+mult_31s_19s_0_pp_4_9                   |       1|    2300|     56.15%
+                                        |        |        |
+mult_31s_19s_0_pp_1_9                   |       1|    1716|     41.89%
+                                        |        |        |
+s_mult_31s_19s_0_8_16                   |       1|    1673|     40.84%
+                                        |        |        |
+s_mult_31s_19s_0_0_12                   |       1|    1608|     39.26%
+                                        |        |        |
+mult_31s_19s_0_pp_2_5                   |       1|    1428|     34.86%
+                                        |        |        |
+s_mult_31s_19s_0_5_8                    |       1|     880|     21.48%
+                                        |        |        |
+s_mult_31s_19s_0_5_20                   |       1|     869|     21.22%
+                                        |        |        |
+s_mult_31s_19s_0_0_14                   |       1|     712|     17.38%
+                                        |        |        |
+mult_31s_19s_0_pp_1_11                  |       1|     610|     14.89%
+                                        |        |        |
+mult_31s_19s_0_pp_2_4                   |       1|     476|     11.62%
+                                        |        |        |
+--------------------------------------------------------------------------------
+
+
+Timing summary:
+---------------
+
+Timing errors: 4096  Score: 129138688
+
+Constraints cover  476248698 paths, 963 nets, and 2563 connections (92.5% coverage)
+
+
+Peak memory: 101732352 bytes, TRCE: 8982528 bytes, DLYMAN: 0 bytes
+CPU_TIME_REPORT: 0 secs 

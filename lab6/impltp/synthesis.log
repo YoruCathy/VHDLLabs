@@ -1,0 +1,272 @@
+synthesis:  version Diamond (64-bit) 3.11.0.396.4
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+Thu Dec 10 10:45:46 2020
+
+
+Command Line:  synthesis -f 6_impltp_lattice.synproj -gui -msgset D:/lab_6/promote.xml 
+
+Synthesis options:
+The -a option is MachXO2.
+The -s option is 4.
+The -t option is CSBGA132.
+The -d option is LCMXO2-4000HC.
+Using package CSBGA132.
+Using performance grade 4.
+                                                          
+
+##########################################################
+
+### Lattice Family : MachXO2
+
+### Device  : LCMXO2-4000HC
+
+### Package : CSBGA132
+
+### Speed   : 4
+
+##########################################################
+
+                                                          
+
+INFO - synthesis: User-Selected Strategy Settings
+Optimization goal = Balanced
+The -top option is not used.
+Target frequency = 200.000000 MHz.
+Maximum fanout = 1000.
+Timing path count = 3
+BRAM utilization = 100.000000 %
+DSP usage = true
+DSP utilization = 100.000000 %
+fsm_encoding_style = auto
+resolve_mixed_drivers = 0
+fix_gated_clocks = 1
+
+Mux style = Auto
+Use Carry Chain = true
+carry_chain_length = 0
+Loop Limit = 1950.
+Use IO Insertion = TRUE
+Use IO Reg = AUTO
+
+Resource Sharing = TRUE
+Propagate Constants = TRUE
+Remove Duplicate Registers = TRUE
+force_gsr = auto
+ROM style = auto
+RAM style = auto
+The -comp option is FALSE.
+The -syn option is FALSE.
+-p D:/lscc/diamond/3.11_x64/ispfpga/xo2c00/data (searchpath added)
+-p D:/lab_6/impltp (searchpath added)
+-p D:/lab_6 (searchpath added)
+VHDL library = work
+VHDL design file = D:/lab_6/TEMPERATURE.vhd
+NGD file = 6_impltp.ngd
+-sdc option: SDC file input not used.
+-lpf option: Output file option is ON.
+Hardtimer checking is enabled (default). The -dt option is not used.
+The -r option is OFF. [ Remove LOC Properties is OFF. ]
+Technology check ok...
+
+Analyzing Verilog file D:/lscc/diamond/3.11_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v. VERI-1482
+Compile design.
+Compile Design Begin
+WARNING - synthesis: Setting ds18B20 as the top-level module. To specify the top-level module explicitly, use the -top option.
+INFO - synthesis: The default VHDL library search path is now "D:/lab_6/impltp". VHDL-1504
+Analyzing VHDL file d:/lab_6/temperature.vhd. VHDL-1481
+INFO - synthesis: d:/lab_6/temperature.vhd(9): analyzing entity ds18b20. VHDL-1012
+INFO - synthesis: d:/lab_6/temperature.vhd(20): analyzing architecture behavioral. VHDL-1010
+unit ds18B20 is not yet analyzed. VHDL-1485
+Analyzing VHDL file d:/lab_6/temperature.vhd. VHDL-1481
+INFO - synthesis: d:/lab_6/temperature.vhd(9): analyzing entity ds18b20. VHDL-1012
+INFO - synthesis: d:/lab_6/temperature.vhd(20): analyzing architecture behavioral. VHDL-1010
+unit ds18B20 is not yet analyzed. VHDL-1485
+unit ds18B20 is not yet analyzed. VHDL-1485
+d:/lab_6/temperature.vhd(9): executing ds18B20(Behavioral)
+
+INFO - synthesis: d:/lab_6/temperature.vhd(71): others clause is never selected. VHDL-1172
+INFO - synthesis: d:/lab_6/temperature.vhd(73): others clause is never selected. VHDL-1172
+INFO - synthesis: d:/lab_6/temperature.vhd(183): others clause is never selected. VHDL-1172
+INFO - synthesis: d:/lab_6/temperature.vhd(206): others clause is never selected. VHDL-1172
+INFO - synthesis: d:/lab_6/temperature.vhd(254): others clause is never selected. VHDL-1172
+WARNING - synthesis: d:/lab_6/temperature.vhd(302): tmp should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: d:/lab_6/temperature.vhd(303): tmp should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: d:/lab_6/temperature.vhd(304): tmp should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: d:/lab_6/temperature.vhd(305): tmp should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: d:/lab_6/temperature.vhd(306): tmp should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: d:/lab_6/temperature.vhd(307): tmp should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: d:/lab_6/temperature.vhd(308): tmp should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: d:/lab_6/temperature.vhd(310): tmp should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: d:/lab_6/temperature.vhd(311): tmp should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: d:/lab_6/temperature.vhd(312): tmp should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: d:/lab_6/temperature.vhd(313): tmp should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: d:/lab_6/temperature.vhd(317): mode should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: d:/lab_6/temperature.vhd(325): mode should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: d:/lab_6/temperature.vhd(353): incomplete sensitivity list specified, assuming completeness. VHDL-1613
+WARNING - synthesis: d:/lab_6/temperature.vhd(360): segcnt_div should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: d:/lab_6/temperature.vhd(361): incomplete sensitivity list specified, assuming completeness. VHDL-1613
+WARNING - synthesis: d:/lab_6/temperature.vhd(353): Transparent Latch ones[3] gate is stuck at One
+
+WARNING - synthesis: d:/lab_6/temperature.vhd(353): Transparent Latch ones[2] gate is stuck at One
+
+WARNING - synthesis: d:/lab_6/temperature.vhd(353): Transparent Latch ones[1] gate is stuck at One
+
+WARNING - synthesis: d:/lab_6/temperature.vhd(353): Transparent Latch ones[0] gate is stuck at One
+
+WARNING - synthesis: d:/lab_6/temperature.vhd(353): Transparent Latch tens[3] gate is stuck at One
+
+WARNING - synthesis: d:/lab_6/temperature.vhd(353): Transparent Latch tens[2] gate is stuck at One
+
+WARNING - synthesis: d:/lab_6/temperature.vhd(353): Transparent Latch tens[1] gate is stuck at One
+
+WARNING - synthesis: d:/lab_6/temperature.vhd(353): Transparent Latch tens[0] gate is stuck at One
+
+WARNING - synthesis: d:/lab_6/temperature.vhd(353): Transparent Latch zpzone[3] gate is stuck at One
+
+WARNING - synthesis: d:/lab_6/temperature.vhd(353): Transparent Latch zpzone[2] gate is stuck at One
+
+WARNING - synthesis: d:/lab_6/temperature.vhd(353): Transparent Latch zpzone[1] gate is stuck at One
+
+WARNING - synthesis: d:/lab_6/temperature.vhd(353): Transparent Latch zpzone[0] gate is stuck at One
+
+WARNING - synthesis: d:/lab_6/temperature.vhd(353): Transparent Latch zpone[3] gate is stuck at One
+
+WARNING - synthesis: d:/lab_6/temperature.vhd(353): Transparent Latch zpone[2] gate is stuck at One
+
+WARNING - synthesis: d:/lab_6/temperature.vhd(353): Transparent Latch zpone[1] gate is stuck at One
+
+WARNING - synthesis: d:/lab_6/temperature.vhd(353): Transparent Latch zpone[0] gate is stuck at One
+
+WARNING - synthesis: d:/lab_6/temperature.vhd(51): net cycledata[87] does not have a driver. VDB-1002
+WARNING - synthesis: d:/lab_6/temperature.vhd(18): replacing existing netlist ds18B20(Behavioral). VHDL-1205
+Top module name (VHDL): ds18B20
+Loading NGL library 'D:/lscc/diamond/3.11_x64/ispfpga/xo2c00a/data/xo2alib.ngl'...
+Loading NGL library 'D:/lscc/diamond/3.11_x64/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library 'D:/lscc/diamond/3.11_x64/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library 'D:/lscc/diamond/3.11_x64/ispfpga/or5g00/data/orc5glib.ngl'...
+Loading device for application map from file 'xo2c4000.nph' in environment: D:/lscc/diamond/3.11_x64/ispfpga.
+Package Status:                     Final          Version 1.44.
+Top-level module name = ds18B20.
+######## Missing driver on net cycledata[87]. Patching with GND.
+######## Missing driver on net cycledata[86]. Patching with GND.
+######## Missing driver on net cycledata[71]. Patching with GND.
+######## Missing driver on net cycledata[70]. Patching with GND.
+######## Missing driver on net cycledata[55]. Patching with GND.
+######## Missing driver on net cycledata[54]. Patching with GND.
+######## Missing driver on net cycledata[39]. Patching with GND.
+######## Missing driver on net cycledata[38]. Patching with GND.
+######## Missing driver on net cycledata[23]. Patching with GND.
+######## Missing driver on net cycledata[22]. Patching with GND.
+######## Missing driver on net cycledata[7]. Patching with GND.
+######## Missing driver on net cycledata[6]. Patching with GND.
+
+
+
+WARNING - synthesis: d:/lab_6/temperature.vhd(284): Register write_temp_i0_i0 is stuck at Zero. VDB-5013
+GSR will not be inferred because no asynchronous signal was found in the netlist.
+WARNING - synthesis: Initial value found on instance placecnt_i0 will be ignored.
+WARNING - synthesis: Initial value found on instance placecnt_i1 will be ignored.
+WARNING - synthesis: Initial value found on instance placecnt_i2 will be ignored.
+WARNING - synthesis: Initial value found on instance placecnt_i3 will be ignored.
+WARNING - synthesis: Initial value found on instance placecnt_i4 will be ignored.
+Duplicate register/latch removal. write_temp_i0_i7 is a one-to-one match with write_temp_i0_i3.
+Duplicate register/latch removal. write_temp_i0_i5 is a one-to-one match with write_temp_i0_i4.
+Duplicate register/latch removal. write_temp_i0_i1 is a one-to-one match with write_temp_i0_i5.
+Applying 200.000000 MHz constraint to all clocks
+
+WARNING - synthesis: No user .sdc file.
+Results of NGD DRC are available in ds18B20_drc.log.
+Loading NGL library 'D:/lscc/diamond/3.11_x64/ispfpga/xo2c00a/data/xo2alib.ngl'...
+Loading NGL library 'D:/lscc/diamond/3.11_x64/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library 'D:/lscc/diamond/3.11_x64/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library 'D:/lscc/diamond/3.11_x64/ispfpga/or5g00/data/orc5glib.ngl'...
+All blocks are expanded and NGD expansion is successful.
+Writing NGD file 6_impltp.ngd.
+
+################### Begin Area Report (ds18B20)######################
+Number of register bits => 96 of 4635 (2 % )
+BB => 1
+CCU2D => 415
+FD1P3AX => 27
+FD1P3IX => 29
+FD1P3JX => 2
+FD1S3AX => 6
+FD1S3IX => 28
+FD1S3JX => 4
+GSR => 1
+IB => 2
+INV => 2
+L6MUX21 => 4
+LUT4 => 1409
+OB => 6
+PFUMX => 43
+################### End Area Report ##################
+
+################### Begin BlackBox Report ######################
+TSALL => 1
+################### End BlackBox Report ##################
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 3
+  Net : clk_c, loads : 82
+  Net : clk_temp, loads : 13
+  Net : sck_c_1, loads : 3
+Clock Enable Nets
+Number of Clock Enables: 17
+Top 10 highest fanout Clock Enables:
+  Net : clk_c_enable_53, loads : 18
+  Net : clk_c_enable_41, loads : 15
+  Net : sck_N_88_enable_3, loads : 9
+  Net : clk_c_enable_35, loads : 5
+  Net : clk_c_enable_49, loads : 3
+  Net : clk_c_enable_51, loads : 2
+  Net : clk_c_enable_45, loads : 2
+  Net : dq_N_403, loads : 2
+  Net : clk_c_enable_37, loads : 2
+  Net : clk_c_enable_50, loads : 2
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : n1179, loads : 73
+  Net : n1248, loads : 41
+  Net : STATE_0, loads : 38
+  Net : n13097, loads : 33
+  Net : temp2_8_N_286_3, loads : 32
+  Net : n13057, loads : 32
+  Net : n20449, loads : 32
+  Net : n13120, loads : 32
+  Net : STATE_2, loads : 30
+  Net : n20423, loads : 30
+################### End Clock Report ##################
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk2 [get_nets clk_temp]                |            -|            -|     0  
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk1 [get_nets sck_c_1]                 |  200.000 MHz|   95.193 MHz|     9 *
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets clk_c]                   |  200.000 MHz|   51.642 MHz|    14 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+2 constraints not met.
+
+
+Peak Memory Usage: 111.641  MB
+
+--------------------------------------------------------------
+Elapsed CPU time for LSE flow : 9.594  secs
+--------------------------------------------------------------

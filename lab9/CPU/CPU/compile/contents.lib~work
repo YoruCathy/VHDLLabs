@@ -1,0 +1,9 @@
+4
+~E 1 "./../cpu2system.vhd" 8 cpu2system
+~A 1 "./../cpu2system.vhd" 18 arch
+~E 1 "./../tb02cpu2.vhd" 9 CPU8BIT2
+~A 1 "./../tb02cpu2.vhd" 20 CPU_ARCH
+~E 1 "./../sram64kx8_syn.vhd" 5 sram64kx8
+~A 1 "./../sram64kx8_syn.vhd" 15 sram_syn
+~E 1 "./../testbench.vhd" 9 testbench
+~A 1 "./../testbench.vhd" 12 testmain

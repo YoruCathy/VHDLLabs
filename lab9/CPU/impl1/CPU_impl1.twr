@@ -1,0 +1,2510 @@
+
+Loading design for application trce from file cpu_impl1.ncd.
+Design name: cpu2system
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-4000HC
+Package:     CSBGA132
+Performance: 4
+Loading device for application trce from file 'xo2c4000.nph' in environment: E:/Diamond/diamond/3.10_x64/ispfpga.
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 34.4.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.10.0.111.2
+Wed Dec 09 16:45:52 2020
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 4 -sphld m -o CPU_impl1.twr -gui -msgset C:/Users/70735/Desktop/CPU/promote.xml CPU_impl1.ncd CPU_impl1.prf 
+Design file:     cpu_impl1.ncd
+Preference file: cpu_impl1.prf
+Device,speed:    LCMXO2-4000HC,4
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+Report Type:     based on TRACE automatically generated preferences
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Preference: FREQUENCY NET "clk_c" 106.225000 MHz ;
+            4096 items scored, 4096 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error: The following path exceeds requirements by 25.221ns (weighted slack = -2638.117ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              RAM/mem_26__i0_i0  (from CPU/we_N_63 +)
+   Destination:    FF         Data in        CPU/akku_i9  (to clk_c +)
+
+   Delay:              15.262ns  (35.8% logic, 64.2% route), 12 logic levels.
+
+ Constraint Details:
+
+     15.262ns physical path delay RAM/SLICE_520 to CPU/SLICE_271 exceeds
+      (delay constraint based on source clock period of 4.950ns and destination clock period of 9.414ns)
+      0.090ns delay constraint less
+      9.883ns skew and
+      0.166ns DIN_SET requirement (totaling -9.959ns) by 25.221ns
+
+ Physical Path Details:
+
+      Data path RAM/SLICE_520 to CPU/SLICE_271:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452    R12C13D.CLK to     R12C13D.Q1 RAM/SLICE_520 (from CPU/we_N_63)
+ROUTE         1     2.440     R12C13D.Q1 to       R8C9B.A1 RAM/mem_26_0
+CTOOFX_DEL  ---     0.721       R8C9B.A1 to     R8C9B.OFX0 RAM/i1480/SLICE_343
+ROUTE         1     0.000     R8C9B.OFX0 to      R8C9A.FXA RAM/n1613
+FXTOOFX_DE  ---     0.241      R8C9A.FXA to     R8C9A.OFX1 RAM/i1481/SLICE_291
+ROUTE         1     0.000     R8C9A.OFX1 to      R8C9B.FXB RAM/n1618
+FXTOOFX_DE  ---     0.241      R8C9B.FXB to     R8C9B.OFX1 RAM/i1480/SLICE_343
+ROUTE         1     2.050     R8C9B.OFX1 to     R20C10A.B0 RAM/n1620
+CTOOFX_DEL  ---     0.721     R20C10A.B0 to   R20C10A.OFX0 RAM/i117911_i1/SLICE_279
+ROUTE         2     1.866   R20C10A.OFX0 to     R12C11A.B0 RAM/data_7_N_66_0
+CTOF_DEL    ---     0.495     R12C11A.B0 to     R12C11A.F0 RAM/SLICE_12
+ROUTE        66     2.168     R12C11A.F0 to      R18C4B.B0 data_0
+C0TOFCO_DE  ---     1.023      R18C4B.B0 to     R18C4B.FCO CPU/SLICE_4
+ROUTE         1     0.000     R18C4B.FCO to     R18C4C.FCI CPU/n1539
+FCITOFCO_D  ---     0.162     R18C4C.FCI to     R18C4C.FCO CPU/SLICE_3
+ROUTE         1     0.000     R18C4C.FCO to     R18C4D.FCI CPU/n1540
+FCITOFCO_D  ---     0.162     R18C4D.FCI to     R18C4D.FCO CPU/SLICE_2
+ROUTE         1     0.000     R18C4D.FCO to     R18C5A.FCI CPU/n1541
+FCITOFCO_D  ---     0.162     R18C5A.FCI to     R18C5A.FCO CPU/SLICE_1
+ROUTE         1     0.000     R18C5A.FCO to     R18C5B.FCI CPU/n1542
+FCITOF0_DE  ---     0.585     R18C5B.FCI to      R18C5B.F0 SLICE_0
+ROUTE         1     1.278      R18C5B.F0 to      R15C7A.C0 CPU/akku_o_8_N_44_8
+CTOF_DEL    ---     0.495      R15C7A.C0 to      R15C7A.F0 CPU/SLICE_271
+ROUTE         1     0.000      R15C7A.F0 to     R15C7A.DI0 CPU/akku_o_8_N_11_8 (to clk_c)
+                  --------
+                   15.262   (35.8% logic, 64.2% route), 12 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to RAM/SLICE_520:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         C1.PAD to       C1.PADDI clk
+ROUTE        16     3.044       C1.PADDI to    R19C10A.CLK clk_c
+REG_DEL     ---     0.452    R19C10A.CLK to     R19C10A.Q0 CPU/SLICE_9
+ROUTE        21     4.047     R19C10A.Q0 to      R2C16C.A0 CPU/states_0
+CTOF_DEL    ---     0.495      R2C16C.A0 to      R2C16C.F0 SLICE_412
+ROUTE       256     4.889      R2C16C.F0 to    R12C13D.CLK CPU/we_N_63
+                  --------
+                   14.059   (14.8% logic, 85.2% route), 3 logic levels.
+
+      Destination Clock Path clk to CPU/SLICE_271:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         C1.PAD to       C1.PADDI clk
+ROUTE        16     3.044       C1.PADDI to     R15C7A.CLK clk_c
+                  --------
+                    4.176   (27.1% logic, 72.9% route), 1 logic levels.
+
+
+Error: The following path exceeds requirements by 25.149ns (weighted slack = -2630.585ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              RAM/mem_29__i0_i0  (from CPU/we_N_63 +)
+   Destination:    FF         Data in        CPU/akku_i9  (to clk_c +)
+
+   Delay:              15.190ns  (35.9% logic, 64.1% route), 12 logic levels.
+
+ Constraint Details:
+
+     15.190ns physical path delay RAM/SLICE_532 to CPU/SLICE_271 exceeds
+      (delay constraint based on source clock period of 4.950ns and destination clock period of 9.414ns)
+      0.090ns delay constraint less
+      9.883ns skew and
+      0.166ns DIN_SET requirement (totaling -9.959ns) by 25.149ns
+
+ Physical Path Details:
+
+      Data path RAM/SLICE_532 to CPU/SLICE_271:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452    R12C13A.CLK to     R12C13A.Q1 RAM/SLICE_532 (from CPU/we_N_63)
+ROUTE         1     2.368     R12C13A.Q1 to       R8C9A.A0 RAM/mem_29_0
+CTOOFX_DEL  ---     0.721       R8C9A.A0 to     R8C9A.OFX0 RAM/i1481/SLICE_291
+ROUTE         1     0.000     R8C9A.OFX0 to      R8C9A.FXB RAM/n1614
+FXTOOFX_DE  ---     0.241      R8C9A.FXB to     R8C9A.OFX1 RAM/i1481/SLICE_291
+ROUTE         1     0.000     R8C9A.OFX1 to      R8C9B.FXB RAM/n1618
+FXTOOFX_DE  ---     0.241      R8C9B.FXB to     R8C9B.OFX1 RAM/i1480/SLICE_343
+ROUTE         1     2.050     R8C9B.OFX1 to     R20C10A.B0 RAM/n1620
+CTOOFX_DEL  ---     0.721     R20C10A.B0 to   R20C10A.OFX0 RAM/i117911_i1/SLICE_279
+ROUTE         2     1.866   R20C10A.OFX0 to     R12C11A.B0 RAM/data_7_N_66_0
+CTOF_DEL    ---     0.495     R12C11A.B0 to     R12C11A.F0 RAM/SLICE_12
+ROUTE        66     2.168     R12C11A.F0 to      R18C4B.B0 data_0
+C0TOFCO_DE  ---     1.023      R18C4B.B0 to     R18C4B.FCO CPU/SLICE_4
+ROUTE         1     0.000     R18C4B.FCO to     R18C4C.FCI CPU/n1539
+FCITOFCO_D  ---     0.162     R18C4C.FCI to     R18C4C.FCO CPU/SLICE_3
+ROUTE         1     0.000     R18C4C.FCO to     R18C4D.FCI CPU/n1540
+FCITOFCO_D  ---     0.162     R18C4D.FCI to     R18C4D.FCO CPU/SLICE_2
+ROUTE         1     0.000     R18C4D.FCO to     R18C5A.FCI CPU/n1541
+FCITOFCO_D  ---     0.162     R18C5A.FCI to     R18C5A.FCO CPU/SLICE_1
+ROUTE         1     0.000     R18C5A.FCO to     R18C5B.FCI CPU/n1542
+FCITOF0_DE  ---     0.585     R18C5B.FCI to      R18C5B.F0 SLICE_0
+ROUTE         1     1.278      R18C5B.F0 to      R15C7A.C0 CPU/akku_o_8_N_44_8
+CTOF_DEL    ---     0.495      R15C7A.C0 to      R15C7A.F0 CPU/SLICE_271
+ROUTE         1     0.000      R15C7A.F0 to     R15C7A.DI0 CPU/akku_o_8_N_11_8 (to clk_c)
+                  --------
+                   15.190   (35.9% logic, 64.1% route), 12 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to RAM/SLICE_532:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         C1.PAD to       C1.PADDI clk
+ROUTE        16     3.044       C1.PADDI to    R19C10A.CLK clk_c
+REG_DEL     ---     0.452    R19C10A.CLK to     R19C10A.Q0 CPU/SLICE_9
+ROUTE        21     4.047     R19C10A.Q0 to      R2C16C.A0 CPU/states_0
+CTOF_DEL    ---     0.495      R2C16C.A0 to      R2C16C.F0 SLICE_412
+ROUTE       256     4.889      R2C16C.F0 to    R12C13A.CLK CPU/we_N_63
+                  --------
+                   14.059   (14.8% logic, 85.2% route), 3 logic levels.
+
+      Destination Clock Path clk to CPU/SLICE_271:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         C1.PAD to       C1.PADDI clk
+ROUTE        16     3.044       C1.PADDI to     R15C7A.CLK clk_c
+                  --------
+                    4.176   (27.1% logic, 72.9% route), 1 logic levels.
+
+
+Error: The following path exceeds requirements by 25.107ns (weighted slack = -2626.192ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              RAM/mem_56__i0_i4  (from CPU/we_N_63 +)
+   Destination:    FF         Data in        CPU/akku_i9  (to clk_c +)
+
+   Delay:              15.148ns  (33.9% logic, 66.1% route), 10 logic levels.
+
+ Constraint Details:
+
+     15.148ns physical path delay RAM/SLICE_654 to CPU/SLICE_271 exceeds
+      (delay constraint based on source clock period of 4.950ns and destination clock period of 9.414ns)
+      0.090ns delay constraint less
+      9.883ns skew and
+      0.166ns DIN_SET requirement (totaling -9.959ns) by 25.107ns
+
+ Physical Path Details:
+
+      Data path RAM/SLICE_654 to CPU/SLICE_271:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452    R18C19B.CLK to     R18C19B.Q1 RAM/SLICE_654 (from CPU/we_N_63)
+ROUTE         1     2.186     R18C19B.Q1 to     R10C16B.D0 RAM/mem_56_4
+CTOOFX_DEL  ---     0.721     R10C16B.D0 to   R10C16B.OFX0 RAM/i1821/SLICE_375
+ROUTE         1     0.000   R10C16B.OFX0 to    R10C16A.FXA RAM/n1954
+FXTOOFX_DE  ---     0.241    R10C16A.FXA to   R10C16A.OFX1 RAM/i1822/SLICE_385
+ROUTE         1     0.000   R10C16A.OFX1 to    R10C16B.FXB RAM/n1959
+FXTOOFX_DE  ---     0.241    R10C16B.FXB to   R10C16B.OFX1 RAM/i1821/SLICE_375
+ROUTE         1     1.975   R10C16B.OFX1 to     R18C12C.D1 RAM/n1961
+CTOOFX_DEL  ---     0.721     R18C12C.D1 to   R18C12C.OFX0 RAM/i120323_i1/SLICE_275
+ROUTE         2     1.488   R18C12C.OFX0 to     R18C18A.D0 RAM/data_7_N_66_4
+CTOF_DEL    ---     0.495     R18C18A.D0 to     R18C18A.F0 RAM/SLICE_14
+ROUTE        66     3.085     R18C18A.F0 to      R18C4D.B0 data_4
+C0TOFCO_DE  ---     1.023      R18C4D.B0 to     R18C4D.FCO CPU/SLICE_2
+ROUTE         1     0.000     R18C4D.FCO to     R18C5A.FCI CPU/n1541
+FCITOFCO_D  ---     0.162     R18C5A.FCI to     R18C5A.FCO CPU/SLICE_1
+ROUTE         1     0.000     R18C5A.FCO to     R18C5B.FCI CPU/n1542
+FCITOF0_DE  ---     0.585     R18C5B.FCI to      R18C5B.F0 SLICE_0
+ROUTE         1     1.278      R18C5B.F0 to      R15C7A.C0 CPU/akku_o_8_N_44_8
+CTOF_DEL    ---     0.495      R15C7A.C0 to      R15C7A.F0 CPU/SLICE_271
+ROUTE         1     0.000      R15C7A.F0 to     R15C7A.DI0 CPU/akku_o_8_N_11_8 (to clk_c)
+                  --------
+                   15.148   (33.9% logic, 66.1% route), 10 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to RAM/SLICE_654:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         C1.PAD to       C1.PADDI clk
+ROUTE        16     3.044       C1.PADDI to    R19C10A.CLK clk_c
+REG_DEL     ---     0.452    R19C10A.CLK to     R19C10A.Q0 CPU/SLICE_9
+ROUTE        21     4.047     R19C10A.Q0 to      R2C16C.A0 CPU/states_0
+CTOF_DEL    ---     0.495      R2C16C.A0 to      R2C16C.F0 SLICE_412
+ROUTE       256     4.889      R2C16C.F0 to    R18C19B.CLK CPU/we_N_63
+                  --------
+                   14.059   (14.8% logic, 85.2% route), 3 logic levels.
+
+      Destination Clock Path clk to CPU/SLICE_271:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         C1.PAD to       C1.PADDI clk
+ROUTE        16     3.044       C1.PADDI to     R15C7A.CLK clk_c
+                  --------
+                    4.176   (27.1% logic, 72.9% route), 1 logic levels.
+
+
+Error: The following path exceeds requirements by 25.097ns (weighted slack = -2625.146ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              RAM/mem_30__i0_i0  (from CPU/we_N_63 +)
+   Destination:    FF         Data in        CPU/akku_i9  (to clk_c +)
+
+   Delay:              15.138ns  (36.1% logic, 63.9% route), 12 logic levels.
+
+ Constraint Details:
+
+     15.138ns physical path delay RAM/SLICE_540 to CPU/SLICE_271 exceeds
+      (delay constraint based on source clock period of 4.950ns and destination clock period of 9.414ns)
+      0.090ns delay constraint less
+      9.883ns skew and
+      0.166ns DIN_SET requirement (totaling -9.959ns) by 25.097ns
+
+ Physical Path Details:
+
+      Data path RAM/SLICE_540 to CPU/SLICE_271:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452    R13C13D.CLK to     R13C13D.Q1 RAM/SLICE_540 (from CPU/we_N_63)
+ROUTE         1     2.316     R13C13D.Q1 to       R8C9A.A1 RAM/mem_30_0
+CTOOFX_DEL  ---     0.721       R8C9A.A1 to     R8C9A.OFX0 RAM/i1481/SLICE_291
+ROUTE         1     0.000     R8C9A.OFX0 to      R8C9A.FXB RAM/n1614
+FXTOOFX_DE  ---     0.241      R8C9A.FXB to     R8C9A.OFX1 RAM/i1481/SLICE_291
+ROUTE         1     0.000     R8C9A.OFX1 to      R8C9B.FXB RAM/n1618
+FXTOOFX_DE  ---     0.241      R8C9B.FXB to     R8C9B.OFX1 RAM/i1480/SLICE_343
+ROUTE         1     2.050     R8C9B.OFX1 to     R20C10A.B0 RAM/n1620
+CTOOFX_DEL  ---     0.721     R20C10A.B0 to   R20C10A.OFX0 RAM/i117911_i1/SLICE_279
+ROUTE         2     1.866   R20C10A.OFX0 to     R12C11A.B0 RAM/data_7_N_66_0
+CTOF_DEL    ---     0.495     R12C11A.B0 to     R12C11A.F0 RAM/SLICE_12
+ROUTE        66     2.168     R12C11A.F0 to      R18C4B.B0 data_0
+C0TOFCO_DE  ---     1.023      R18C4B.B0 to     R18C4B.FCO CPU/SLICE_4
+ROUTE         1     0.000     R18C4B.FCO to     R18C4C.FCI CPU/n1539
+FCITOFCO_D  ---     0.162     R18C4C.FCI to     R18C4C.FCO CPU/SLICE_3
+ROUTE         1     0.000     R18C4C.FCO to     R18C4D.FCI CPU/n1540
+FCITOFCO_D  ---     0.162     R18C4D.FCI to     R18C4D.FCO CPU/SLICE_2
+ROUTE         1     0.000     R18C4D.FCO to     R18C5A.FCI CPU/n1541
+FCITOFCO_D  ---     0.162     R18C5A.FCI to     R18C5A.FCO CPU/SLICE_1
+ROUTE         1     0.000     R18C5A.FCO to     R18C5B.FCI CPU/n1542
+FCITOF0_DE  ---     0.585     R18C5B.FCI to      R18C5B.F0 SLICE_0
+ROUTE         1     1.278      R18C5B.F0 to      R15C7A.C0 CPU/akku_o_8_N_44_8
+CTOF_DEL    ---     0.495      R15C7A.C0 to      R15C7A.F0 CPU/SLICE_271
+ROUTE         1     0.000      R15C7A.F0 to     R15C7A.DI0 CPU/akku_o_8_N_11_8 (to clk_c)
+                  --------
+                   15.138   (36.1% logic, 63.9% route), 12 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to RAM/SLICE_540:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         C1.PAD to       C1.PADDI clk
+ROUTE        16     3.044       C1.PADDI to    R19C10A.CLK clk_c
+REG_DEL     ---     0.452    R19C10A.CLK to     R19C10A.Q0 CPU/SLICE_9
+ROUTE        21     4.047     R19C10A.Q0 to      R2C16C.A0 CPU/states_0
+CTOF_DEL    ---     0.495      R2C16C.A0 to      R2C16C.F0 SLICE_412
+ROUTE       256     4.889      R2C16C.F0 to    R13C13D.CLK CPU/we_N_63
+                  --------
+                   14.059   (14.8% logic, 85.2% route), 3 logic levels.
+
+      Destination Clock Path clk to CPU/SLICE_271:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         C1.PAD to       C1.PADDI clk
+ROUTE        16     3.044       C1.PADDI to     R15C7A.CLK clk_c
+                  --------
+                    4.176   (27.1% logic, 72.9% route), 1 logic levels.
+
+
+Error: The following path exceeds requirements by 24.965ns (weighted slack = -2611.339ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              RAM/mem_41__i0_i5  (from CPU/we_N_63 +)
+   Destination:    FF         Data in        CPU/akku_i9  (to clk_c +)
+
+   Delay:              15.006ns  (33.3% logic, 66.7% route), 10 logic levels.
+
+ Constraint Details:
+
+     15.006ns physical path delay RAM/SLICE_590 to CPU/SLICE_271 exceeds
+      (delay constraint based on source clock period of 4.950ns and destination clock period of 9.414ns)
+      0.090ns delay constraint less
+      9.883ns skew and
+      0.166ns DIN_SET requirement (totaling -9.959ns) by 24.965ns
+
+ Physical Path Details:
+
+      Data path RAM/SLICE_590 to CPU/SLICE_271:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452    R18C26D.CLK to     R18C26D.Q0 RAM/SLICE_590 (from CPU/we_N_63)
+ROUTE         1     3.140     R18C26D.Q0 to       R8C8B.D0 RAM/mem_41_5
+CTOOFX_DEL  ---     0.721       R8C8B.D0 to     R8C8B.OFX0 RAM/i1786/SLICE_407
+ROUTE         1     0.000     R8C8B.OFX0 to      R8C8A.FXA RAM/n1919
+FXTOOFX_DE  ---     0.241      R8C8A.FXA to     R8C8A.OFX1 RAM/i1787/SLICE_341
+ROUTE         1     0.000     R8C8A.OFX1 to      R8C8B.FXB RAM/n1926
+FXTOOFX_DE  ---     0.241      R8C8B.FXB to     R8C8B.OFX1 RAM/i1786/SLICE_407
+ROUTE         1     1.975     R8C8B.OFX1 to     R19C10B.D1 RAM/n1929
+CTOOFX_DEL  ---     0.721     R19C10B.D1 to   R19C10B.OFX0 RAM/i120926_i1/SLICE_274
+ROUTE         2     1.488   R19C10B.OFX0 to     R18C18A.D1 RAM/data_7_N_66_5
+CTOF_DEL    ---     0.495     R18C18A.D1 to     R18C18A.F1 RAM/SLICE_14
+ROUTE        66     2.123     R18C18A.F1 to      R18C4D.B1 data_5
+C1TOFCO_DE  ---     0.889      R18C4D.B1 to     R18C4D.FCO CPU/SLICE_2
+ROUTE         1     0.000     R18C4D.FCO to     R18C5A.FCI CPU/n1541
+FCITOFCO_D  ---     0.162     R18C5A.FCI to     R18C5A.FCO CPU/SLICE_1
+ROUTE         1     0.000     R18C5A.FCO to     R18C5B.FCI CPU/n1542
+FCITOF0_DE  ---     0.585     R18C5B.FCI to      R18C5B.F0 SLICE_0
+ROUTE         1     1.278      R18C5B.F0 to      R15C7A.C0 CPU/akku_o_8_N_44_8
+CTOF_DEL    ---     0.495      R15C7A.C0 to      R15C7A.F0 CPU/SLICE_271
+ROUTE         1     0.000      R15C7A.F0 to     R15C7A.DI0 CPU/akku_o_8_N_11_8 (to clk_c)
+                  --------
+                   15.006   (33.3% logic, 66.7% route), 10 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to RAM/SLICE_590:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         C1.PAD to       C1.PADDI clk
+ROUTE        16     3.044       C1.PADDI to    R19C10A.CLK clk_c
+REG_DEL     ---     0.452    R19C10A.CLK to     R19C10A.Q0 CPU/SLICE_9
+ROUTE        21     4.047     R19C10A.Q0 to      R2C16C.A0 CPU/states_0
+CTOF_DEL    ---     0.495      R2C16C.A0 to      R2C16C.F0 SLICE_412
+ROUTE       256     4.889      R2C16C.F0 to    R18C26D.CLK CPU/we_N_63
+                  --------
+                   14.059   (14.8% logic, 85.2% route), 3 logic levels.
+
+      Destination Clock Path clk to CPU/SLICE_271:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         C1.PAD to       C1.PADDI clk
+ROUTE        16     3.044       C1.PADDI to     R15C7A.CLK clk_c
+                  --------
+                    4.176   (27.1% logic, 72.9% route), 1 logic levels.
+
+
+Error: The following path exceeds requirements by 24.924ns (weighted slack = -2607.050ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              RAM/mem_41__i0_i4  (from CPU/we_N_63 +)
+   Destination:    FF         Data in        CPU/akku_i9  (to clk_c +)
+
+   Delay:              14.965ns  (34.3% logic, 65.7% route), 10 logic levels.
+
+ Constraint Details:
+
+     14.965ns physical path delay RAM/SLICE_590 to CPU/SLICE_271 exceeds
+      (delay constraint based on source clock period of 4.950ns and destination clock period of 9.414ns)
+      0.090ns delay constraint less
+      9.883ns skew and
+      0.166ns DIN_SET requirement (totaling -9.959ns) by 24.924ns
+
+ Physical Path Details:
+
+      Data path RAM/SLICE_590 to CPU/SLICE_271:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452    R18C26D.CLK to     R18C26D.Q1 RAM/SLICE_590 (from CPU/we_N_63)
+ROUTE         1     1.656     R18C26D.Q1 to     R16C17B.D0 RAM/mem_41_4
+CTOOFX_DEL  ---     0.721     R16C17B.D0 to   R16C17B.OFX0 RAM/i1817/SLICE_383
+ROUTE         1     0.000   R16C17B.OFX0 to    R16C17A.FXA RAM/n1950
+FXTOOFX_DE  ---     0.241    R16C17A.FXA to   R16C17A.OFX1 RAM/i1818/SLICE_354
+ROUTE         1     0.000   R16C17A.OFX1 to    R16C17B.FXB RAM/n1957
+FXTOOFX_DE  ---     0.241    R16C17B.FXB to   R16C17B.OFX1 RAM/i1817/SLICE_383
+ROUTE         1     2.322   R16C17B.OFX1 to     R18C12C.A1 RAM/n1960
+CTOOFX_DEL  ---     0.721     R18C12C.A1 to   R18C12C.OFX0 RAM/i120323_i1/SLICE_275
+ROUTE         2     1.488   R18C12C.OFX0 to     R18C18A.D0 RAM/data_7_N_66_4
+CTOF_DEL    ---     0.495     R18C18A.D0 to     R18C18A.F0 RAM/SLICE_14
+ROUTE        66     3.085     R18C18A.F0 to      R18C4D.B0 data_4
+C0TOFCO_DE  ---     1.023      R18C4D.B0 to     R18C4D.FCO CPU/SLICE_2
+ROUTE         1     0.000     R18C4D.FCO to     R18C5A.FCI CPU/n1541
+FCITOFCO_D  ---     0.162     R18C5A.FCI to     R18C5A.FCO CPU/SLICE_1
+ROUTE         1     0.000     R18C5A.FCO to     R18C5B.FCI CPU/n1542
+FCITOF0_DE  ---     0.585     R18C5B.FCI to      R18C5B.F0 SLICE_0
+ROUTE         1     1.278      R18C5B.F0 to      R15C7A.C0 CPU/akku_o_8_N_44_8
+CTOF_DEL    ---     0.495      R15C7A.C0 to      R15C7A.F0 CPU/SLICE_271
+ROUTE         1     0.000      R15C7A.F0 to     R15C7A.DI0 CPU/akku_o_8_N_11_8 (to clk_c)
+                  --------
+                   14.965   (34.3% logic, 65.7% route), 10 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to RAM/SLICE_590:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         C1.PAD to       C1.PADDI clk
+ROUTE        16     3.044       C1.PADDI to    R19C10A.CLK clk_c
+REG_DEL     ---     0.452    R19C10A.CLK to     R19C10A.Q0 CPU/SLICE_9
+ROUTE        21     4.047     R19C10A.Q0 to      R2C16C.A0 CPU/states_0
+CTOF_DEL    ---     0.495      R2C16C.A0 to      R2C16C.F0 SLICE_412
+ROUTE       256     4.889      R2C16C.F0 to    R18C26D.CLK CPU/we_N_63
+                  --------
+                   14.059   (14.8% logic, 85.2% route), 3 logic levels.
+
+      Destination Clock Path clk to CPU/SLICE_271:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         C1.PAD to       C1.PADDI clk
+ROUTE        16     3.044       C1.PADDI to     R15C7A.CLK clk_c
+                  --------
+                    4.176   (27.1% logic, 72.9% route), 1 logic levels.
+
+
+Error: The following path exceeds requirements by 24.917ns (weighted slack = -2606.318ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              RAM/mem_26__i0_i1  (from CPU/we_N_63 +)
+   Destination:    FF         Data in        CPU/akku_i9  (to clk_c +)
+
+   Delay:              14.958ns  (35.6% logic, 64.4% route), 12 logic levels.
+
+ Constraint Details:
+
+     14.958ns physical path delay RAM/SLICE_520 to CPU/SLICE_271 exceeds
+      (delay constraint based on source clock period of 4.950ns and destination clock period of 9.414ns)
+      0.090ns delay constraint less
+      9.883ns skew and
+      0.166ns DIN_SET requirement (totaling -9.959ns) by 24.917ns
+
+ Physical Path Details:
+
+      Data path RAM/SLICE_520 to CPU/SLICE_271:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452    R12C13D.CLK to     R12C13D.Q0 RAM/SLICE_520 (from CPU/we_N_63)
+ROUTE         1     2.449     R12C13D.Q0 to       R7C8B.A1 RAM/mem_26_1
+CTOOFX_DEL  ---     0.721       R7C8B.A1 to     R7C8B.OFX0 RAM/i1511/SLICE_370
+ROUTE         1     0.000     R7C8B.OFX0 to      R7C8A.FXA RAM/n1644
+FXTOOFX_DE  ---     0.241      R7C8A.FXA to     R7C8A.OFX1 RAM/i1512/SLICE_281
+ROUTE         1     0.000     R7C8A.OFX1 to      R7C8B.FXB RAM/n1649
+FXTOOFX_DE  ---     0.241      R7C8B.FXB to     R7C8B.OFX1 RAM/i1511/SLICE_370
+ROUTE         1     1.721     R7C8B.OFX1 to     R15C10B.C0 RAM/n1651
+CTOOFX_DEL  ---     0.721     R15C10B.C0 to   R15C10B.OFX0 RAM/i118514_i1/SLICE_278
+ROUTE         2     1.579   R15C10B.OFX0 to     R12C11A.B1 RAM/data_7_N_66_1
+CTOF_DEL    ---     0.495     R12C11A.B1 to     R12C11A.F1 RAM/SLICE_12
+ROUTE        66     2.605     R12C11A.F1 to      R18C4B.B1 data_1
+C1TOFCO_DE  ---     0.889      R18C4B.B1 to     R18C4B.FCO CPU/SLICE_4
+ROUTE         1     0.000     R18C4B.FCO to     R18C4C.FCI CPU/n1539
+FCITOFCO_D  ---     0.162     R18C4C.FCI to     R18C4C.FCO CPU/SLICE_3
+ROUTE         1     0.000     R18C4C.FCO to     R18C4D.FCI CPU/n1540
+FCITOFCO_D  ---     0.162     R18C4D.FCI to     R18C4D.FCO CPU/SLICE_2
+ROUTE         1     0.000     R18C4D.FCO to     R18C5A.FCI CPU/n1541
+FCITOFCO_D  ---     0.162     R18C5A.FCI to     R18C5A.FCO CPU/SLICE_1
+ROUTE         1     0.000     R18C5A.FCO to     R18C5B.FCI CPU/n1542
+FCITOF0_DE  ---     0.585     R18C5B.FCI to      R18C5B.F0 SLICE_0
+ROUTE         1     1.278      R18C5B.F0 to      R15C7A.C0 CPU/akku_o_8_N_44_8
+CTOF_DEL    ---     0.495      R15C7A.C0 to      R15C7A.F0 CPU/SLICE_271
+ROUTE         1     0.000      R15C7A.F0 to     R15C7A.DI0 CPU/akku_o_8_N_11_8 (to clk_c)
+                  --------
+                   14.958   (35.6% logic, 64.4% route), 12 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to RAM/SLICE_520:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         C1.PAD to       C1.PADDI clk
+ROUTE        16     3.044       C1.PADDI to    R19C10A.CLK clk_c
+REG_DEL     ---     0.452    R19C10A.CLK to     R19C10A.Q0 CPU/SLICE_9
+ROUTE        21     4.047     R19C10A.Q0 to      R2C16C.A0 CPU/states_0
+CTOF_DEL    ---     0.495      R2C16C.A0 to      R2C16C.F0 SLICE_412
+ROUTE       256     4.889      R2C16C.F0 to    R12C13D.CLK CPU/we_N_63
+                  --------
+                   14.059   (14.8% logic, 85.2% route), 3 logic levels.
+
+      Destination Clock Path clk to CPU/SLICE_271:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         C1.PAD to       C1.PADDI clk
+ROUTE        16     3.044       C1.PADDI to     R15C7A.CLK clk_c
+                  --------
+                    4.176   (27.1% logic, 72.9% route), 1 logic levels.
+
+
+Error: The following path exceeds requirements by 24.882ns (weighted slack = -2602.657ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              RAM/mem_34__i0_i5  (from CPU/we_N_63 +)
+   Destination:    FF         Data in        CPU/akku_i9  (to clk_c +)
+
+   Delay:              14.923ns  (33.5% logic, 66.5% route), 10 logic levels.
+
+ Constraint Details:
+
+     14.923ns physical path delay RAM/SLICE_558 to CPU/SLICE_271 exceeds
+      (delay constraint based on source clock period of 4.950ns and destination clock period of 9.414ns)
+      0.090ns delay constraint less
+      9.883ns skew and
+      0.166ns DIN_SET requirement (totaling -9.959ns) by 24.882ns
+
+ Physical Path Details:
+
+      Data path RAM/SLICE_558 to CPU/SLICE_271:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452    R17C18B.CLK to     R17C18B.Q0 RAM/SLICE_558 (from CPU/we_N_63)
+ROUTE         1     3.057     R17C18B.Q0 to       R8C8D.B1 RAM/mem_34_5
+CTOOFX_DEL  ---     0.721       R8C8D.B1 to     R8C8D.OFX0 RAM/i1784/SLICE_404
+ROUTE         1     0.000     R8C8D.OFX0 to      R8C8C.FXA RAM/n1917
+FXTOOFX_DE  ---     0.241      R8C8C.FXA to     R8C8C.OFX1 RAM/i1785/SLICE_406
+ROUTE         1     0.000     R8C8C.OFX1 to      R8C8B.FXA RAM/n1925
+FXTOOFX_DE  ---     0.241      R8C8B.FXA to     R8C8B.OFX1 RAM/i1786/SLICE_407
+ROUTE         1     1.975     R8C8B.OFX1 to     R19C10B.D1 RAM/n1929
+CTOOFX_DEL  ---     0.721     R19C10B.D1 to   R19C10B.OFX0 RAM/i120926_i1/SLICE_274
+ROUTE         2     1.488   R19C10B.OFX0 to     R18C18A.D1 RAM/data_7_N_66_5
+CTOF_DEL    ---     0.495     R18C18A.D1 to     R18C18A.F1 RAM/SLICE_14
+ROUTE        66     2.123     R18C18A.F1 to      R18C4D.B1 data_5
+C1TOFCO_DE  ---     0.889      R18C4D.B1 to     R18C4D.FCO CPU/SLICE_2
+ROUTE         1     0.000     R18C4D.FCO to     R18C5A.FCI CPU/n1541
+FCITOFCO_D  ---     0.162     R18C5A.FCI to     R18C5A.FCO CPU/SLICE_1
+ROUTE         1     0.000     R18C5A.FCO to     R18C5B.FCI CPU/n1542
+FCITOF0_DE  ---     0.585     R18C5B.FCI to      R18C5B.F0 SLICE_0
+ROUTE         1     1.278      R18C5B.F0 to      R15C7A.C0 CPU/akku_o_8_N_44_8
+CTOF_DEL    ---     0.495      R15C7A.C0 to      R15C7A.F0 CPU/SLICE_271
+ROUTE         1     0.000      R15C7A.F0 to     R15C7A.DI0 CPU/akku_o_8_N_11_8 (to clk_c)
+                  --------
+                   14.923   (33.5% logic, 66.5% route), 10 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to RAM/SLICE_558:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         C1.PAD to       C1.PADDI clk
+ROUTE        16     3.044       C1.PADDI to    R19C10A.CLK clk_c
+REG_DEL     ---     0.452    R19C10A.CLK to     R19C10A.Q0 CPU/SLICE_9
+ROUTE        21     4.047     R19C10A.Q0 to      R2C16C.A0 CPU/states_0
+CTOF_DEL    ---     0.495      R2C16C.A0 to      R2C16C.F0 SLICE_412
+ROUTE       256     4.889      R2C16C.F0 to    R17C18B.CLK CPU/we_N_63
+                  --------
+                   14.059   (14.8% logic, 85.2% route), 3 logic levels.
+
+      Destination Clock Path clk to CPU/SLICE_271:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         C1.PAD to       C1.PADDI clk
+ROUTE        16     3.044       C1.PADDI to     R15C7A.CLK clk_c
+                  --------
+                    4.176   (27.1% logic, 72.9% route), 1 logic levels.
+
+
+Error: The following path exceeds requirements by 24.857ns (weighted slack = -2600.042ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              RAM/mem_12__i0_i4  (from CPU/we_N_63 +)
+   Destination:    FF         Data in        CPU/akku_i9  (to clk_c +)
+
+   Delay:              14.898ns  (34.5% logic, 65.5% route), 10 logic levels.
+
+ Constraint Details:
+
+     14.898ns physical path delay SLICE_411 to CPU/SLICE_271 exceeds
+      (delay constraint based on source clock period of 4.950ns and destination clock period of 9.414ns)
+      0.090ns delay constraint less
+      9.883ns skew and
+      0.166ns DIN_SET requirement (totaling -9.959ns) by 24.857ns
+
+ Physical Path Details:
+
+      Data path SLICE_411 to CPU/SLICE_271:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452    R18C18B.CLK to     R18C18B.Q0 SLICE_411 (from CPU/we_N_63)
+ROUTE         1     1.877     R18C18B.Q0 to     R19C17A.B0 RAM/mem_12_4
+CTOOFX_DEL  ---     0.721     R19C17A.B0 to   R19C17A.OFX0 RAM/i1601/SLICE_331
+ROUTE         1     0.000   R19C17A.OFX0 to    R19C17A.FXB RAM/n1734
+FXTOOFX_DE  ---     0.241    R19C17A.FXB to   R19C17A.OFX1 RAM/i1601/SLICE_331
+ROUTE         1     0.000   R19C17A.OFX1 to    R19C17B.FXB RAM/n1740
+FXTOOFX_DE  ---     0.241    R19C17B.FXB to   R19C17B.OFX1 RAM/i1600/SLICE_330
+ROUTE         1     2.034   R19C17B.OFX1 to     R18C12C.B0 RAM/n1743
+CTOOFX_DEL  ---     0.721     R18C12C.B0 to   R18C12C.OFX0 RAM/i120323_i1/SLICE_275
+ROUTE         2     1.488   R18C12C.OFX0 to     R18C18A.D0 RAM/data_7_N_66_4
+CTOF_DEL    ---     0.495     R18C18A.D0 to     R18C18A.F0 RAM/SLICE_14
+ROUTE        66     3.085     R18C18A.F0 to      R18C4D.B0 data_4
+C0TOFCO_DE  ---     1.023      R18C4D.B0 to     R18C4D.FCO CPU/SLICE_2
+ROUTE         1     0.000     R18C4D.FCO to     R18C5A.FCI CPU/n1541
+FCITOFCO_D  ---     0.162     R18C5A.FCI to     R18C5A.FCO CPU/SLICE_1
+ROUTE         1     0.000     R18C5A.FCO to     R18C5B.FCI CPU/n1542
+FCITOF0_DE  ---     0.585     R18C5B.FCI to      R18C5B.F0 SLICE_0
+ROUTE         1     1.278      R18C5B.F0 to      R15C7A.C0 CPU/akku_o_8_N_44_8
+CTOF_DEL    ---     0.495      R15C7A.C0 to      R15C7A.F0 CPU/SLICE_271
+ROUTE         1     0.000      R15C7A.F0 to     R15C7A.DI0 CPU/akku_o_8_N_11_8 (to clk_c)
+                  --------
+                   14.898   (34.5% logic, 65.5% route), 10 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to SLICE_411:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         C1.PAD to       C1.PADDI clk
+ROUTE        16     3.044       C1.PADDI to    R19C10A.CLK clk_c
+REG_DEL     ---     0.452    R19C10A.CLK to     R19C10A.Q0 CPU/SLICE_9
+ROUTE        21     4.047     R19C10A.Q0 to      R2C16C.A0 CPU/states_0
+CTOF_DEL    ---     0.495      R2C16C.A0 to      R2C16C.F0 SLICE_412
+ROUTE       256     4.889      R2C16C.F0 to    R18C18B.CLK CPU/we_N_63
+                  --------
+                   14.059   (14.8% logic, 85.2% route), 3 logic levels.
+
+      Destination Clock Path clk to CPU/SLICE_271:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         C1.PAD to       C1.PADDI clk
+ROUTE        16     3.044       C1.PADDI to     R15C7A.CLK clk_c
+                  --------
+                    4.176   (27.1% logic, 72.9% route), 1 logic levels.
+
+
+Error: The following path exceeds requirements by 24.848ns (weighted slack = -2599.101ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              RAM/mem_34__i0_i0  (from CPU/we_N_63 +)
+   Destination:    FF         Data in        CPU/akku_i9  (to clk_c +)
+
+   Delay:              14.889ns  (36.7% logic, 63.3% route), 12 logic levels.
+
+ Constraint Details:
+
+     14.889ns physical path delay RAM/SLICE_556 to CPU/SLICE_271 exceeds
+      (delay constraint based on source clock period of 4.950ns and destination clock period of 9.414ns)
+      0.090ns delay constraint less
+      9.883ns skew and
+      0.166ns DIN_SET requirement (totaling -9.959ns) by 24.848ns
+
+ Physical Path Details:
+
+      Data path RAM/SLICE_556 to CPU/SLICE_271:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452    R14C11B.CLK to     R14C11B.Q1 RAM/SLICE_556 (from CPU/we_N_63)
+ROUTE         1     1.962     R14C11B.Q1 to      R12C7D.B1 RAM/mem_34_0
+CTOOFX_DEL  ---     0.721      R12C7D.B1 to    R12C7D.OFX0 RAM/i1939/SLICE_346
+ROUTE         1     0.000    R12C7D.OFX0 to     R12C7C.FXA RAM/n2072
+FXTOOFX_DE  ---     0.241     R12C7C.FXA to    R12C7C.OFX1 RAM/i1940/SLICE_380
+ROUTE         1     0.000    R12C7C.OFX1 to     R12C7B.FXA RAM/n2080
+FXTOOFX_DE  ---     0.241     R12C7B.FXA to    R12C7B.OFX1 RAM/i1941/SLICE_368
+ROUTE         1     2.155    R12C7B.OFX1 to     R20C10A.D1 RAM/n2084
+CTOOFX_DEL  ---     0.721     R20C10A.D1 to   R20C10A.OFX0 RAM/i117911_i1/SLICE_279
+ROUTE         2     1.866   R20C10A.OFX0 to     R12C11A.B0 RAM/data_7_N_66_0
+CTOF_DEL    ---     0.495     R12C11A.B0 to     R12C11A.F0 RAM/SLICE_12
+ROUTE        66     2.168     R12C11A.F0 to      R18C4B.B0 data_0
+C0TOFCO_DE  ---     1.023      R18C4B.B0 to     R18C4B.FCO CPU/SLICE_4
+ROUTE         1     0.000     R18C4B.FCO to     R18C4C.FCI CPU/n1539
+FCITOFCO_D  ---     0.162     R18C4C.FCI to     R18C4C.FCO CPU/SLICE_3
+ROUTE         1     0.000     R18C4C.FCO to     R18C4D.FCI CPU/n1540
+FCITOFCO_D  ---     0.162     R18C4D.FCI to     R18C4D.FCO CPU/SLICE_2
+ROUTE         1     0.000     R18C4D.FCO to     R18C5A.FCI CPU/n1541
+FCITOFCO_D  ---     0.162     R18C5A.FCI to     R18C5A.FCO CPU/SLICE_1
+ROUTE         1     0.000     R18C5A.FCO to     R18C5B.FCI CPU/n1542
+FCITOF0_DE  ---     0.585     R18C5B.FCI to      R18C5B.F0 SLICE_0
+ROUTE         1     1.278      R18C5B.F0 to      R15C7A.C0 CPU/akku_o_8_N_44_8
+CTOF_DEL    ---     0.495      R15C7A.C0 to      R15C7A.F0 CPU/SLICE_271
+ROUTE         1     0.000      R15C7A.F0 to     R15C7A.DI0 CPU/akku_o_8_N_11_8 (to clk_c)
+                  --------
+                   14.889   (36.7% logic, 63.3% route), 12 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to RAM/SLICE_556:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         C1.PAD to       C1.PADDI clk
+ROUTE        16     3.044       C1.PADDI to    R19C10A.CLK clk_c
+REG_DEL     ---     0.452    R19C10A.CLK to     R19C10A.Q0 CPU/SLICE_9
+ROUTE        21     4.047     R19C10A.Q0 to      R2C16C.A0 CPU/states_0
+CTOF_DEL    ---     0.495      R2C16C.A0 to      R2C16C.F0 SLICE_412
+ROUTE       256     4.889      R2C16C.F0 to    R14C11B.CLK CPU/we_N_63
+                  --------
+                   14.059   (14.8% logic, 85.2% route), 3 logic levels.
+
+      Destination Clock Path clk to CPU/SLICE_271:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         C1.PAD to       C1.PADDI clk
+ROUTE        16     3.044       C1.PADDI to     R15C7A.CLK clk_c
+                  --------
+                    4.176   (27.1% logic, 72.9% route), 1 logic levels.
+
+Warning:   0.378MHz is the maximum frequency for this preference.
+
+
+================================================================================
+Preference: FREQUENCY NET "CPU/we_N_63" 202.020000 MHz ;
+            4096 items scored, 4096 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error: The following path exceeds requirements by 12.609ns (weighted slack = -128.425ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              CPU/adreg_i4  (from clk_c +)
+   Destination:    FF         Data in        RAM/mem_61__i0_i4  (to CPU/we_N_63 +)
+
+   Delay:              17.790ns  (11.5% logic, 88.5% route), 4 logic levels.
+
+ Constraint Details:
+
+     17.790ns physical path delay CPU/SLICE_269 to RAM/SLICE_678 exceeds
+      (delay constraint based on source clock period of 9.414ns and destination clock period of 4.950ns)
+      0.486ns delay constraint less
+     -5.043ns skew and
+      0.348ns M_SET requirement (totaling 5.181ns) by 12.609ns
+
+ Physical Path Details:
+
+      Data path CPU/SLICE_269 to RAM/SLICE_678:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452     R10C8C.CLK to      R10C8C.Q1 CPU/SLICE_269 (from clk_c)
+ROUTE        39     7.846      R10C8C.Q1 to     R16C17B.M1 adrram_3
+MTOOFX_DEL  ---     0.376     R16C17B.M1 to   R16C17B.OFX1 RAM/i1817/SLICE_383
+ROUTE         1     2.322   R16C17B.OFX1 to     R18C12C.A1 RAM/n1960
+CTOOFX_DEL  ---     0.721     R18C12C.A1 to   R18C12C.OFX0 RAM/i120323_i1/SLICE_275
+ROUTE         2     1.488   R18C12C.OFX0 to     R18C18A.D0 RAM/data_7_N_66_4
+CTOF_DEL    ---     0.495     R18C18A.D0 to     R18C18A.F0 RAM/SLICE_14
+ROUTE        66     4.090     R18C18A.F0 to     R12C16C.M1 data_4 (to CPU/we_N_63)
+                  --------
+                   17.790   (11.5% logic, 88.5% route), 4 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to CPU/SLICE_269:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         C1.PAD to       C1.PADDI clk
+ROUTE        16     3.044       C1.PADDI to     R10C8C.CLK clk_c
+                  --------
+                    4.176   (27.1% logic, 72.9% route), 1 logic levels.
+
+      Destination Clock Path clk to RAM/SLICE_678:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         C1.PAD to       C1.PADDI clk
+ROUTE        16     2.703       C1.PADDI to      R2C16C.D0 clk_c
+CTOF_DEL    ---     0.495      R2C16C.D0 to      R2C16C.F0 SLICE_412
+ROUTE       256     4.889      R2C16C.F0 to    R12C16C.CLK CPU/we_N_63
+                  --------
+                    9.219   (17.6% logic, 82.4% route), 2 logic levels.
+
+
+Error: The following path exceeds requirements by 12.609ns (weighted slack = -128.425ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              CPU/adreg_i4  (from clk_c +)
+   Destination:    FF         Data in        RAM/mem_52__i0_i4  (to CPU/we_N_63 +)
+
+   Delay:              17.790ns  (11.5% logic, 88.5% route), 4 logic levels.
+
+ Constraint Details:
+
+     17.790ns physical path delay CPU/SLICE_269 to RAM/SLICE_638 exceeds
+      (delay constraint based on source clock period of 9.414ns and destination clock period of 4.950ns)
+      0.486ns delay constraint less
+     -5.043ns skew and
+      0.348ns M_SET requirement (totaling 5.181ns) by 12.609ns
+
+ Physical Path Details:
+
+      Data path CPU/SLICE_269 to RAM/SLICE_638:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452     R10C8C.CLK to      R10C8C.Q1 CPU/SLICE_269 (from clk_c)
+ROUTE        39     7.846      R10C8C.Q1 to     R16C17B.M1 adrram_3
+MTOOFX_DEL  ---     0.376     R16C17B.M1 to   R16C17B.OFX1 RAM/i1817/SLICE_383
+ROUTE         1     2.322   R16C17B.OFX1 to     R18C12C.A1 RAM/n1960
+CTOOFX_DEL  ---     0.721     R18C12C.A1 to   R18C12C.OFX0 RAM/i120323_i1/SLICE_275
+ROUTE         2     1.488   R18C12C.OFX0 to     R18C18A.D0 RAM/data_7_N_66_4
+CTOF_DEL    ---     0.495     R18C18A.D0 to     R18C18A.F0 RAM/SLICE_14
+ROUTE        66     4.090     R18C18A.F0 to     R12C16A.M1 data_4 (to CPU/we_N_63)
+                  --------
+                   17.790   (11.5% logic, 88.5% route), 4 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to CPU/SLICE_269:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         C1.PAD to       C1.PADDI clk
+ROUTE        16     3.044       C1.PADDI to     R10C8C.CLK clk_c
+                  --------
+                    4.176   (27.1% logic, 72.9% route), 1 logic levels.
+
+      Destination Clock Path clk to RAM/SLICE_638:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         C1.PAD to       C1.PADDI clk
+ROUTE        16     2.703       C1.PADDI to      R2C16C.D0 clk_c
+CTOF_DEL    ---     0.495      R2C16C.D0 to      R2C16C.F0 SLICE_412
+ROUTE       256     4.889      R2C16C.F0 to    R12C16A.CLK CPU/we_N_63
+                  --------
+                    9.219   (17.6% logic, 82.4% route), 2 logic levels.
+
+
+Error: The following path exceeds requirements by 12.594ns (weighted slack = -128.272ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              CPU/adreg_i4  (from clk_c +)
+   Destination:    FF         Data in        RAM/mem_58__i0_i4  (to CPU/we_N_63 +)
+
+   Delay:              17.775ns  (11.5% logic, 88.5% route), 4 logic levels.
+
+ Constraint Details:
+
+     17.775ns physical path delay CPU/SLICE_269 to RAM/SLICE_662 exceeds
+      (delay constraint based on source clock period of 9.414ns and destination clock period of 4.950ns)
+      0.486ns delay constraint less
+     -5.043ns skew and
+      0.348ns M_SET requirement (totaling 5.181ns) by 12.594ns
+
+ Physical Path Details:
+
+      Data path CPU/SLICE_269 to RAM/SLICE_662:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452     R10C8C.CLK to      R10C8C.Q1 CPU/SLICE_269 (from clk_c)
+ROUTE        39     7.846      R10C8C.Q1 to     R16C17B.M1 adrram_3
+MTOOFX_DEL  ---     0.376     R16C17B.M1 to   R16C17B.OFX1 RAM/i1817/SLICE_383
+ROUTE         1     2.322   R16C17B.OFX1 to     R18C12C.A1 RAM/n1960
+CTOOFX_DEL  ---     0.721     R18C12C.A1 to   R18C12C.OFX0 RAM/i120323_i1/SLICE_275
+ROUTE         2     1.488   R18C12C.OFX0 to     R18C18A.D0 RAM/data_7_N_66_4
+CTOF_DEL    ---     0.495     R18C18A.D0 to     R18C18A.F0 RAM/SLICE_14
+ROUTE        66     4.075     R18C18A.F0 to     R12C16B.M1 data_4 (to CPU/we_N_63)
+                  --------
+                   17.775   (11.5% logic, 88.5% route), 4 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to CPU/SLICE_269:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         C1.PAD to       C1.PADDI clk
+ROUTE        16     3.044       C1.PADDI to     R10C8C.CLK clk_c
+                  --------
+                    4.176   (27.1% logic, 72.9% route), 1 logic levels.
+
+      Destination Clock Path clk to RAM/SLICE_662:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         C1.PAD to       C1.PADDI clk
+ROUTE        16     2.703       C1.PADDI to      R2C16C.D0 clk_c
+CTOF_DEL    ---     0.495      R2C16C.D0 to      R2C16C.F0 SLICE_412
+ROUTE       256     4.889      R2C16C.F0 to    R12C16B.CLK CPU/we_N_63
+                  --------
+                    9.219   (17.6% logic, 82.4% route), 2 logic levels.
+
+
+Error: The following path exceeds requirements by 12.513ns (weighted slack = -127.447ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              CPU/adreg_i4  (from clk_c +)
+   Destination:    FF         Data in        RAM/mem_59__i0_i4  (to CPU/we_N_63 +)
+
+   Delay:              17.694ns  (11.6% logic, 88.4% route), 4 logic levels.
+
+ Constraint Details:
+
+     17.694ns physical path delay CPU/SLICE_269 to RAM/SLICE_666 exceeds
+      (delay constraint based on source clock period of 9.414ns and destination clock period of 4.950ns)
+      0.486ns delay constraint less
+     -5.043ns skew and
+      0.348ns M_SET requirement (totaling 5.181ns) by 12.513ns
+
+ Physical Path Details:
+
+      Data path CPU/SLICE_269 to RAM/SLICE_666:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452     R10C8C.CLK to      R10C8C.Q1 CPU/SLICE_269 (from clk_c)
+ROUTE        39     7.846      R10C8C.Q1 to     R16C17B.M1 adrram_3
+MTOOFX_DEL  ---     0.376     R16C17B.M1 to   R16C17B.OFX1 RAM/i1817/SLICE_383
+ROUTE         1     2.322   R16C17B.OFX1 to     R18C12C.A1 RAM/n1960
+CTOOFX_DEL  ---     0.721     R18C12C.A1 to   R18C12C.OFX0 RAM/i120323_i1/SLICE_275
+ROUTE         2     1.488   R18C12C.OFX0 to     R18C18A.D0 RAM/data_7_N_66_4
+CTOF_DEL    ---     0.495     R18C18A.D0 to     R18C18A.F0 RAM/SLICE_14
+ROUTE        66     3.994     R18C18A.F0 to     R12C17C.M1 data_4 (to CPU/we_N_63)
+                  --------
+                   17.694   (11.6% logic, 88.4% route), 4 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to CPU/SLICE_269:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         C1.PAD to       C1.PADDI clk
+ROUTE        16     3.044       C1.PADDI to     R10C8C.CLK clk_c
+                  --------
+                    4.176   (27.1% logic, 72.9% route), 1 logic levels.
+
+      Destination Clock Path clk to RAM/SLICE_666:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         C1.PAD to       C1.PADDI clk
+ROUTE        16     2.703       C1.PADDI to      R2C16C.D0 clk_c
+CTOF_DEL    ---     0.495      R2C16C.D0 to      R2C16C.F0 SLICE_412
+ROUTE       256     4.889      R2C16C.F0 to    R12C17C.CLK CPU/we_N_63
+                  --------
+                    9.219   (17.6% logic, 82.4% route), 2 logic levels.
+
+
+Error: The following path exceeds requirements by 12.197ns (weighted slack = -124.229ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              CPU/adreg_i4  (from clk_c +)
+   Destination:    FF         Data in        RAM/mem_49__i0_i4  (to CPU/we_N_63 +)
+
+   Delay:              17.378ns  (11.8% logic, 88.2% route), 4 logic levels.
+
+ Constraint Details:
+
+     17.378ns physical path delay CPU/SLICE_269 to RAM/SLICE_622 exceeds
+      (delay constraint based on source clock period of 9.414ns and destination clock period of 4.950ns)
+      0.486ns delay constraint less
+     -5.043ns skew and
+      0.348ns M_SET requirement (totaling 5.181ns) by 12.197ns
+
+ Physical Path Details:
+
+      Data path CPU/SLICE_269 to RAM/SLICE_622:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452     R10C8C.CLK to      R10C8C.Q1 CPU/SLICE_269 (from clk_c)
+ROUTE        39     7.846      R10C8C.Q1 to     R16C17B.M1 adrram_3
+MTOOFX_DEL  ---     0.376     R16C17B.M1 to   R16C17B.OFX1 RAM/i1817/SLICE_383
+ROUTE         1     2.322   R16C17B.OFX1 to     R18C12C.A1 RAM/n1960
+CTOOFX_DEL  ---     0.721     R18C12C.A1 to   R18C12C.OFX0 RAM/i120323_i1/SLICE_275
+ROUTE         2     1.488   R18C12C.OFX0 to     R18C18A.D0 RAM/data_7_N_66_4
+CTOF_DEL    ---     0.495     R18C18A.D0 to     R18C18A.F0 RAM/SLICE_14
+ROUTE        66     3.678     R18C18A.F0 to     R12C16D.M1 data_4 (to CPU/we_N_63)
+                  --------
+                   17.378   (11.8% logic, 88.2% route), 4 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to CPU/SLICE_269:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         C1.PAD to       C1.PADDI clk
+ROUTE        16     3.044       C1.PADDI to     R10C8C.CLK clk_c
+                  --------
+                    4.176   (27.1% logic, 72.9% route), 1 logic levels.
+
+      Destination Clock Path clk to RAM/SLICE_622:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         C1.PAD to       C1.PADDI clk
+ROUTE        16     2.703       C1.PADDI to      R2C16C.D0 clk_c
+CTOF_DEL    ---     0.495      R2C16C.D0 to      R2C16C.F0 SLICE_412
+ROUTE       256     4.889      R2C16C.F0 to    R12C16D.CLK CPU/we_N_63
+                  --------
+                    9.219   (17.6% logic, 82.4% route), 2 logic levels.
+
+
+Error: The following path exceeds requirements by 11.974ns (weighted slack = -121.957ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              CPU/adreg_i4  (from clk_c +)
+   Destination:    FF         Data in        RAM/mem_54__i0_i4  (to CPU/we_N_63 +)
+
+   Delay:              17.155ns  (11.9% logic, 88.1% route), 4 logic levels.
+
+ Constraint Details:
+
+     17.155ns physical path delay CPU/SLICE_269 to RAM/SLICE_646 exceeds
+      (delay constraint based on source clock period of 9.414ns and destination clock period of 4.950ns)
+      0.486ns delay constraint less
+     -5.043ns skew and
+      0.348ns M_SET requirement (totaling 5.181ns) by 11.974ns
+
+ Physical Path Details:
+
+      Data path CPU/SLICE_269 to RAM/SLICE_646:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452     R10C8C.CLK to      R10C8C.Q1 CPU/SLICE_269 (from clk_c)
+ROUTE        39     7.846      R10C8C.Q1 to     R16C17B.M1 adrram_3
+MTOOFX_DEL  ---     0.376     R16C17B.M1 to   R16C17B.OFX1 RAM/i1817/SLICE_383
+ROUTE         1     2.322   R16C17B.OFX1 to     R18C12C.A1 RAM/n1960
+CTOOFX_DEL  ---     0.721     R18C12C.A1 to   R18C12C.OFX0 RAM/i120323_i1/SLICE_275
+ROUTE         2     1.488   R18C12C.OFX0 to     R18C18A.D0 RAM/data_7_N_66_4
+CTOF_DEL    ---     0.495     R18C18A.D0 to     R18C18A.F0 RAM/SLICE_14
+ROUTE        66     3.455     R18C18A.F0 to     R10C18B.M1 data_4 (to CPU/we_N_63)
+                  --------
+                   17.155   (11.9% logic, 88.1% route), 4 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to CPU/SLICE_269:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         C1.PAD to       C1.PADDI clk
+ROUTE        16     3.044       C1.PADDI to     R10C8C.CLK clk_c
+                  --------
+                    4.176   (27.1% logic, 72.9% route), 1 logic levels.
+
+      Destination Clock Path clk to RAM/SLICE_646:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         C1.PAD to       C1.PADDI clk
+ROUTE        16     2.703       C1.PADDI to      R2C16C.D0 clk_c
+CTOF_DEL    ---     0.495      R2C16C.D0 to      R2C16C.F0 SLICE_412
+ROUTE       256     4.889      R2C16C.F0 to    R10C18B.CLK CPU/we_N_63
+                  --------
+                    9.219   (17.6% logic, 82.4% route), 2 logic levels.
+
+
+Error: The following path exceeds requirements by 11.974ns (weighted slack = -121.957ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              CPU/adreg_i4  (from clk_c +)
+   Destination:    FF         Data in        RAM/mem_60__i0_i4  (to CPU/we_N_63 +)
+
+   Delay:              17.155ns  (11.9% logic, 88.1% route), 4 logic levels.
+
+ Constraint Details:
+
+     17.155ns physical path delay CPU/SLICE_269 to RAM/SLICE_674 exceeds
+      (delay constraint based on source clock period of 9.414ns and destination clock period of 4.950ns)
+      0.486ns delay constraint less
+     -5.043ns skew and
+      0.348ns M_SET requirement (totaling 5.181ns) by 11.974ns
+
+ Physical Path Details:
+
+      Data path CPU/SLICE_269 to RAM/SLICE_674:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452     R10C8C.CLK to      R10C8C.Q1 CPU/SLICE_269 (from clk_c)
+ROUTE        39     7.846      R10C8C.Q1 to     R16C17B.M1 adrram_3
+MTOOFX_DEL  ---     0.376     R16C17B.M1 to   R16C17B.OFX1 RAM/i1817/SLICE_383
+ROUTE         1     2.322   R16C17B.OFX1 to     R18C12C.A1 RAM/n1960
+CTOOFX_DEL  ---     0.721     R18C12C.A1 to   R18C12C.OFX0 RAM/i120323_i1/SLICE_275
+ROUTE         2     1.488   R18C12C.OFX0 to     R18C18A.D0 RAM/data_7_N_66_4
+CTOF_DEL    ---     0.495     R18C18A.D0 to     R18C18A.F0 RAM/SLICE_14
+ROUTE        66     3.455     R18C18A.F0 to     R10C18A.M1 data_4 (to CPU/we_N_63)
+                  --------
+                   17.155   (11.9% logic, 88.1% route), 4 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to CPU/SLICE_269:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         C1.PAD to       C1.PADDI clk
+ROUTE        16     3.044       C1.PADDI to     R10C8C.CLK clk_c
+                  --------
+                    4.176   (27.1% logic, 72.9% route), 1 logic levels.
+
+      Destination Clock Path clk to RAM/SLICE_674:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         C1.PAD to       C1.PADDI clk
+ROUTE        16     2.703       C1.PADDI to      R2C16C.D0 clk_c
+CTOF_DEL    ---     0.495      R2C16C.D0 to      R2C16C.F0 SLICE_412
+ROUTE       256     4.889      R2C16C.F0 to    R10C18A.CLK CPU/we_N_63
+                  --------
+                    9.219   (17.6% logic, 82.4% route), 2 logic levels.
+
+
+Error: The following path exceeds requirements by 11.974ns (weighted slack = -121.957ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              CPU/adreg_i4  (from clk_c +)
+   Destination:    FF         Data in        RAM/mem_51__i0_i4  (to CPU/we_N_63 +)
+
+   Delay:              17.155ns  (11.9% logic, 88.1% route), 4 logic levels.
+
+ Constraint Details:
+
+     17.155ns physical path delay CPU/SLICE_269 to RAM/SLICE_634 exceeds
+      (delay constraint based on source clock period of 9.414ns and destination clock period of 4.950ns)
+      0.486ns delay constraint less
+     -5.043ns skew and
+      0.348ns M_SET requirement (totaling 5.181ns) by 11.974ns
+
+ Physical Path Details:
+
+      Data path CPU/SLICE_269 to RAM/SLICE_634:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452     R10C8C.CLK to      R10C8C.Q1 CPU/SLICE_269 (from clk_c)
+ROUTE        39     7.846      R10C8C.Q1 to     R16C17B.M1 adrram_3
+MTOOFX_DEL  ---     0.376     R16C17B.M1 to   R16C17B.OFX1 RAM/i1817/SLICE_383
+ROUTE         1     2.322   R16C17B.OFX1 to     R18C12C.A1 RAM/n1960
+CTOOFX_DEL  ---     0.721     R18C12C.A1 to   R18C12C.OFX0 RAM/i120323_i1/SLICE_275
+ROUTE         2     1.488   R18C12C.OFX0 to     R18C18A.D0 RAM/data_7_N_66_4
+CTOF_DEL    ---     0.495     R18C18A.D0 to     R18C18A.F0 RAM/SLICE_14
+ROUTE        66     3.455     R18C18A.F0 to     R10C18C.M1 data_4 (to CPU/we_N_63)
+                  --------
+                   17.155   (11.9% logic, 88.1% route), 4 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to CPU/SLICE_269:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         C1.PAD to       C1.PADDI clk
+ROUTE        16     3.044       C1.PADDI to     R10C8C.CLK clk_c
+                  --------
+                    4.176   (27.1% logic, 72.9% route), 1 logic levels.
+
+      Destination Clock Path clk to RAM/SLICE_634:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         C1.PAD to       C1.PADDI clk
+ROUTE        16     2.703       C1.PADDI to      R2C16C.D0 clk_c
+CTOF_DEL    ---     0.495      R2C16C.D0 to      R2C16C.F0 SLICE_412
+ROUTE       256     4.889      R2C16C.F0 to    R10C18C.CLK CPU/we_N_63
+                  --------
+                    9.219   (17.6% logic, 82.4% route), 2 logic levels.
+
+
+Error: The following path exceeds requirements by 11.725ns (weighted slack = -119.421ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              CPU/adreg_i1  (from clk_c +)
+   Destination:    FF         Data in        RAM/mem_44__i0_i5  (to CPU/we_N_63 +)
+
+   Delay:              16.906ns  (17.0% logic, 83.0% route), 6 logic levels.
+
+ Constraint Details:
+
+     16.906ns physical path delay CPU/SLICE_268 to RAM/SLICE_602 exceeds
+      (delay constraint based on source clock period of 9.414ns and destination clock period of 4.950ns)
+      0.486ns delay constraint less
+     -5.043ns skew and
+      0.348ns M_SET requirement (totaling 5.181ns) by 11.725ns
+
+ Physical Path Details:
+
+      Data path CPU/SLICE_268 to RAM/SLICE_602:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452     R10C8B.CLK to      R10C8B.Q0 CPU/SLICE_268 (from clk_c)
+ROUTE       265     7.338      R10C8B.Q0 to     R20C20D.B1 adrram_0
+CTOOFX_DEL  ---     0.721     R20C20D.B1 to   R20C20D.OFX0 RAM/i1633/SLICE_382
+ROUTE         1     0.000   R20C20D.OFX0 to    R20C20C.FXA RAM/n1766
+FXTOOFX_DE  ---     0.241    R20C20C.FXA to   R20C20C.OFX1 RAM/i1634/SLICE_345
+ROUTE         1     0.000   R20C20C.OFX1 to    R20C20B.FXA RAM/n1772
+FXTOOFX_DE  ---     0.241    R20C20B.FXA to   R20C20B.OFX1 RAM/i1635/SLICE_353
+ROUTE         1     2.461   R20C20B.OFX1 to     R19C10B.B0 RAM/n1775
+CTOOFX_DEL  ---     0.721     R19C10B.B0 to   R19C10B.OFX0 RAM/i120926_i1/SLICE_274
+ROUTE         2     1.488   R19C10B.OFX0 to     R18C18A.D1 RAM/data_7_N_66_5
+CTOF_DEL    ---     0.495     R18C18A.D1 to     R18C18A.F1 RAM/SLICE_14
+ROUTE        66     2.748     R18C18A.F1 to     R16C18C.M0 data_5 (to CPU/we_N_63)
+                  --------
+                   16.906   (17.0% logic, 83.0% route), 6 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to CPU/SLICE_268:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         C1.PAD to       C1.PADDI clk
+ROUTE        16     3.044       C1.PADDI to     R10C8B.CLK clk_c
+                  --------
+                    4.176   (27.1% logic, 72.9% route), 1 logic levels.
+
+      Destination Clock Path clk to RAM/SLICE_602:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         C1.PAD to       C1.PADDI clk
+ROUTE        16     2.703       C1.PADDI to      R2C16C.D0 clk_c
+CTOF_DEL    ---     0.495      R2C16C.D0 to      R2C16C.F0 SLICE_412
+ROUTE       256     4.889      R2C16C.F0 to    R16C18C.CLK CPU/we_N_63
+                  --------
+                    9.219   (17.6% logic, 82.4% route), 2 logic levels.
+
+
+Error: The following path exceeds requirements by 11.725ns (weighted slack = -119.421ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              CPU/adreg_i1  (from clk_c +)
+   Destination:    FF         Data in        RAM/mem_42__i0_i5  (to CPU/we_N_63 +)
+
+   Delay:              16.906ns  (17.0% logic, 83.0% route), 6 logic levels.
+
+ Constraint Details:
+
+     16.906ns physical path delay CPU/SLICE_268 to RAM/SLICE_594 exceeds
+      (delay constraint based on source clock period of 9.414ns and destination clock period of 4.950ns)
+      0.486ns delay constraint less
+     -5.043ns skew and
+      0.348ns M_SET requirement (totaling 5.181ns) by 11.725ns
+
+ Physical Path Details:
+
+      Data path CPU/SLICE_268 to RAM/SLICE_594:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452     R10C8B.CLK to      R10C8B.Q0 CPU/SLICE_268 (from clk_c)
+ROUTE       265     7.338      R10C8B.Q0 to     R20C20D.B1 adrram_0
+CTOOFX_DEL  ---     0.721     R20C20D.B1 to   R20C20D.OFX0 RAM/i1633/SLICE_382
+ROUTE         1     0.000   R20C20D.OFX0 to    R20C20C.FXA RAM/n1766
+FXTOOFX_DE  ---     0.241    R20C20C.FXA to   R20C20C.OFX1 RAM/i1634/SLICE_345
+ROUTE         1     0.000   R20C20C.OFX1 to    R20C20B.FXA RAM/n1772
+FXTOOFX_DE  ---     0.241    R20C20B.FXA to   R20C20B.OFX1 RAM/i1635/SLICE_353
+ROUTE         1     2.461   R20C20B.OFX1 to     R19C10B.B0 RAM/n1775
+CTOOFX_DEL  ---     0.721     R19C10B.B0 to   R19C10B.OFX0 RAM/i120926_i1/SLICE_274
+ROUTE         2     1.488   R19C10B.OFX0 to     R18C18A.D1 RAM/data_7_N_66_5
+CTOF_DEL    ---     0.495     R18C18A.D1 to     R18C18A.F1 RAM/SLICE_14
+ROUTE        66     2.748     R18C18A.F1 to     R16C18A.M0 data_5 (to CPU/we_N_63)
+                  --------
+                   16.906   (17.0% logic, 83.0% route), 6 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to CPU/SLICE_268:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         C1.PAD to       C1.PADDI clk
+ROUTE        16     3.044       C1.PADDI to     R10C8B.CLK clk_c
+                  --------
+                    4.176   (27.1% logic, 72.9% route), 1 logic levels.
+
+      Destination Clock Path clk to RAM/SLICE_594:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         C1.PAD to       C1.PADDI clk
+ROUTE        16     2.703       C1.PADDI to      R2C16C.D0 clk_c
+CTOF_DEL    ---     0.495      R2C16C.D0 to      R2C16C.F0 SLICE_412
+ROUTE       256     4.889      R2C16C.F0 to    R16C18A.CLK CPU/we_N_63
+                  --------
+                    9.219   (17.6% logic, 82.4% route), 2 logic levels.
+
+Warning:   7.498MHz is the maximum frequency for this preference.
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference                              |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "clk_c" 106.225000 MHz ;  |  106.225 MHz|    0.378 MHz|  12 *
+                                        |             |             |
+FREQUENCY NET "CPU/we_N_63" 202.020000  |             |             |
+MHz ;                                   |  202.020 MHz|    7.498 MHz|   4 *
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+2 preferences(marked by "*" above) not met.
+
+----------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+----------------------------------------------------------------------------
+RAM/data_7_N_66_5                       |       2|    2412|     29.44%
+                                        |        |        |
+data_5                                  |      66|    2297|     28.04%
+                                        |        |        |
+RAM/data_7_N_66_4                       |       2|    2109|     25.74%
+                                        |        |        |
+CPU/n1540                               |       1|    2022|     24.68%
+                                        |        |        |
+adrram_0                                |     265|    1957|     23.89%
+                                        |        |        |
+CPU/n1541                               |       1|    1947|     23.77%
+                                        |        |        |
+data_4                                  |      66|    1924|     23.49%
+                                        |        |        |
+CPU/n1539                               |       1|    1423|     17.37%
+                                        |        |        |
+adrram_1                                |     136|    1344|     16.41%
+                                        |        |        |
+CPU/n1542                               |       1|    1019|     12.44%
+                                        |        |        |
+CPU/akku_o_8_N_44_8                     |       1|    1019|     12.44%
+                                        |        |        |
+CPU/akku_o_8_N_11_8                     |       1|    1019|     12.44%
+                                        |        |        |
+RAM/n1775                               |       1|     946|     11.55%
+                                        |        |        |
+RAM/n1774                               |       1|     865|     10.56%
+                                        |        |        |
+RAM/data_7_N_66_0                       |       2|     846|     10.33%
+                                        |        |        |
+----------------------------------------------------------------------------
+
+
+Clock Domains Analysis
+------------------------
+
+Found 2 clocks:
+
+Clock Domain: CPU/we_N_63   Source: SLICE_412.F0   Loads: 256
+   Covered under: FREQUENCY NET "CPU/we_N_63" 202.020000 MHz ;
+
+   Data transfers from:
+   Clock Domain: clk_c   Source: clk.PAD
+      Covered under: FREQUENCY NET "CPU/we_N_63" 202.020000 MHz ;   Transfers: 17
+
+Clock Domain: clk_c   Source: clk.PAD   Loads: 16
+   Covered under: FREQUENCY NET "clk_c" 106.225000 MHz ;
+
+   Data transfers from:
+   Clock Domain: CPU/we_N_63   Source: SLICE_412.F0
+      Covered under: FREQUENCY NET "clk_c" 106.225000 MHz ;   Transfers: 500
+
+   Clock Domain: CPU/we_N_63   Source: SLICE_412.F0
+      Covered under: FREQUENCY NET "clk_c" 106.225000 MHz ;   Transfers: 2
+
+   Clock Domain: CPU/we_N_63   Source: SLICE_412.F0
+      Covered under: FREQUENCY NET "clk_c" 106.225000 MHz ;   Transfers: 10
+
+
+Timing summary (Setup):
+---------------
+
+Timing errors: 8192  Score: 4294967295
+Cumulative negative slack: 4294967295
+
+Constraints cover 83108 paths, 43 nets, and 2771 connections (99.57% coverage)
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.10.0.111.2
+Wed Dec 09 16:45:54 2020
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 4 -sphld m -o CPU_impl1.twr -gui -msgset C:/Users/70735/Desktop/CPU/promote.xml CPU_impl1.ncd CPU_impl1.prf 
+Design file:     cpu_impl1.ncd
+Preference file: cpu_impl1.prf
+Device,speed:    LCMXO2-4000HC,m
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Preference: FREQUENCY NET "clk_c" 106.225000 MHz ;
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.382ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              CPU/akku_i2  (from clk_c +)
+   Destination:    FF         Data in        CPU/akku_i2  (to clk_c +)
+
+   Delay:               0.369ns  (63.4% logic, 36.6% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.369ns physical path delay CPU/SLICE_4 to CPU/SLICE_4 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.382ns
+
+ Physical Path Details:
+
+      Data path CPU/SLICE_4 to CPU/SLICE_4:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R18C4B.CLK to      R18C4B.Q1 CPU/SLICE_4 (from clk_c)
+ROUTE         4     0.135      R18C4B.Q1 to      R18C4B.D1 akku_o_c_1
+CTOF_DEL    ---     0.101      R18C4B.D1 to      R18C4B.F1 CPU/SLICE_4
+ROUTE         1     0.000      R18C4B.F1 to     R18C4B.DI1 CPU/akku_o_8_N_44_1 (to clk_c)
+                  --------
+                    0.369   (63.4% logic, 36.6% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to CPU/SLICE_4:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        16     1.116       C1.PADDI to     R18C4B.CLK clk_c
+                  --------
+                    1.116   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk to CPU/SLICE_4:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        16     1.116       C1.PADDI to     R18C4B.CLK clk_c
+                  --------
+                    1.116   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.382ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              CPU/akku_i6  (from clk_c +)
+   Destination:    FF         Data in        CPU/akku_i6  (to clk_c +)
+
+   Delay:               0.369ns  (63.4% logic, 36.6% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.369ns physical path delay CPU/SLICE_2 to CPU/SLICE_2 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.382ns
+
+ Physical Path Details:
+
+      Data path CPU/SLICE_2 to CPU/SLICE_2:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R18C4D.CLK to      R18C4D.Q1 CPU/SLICE_2 (from clk_c)
+ROUTE         4     0.135      R18C4D.Q1 to      R18C4D.D1 akku_o_c_5
+CTOF_DEL    ---     0.101      R18C4D.D1 to      R18C4D.F1 CPU/SLICE_2
+ROUTE         1     0.000      R18C4D.F1 to     R18C4D.DI1 CPU/akku_o_8_N_44_5 (to clk_c)
+                  --------
+                    0.369   (63.4% logic, 36.6% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to CPU/SLICE_2:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        16     1.116       C1.PADDI to     R18C4D.CLK clk_c
+                  --------
+                    1.116   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk to CPU/SLICE_2:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        16     1.116       C1.PADDI to     R18C4D.CLK clk_c
+                  --------
+                    1.116   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.383ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              CPU/akku_i4  (from clk_c +)
+   Destination:    FF         Data in        CPU/akku_i4  (to clk_c +)
+
+   Delay:               0.370ns  (63.2% logic, 36.8% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.370ns physical path delay CPU/SLICE_3 to CPU/SLICE_3 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.383ns
+
+ Physical Path Details:
+
+      Data path CPU/SLICE_3 to CPU/SLICE_3:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R18C4C.CLK to      R18C4C.Q1 CPU/SLICE_3 (from clk_c)
+ROUTE         4     0.136      R18C4C.Q1 to      R18C4C.D1 akku_o_c_3
+CTOF_DEL    ---     0.101      R18C4C.D1 to      R18C4C.F1 CPU/SLICE_3
+ROUTE         1     0.000      R18C4C.F1 to     R18C4C.DI1 CPU/akku_o_8_N_44_3 (to clk_c)
+                  --------
+                    0.370   (63.2% logic, 36.8% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to CPU/SLICE_3:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        16     1.116       C1.PADDI to     R18C4C.CLK clk_c
+                  --------
+                    1.116   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk to CPU/SLICE_3:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        16     1.116       C1.PADDI to     R18C4C.CLK clk_c
+                  --------
+                    1.116   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.384ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              CPU/akku_i7  (from clk_c +)
+   Destination:    FF         Data in        CPU/akku_i7  (to clk_c +)
+
+   Delay:               0.371ns  (63.1% logic, 36.9% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.371ns physical path delay CPU/SLICE_1 to CPU/SLICE_1 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.384ns
+
+ Physical Path Details:
+
+      Data path CPU/SLICE_1 to CPU/SLICE_1:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R18C5A.CLK to      R18C5A.Q0 CPU/SLICE_1 (from clk_c)
+ROUTE         4     0.137      R18C5A.Q0 to      R18C5A.D0 akku_o_c_6
+CTOF_DEL    ---     0.101      R18C5A.D0 to      R18C5A.F0 CPU/SLICE_1
+ROUTE         1     0.000      R18C5A.F0 to     R18C5A.DI0 CPU/akku_o_8_N_44_6 (to clk_c)
+                  --------
+                    0.371   (63.1% logic, 36.9% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to CPU/SLICE_1:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        16     1.116       C1.PADDI to     R18C5A.CLK clk_c
+                  --------
+                    1.116   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk to CPU/SLICE_1:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        16     1.116       C1.PADDI to     R18C5A.CLK clk_c
+                  --------
+                    1.116   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.393ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              CPU/states__i0  (from clk_c +)
+   Destination:    FF         Data in        CPU/adreg_i5  (to clk_c +)
+
+   Delay:               0.380ns  (61.6% logic, 38.4% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.380ns physical path delay CPU/SLICE_9 to CPU/SLICE_270 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.393ns
+
+ Physical Path Details:
+
+      Data path CPU/SLICE_9 to CPU/SLICE_270:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133    R19C10A.CLK to     R19C10A.Q0 CPU/SLICE_9 (from clk_c)
+ROUTE        21     0.146     R19C10A.Q0 to     R18C10A.C0 CPU/states_0
+CTOF_DEL    ---     0.101     R18C10A.C0 to     R18C10A.F0 CPU/SLICE_270
+ROUTE         1     0.000     R18C10A.F0 to    R18C10A.DI0 CPU/adress_5_N_3_4 (to clk_c)
+                  --------
+                    0.380   (61.6% logic, 38.4% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to CPU/SLICE_9:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        16     1.116       C1.PADDI to    R19C10A.CLK clk_c
+                  --------
+                    1.116   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk to CPU/SLICE_270:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        16     1.116       C1.PADDI to    R18C10A.CLK clk_c
+                  --------
+                    1.116   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.508ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              CPU/akku_i7  (from clk_c +)
+   Destination:    FF         Data in        CPU/akku_i8  (to clk_c +)
+
+   Delay:               0.495ns  (72.3% logic, 27.7% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.495ns physical path delay CPU/SLICE_1 to CPU/SLICE_1 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.508ns
+
+ Physical Path Details:
+
+      Data path CPU/SLICE_1 to CPU/SLICE_1:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R18C5A.CLK to      R18C5A.Q0 CPU/SLICE_1 (from clk_c)
+ROUTE         4     0.137      R18C5A.Q0 to      R18C5A.D0 akku_o_c_6
+CTOF1_DEL   ---     0.225      R18C5A.D0 to      R18C5A.F1 CPU/SLICE_1
+ROUTE         1     0.000      R18C5A.F1 to     R18C5A.DI1 CPU/akku_o_8_N_44_7 (to clk_c)
+                  --------
+                    0.495   (72.3% logic, 27.7% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to CPU/SLICE_1:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        16     1.116       C1.PADDI to     R18C5A.CLK clk_c
+                  --------
+                    1.116   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk to CPU/SLICE_1:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        16     1.116       C1.PADDI to     R18C5A.CLK clk_c
+                  --------
+                    1.116   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.511ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              CPU/states__i0  (from clk_c +)
+   Destination:    FF         Data in        CPU/adreg_i6  (to clk_c +)
+
+   Delay:               0.498ns  (47.0% logic, 53.0% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.498ns physical path delay CPU/SLICE_9 to CPU/SLICE_270 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.511ns
+
+ Physical Path Details:
+
+      Data path CPU/SLICE_9 to CPU/SLICE_270:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133    R19C10A.CLK to     R19C10A.Q0 CPU/SLICE_9 (from clk_c)
+ROUTE        21     0.264     R19C10A.Q0 to     R18C10A.D1 CPU/states_0
+CTOF_DEL    ---     0.101     R18C10A.D1 to     R18C10A.F1 CPU/SLICE_270
+ROUTE         1     0.000     R18C10A.F1 to    R18C10A.DI1 CPU/adress_5_N_3_5 (to clk_c)
+                  --------
+                    0.498   (47.0% logic, 53.0% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to CPU/SLICE_9:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        16     1.116       C1.PADDI to    R19C10A.CLK clk_c
+                  --------
+                    1.116   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk to CPU/SLICE_270:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        16     1.116       C1.PADDI to    R18C10A.CLK clk_c
+                  --------
+                    1.116   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.524ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              CPU/akku_i5  (from clk_c +)
+   Destination:    FF         Data in        CPU/akku_i5  (to clk_c +)
+
+   Delay:               0.511ns  (45.8% logic, 54.2% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.511ns physical path delay CPU/SLICE_2 to CPU/SLICE_2 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.524ns
+
+ Physical Path Details:
+
+      Data path CPU/SLICE_2 to CPU/SLICE_2:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R18C4D.CLK to      R18C4D.Q0 CPU/SLICE_2 (from clk_c)
+ROUTE         4     0.277      R18C4D.Q0 to      R18C4D.D0 akku_o_c_4
+CTOF_DEL    ---     0.101      R18C4D.D0 to      R18C4D.F0 CPU/SLICE_2
+ROUTE         1     0.000      R18C4D.F0 to     R18C4D.DI0 CPU/akku_o_8_N_44_4 (to clk_c)
+                  --------
+                    0.511   (45.8% logic, 54.2% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to CPU/SLICE_2:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        16     1.116       C1.PADDI to     R18C4D.CLK clk_c
+                  --------
+                    1.116   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk to CPU/SLICE_2:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        16     1.116       C1.PADDI to     R18C4D.CLK clk_c
+                  --------
+                    1.116   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.525ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              CPU/akku_i3  (from clk_c +)
+   Destination:    FF         Data in        CPU/akku_i3  (to clk_c +)
+
+   Delay:               0.512ns  (45.7% logic, 54.3% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.512ns physical path delay CPU/SLICE_3 to CPU/SLICE_3 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.525ns
+
+ Physical Path Details:
+
+      Data path CPU/SLICE_3 to CPU/SLICE_3:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R18C4C.CLK to      R18C4C.Q0 CPU/SLICE_3 (from clk_c)
+ROUTE         4     0.278      R18C4C.Q0 to      R18C4C.D0 akku_o_c_2
+CTOF_DEL    ---     0.101      R18C4C.D0 to      R18C4C.F0 CPU/SLICE_3
+ROUTE         1     0.000      R18C4C.F0 to     R18C4C.DI0 CPU/akku_o_8_N_44_2 (to clk_c)
+                  --------
+                    0.512   (45.7% logic, 54.3% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to CPU/SLICE_3:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        16     1.116       C1.PADDI to     R18C4C.CLK clk_c
+                  --------
+                    1.116   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk to CPU/SLICE_3:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        16     1.116       C1.PADDI to     R18C4C.CLK clk_c
+                  --------
+                    1.116   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.526ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              CPU/akku_i8  (from clk_c +)
+   Destination:    FF         Data in        CPU/akku_i8  (to clk_c +)
+
+   Delay:               0.513ns  (45.6% logic, 54.4% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.513ns physical path delay CPU/SLICE_1 to CPU/SLICE_1 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.526ns
+
+ Physical Path Details:
+
+      Data path CPU/SLICE_1 to CPU/SLICE_1:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R18C5A.CLK to      R18C5A.Q1 CPU/SLICE_1 (from clk_c)
+ROUTE         5     0.279      R18C5A.Q1 to      R18C5A.D1 akku_o_c_7
+CTOF_DEL    ---     0.101      R18C5A.D1 to      R18C5A.F1 CPU/SLICE_1
+ROUTE         1     0.000      R18C5A.F1 to     R18C5A.DI1 CPU/akku_o_8_N_44_7 (to clk_c)
+                  --------
+                    0.513   (45.6% logic, 54.4% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to CPU/SLICE_1:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        16     1.116       C1.PADDI to     R18C5A.CLK clk_c
+                  --------
+                    1.116   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk to CPU/SLICE_1:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        16     1.116       C1.PADDI to     R18C5A.CLK clk_c
+                  --------
+                    1.116   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+================================================================================
+Preference: FREQUENCY NET "CPU/we_N_63" 202.020000 MHz ;
+            4096 items scored, 4096 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error: The following path exceeds requirements by 2.801ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              CPU/akku_i8  (from clk_c +)
+   Destination:    FF         Data in        RAM/mem_0__i0_i7  (to CPU/we_N_63 +)
+
+   Delay:               0.525ns  (44.6% logic, 55.4% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.525ns physical path delay CPU/SLICE_1 to RAM/SLICE_15 exceeds
+      (delay constraint based on source clock period of 9.414ns and destination clock period of 4.950ns)
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+     -3.339ns skew requirement (totaling 3.326ns) by 2.801ns
+
+ Physical Path Details:
+
+      Data path CPU/SLICE_1 to RAM/SLICE_15:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R18C5A.CLK to      R18C5A.Q1 CPU/SLICE_1 (from clk_c)
+ROUTE         5     0.285      R18C5A.Q1 to      R19C3B.C1 akku_o_c_7
+CTOF_DEL    ---     0.101      R19C3B.C1 to      R19C3B.F1 RAM/SLICE_15
+ROUTE        68     0.006      R19C3B.F1 to     R19C3B.DI1 data_7 (to CPU/we_N_63)
+                  --------
+                    0.525   (44.6% logic, 55.4% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to CPU/SLICE_1:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.449         C1.PAD to       C1.PADDI clk
+ROUTE        16     1.116       C1.PADDI to     R18C5A.CLK clk_c
+                  --------
+                    1.565   (28.7% logic, 71.3% route), 1 logic levels.
+
+      Destination Clock Path clk to RAM/SLICE_15:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.449         C1.PAD to       C1.PADDI clk
+ROUTE        16     1.116       C1.PADDI to    R18C11C.CLK clk_c
+REG_DEL     ---     0.154    R18C11C.CLK to     R18C11C.Q0 CPU/SLICE_10
+ROUTE         7     0.990     R18C11C.Q0 to      R2C16C.D1 CPU/states_1
+CTOF_DEL    ---     0.177      R2C16C.D1 to      R2C16C.F1 SLICE_412
+ROUTE         7     0.164      R2C16C.F1 to      R2C16C.C0 CPU/n2312
+CTOF_DEL    ---     0.177      R2C16C.C0 to      R2C16C.F0 SLICE_412
+ROUTE       256     1.677      R2C16C.F0 to     R19C3B.CLK CPU/we_N_63
+                  --------
+                    4.904   (19.5% logic, 80.5% route), 4 logic levels.
+
+
+Error: The following path exceeds requirements by 2.675ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              CPU/adreg_i6  (from clk_c +)
+   Destination:    FF         Data in        RAM/mem_3__i0_i0  (to CPU/we_N_63 +)
+                   FF                        RAM/mem_3__i0_i1
+
+   Delay:               0.640ns  (36.6% logic, 63.4% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.640ns physical path delay CPU/SLICE_270 to RAM/SLICE_580 exceeds
+      (delay constraint based on source clock period of 9.414ns and destination clock period of 4.950ns)
+     -0.024ns CE_HLD and
+      0.000ns delay constraint less
+     -3.339ns skew requirement (totaling 3.315ns) by 2.675ns
+
+ Physical Path Details:
+
+      Data path CPU/SLICE_270 to RAM/SLICE_580:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133    R18C10A.CLK to     R18C10A.Q1 CPU/SLICE_270 (from clk_c)
+ROUTE        73     0.153     R18C10A.Q1 to     R17C10A.C1 adrram_5
+CTOF_DEL    ---     0.101     R17C10A.C1 to     R17C10A.F1 RAM/SLICE_431
+ROUTE         4     0.253     R17C10A.F1 to     R14C10B.CE RAM/we_N_63_enable_416 (to CPU/we_N_63)
+                  --------
+                    0.640   (36.6% logic, 63.4% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to CPU/SLICE_270:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.449         C1.PAD to       C1.PADDI clk
+ROUTE        16     1.116       C1.PADDI to    R18C10A.CLK clk_c
+                  --------
+                    1.565   (28.7% logic, 71.3% route), 1 logic levels.
+
+      Destination Clock Path clk to RAM/SLICE_580:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.449         C1.PAD to       C1.PADDI clk
+ROUTE        16     1.116       C1.PADDI to    R18C11C.CLK clk_c
+REG_DEL     ---     0.154    R18C11C.CLK to     R18C11C.Q0 CPU/SLICE_10
+ROUTE         7     0.990     R18C11C.Q0 to      R2C16C.D1 CPU/states_1
+CTOF_DEL    ---     0.177      R2C16C.D1 to      R2C16C.F1 SLICE_412
+ROUTE         7     0.164      R2C16C.F1 to      R2C16C.C0 CPU/n2312
+CTOF_DEL    ---     0.177      R2C16C.C0 to      R2C16C.F0 SLICE_412
+ROUTE       256     1.677      R2C16C.F0 to    R14C10B.CLK CPU/we_N_63
+                  --------
+                    4.904   (19.5% logic, 80.5% route), 4 logic levels.
+
+
+Error: The following path exceeds requirements by 2.662ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              CPU/akku_i2  (from clk_c +)
+   Destination:    FF         Data in        RAM/mem_0__i0_i1  (to CPU/we_N_63 +)
+
+   Delay:               0.664ns  (35.2% logic, 64.8% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.664ns physical path delay CPU/SLICE_4 to RAM/SLICE_12 exceeds
+      (delay constraint based on source clock period of 9.414ns and destination clock period of 4.950ns)
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+     -3.339ns skew requirement (totaling 3.326ns) by 2.662ns
+
+ Physical Path Details:
+
+      Data path CPU/SLICE_4 to RAM/SLICE_12:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R18C4B.CLK to      R18C4B.Q1 CPU/SLICE_4 (from clk_c)
+ROUTE         4     0.423      R18C4B.Q1 to     R12C11A.C1 akku_o_c_1
+CTOF_DEL    ---     0.101     R12C11A.C1 to     R12C11A.F1 RAM/SLICE_12
+ROUTE        66     0.007     R12C11A.F1 to    R12C11A.DI1 data_1 (to CPU/we_N_63)
+                  --------
+                    0.664   (35.2% logic, 64.8% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to CPU/SLICE_4:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.449         C1.PAD to       C1.PADDI clk
+ROUTE        16     1.116       C1.PADDI to     R18C4B.CLK clk_c
+                  --------
+                    1.565   (28.7% logic, 71.3% route), 1 logic levels.
+
+      Destination Clock Path clk to RAM/SLICE_12:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.449         C1.PAD to       C1.PADDI clk
+ROUTE        16     1.116       C1.PADDI to    R18C11C.CLK clk_c
+REG_DEL     ---     0.154    R18C11C.CLK to     R18C11C.Q0 CPU/SLICE_10
+ROUTE         7     0.990     R18C11C.Q0 to      R2C16C.D1 CPU/states_1
+CTOF_DEL    ---     0.177      R2C16C.D1 to      R2C16C.F1 SLICE_412
+ROUTE         7     0.164      R2C16C.F1 to      R2C16C.C0 CPU/n2312
+CTOF_DEL    ---     0.177      R2C16C.C0 to      R2C16C.F0 SLICE_412
+ROUTE       256     1.677      R2C16C.F0 to    R12C11A.CLK CPU/we_N_63
+                  --------
+                    4.904   (19.5% logic, 80.5% route), 4 logic levels.
+
+
+Error: The following path exceeds requirements by 2.661ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              CPU/adreg_i6  (from clk_c +)
+   Destination:    FF         Data in        RAM/mem_58__i0_i2  (to CPU/we_N_63 +)
+                   FF                        RAM/mem_58__i0_i3
+
+   Delay:               0.654ns  (35.8% logic, 64.2% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.654ns physical path delay CPU/SLICE_270 to RAM/SLICE_661 exceeds
+      (delay constraint based on source clock period of 9.414ns and destination clock period of 4.950ns)
+     -0.024ns CE_HLD and
+      0.000ns delay constraint less
+     -3.339ns skew requirement (totaling 3.315ns) by 2.661ns
+
+ Physical Path Details:
+
+      Data path CPU/SLICE_270 to RAM/SLICE_661:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133    R18C10A.CLK to     R18C10A.Q1 CPU/SLICE_270 (from clk_c)
+ROUTE        73     0.273     R18C10A.Q1 to     R18C11A.D1 adrram_5
+CTOF_DEL    ---     0.101     R18C11A.D1 to     R18C11A.F1 RAM/SLICE_438
+ROUTE         4     0.147     R18C11A.F1 to     R18C10B.CE RAM/we_N_63_enable_455 (to CPU/we_N_63)
+                  --------
+                    0.654   (35.8% logic, 64.2% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to CPU/SLICE_270:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.449         C1.PAD to       C1.PADDI clk
+ROUTE        16     1.116       C1.PADDI to    R18C10A.CLK clk_c
+                  --------
+                    1.565   (28.7% logic, 71.3% route), 1 logic levels.
+
+      Destination Clock Path clk to RAM/SLICE_661:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.449         C1.PAD to       C1.PADDI clk
+ROUTE        16     1.116       C1.PADDI to    R18C11C.CLK clk_c
+REG_DEL     ---     0.154    R18C11C.CLK to     R18C11C.Q0 CPU/SLICE_10
+ROUTE         7     0.990     R18C11C.Q0 to      R2C16C.D1 CPU/states_1
+CTOF_DEL    ---     0.177      R2C16C.D1 to      R2C16C.F1 SLICE_412
+ROUTE         7     0.164      R2C16C.F1 to      R2C16C.C0 CPU/n2312
+CTOF_DEL    ---     0.177      R2C16C.C0 to      R2C16C.F0 SLICE_412
+ROUTE       256     1.677      R2C16C.F0 to    R18C10B.CLK CPU/we_N_63
+                  --------
+                    4.904   (19.5% logic, 80.5% route), 4 logic levels.
+
+
+Error: The following path exceeds requirements by 2.661ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              CPU/akku_i7  (from clk_c +)
+   Destination:    FF         Data in        RAM/mem_0__i0_i6  (to CPU/we_N_63 +)
+
+   Delay:               0.665ns  (35.2% logic, 64.8% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.665ns physical path delay CPU/SLICE_1 to RAM/SLICE_15 exceeds
+      (delay constraint based on source clock period of 9.414ns and destination clock period of 4.950ns)
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+     -3.339ns skew requirement (totaling 3.326ns) by 2.661ns
+
+ Physical Path Details:
+
+      Data path CPU/SLICE_1 to RAM/SLICE_15:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R18C5A.CLK to      R18C5A.Q0 CPU/SLICE_1 (from clk_c)
+ROUTE         4     0.419      R18C5A.Q0 to      R19C3B.C0 akku_o_c_6
+CTOF_DEL    ---     0.101      R19C3B.C0 to      R19C3B.F0 RAM/SLICE_15
+ROUTE        68     0.012      R19C3B.F0 to     R19C3B.DI0 data_6 (to CPU/we_N_63)
+                  --------
+                    0.665   (35.2% logic, 64.8% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to CPU/SLICE_1:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.449         C1.PAD to       C1.PADDI clk
+ROUTE        16     1.116       C1.PADDI to     R18C5A.CLK clk_c
+                  --------
+                    1.565   (28.7% logic, 71.3% route), 1 logic levels.
+
+      Destination Clock Path clk to RAM/SLICE_15:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.449         C1.PAD to       C1.PADDI clk
+ROUTE        16     1.116       C1.PADDI to    R18C11C.CLK clk_c
+REG_DEL     ---     0.154    R18C11C.CLK to     R18C11C.Q0 CPU/SLICE_10
+ROUTE         7     0.990     R18C11C.Q0 to      R2C16C.D1 CPU/states_1
+CTOF_DEL    ---     0.177      R2C16C.D1 to      R2C16C.F1 SLICE_412
+ROUTE         7     0.164      R2C16C.F1 to      R2C16C.C0 CPU/n2312
+CTOF_DEL    ---     0.177      R2C16C.C0 to      R2C16C.F0 SLICE_412
+ROUTE       256     1.677      R2C16C.F0 to     R19C3B.CLK CPU/we_N_63
+                  --------
+                    4.904   (19.5% logic, 80.5% route), 4 logic levels.
+
+
+Error: The following path exceeds requirements by 2.643ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              CPU/akku_i8  (from clk_c +)
+   Destination:    FF         Data in        RAM/mem_33__i0_i7  (to CPU/we_N_63 +)
+
+   Delay:               0.677ns  (34.6% logic, 65.4% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.677ns physical path delay CPU/SLICE_1 to RAM/SLICE_555 exceeds
+      (delay constraint based on source clock period of 9.414ns and destination clock period of 4.950ns)
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+     -3.339ns skew requirement (totaling 3.320ns) by 2.643ns
+
+ Physical Path Details:
+
+      Data path CPU/SLICE_1 to RAM/SLICE_555:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R18C5A.CLK to      R18C5A.Q1 CPU/SLICE_1 (from clk_c)
+ROUTE         5     0.285      R18C5A.Q1 to      R19C3B.C1 akku_o_c_7
+CTOF_DEL    ---     0.101      R19C3B.C1 to      R19C3B.F1 RAM/SLICE_15
+ROUTE        68     0.158      R19C3B.F1 to      R19C3D.M0 data_7 (to CPU/we_N_63)
+                  --------
+                    0.677   (34.6% logic, 65.4% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to CPU/SLICE_1:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.449         C1.PAD to       C1.PADDI clk
+ROUTE        16     1.116       C1.PADDI to     R18C5A.CLK clk_c
+                  --------
+                    1.565   (28.7% logic, 71.3% route), 1 logic levels.
+
+      Destination Clock Path clk to RAM/SLICE_555:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.449         C1.PAD to       C1.PADDI clk
+ROUTE        16     1.116       C1.PADDI to    R18C11C.CLK clk_c
+REG_DEL     ---     0.154    R18C11C.CLK to     R18C11C.Q0 CPU/SLICE_10
+ROUTE         7     0.990     R18C11C.Q0 to      R2C16C.D1 CPU/states_1
+CTOF_DEL    ---     0.177      R2C16C.D1 to      R2C16C.F1 SLICE_412
+ROUTE         7     0.164      R2C16C.F1 to      R2C16C.C0 CPU/n2312
+CTOF_DEL    ---     0.177      R2C16C.C0 to      R2C16C.F0 SLICE_412
+ROUTE       256     1.677      R2C16C.F0 to     R19C3D.CLK CPU/we_N_63
+                  --------
+                    4.904   (19.5% logic, 80.5% route), 4 logic levels.
+
+
+Error: The following path exceeds requirements by 2.637ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              CPU/akku_i8  (from clk_c +)
+   Destination:    FF         Data in        RAM/mem_5__i0_i7  (to CPU/we_N_63 +)
+
+   Delay:               0.683ns  (34.3% logic, 65.7% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.683ns physical path delay CPU/SLICE_1 to RAM/SLICE_671 exceeds
+      (delay constraint based on source clock period of 9.414ns and destination clock period of 4.950ns)
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+     -3.339ns skew requirement (totaling 3.320ns) by 2.637ns
+
+ Physical Path Details:
+
+      Data path CPU/SLICE_1 to RAM/SLICE_671:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R18C5A.CLK to      R18C5A.Q1 CPU/SLICE_1 (from clk_c)
+ROUTE         5     0.285      R18C5A.Q1 to      R19C3B.C1 akku_o_c_7
+CTOF_DEL    ---     0.101      R19C3B.C1 to      R19C3B.F1 RAM/SLICE_15
+ROUTE        68     0.164      R19C3B.F1 to      R19C3A.M0 data_7 (to CPU/we_N_63)
+                  --------
+                    0.683   (34.3% logic, 65.7% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to CPU/SLICE_1:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.449         C1.PAD to       C1.PADDI clk
+ROUTE        16     1.116       C1.PADDI to     R18C5A.CLK clk_c
+                  --------
+                    1.565   (28.7% logic, 71.3% route), 1 logic levels.
+
+      Destination Clock Path clk to RAM/SLICE_671:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.449         C1.PAD to       C1.PADDI clk
+ROUTE        16     1.116       C1.PADDI to    R18C11C.CLK clk_c
+REG_DEL     ---     0.154    R18C11C.CLK to     R18C11C.Q0 CPU/SLICE_10
+ROUTE         7     0.990     R18C11C.Q0 to      R2C16C.D1 CPU/states_1
+CTOF_DEL    ---     0.177      R2C16C.D1 to      R2C16C.F1 SLICE_412
+ROUTE         7     0.164      R2C16C.F1 to      R2C16C.C0 CPU/n2312
+CTOF_DEL    ---     0.177      R2C16C.C0 to      R2C16C.F0 SLICE_412
+ROUTE       256     1.677      R2C16C.F0 to     R19C3A.CLK CPU/we_N_63
+                  --------
+                    4.904   (19.5% logic, 80.5% route), 4 logic levels.
+
+
+Error: The following path exceeds requirements by 2.637ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              CPU/akku_i8  (from clk_c +)
+   Destination:    FF         Data in        RAM/mem_8__i0_i7  (to CPU/we_N_63 +)
+
+   Delay:               0.683ns  (34.3% logic, 65.7% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.683ns physical path delay CPU/SLICE_1 to RAM/SLICE_699 exceeds
+      (delay constraint based on source clock period of 9.414ns and destination clock period of 4.950ns)
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+     -3.339ns skew requirement (totaling 3.320ns) by 2.637ns
+
+ Physical Path Details:
+
+      Data path CPU/SLICE_1 to RAM/SLICE_699:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R18C5A.CLK to      R18C5A.Q1 CPU/SLICE_1 (from clk_c)
+ROUTE         5     0.285      R18C5A.Q1 to      R19C3B.C1 akku_o_c_7
+CTOF_DEL    ---     0.101      R19C3B.C1 to      R19C3B.F1 RAM/SLICE_15
+ROUTE        68     0.164      R19C3B.F1 to      R19C3C.M0 data_7 (to CPU/we_N_63)
+                  --------
+                    0.683   (34.3% logic, 65.7% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to CPU/SLICE_1:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.449         C1.PAD to       C1.PADDI clk
+ROUTE        16     1.116       C1.PADDI to     R18C5A.CLK clk_c
+                  --------
+                    1.565   (28.7% logic, 71.3% route), 1 logic levels.
+
+      Destination Clock Path clk to RAM/SLICE_699:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.449         C1.PAD to       C1.PADDI clk
+ROUTE        16     1.116       C1.PADDI to    R18C11C.CLK clk_c
+REG_DEL     ---     0.154    R18C11C.CLK to     R18C11C.Q0 CPU/SLICE_10
+ROUTE         7     0.990     R18C11C.Q0 to      R2C16C.D1 CPU/states_1
+CTOF_DEL    ---     0.177      R2C16C.D1 to      R2C16C.F1 SLICE_412
+ROUTE         7     0.164      R2C16C.F1 to      R2C16C.C0 CPU/n2312
+CTOF_DEL    ---     0.177      R2C16C.C0 to      R2C16C.F0 SLICE_412
+ROUTE       256     1.677      R2C16C.F0 to     R19C3C.CLK CPU/we_N_63
+                  --------
+                    4.904   (19.5% logic, 80.5% route), 4 logic levels.
+
+
+Error: The following path exceeds requirements by 2.591ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              CPU/adreg_i6  (from clk_c +)
+   Destination:    FF         Data in        RAM/mem_43__i0_i2  (to CPU/we_N_63 +)
+                   FF                        RAM/mem_43__i0_i3
+
+   Delay:               0.724ns  (32.3% logic, 67.7% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.724ns physical path delay CPU/SLICE_270 to RAM/SLICE_597 exceeds
+      (delay constraint based on source clock period of 9.414ns and destination clock period of 4.950ns)
+     -0.024ns CE_HLD and
+      0.000ns delay constraint less
+     -3.339ns skew requirement (totaling 3.315ns) by 2.591ns
+
+ Physical Path Details:
+
+      Data path CPU/SLICE_270 to RAM/SLICE_597:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133    R18C10A.CLK to     R18C10A.Q1 CPU/SLICE_270 (from clk_c)
+ROUTE        73     0.231     R18C10A.Q1 to     R17C10D.B1 adrram_5
+CTOF_DEL    ---     0.101     R17C10D.B1 to     R17C10D.F1 RAM/SLICE_441
+ROUTE         4     0.259     R17C10D.F1 to     R16C10D.CE RAM/we_N_63_enable_219 (to CPU/we_N_63)
+                  --------
+                    0.724   (32.3% logic, 67.7% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to CPU/SLICE_270:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.449         C1.PAD to       C1.PADDI clk
+ROUTE        16     1.116       C1.PADDI to    R18C10A.CLK clk_c
+                  --------
+                    1.565   (28.7% logic, 71.3% route), 1 logic levels.
+
+      Destination Clock Path clk to RAM/SLICE_597:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.449         C1.PAD to       C1.PADDI clk
+ROUTE        16     1.116       C1.PADDI to    R18C11C.CLK clk_c
+REG_DEL     ---     0.154    R18C11C.CLK to     R18C11C.Q0 CPU/SLICE_10
+ROUTE         7     0.990     R18C11C.Q0 to      R2C16C.D1 CPU/states_1
+CTOF_DEL    ---     0.177      R2C16C.D1 to      R2C16C.F1 SLICE_412
+ROUTE         7     0.164      R2C16C.F1 to      R2C16C.C0 CPU/n2312
+CTOF_DEL    ---     0.177      R2C16C.C0 to      R2C16C.F0 SLICE_412
+ROUTE       256     1.677      R2C16C.F0 to    R16C10D.CLK CPU/we_N_63
+                  --------
+                    4.904   (19.5% logic, 80.5% route), 4 logic levels.
+
+
+Error: The following path exceeds requirements by 2.589ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              CPU/adreg_i6  (from clk_c +)
+   Destination:    FF         Data in        RAM/mem_7__i0_i0  (to CPU/we_N_63 +)
+                   FF                        RAM/mem_7__i0_i1
+
+   Delay:               0.726ns  (32.2% logic, 67.8% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.726ns physical path delay CPU/SLICE_270 to RAM/SLICE_692 exceeds
+      (delay constraint based on source clock period of 9.414ns and destination clock period of 4.950ns)
+     -0.024ns CE_HLD and
+      0.000ns delay constraint less
+     -3.339ns skew requirement (totaling 3.315ns) by 2.589ns
+
+ Physical Path Details:
+
+      Data path CPU/SLICE_270 to RAM/SLICE_692:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133    R18C10A.CLK to     R18C10A.Q1 CPU/SLICE_270 (from clk_c)
+ROUTE        73     0.153     R18C10A.Q1 to     R17C10A.C0 adrram_5
+CTOF_DEL    ---     0.101     R17C10A.C0 to     R17C10A.F0 RAM/SLICE_431
+ROUTE         4     0.339     R17C10A.F0 to     R14C11D.CE RAM/we_N_63_enable_377 (to CPU/we_N_63)
+                  --------
+                    0.726   (32.2% logic, 67.8% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to CPU/SLICE_270:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.449         C1.PAD to       C1.PADDI clk
+ROUTE        16     1.116       C1.PADDI to    R18C10A.CLK clk_c
+                  --------
+                    1.565   (28.7% logic, 71.3% route), 1 logic levels.
+
+      Destination Clock Path clk to RAM/SLICE_692:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.449         C1.PAD to       C1.PADDI clk
+ROUTE        16     1.116       C1.PADDI to    R18C11C.CLK clk_c
+REG_DEL     ---     0.154    R18C11C.CLK to     R18C11C.Q0 CPU/SLICE_10
+ROUTE         7     0.990     R18C11C.Q0 to      R2C16C.D1 CPU/states_1
+CTOF_DEL    ---     0.177      R2C16C.D1 to      R2C16C.F1 SLICE_412
+ROUTE         7     0.164      R2C16C.F1 to      R2C16C.C0 CPU/n2312
+CTOF_DEL    ---     0.177      R2C16C.C0 to      R2C16C.F0 SLICE_412
+ROUTE       256     1.677      R2C16C.F0 to    R14C11D.CLK CPU/we_N_63
+                  --------
+                    4.904   (19.5% logic, 80.5% route), 4 logic levels.
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference(MIN Delays)                  |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "clk_c" 106.225000 MHz ;  |     0.000 ns|     0.382 ns|   2  
+                                        |             |             |
+FREQUENCY NET "CPU/we_N_63" 202.020000  |             |             |
+MHz ;                                   |     0.000 ns|    -2.801 ns|   2 *
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+1 preference(marked by "*" above) not met.
+
+----------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+----------------------------------------------------------------------------
+n2305                                   |       9|    1305|     31.86%
+                                        |        |        |
+adrram_4                                |      22|     856|     20.90%
+                                        |        |        |
+CPU/states_0                            |      21|     703|     17.16%
+                                        |        |        |
+CPU/states_1                            |       7|     677|     16.53%
+                                        |        |        |
+adrram_5                                |      73|     656|     16.02%
+                                        |        |        |
+data_2                                  |      66|     571|     13.94%
+                                        |        |        |
+data_3                                  |      66|     560|     13.67%
+                                        |        |        |
+data_0                                  |      66|     559|     13.65%
+                                        |        |        |
+oe_N_57                                 |      17|     491|     11.99%
+                                        |        |        |
+data_5                                  |      66|     443|     10.82%
+                                        |        |        |
+CPU/states_2                            |       7|     416|     10.16%
+                                        |        |        |
+data_6                                  |      68|     416|     10.16%
+                                        |        |        |
+----------------------------------------------------------------------------
+
+
+Clock Domains Analysis
+------------------------
+
+Found 2 clocks:
+
+Clock Domain: CPU/we_N_63   Source: SLICE_412.F0   Loads: 256
+   Covered under: FREQUENCY NET "CPU/we_N_63" 202.020000 MHz ;
+
+   Data transfers from:
+   Clock Domain: clk_c   Source: clk.PAD
+      Covered under: FREQUENCY NET "CPU/we_N_63" 202.020000 MHz ;   Transfers: 17
+
+Clock Domain: clk_c   Source: clk.PAD   Loads: 16
+   Covered under: FREQUENCY NET "clk_c" 106.225000 MHz ;
+
+   Data transfers from:
+   Clock Domain: CPU/we_N_63   Source: SLICE_412.F0
+      Covered under: FREQUENCY NET "clk_c" 106.225000 MHz ;   Transfers: 498
+
+   Clock Domain: CPU/we_N_63   Source: SLICE_412.F0
+      Covered under: FREQUENCY NET "clk_c" 106.225000 MHz ;   Transfers: 2
+
+   Clock Domain: CPU/we_N_63   Source: SLICE_412.F0
+      Covered under: FREQUENCY NET "clk_c" 106.225000 MHz ;   Transfers: 12
+
+
+Timing summary (Hold):
+---------------
+
+Timing errors: 4096  Score: 7704695
+Cumulative negative slack: 7704695
+
+Constraints cover 83108 paths, 43 nets, and 2770 connections (99.53% coverage)
+
+
+
+Timing summary (Setup and Hold):
+---------------
+
+Timing errors: 8192 (setup), 4096 (hold)
+Score: 4294967295 (setup), 7704695 (hold)
+Cumulative negative slack: 7704694 (4294967295+7704695)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+

@@ -1,0 +1,1145 @@
+
+map -a "MachXO2" -p LCMXO2-4000HC -t CSBGA132 -s 4 -oc Commercial   "CPU_impl1.ngd" -o "CPU_impl1_map.ncd" -pr "CPU_impl1.prf" -mp "CPU_impl1.mrp" -lpf "C:/Users/70735/Desktop/CPU/impl1/CPU_impl1.lpf" -lpf "C:/Users/70735/Desktop/CPU/CPU.lpf" -c 0            
+map:  version Diamond (64-bit) 3.10.0.111.2
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights reserved.
+   Process the file: CPU_impl1.ngd
+   Picdevice="LCMXO2-4000HC"
+
+   Pictype="CSBGA132"
+
+   Picspeed=4
+
+   Remove unused logic
+
+   Do not produce over sized NCDs.
+
+Part used: LCMXO2-4000HCCSBGA132, Performance used: 4.
+
+Loading device for application map from file 'xo2c4000.nph' in environment: E:/Diamond/diamond/3.10_x64/ispfpga.
+Package Status:                     Final          Version 1.44.
+
+Running general design DRC...
+
+Removing unused logic...
+
+Optimizing...
+
+
+
+
+Design Summary:
+   Number of registers:    536 out of  4635 (12%)
+      PFU registers:          536 out of  4320 (12%)
+      PIO registers:            0 out of   315 (0%)
+   Number of SLICEs:       406 out of  2160 (19%)
+      SLICEs as Logic/ROM:    406 out of  2160 (19%)
+      SLICEs as RAM:            0 out of  1620 (0%)
+      SLICEs as Carry:          6 out of  2160 (0%)
+   Number of LUT4s:        399 out of  4320 (9%)
+      Number used as logic LUTs:        387
+      Number used as distributed RAM:     0
+      Number used as ripple logic:       12
+      Number used as shift registers:     0
+   Number of PIO sites used: 20 + 4(JTAG) out of 105 (23%)
+   Number of block RAMs:  0 out of 10 (0%)
+   Number of GSRs:  1 out of 1 (100%)
+   EFB used :       No
+   JTAG used :      No
+   Readback used :  No
+   Oscillator used :  No
+   Startup used :   No
+   POR :            On
+   Bandgap :        On
+   Number of Power Controller:  0 out of 1 (0%)
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 6 (0%)
+   Number of Dynamic Bank Controller (BCLVDSO):  0 out of 1 (0%)
+   Number of DCCA:  0 out of 8 (0%)
+   Number of DCMA:  0 out of 2 (0%)
+   Number of PLLs:  0 out of 2 (0%)
+   Number of DQSDLLs:  0 out of 2 (0%)
+   Number of CLKDIVC:  0 out of 4 (0%)
+   Number of ECLKSYNCA:  0 out of 4 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and ripple logic.
+   Number of clocks:  2
+     Net clk_c: 14 loads, 14 rising, 0 falling (Driver: PIO clk )
+     Net CPU/we_N_63: 256 loads, 256 rising, 0 falling (Driver: CPU/i2203_2_lut_2_lut_3_lut_4_lut )
+   Number of Clock Enables:  67
+     Net CPU/clk_c_enable_15: 4 loads, 4 LSLICEs
+     Net CPU/clk_c_enable_7: 3 loads, 3 LSLICEs
+     Net CPU/clk_c_enable_8: 1 loads, 1 LSLICEs
+     Net we_N_63_enable_259: 4 loads, 4 LSLICEs
+     Net we_N_63_enable_315: 4 loads, 4 LSLICEs
+     Net we_N_63_enable_187: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_481: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_452: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_219: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_512: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_137: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_416: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_136: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_135: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_134: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_144: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_133: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_132: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_131: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_130: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_143: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_129: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_160: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_407: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_395: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_386: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_377: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_368: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_359: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_351: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_343: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_336: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_329: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_322: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_308: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_301: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_294: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_287: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_280: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_273: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_266: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_252: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_245: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_238: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_231: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_224: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_216: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_201: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_173: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_213: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_202: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_188: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_174: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_511: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_504: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_497: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_490: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_483: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_474: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_465: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_455: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_446: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_437: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_428: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_420: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_405: 4 loads, 4 LSLICEs
+     Net RAM/we_N_63_enable_379: 4 loads, 4 LSLICEs
+   Number of LSRs:  2
+     Net CPU/n2304: 2 loads, 2 LSLICEs
+     Net CPU/n804: 1 loads, 1 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net adrram_0: 265 loads
+     Net adrram_1: 136 loads
+     Net adrram_2: 132 loads
+     Net adrram_5: 73 loads
+     Net data_6: 68 loads
+     Net data_7: 68 loads
+     Net data_0: 66 loads
+     Net data_2: 66 loads
+     Net data_4: 66 loads
+     Net data_5: 66 loads
+ 
+
+   Number of warnings:  0
+   Number of errors:    0
+
+
+
+Total CPU Time: 5 secs  
+Total REAL Time: 5 secs  
+Peak Memory Usage: 54 MB
+
+Dumping design to file CPU_impl1_map.ncd.
+
+ncd2vdb "CPU_impl1_map.ncd" ".vdbs/CPU_impl1_map.vdb"
+
+Loading device for application ncd2vdb from file 'xo2c4000.nph' in environment: E:/Diamond/diamond/3.10_x64/ispfpga.
+
+trce -f "CPU_impl1.mt" -o "CPU_impl1.tw1" "CPU_impl1_map.ncd" "CPU_impl1.prf"
+trce:  version Diamond (64-bit) 3.10.0.111.2
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights reserved.
+
+Loading design for application trce from file cpu_impl1_map.ncd.
+Design name: cpu2system
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-4000HC
+Package:     CSBGA132
+Performance: 4
+Loading device for application trce from file 'xo2c4000.nph' in environment: E:/Diamond/diamond/3.10_x64/ispfpga.
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 34.4.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.10.0.111.2
+Wed Dec 09 16:43:29 2020
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o CPU_impl1.tw1 -gui -msgset C:/Users/70735/Desktop/CPU/promote.xml CPU_impl1_map.ncd CPU_impl1.prf 
+Design file:     cpu_impl1_map.ncd
+Preference file: cpu_impl1.prf
+Device,speed:    LCMXO2-4000HC,4
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+Report Type:     based on TRACE automatically generated preferences
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+Timing summary (Setup):
+---------------
+
+Timing errors: 8192  Score: 4294967295
+Cumulative negative slack: 4294967295
+
+Constraints cover 83108 paths, 43 nets, and 2763 connections (99.28% coverage)
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.10.0.111.2
+Wed Dec 09 16:43:35 2020
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o CPU_impl1.tw1 -gui -msgset C:/Users/70735/Desktop/CPU/promote.xml CPU_impl1_map.ncd CPU_impl1.prf 
+Design file:     cpu_impl1_map.ncd
+Preference file: cpu_impl1.prf
+Device,speed:    LCMXO2-4000HC,M
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+Timing summary (Hold):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 83108 paths, 43 nets, and 2771 connections (99.57% coverage)
+
+
+
+Timing summary (Setup and Hold):
+---------------
+
+Timing errors: 8192 (setup), 0 (hold)
+Score: 4294967295 (setup), 0 (hold)
+Cumulative negative slack: 4294967295 (4294967295+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+Total time: 9 secs 
+
+ldbanno "CPU_impl1_map.ncd" -n Verilog -o "CPU_impl1_mapvo.vo" -w -neg
+ldbanno: version Diamond (64-bit) 3.10.0.111.2
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights reserved.
+
+Writing a Verilog netlist using the orca library type based on the CPU_impl1_map design file.
+
+
+Loading design for application ldbanno from file CPU_impl1_map.ncd.
+Design name: cpu2system
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-4000HC
+Package:     CSBGA132
+Performance: 4
+Loading device for application ldbanno from file 'xo2c4000.nph' in environment: E:/Diamond/diamond/3.10_x64/ispfpga.
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 34.4.
+Converting design CPU_impl1_map.ncd into .ldb format.
+Writing Verilog netlist to file CPU_impl1_mapvo.vo
+Writing SDF timing to file CPU_impl1_mapvo.sdf
+    <postMsg mid="35400250" type="Info"    dynamic="1" navigation="0" arg0="0"  />
+
+ldbanno "CPU_impl1_map.ncd" -n VHDL -o "CPU_impl1_mapvho.vho" -w -neg
+ldbanno: version Diamond (64-bit) 3.10.0.111.2
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights reserved.
+
+Writing a VHDL netlist using the orca library type based on the CPU_impl1_map design file.
+
+
+Loading design for application ldbanno from file CPU_impl1_map.ncd.
+Design name: cpu2system
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-4000HC
+Package:     CSBGA132
+Performance: 4
+Loading device for application ldbanno from file 'xo2c4000.nph' in environment: E:/Diamond/diamond/3.10_x64/ispfpga.
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 34.4.
+Converting design CPU_impl1_map.ncd into .ldb format.
+Writing VHDL netlist to file CPU_impl1_mapvho.vho
+Writing SDF timing to file CPU_impl1_mapvho.sdf
+    <postMsg mid="35400250" type="Info"    dynamic="1" navigation="0" arg0="0"  />
+
+mpartrce -p "CPU_impl1.p2t" -f "CPU_impl1.p3t" -tf "CPU_impl1.pt" "CPU_impl1_map.ncd" "CPU_impl1.ncd"
+
+---- MParTrce Tool ----
+Removing old design directory at request of -rem command line option to this program.
+Running par. Please wait . . .
+
+Lattice Place and Route Report for Design "CPU_impl1_map.ncd"
+Wed Dec 09 16:43:58 2020
+
+PAR: Place And Route Diamond (64-bit) 3.10.0.111.2.
+Command Line: par -w -l 5 -i 6 -t 1 -c 0 -e 0 -gui -msgset C:/Users/70735/Desktop/CPU/promote.xml -exp parUseNBR=1:parCDP=0:parCDR=0:parPathBased=OFF CPU_impl1_map.ncd CPU_impl1.dir/5_1.ncd CPU_impl1.prf
+Preference file: CPU_impl1.prf.
+Placement level-cost: 5-1.
+Routing Iterations: 6
+
+Loading design for application par from file CPU_impl1_map.ncd.
+Design name: cpu2system
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-4000HC
+Package:     CSBGA132
+Performance: 4
+Loading device for application par from file 'xo2c4000.nph' in environment: E:/Diamond/diamond/3.10_x64/ispfpga.
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 34.4.
+License checked out.
+
+
+Ignore Preference Error(s):  True
+Device utilization summary:
+
+   PIO (prelim)   20+4(JTAG)/280     9% used
+                  20+4(JTAG)/105     23% bonded
+
+   SLICE            406/2160         18% used
+
+   GSR                1/1           100% used
+
+
+Number of Signals: 899
+Number of Connections: 2783
+    <postMsg mid="61001101" type="Warning" dynamic="0" navigation="0"  />
+
+Pin Constraint Summary:
+   20 out of 20 pins locked (100% locked).
+
+The following 2 signals are selected to use the primary clock routing resources:
+    CPU/we_N_63 (driver: SLICE_412, clk load #: 256)
+    clk_c (driver: clk, clk load #: 14)
+
+    <postMsg mid="61061008" type="Warning" dynamic="5" navigation="0" arg0="clk_c" arg1="Primary" arg2="clk" arg3="C1" arg4="Primary"  />
+
+No signal is selected as secondary clock.
+
+Signal reset_c is selected as Global Set/Reset.
+Starting Placer Phase 0.
+..........
+Finished Placer Phase 0.  REAL time: 29 secs 
+
+Starting Placer Phase 1.
+.................
+Placer score = 339618109.
+Finished Placer Phase 1.  REAL time: 41 secs 
+
+Starting Placer Phase 2.
+.
+Placer score =  333093299
+Finished Placer Phase 2.  REAL time: 43 secs 
+
+
+------------------ Clock Report ------------------
+
+Global Clock Resources:
+  CLK_PIN    : 0 out of 8 (0%)
+  General PIO: 1 out of 280 (0%)
+  PLL        : 0 out of 2 (0%)
+  DCM        : 0 out of 2 (0%)
+  DCC        : 0 out of 8 (0%)
+
+Quadrants All (TL, TR, BL, BR) - Global Clocks:
+  PRIMARY "CPU/we_N_63" from F0 on comp "SLICE_412" on site "R2C16C", clk load = 256
+  PRIMARY "clk_c" from comp "clk" on PIO site "C1 (PL4A)", clk load = 14
+
+  PRIMARY  : 2 out of 8 (25%)
+  SECONDARY: 0 out of 8 (0%)
+
+Edge Clocks:
+  No edge clock selected.
+
+--------------- End of Clock Report ---------------
+
+
+I/O Usage Summary (final):
+   20 + 4(JTAG) out of 280 (8.6%) PIO sites used.
+   20 + 4(JTAG) out of 105 (22.9%) bonded PIO sites used.
+   Number of PIO comps: 20; differential: 0.
+   Number of Vref pins used: 0.
+
+I/O Bank Usage Summary:
++----------+---------------+------------+-----------+
+| I/O Bank | Usage         | Bank Vccio | Bank Vref |
++----------+---------------+------------+-----------+
+| 0        | 9 / 26 ( 34%) | 3.3V       | -         |
+| 1        | 2 / 26 (  7%) | 3.3V       | -         |
+| 2        | 0 / 28 (  0%) | -          | -         |
+| 3        | 1 / 7 ( 14%)  | 3.3V       | -         |
+| 4        | 4 / 8 ( 50%)  | 3.3V       | -         |
+| 5        | 4 / 10 ( 40%) | 3.3V       | -         |
++----------+---------------+------------+-----------+
+
+Total placer CPU time: 40 secs 
+
+Dumping design to file CPU_impl1.dir/5_1.ncd.
+
+0 connections routed; 2783 unrouted.
+Starting router resource preassignment
+
+Completed router resource preassignment. Real time: 1 mins 1 secs 
+
+Start NBR router at 16:45:00 12/09/20
+
+*****************************************************************
+Info: NBR allows conflicts(one node used by more than one signal)
+      in the earlier iterations. In each iteration, it tries to  
+      solve the conflicts while keeping the critical connections 
+      routed as short as possible. The routing process is said to
+      be completed when no conflicts exist and all connections   
+      are routed.                                                
+Note: NBR uses a different method to calculate timing slacks. The
+      worst slack and total negative slack may not be the same as
+      that in TRCE report. You should always run TRCE to verify  
+      your design.                                               
+*****************************************************************
+
+Start NBR special constraint process at 16:45:01 12/09/20
+
+Start NBR section for initial routing at 16:45:05 12/09/20
+Level 1, iteration 1
+5(0.00%) conflicts; 2218(79.70%) untouched conns; 1387325912 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -1605.191ns/-1387325.912ns; real time: 1 mins 9 secs 
+Level 2, iteration 1
+2(0.00%) conflicts; 2185(78.51%) untouched conns; 1398470390 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -1670.880ns/-1398470.390ns; real time: 1 mins 11 secs 
+Level 3, iteration 1
+0(0.00%) conflict; 2184(78.48%) untouched conns; 1410774579 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -1675.901ns/-1410774.580ns; real time: 1 mins 12 secs 
+Level 4, iteration 1
+96(0.04%) conflicts; 0(0.00%) untouched conn; 1462700276 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -1675.901ns/-1462700.277ns; real time: 1 mins 16 secs 
+
+Info: Initial congestion level at 75% usage is 0
+Info: Initial congestion area  at 75% usage is 0 (0.00%)
+
+Start NBR section for normal routing at 16:45:14 12/09/20
+Level 4, iteration 1
+35(0.01%) conflicts; 0(0.00%) untouched conn; -2147483648 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -2676.818ns/-2207598.452ns; real time: 1 mins 18 secs 
+Level 4, iteration 2
+20(0.01%) conflicts; 0(0.00%) untouched conn; -2147483648 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -2703.177ns/-2211271.842ns; real time: 1 mins 19 secs 
+Level 4, iteration 3
+10(0.00%) conflicts; 0(0.00%) untouched conn; 1471034485 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -1693.369ns/-1471034.486ns; real time: 1 mins 20 secs 
+Level 4, iteration 4
+1(0.00%) conflict; 0(0.00%) untouched conn; 1471034485 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -1693.369ns/-1471034.486ns; real time: 1 mins 21 secs 
+Level 4, iteration 5
+1(0.00%) conflict; 0(0.00%) untouched conn; 1481297555 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -1655.085ns/-1481297.556ns; real time: 1 mins 22 secs 
+Level 4, iteration 6
+3(0.00%) conflicts; 0(0.00%) untouched conn; 1481297555 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -1655.085ns/-1481297.556ns; real time: 1 mins 22 secs 
+Level 4, iteration 7
+1(0.00%) conflict; 0(0.00%) untouched conn; 1486934808 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -1662.721ns/-1486934.809ns; real time: 1 mins 23 secs 
+Level 4, iteration 8
+2(0.00%) conflicts; 0(0.00%) untouched conn; 1486934808 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -1662.721ns/-1486934.809ns; real time: 1 mins 23 secs 
+Level 4, iteration 9
+0(0.00%) conflict; 0(0.00%) untouched conn; -2147483648 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -2732.675ns/-2241954.358ns; real time: 1 mins 25 secs 
+Level 4, iteration 10
+0(0.00%) conflict; 0(0.00%) untouched conn; -2147483648 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -2732.675ns/-2241954.358ns; real time: 1 mins 25 secs 
+
+Start NBR section for performance tuning (iteration 1) at 16:45:23 12/09/20
+Level 4, iteration 1
+2(0.00%) conflicts; 0(0.00%) untouched conn; -2147483648 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -2648.158ns/-2224483.888ns; real time: 1 mins 26 secs 
+Level 4, iteration 2
+8(0.00%) conflicts; 0(0.00%) untouched conn; -2147483648 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -2642.300ns/-2211021.484ns; real time: 1 mins 28 secs 
+Level 4, iteration 3
+0(0.00%) conflict; 0(0.00%) untouched conn; -2147483648 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -2641.986ns/-2210387.783ns; real time: 1 mins 29 secs 
+
+Start NBR section for performance tuning (iteration 2) at 16:45:27 12/09/20
+Level 4, iteration 1
+11(0.00%) conflicts; 0(0.00%) untouched conn; -2147483648 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -2626.192ns/-2198255.237ns; real time: 1 mins 31 secs 
+Level 4, iteration 2
+1(0.00%) conflict; 0(0.00%) untouched conn; -2147483648 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -2611.339ns/-2202224.519ns; real time: 1 mins 32 secs 
+Level 4, iteration 3
+0(0.00%) conflict; 0(0.00%) untouched conn; -2147483648 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -2684.768ns/-2198022.235ns; real time: 1 mins 33 secs 
+
+Start NBR section for re-routing at 16:45:34 12/09/20
+Level 4, iteration 1
+0(0.00%) conflict; 0(0.00%) untouched conn; -2147483648 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -2638.116ns/-2210434.431ns; real time: 1 mins 39 secs 
+
+Start NBR section for post-routing at 16:45:37 12/09/20
+
+End NBR router with 0 unrouted connection
+
+NBR Summary
+-----------
+  Number of unrouted connections : 0 (0.00%)
+  Number of connections with timing violations : 2388 (85.81%)
+  Estimated worst slack<setup> : -2638.116ns
+  Timing score<setup> : 2147483647
+-----------
+Notes: The timing info is calculated for SETUP only and all PAR_ADJs are ignored.
+
+
+
+Total CPU time 1 mins 45 secs 
+Total REAL time: 1 mins 50 secs 
+Completely routed.
+End of route.  2783 routed (100.00%); 0 unrouted.
+
+Hold time timing score: 7704, hold timing errors: 4096
+
+Timing score: 2147483647 
+
+Dumping design to file CPU_impl1.dir/5_1.ncd.
+
+
+PAR_SUMMARY::Run status = Success
+PAR_SUMMARY::Number of unrouted conns = 0
+PAR_SUMMARY::Worst  slack<setup/<ns>> = -2638.117
+PAR_SUMMARY::Timing score<setup/<ns>> = 2147483.647
+PAR_SUMMARY::Worst  slack<hold /<ns>> = -2.801
+PAR_SUMMARY::Timing score<hold /<ns>> = 7704.695
+PAR_SUMMARY::Number of errors = 0
+
+Total CPU  time to completion: 1 mins 46 secs 
+Total REAL time to completion: 1 mins 51 secs 
+
+par done!
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights reserved.
+Exiting par with exit code 0
+Exiting mpartrce with exit code 0
+
+trce -f "CPU_impl1.pt" -o "CPU_impl1.twr" "CPU_impl1.ncd" "CPU_impl1.prf"
+trce:  version Diamond (64-bit) 3.10.0.111.2
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights reserved.
+
+Loading design for application trce from file cpu_impl1.ncd.
+Design name: cpu2system
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-4000HC
+Package:     CSBGA132
+Performance: 4
+Loading device for application trce from file 'xo2c4000.nph' in environment: E:/Diamond/diamond/3.10_x64/ispfpga.
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 34.4.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.10.0.111.2
+Wed Dec 09 16:45:52 2020
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 4 -sphld m -o CPU_impl1.twr -gui -msgset C:/Users/70735/Desktop/CPU/promote.xml CPU_impl1.ncd CPU_impl1.prf 
+Design file:     cpu_impl1.ncd
+Preference file: cpu_impl1.prf
+Device,speed:    LCMXO2-4000HC,4
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+Report Type:     based on TRACE automatically generated preferences
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+Timing summary (Setup):
+---------------
+
+Timing errors: 8192  Score: 4294967295
+Cumulative negative slack: 4294967295
+
+Constraints cover 83108 paths, 43 nets, and 2771 connections (99.57% coverage)
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.10.0.111.2
+Wed Dec 09 16:45:54 2020
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 4 -sphld m -o CPU_impl1.twr -gui -msgset C:/Users/70735/Desktop/CPU/promote.xml CPU_impl1.ncd CPU_impl1.prf 
+Design file:     cpu_impl1.ncd
+Preference file: cpu_impl1.prf
+Device,speed:    LCMXO2-4000HC,m
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+Timing summary (Hold):
+---------------
+
+Timing errors: 4096  Score: 7704695
+Cumulative negative slack: 7704695
+
+Constraints cover 83108 paths, 43 nets, and 2770 connections (99.53% coverage)
+
+
+
+Timing summary (Setup and Hold):
+---------------
+
+Timing errors: 8192 (setup), 4096 (hold)
+Score: 4294967295 (setup), 7704695 (hold)
+Cumulative negative slack: 7704694 (4294967295+7704695)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+Total time: 6 secs 
+
+iotiming  "CPU_impl1.ncd" "CPU_impl1.prf"
+I/O Timing Report:
+:  version Diamond (64-bit) 3.10.0.111.2
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights reserved.
+
+Loading design for application iotiming from file cpu_impl1.ncd.
+Design name: cpu2system
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-4000HC
+Package:     CSBGA132
+Performance: 4
+Loading device for application iotiming from file 'xo2c4000.nph' in environment: E:/Diamond/diamond/3.10_x64/ispfpga.
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 34.4.
+Running Performance Grade: 4
+Computing Setup Time ...
+Computing Max Clock to Output Delay ...
+Computing Hold Time ...
+Computing Min Clock to Output Delay ...
+
+Loading design for application iotiming from file cpu_impl1.ncd.
+Design name: cpu2system
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-4000HC
+Package:     CSBGA132
+Performance: 5
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 34.4.
+Running Performance Grade: 5
+Computing Setup Time ...
+Computing Max Clock to Output Delay ...
+Computing Hold Time ...
+Computing Min Clock to Output Delay ...
+
+Loading design for application iotiming from file cpu_impl1.ncd.
+Design name: cpu2system
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-4000HC
+Package:     CSBGA132
+Performance: 6
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 34.4.
+Running Performance Grade: 6
+Computing Setup Time ...
+Computing Max Clock to Output Delay ...
+Computing Hold Time ...
+Computing Min Clock to Output Delay ...
+
+Loading design for application iotiming from file cpu_impl1.ncd.
+Design name: cpu2system
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-4000HC
+Package:     CSBGA132
+Performance: M
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 34.4.
+Running Performance Grade: M
+Computing Setup Time ...
+Computing Max Clock to Output Delay ...
+Computing Hold Time ...
+Computing Min Clock to Output Delay ...
+Done.
+
+ibisgen "CPU_impl1.pad" "E:/Diamond/diamond/3.10_x64/cae_library/ibis/machxo2.ibs" 
+IBIS Models Generator: Lattice Diamond (64-bit) 3.10.0.111.2
+
+Wed Dec 09 16:46:05 2020
+
+Comp: akku_o[0]
+ Site: C12
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ PULL=DOWN 
+ SLEW=SLOW 
+-----------------------
+Comp: akku_o[1]
+ Site: B14
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ PULL=DOWN 
+ SLEW=SLOW 
+-----------------------
+Comp: akku_o[2]
+ Site: J1
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ PULL=DOWN 
+ SLEW=SLOW 
+-----------------------
+Comp: akku_o[3]
+ Site: H1
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ PULL=DOWN 
+ SLEW=SLOW 
+-----------------------
+Comp: akku_o[4]
+ Site: H2
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ PULL=DOWN 
+ SLEW=SLOW 
+-----------------------
+Comp: akku_o[5]
+ Site: B12
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ PULL=DOWN 
+ SLEW=SLOW 
+-----------------------
+Comp: akku_o[6]
+ Site: A11
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ PULL=DOWN 
+ SLEW=SLOW 
+-----------------------
+Comp: akku_o[7]
+ Site: K1
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ PULL=DOWN 
+ SLEW=SLOW 
+-----------------------
+Comp: akku_o[8]
+ Site: A12
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ PULL=DOWN 
+ SLEW=SLOW 
+-----------------------
+Comp: clk
+ Site: C1
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ PULL=DOWN 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: disp2[0]
+ Site: A10
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ PULL=DOWN 
+ SLEW=SLOW 
+-----------------------
+Comp: disp2[1]
+ Site: C11
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ PULL=DOWN 
+ SLEW=SLOW 
+-----------------------
+Comp: disp2[2]
+ Site: F2
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ PULL=DOWN 
+ SLEW=SLOW 
+-----------------------
+Comp: disp2[3]
+ Site: E1
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ PULL=DOWN 
+ SLEW=SLOW 
+-----------------------
+Comp: disp2[4]
+ Site: E2
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ PULL=DOWN 
+ SLEW=SLOW 
+-----------------------
+Comp: disp2[5]
+ Site: A9
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ PULL=DOWN 
+ SLEW=SLOW 
+-----------------------
+Comp: disp2[6]
+ Site: B9
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ PULL=DOWN 
+ SLEW=SLOW 
+-----------------------
+Comp: disp2[7]
+ Site: F1
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ PULL=DOWN 
+ SLEW=SLOW 
+-----------------------
+Comp: disp2[8]
+ Site: C9
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ PULL=DOWN 
+ SLEW=SLOW 
+-----------------------
+Comp: reset
+ Site: L14
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ PULL=DOWN 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Created design models.
+
+
+Generating: C:\Users\70735\Desktop\CPU\impl1\IBIS\CPU_impl1.ibs
+
+
+    <postMsg mid="1191031" type="Info"    dynamic="0" navigation="0"  />
+
+ldbanno "CPU_impl1.ncd" -n Verilog  -o "CPU_impl1_vo.vo"         -w -neg
+ldbanno: version Diamond (64-bit) 3.10.0.111.2
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights reserved.
+
+Writing a Verilog netlist using the orca library type based on the CPU_impl1 design file.
+
+
+Loading design for application ldbanno from file CPU_impl1.ncd.
+Design name: cpu2system
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-4000HC
+Package:     CSBGA132
+Performance: 4
+Loading device for application ldbanno from file 'xo2c4000.nph' in environment: E:/Diamond/diamond/3.10_x64/ispfpga.
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 34.4.
+Converting design CPU_impl1.ncd into .ldb format.
+Loading preferences from cpu_impl1.prf.
+Writing Verilog netlist to file CPU_impl1_vo.vo
+Writing SDF timing to file CPU_impl1_vo.sdf
+    <postMsg mid="35400250" type="Info"    dynamic="1" navigation="0" arg0="0"  />
+
+ldbanno "CPU_impl1.ncd" -n VHDL -o "CPU_impl1_vho.vho"         -w -neg 
+ldbanno: version Diamond (64-bit) 3.10.0.111.2
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights reserved.
+
+Writing a VHDL netlist using the orca library type based on the CPU_impl1 design file.
+
+
+Loading design for application ldbanno from file CPU_impl1.ncd.
+Design name: cpu2system
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-4000HC
+Package:     CSBGA132
+Performance: 4
+Loading device for application ldbanno from file 'xo2c4000.nph' in environment: E:/Diamond/diamond/3.10_x64/ispfpga.
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 34.4.
+Converting design CPU_impl1.ncd into .ldb format.
+Loading preferences from cpu_impl1.prf.
+Writing VHDL netlist to file CPU_impl1_vho.vho
+Writing SDF timing to file CPU_impl1_vho.sdf
+    <postMsg mid="35400250" type="Info"    dynamic="1" navigation="0" arg0="0"  />
+
+bitgen -f "CPU_impl1.t2b" -w "CPU_impl1.ncd" "CPU_impl1.prf"
+
+
+BITGEN: Bitstream Generator Diamond (64-bit) 3.10.0.111.2
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights reserved.
+
+
+Loading design for application Bitgen from file CPU_impl1.ncd.
+Design name: cpu2system
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-4000HC
+Package:     CSBGA132
+Performance: 4
+Loading device for application Bitgen from file 'xo2c4000.nph' in environment: E:/Diamond/diamond/3.10_x64/ispfpga.
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 34.4.
+
+Running DRC.
+DRC detected 0 errors and 0 warnings.
+Reading Preference File from CPU_impl1.prf.
+
+Preference Summary:
++---------------------------------+---------------------------------+
+|  Preference                     |  Current Setting                |
++---------------------------------+---------------------------------+
+|                         RamCfg  |                        Reset**  |
++---------------------------------+---------------------------------+
+|                     MCCLK_FREQ  |                         2.08**  |
++---------------------------------+---------------------------------+
+|                  CONFIG_SECURE  |                          OFF**  |
++---------------------------------+---------------------------------+
+|                          INBUF  |                           ON**  |
++---------------------------------+---------------------------------+
+|                      JTAG_PORT  |                       ENABLE**  |
++---------------------------------+---------------------------------+
+|                       SDM_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                 SLAVE_SPI_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                MASTER_SPI_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                       I2C_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|        MUX_CONFIGURATION_PORTS  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                  CONFIGURATION  |                          CFG**  |
++---------------------------------+---------------------------------+
+|                COMPRESS_CONFIG  |                           ON**  |
++---------------------------------+---------------------------------+
+|                        MY_ASSP  |                          OFF**  |
++---------------------------------+---------------------------------+
+|               ONE_TIME_PROGRAM  |                          OFF**  |
++---------------------------------+---------------------------------+
+|                 ENABLE_TRANSFR  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                  SHAREDEBRINIT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|            BACKGROUND_RECONFIG  |                          OFF**  |
++---------------------------------+---------------------------------+
+ *  Default setting.
+ ** The specified setting matches the default setting.
+
+
+Creating bit map...
+ 
+Bitstream Status: Final           Version 1.94.
+ 
+Saving bit stream in "CPU_impl1.bit".
+
+bitgen -f "CPU_impl1.t2b" -w "CPU_impl1.ncd" -jedec "CPU_impl1.prf"
+
+
+BITGEN: Bitstream Generator Diamond (64-bit) 3.10.0.111.2
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights reserved.
+
+
+Loading design for application Bitgen from file CPU_impl1.ncd.
+Design name: cpu2system
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-4000HC
+Package:     CSBGA132
+Performance: 4
+Loading device for application Bitgen from file 'xo2c4000.nph' in environment: E:/Diamond/diamond/3.10_x64/ispfpga.
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 34.4.
+
+Running DRC.
+DRC detected 0 errors and 0 warnings.
+Reading Preference File from CPU_impl1.prf.
+
+Preference Summary:
++---------------------------------+---------------------------------+
+|  Preference                     |  Current Setting                |
++---------------------------------+---------------------------------+
+|                         RamCfg  |                        Reset**  |
++---------------------------------+---------------------------------+
+|                     MCCLK_FREQ  |                         2.08**  |
++---------------------------------+---------------------------------+
+|                  CONFIG_SECURE  |                          OFF**  |
++---------------------------------+---------------------------------+
+|                          INBUF  |                           ON**  |
++---------------------------------+---------------------------------+
+|                      JTAG_PORT  |                       ENABLE**  |
++---------------------------------+---------------------------------+
+|                       SDM_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                 SLAVE_SPI_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                MASTER_SPI_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                       I2C_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|        MUX_CONFIGURATION_PORTS  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                  CONFIGURATION  |                          CFG**  |
++---------------------------------+---------------------------------+
+|                COMPRESS_CONFIG  |                           ON**  |
++---------------------------------+---------------------------------+
+|                        MY_ASSP  |                          OFF**  |
++---------------------------------+---------------------------------+
+|               ONE_TIME_PROGRAM  |                          OFF**  |
++---------------------------------+---------------------------------+
+|                 ENABLE_TRANSFR  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                  SHAREDEBRINIT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|            BACKGROUND_RECONFIG  |                          OFF**  |
++---------------------------------+---------------------------------+
+ *  Default setting.
+ ** The specified setting matches the default setting.
+
+
+Creating bit map...
+ 
+Bitstream Status: Final           Version 1.94.
+ 
+Saving bit stream in "CPU_impl1.jed".
+ 
+===========
+UFM Summary.
+===========
+UFM Size:        767 Pages (128*767 Bits).
+UFM Utilization: General Purpose Flash Memory.
+ 
+Available General Purpose Flash Memory:  767 Pages (Page 0 to Page 766).
+Initialized UFM Pages:                     0 Page.
+ 

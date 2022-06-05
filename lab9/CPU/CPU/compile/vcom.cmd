@@ -1,0 +1,1 @@
+-w -erf C:/Users/70735/Desktop/CPU/CPU/compile/CPU.erf -d C:/Users/70735/Desktop/CPU/CPU/compile -s C:/Users/70735/Desktop/CPU/CPU/library.cfg -j C:/Users/70735/Desktop/CPU/CPU/projlib.cfg -work work -dbg -work work C:/Users/70735/Desktop/CPU/CPU/testbench.vhd 

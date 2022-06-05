@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BaliProject version="3.2" title="6" device="LCMXO2-4000HC-4MG132C" default_implementation="impltp">
+    <Options/>
+    <Implementation title="impltp" dir="impltp" description="impltp" synthesis="lse" default_strategy="Strategy1">
+        <Options/>
+        <Source name="TEMPERATURE.vhd" type="VHDL" type_short="VHDL">
+            <Options top_module="ds18B20"/>
+        </Source>
+        <Source name="6.lpf" type="Logic Preference" type_short="LPF">
+            <Options/>
+        </Source>
+        <Source name="impltp/impltp.xcf" type="Programming Project File" type_short="Programming">
+            <Options/>
+        </Source>
+    </Implementation>
+    <Strategy name="Strategy1" file="TEMPERATURE1.sty"/>
+</BaliProject>

@@ -1,0 +1,15 @@
+[Files List]
+E:\Diamond\diamond\3.10_x64\active-hdl\vlib\std/src/standard.vhd=S
+E:\Diamond\diamond\3.10_x64\active-hdl\vlib\std/src/textio.vhd=S
+E:\Diamond\diamond\3.10_x64\active-hdl\vlib\ieee/src/std_logic_1164.vhdl=S
+E:\Diamond\diamond\3.10_x64\active-hdl\vlib\ieee/src/std_logic_1164-body.vhdl=S
+E:\Diamond\diamond\3.10_x64\active-hdl\vlib\ieee/src/arith_p.vhd=S
+E:\Diamond\diamond\3.10_x64\active-hdl\vlib\ieee/src/arith_b.vhd=S
+E:\Diamond\diamond\3.10_x64\active-hdl\vlib\ieee/src/unsigned_p.vhd=S
+E:\Diamond\diamond\3.10_x64\active-hdl\vlib\ieee/src/unsigned_b.vhd=S
+E:\Diamond\diamond\3.10_x64\active-hdl\vlib\ieee/src/numeric_std.vhdl=S
+E:\Diamond\diamond\3.10_x64\active-hdl\vlib\ieee/src/numeric_std-body.vhdl=S
+C:\Users\70735\Desktop\CPU\CPU/sram64kx8_syn.vhd=S
+C:\Users\70735\Desktop\CPU\CPU/tb02cpu2.vhd=S
+C:\Users\70735\Desktop\CPU\CPU/cpu2system.vhd=S
+C:\Users\70735\Desktop\CPU\CPU/testbench.vhd=S

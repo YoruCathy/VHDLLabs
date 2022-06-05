@@ -1,0 +1,10 @@
+#Start recording tcl command: 5/10/2018 15:49:34
+#Project Location: C:/Users/dell/Desktop/VHDL_final/lab_6; Project name: 6
+prj_project open "C:/Users/dell/Desktop/VHDL_final/lab_6/6.ldf"
+prj_run Synthesis -impl impltp -task Lattice_Synthesis
+prj_run Export -impl impltp
+pgr_project open "C:/Users/dell/Desktop/VHDL_final/lab_6/impltp/impltp.xcf"
+pgr_program run
+pgr_project save "C:/Users/dell/Desktop/VHDL_final/lab_6/impltp/impltp.xcf"
+prj_project close
+#Stop recording: 5/10/2018 16:05:20

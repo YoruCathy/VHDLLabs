@@ -1,0 +1,10 @@
+#Start recording tcl command: 12/9/2020 16:37:02
+#Project Location: C:/Users/70735/Desktop/CPU; Project name: CPU
+prj_project open "C:/Users/70735/Desktop/CPU/CPU.ldf"
+prj_src remove "C:/Users/70735/Desktop/CPU/sram64kx8_syn.vhd"
+prj_src add "C:/Users/70735/Desktop/CPU/sram64kx8.vhd"
+prj_run Synthesis -impl impl1
+prj_run Synthesis -impl impl1
+prj_run Export -impl impl1
+prj_run Export -impl impl1
+#Stop recording: 12/9/2020 16:47:33

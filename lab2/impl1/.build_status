@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BuildStatus>
+    <Strategy name="Strategy1">
+        <Milestone name="Export" build_result="0" build_time="0">
+            <Task name="IBIS" build_result="2" update_result="0" update_time="1607521383"/>
+            <Task name="TimingSimFileVlg" build_result="2" update_result="0" update_time="1607521388"/>
+            <Task name="TimingSimFileVHD" build_result="2" update_result="0" update_time="1607521393"/>
+            <Task name="Bitgen" build_result="2" update_result="0" update_time="1607521402"/>
+            <Task name="Jedecgen" build_result="2" update_result="0" update_time="1607521413"/>
+        </Milestone>
+        <Milestone name="Map" build_result="2" build_time="1607521279">
+            <Task name="Map" build_result="2" update_result="0" update_time="1607521279"/>
+            <Task name="MapTrace" build_result="2" update_result="0" update_time="1607521282"/>
+            <Task name="MapVerilogSimFile" build_result="2" update_result="0" update_time="1607521286"/>
+            <Task name="MapVHDLSimFile" build_result="2" update_result="0" update_time="1607521290"/>
+        </Milestone>
+        <Milestone name="PAR" build_result="2" build_time="1607521369">
+            <Task name="PAR" build_result="2" update_result="0" update_time="1607521369"/>
+            <Task name="PARTrace" build_result="2" update_result="0" update_time="1607521374"/>
+            <Task name="IOTiming" build_result="2" update_result="0" update_time="1607521381"/>
+        </Milestone>
+        <Milestone name="Synthesis" build_result="2" build_time="1607521274">
+            <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1607521274"/>
+            <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1607521266"/>
+        </Milestone>
+        <Milestone name="TOOL_Report" build_result="0" build_time="0">
+            <Task name="HDLE" build_result="2" update_result="0" update_time="1607346539"/>
+        </Milestone>
+        <Report name=".vdbs/lab2_impl1_map.vdb" last_build_time="1607521279" last_build_size="161044"/>
+        <Report name="IBIS/lab2_impl1.ibs" last_build_time="1607521383" last_build_size="66725"/>
+        <Report name="lab2_impl1.bgn" last_build_time="1607521412" last_build_size="4201"/>
+        <Report name="lab2_impl1.bit" last_build_time="1607521402" last_build_size="24305"/>
+        <Report name="lab2_impl1.ior" last_build_time="1607521381" last_build_size="2071"/>
+        <Report name="lab2_impl1.jed" last_build_time="1607521412" last_build_size="849182"/>
+        <Report name="lab2_impl1.lsedata" last_build_time="1607521266" last_build_size="428002"/>
+        <Report name="lab2_impl1.ncd" last_build_time="1607521369" last_build_size="741220"/>
+        <Report name="lab2_impl1.ngd" last_build_time="1607521274" last_build_size="540167"/>
+        <Report name="lab2_impl1.tw1" last_build_time="1607521282" last_build_size="17833"/>
+        <Report name="lab2_impl1.twr" last_build_time="1607521374" last_build_size="76369"/>
+        <Report name="lab2_impl1_map.ncd" last_build_time="1607521276" last_build_size="539430"/>
+        <Report name="lab2_impl1_mapvho.sdf" last_build_time="1607521290" last_build_size="516381"/>
+        <Report name="lab2_impl1_mapvho.vho" last_build_time="1607521290" last_build_size="3609621"/>
+        <Report name="lab2_impl1_mapvo.sdf" last_build_time="1607521286" last_build_size="511075"/>
+        <Report name="lab2_impl1_mapvo.vo" last_build_time="1607521286" last_build_size="505295"/>
+        <Report name="lab2_impl1_vho.sdf" last_build_time="1607521393" last_build_size="562542"/>
+        <Report name="lab2_impl1_vho.vho" last_build_time="1607521393" last_build_size="3652657"/>
+        <Report name="lab2_impl1_vo.sdf" last_build_time="1607521388" last_build_size="557126"/>
+        <Report name="lab2_impl1_vo.vo" last_build_time="1607521387" last_build_size="519377"/>
+    </Strategy>
+</BuildStatus>

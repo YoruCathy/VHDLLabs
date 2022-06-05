@@ -1,0 +1,4 @@
+i<>.\sram64kx8_syn.vhd
+i<>.\tb02cpu2.vhd
+i<>.\cpu2system.vhd
+i<>.\testbench.vhd

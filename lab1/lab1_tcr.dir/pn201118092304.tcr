@@ -1,0 +1,7 @@
+#Start recording tcl command: 11/18/2020 09:02:42
+#Project Location: C:/Users/onion/Desktop/FPGA-LABS/AAC_RE_CODE/lab1; Project name: lab1
+prj_project open "C:/Users/onion/Desktop/FPGA-LABS/AAC_RE_CODE/lab1/lab1.ldf"
+prj_run Export -impl impl1
+prj_run Export -impl impl1
+prj_run Export -impl impl1
+#Stop recording: 11/18/2020 09:23:04

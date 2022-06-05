@@ -1,0 +1,240 @@
+synthesis:  version Diamond (64-bit) 3.10.0.111.2
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights reserved.
+Wed Dec 09 21:50:39 2020
+
+
+Command Line:  synthesis -f lab4_impl1_lattice.synproj -gui -msgset C:/Users/70735/Desktop/lab4/promote.xml 
+
+Synthesis options:
+The -a option is MachXO2.
+The -s option is 4.
+The -t option is CSBGA132.
+The -d option is LCMXO2-4000HC.
+Using package CSBGA132.
+Using performance grade 4.
+                                                          
+
+##########################################################
+
+### Lattice Family : MachXO2
+
+### Device  : LCMXO2-4000HC
+
+### Package : CSBGA132
+
+### Speed   : 4
+
+##########################################################
+
+                                                          
+
+INFO - synthesis: User-Selected Strategy Settings
+Optimization goal = Balanced
+Top-level module name = TOP.
+Target frequency = 200.000000 MHz.
+Maximum fanout = 1000.
+Timing path count = 3
+BRAM utilization = 100.000000 %
+DSP usage = true
+DSP utilization = 100.000000 %
+fsm_encoding_style = auto
+resolve_mixed_drivers = 0
+fix_gated_clocks = 1
+
+Mux style = Auto
+Use Carry Chain = true
+carry_chain_length = 0
+Loop Limit = 1950.
+Use IO Insertion = TRUE
+Use IO Reg = AUTO
+
+Resource Sharing = TRUE
+Propagate Constants = TRUE
+Remove Duplicate Registers = TRUE
+force_gsr = auto
+ROM style = auto
+RAM style = auto
+The -comp option is FALSE.
+The -syn option is FALSE.
+-p E:/Diamond/diamond/3.10_x64/ispfpga/xo2c00/data (searchpath added)
+-p C:/Users/70735/Desktop/lab4/impl1 (searchpath added)
+-p C:/Users/70735/Desktop/lab4 (searchpath added)
+VHDL library = work
+VHDL design file = C:/Users/70735/Desktop/lab4/impl1/source/Clock_Div.vhd
+VHDL design file = C:/Users/70735/Desktop/lab4/impl1/source/Clock_logic.vhd
+VHDL design file = C:/Users/70735/Desktop/lab4/impl1/source/TOP.vhd
+VHDL design file = C:/Users/70735/Desktop/lab4/impl1/source/Display.vhd
+VHDL design file = C:/Users/70735/Desktop/lab4/impl1/source/Code_shape_provider.vhd
+VHDL design file = C:/Users/70735/Desktop/lab4/impl1/source/Matrix_button_input.vhd
+NGD file = lab4_impl1.ngd
+-sdc option: SDC file input not used.
+-lpf option: Output file option is ON.
+Hardtimer checking is enabled (default). The -dt option is not used.
+The -r option is OFF. [ Remove LOC Properties is OFF. ]
+Technology check ok...
+
+Analyzing Verilog file E:/Diamond/diamond/3.10_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v. VERI-1482
+Compile design.
+Compile Design Begin
+INFO - synthesis: The default VHDL library search path is now "C:/Users/70735/Desktop/lab4/impl1". VHDL-1504
+Analyzing VHDL file c:/users/70735/desktop/lab4/impl1/source/clock_div.vhd. VHDL-1481
+INFO - synthesis: c:/users/70735/desktop/lab4/impl1/source/clock_div.vhd(6): analyzing entity clock_div. VHDL-1012
+INFO - synthesis: c:/users/70735/desktop/lab4/impl1/source/clock_div.vhd(15): analyzing architecture behavior. VHDL-1010
+unit TOP is not yet analyzed. VHDL-1485
+Analyzing VHDL file c:/users/70735/desktop/lab4/impl1/source/clock_logic.vhd. VHDL-1481
+INFO - synthesis: c:/users/70735/desktop/lab4/impl1/source/clock_logic.vhd(6): analyzing entity clock_logic. VHDL-1012
+INFO - synthesis: c:/users/70735/desktop/lab4/impl1/source/clock_logic.vhd(22): analyzing architecture clock_logic_arch. VHDL-1010
+unit TOP is not yet analyzed. VHDL-1485
+Analyzing VHDL file c:/users/70735/desktop/lab4/impl1/source/top.vhd. VHDL-1481
+INFO - synthesis: c:/users/70735/desktop/lab4/impl1/source/top.vhd(7): analyzing entity top. VHDL-1012
+INFO - synthesis: c:/users/70735/desktop/lab4/impl1/source/top.vhd(21): analyzing architecture clock_top_arch. VHDL-1010
+unit TOP is not yet analyzed. VHDL-1485
+Analyzing VHDL file c:/users/70735/desktop/lab4/impl1/source/display.vhd. VHDL-1481
+INFO - synthesis: c:/users/70735/desktop/lab4/impl1/source/display.vhd(6): analyzing entity display. VHDL-1012
+INFO - synthesis: c:/users/70735/desktop/lab4/impl1/source/display.vhd(18): analyzing architecture default_arch. VHDL-1010
+unit TOP is not yet analyzed. VHDL-1485
+Analyzing VHDL file c:/users/70735/desktop/lab4/impl1/source/code_shape_provider.vhd. VHDL-1481
+INFO - synthesis: c:/users/70735/desktop/lab4/impl1/source/code_shape_provider.vhd(6): analyzing entity code_shape_provider. VHDL-1012
+INFO - synthesis: c:/users/70735/desktop/lab4/impl1/source/code_shape_provider.vhd(17): analyzing architecture default_arch. VHDL-1010
+unit TOP is not yet analyzed. VHDL-1485
+Analyzing VHDL file c:/users/70735/desktop/lab4/impl1/source/matrix_button_input.vhd. VHDL-1481
+INFO - synthesis: c:/users/70735/desktop/lab4/impl1/source/matrix_button_input.vhd(6): analyzing entity matrix_button_input. VHDL-1012
+INFO - synthesis: c:/users/70735/desktop/lab4/impl1/source/matrix_button_input.vhd(16): analyzing architecture default_arch. VHDL-1010
+unit TOP is not yet analyzed. VHDL-1485
+unit TOP is not yet analyzed. VHDL-1485
+c:/users/70735/desktop/lab4/impl1/source/top.vhd(7): executing TOP(Clock_TOP_arch)
+
+WARNING - synthesis: c:/users/70735/desktop/lab4/impl1/source/top.vhd(19): replacing existing netlist TOP(Clock_TOP_arch). VHDL-1205
+Top module name (VHDL): TOP
+Loading NGL library 'E:/Diamond/diamond/3.10_x64/ispfpga/xo2c00a/data/xo2alib.ngl'...
+Loading NGL library 'E:/Diamond/diamond/3.10_x64/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library 'E:/Diamond/diamond/3.10_x64/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library 'E:/Diamond/diamond/3.10_x64/ispfpga/or5g00/data/orc5glib.ngl'...
+Loading device for application map from file 'xo2c4000.nph' in environment: E:/Diamond/diamond/3.10_x64/ispfpga.
+Package Status:                     Final          Version 1.44.
+Top-level module name = TOP.
+INFO - synthesis: Extracted state machine for register '\U4/data_state' with one-hot encoding
+State machine has 4 reachable states with original encodings of:
+
+ 00 
+
+ 01 
+
+ 10 
+
+ 11 
+
+original encoding -> new encoding (one-hot encoding)
+
+ 00 -> 0001
+
+ 01 -> 0010
+
+ 10 -> 0100
+
+ 11 -> 1000
+
+
+
+
+WARNING - synthesis: c:/users/70735/desktop/lab4/impl1/source/top.vhd(198): Register digit1_i0_i1 is stuck at Zero. VDB-5013
+WARNING - synthesis: c:/users/70735/desktop/lab4/impl1/source/display.vhd(62): Register \U4/digit_reg_i0_i0 is stuck at Zero. VDB-5013
+GSR instance connected to net Rst1_c.
+Applying 200.000000 MHz constraint to all clocks
+
+WARNING - synthesis: No user .sdc file.
+Results of NGD DRC are available in TOP_drc.log.
+Loading NGL library 'E:/Diamond/diamond/3.10_x64/ispfpga/xo2c00a/data/xo2alib.ngl'...
+Loading NGL library 'E:/Diamond/diamond/3.10_x64/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library 'E:/Diamond/diamond/3.10_x64/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library 'E:/Diamond/diamond/3.10_x64/ispfpga/or5g00/data/orc5glib.ngl'...
+All blocks are expanded and NGD expansion is successful.
+Writing NGD file lab4_impl1.ngd.
+
+################### Begin Area Report (TOP)######################
+Number of register bits => 266 of 4635 (5 % )
+CCU2D => 84
+FD1P3AX => 93
+FD1P3AY => 2
+FD1P3IX => 78
+FD1P3JX => 2
+FD1S3AX => 23
+FD1S3AY => 1
+FD1S3DX => 18
+FD1S3IX => 49
+GSR => 1
+IB => 7
+INV => 1
+LUT4 => 395
+OB => 15
+PFUMX => 14
+################### End Area Report ##################
+
+################### Begin BlackBox Report ######################
+TSALL => 1
+################### End BlackBox Report ##################
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 3
+  Net : Clock_top_c, loads : 259
+  Net : U5/Clkout1M, loads : 7
+  Net : U5/Clkout200, loads : 6
+Clock Enable Nets
+Number of Clock Enables: 27
+Top 10 highest fanout Clock Enables:
+  Net : Rst1_c, loads : 35
+  Net : U2/clr, loads : 33
+  Net : U4/Clkout1M_enable_1, loads : 8
+  Net : Clock_top_c_enable_89, loads : 6
+  Net : U2/Clock_top_c_enable_85, loads : 5
+  Net : U2/Clock_top_c_enable_76, loads : 5
+  Net : U2/Clock_top_c_enable_103, loads : 5
+  Net : U2/Clock_top_c_enable_61, loads : 5
+  Net : U1/Clock_top_c_enable_98, loads : 5
+  Net : U1/key_get_4__N_121, loads : 5
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : Rst1_c, loads : 75
+  Net : U2/clr, loads : 33
+  Net : U2/n2537, loads : 32
+  Net : U2/one_sec_cnt_23__N_407, loads : 25
+  Net : segstate_0, loads : 24
+  Net : U4/sclk_out_N_515, loads : 21
+  Net : U2/Clock_status_0, loads : 21
+  Net : U1/Keyout1_0, loads : 20
+  Net : U1/n2527, loads : 20
+  Net : Mod1_c, loads : 19
+################### End Clock Report ##################
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk2 [get_nets Clkout1M]                |  200.000 MHz|  309.023 MHz|     2  
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk1 [get_nets Clock_top_c]             |  200.000 MHz|   67.783 MHz|    17 *
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets Clkout200]               |            -|            -|     0  
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+1 constraints not met.
+
+
+Peak Memory Usage: 78.672  MB
+
+--------------------------------------------------------------
+Elapsed CPU time for LSE flow : 12.063  secs
+--------------------------------------------------------------

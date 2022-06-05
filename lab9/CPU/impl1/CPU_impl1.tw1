@@ -1,0 +1,384 @@
+
+Loading design for application trce from file cpu_impl1_map.ncd.
+Design name: cpu2system
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-4000HC
+Package:     CSBGA132
+Performance: 4
+Loading device for application trce from file 'xo2c4000.nph' in environment: E:/Diamond/diamond/3.10_x64/ispfpga.
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 34.4.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.10.0.111.2
+Wed Dec 09 16:43:29 2020
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o CPU_impl1.tw1 -gui -msgset C:/Users/70735/Desktop/CPU/promote.xml CPU_impl1_map.ncd CPU_impl1.prf 
+Design file:     cpu_impl1_map.ncd
+Preference file: cpu_impl1.prf
+Device,speed:    LCMXO2-4000HC,4
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+Report Type:     based on TRACE automatically generated preferences
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Preference: FREQUENCY NET "clk_c" 106.225000 MHz ;
+            4096 items scored, 4096 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error: The following path exceeds requirements by 11.713ns (weighted slack = -1225.180ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              RAM/mem_62__i0_i0  (from CPU/we_N_63 +)
+   Destination:    FF         Data in        CPU/akku_i9  (to clk_c +)
+
+   Delay:              11.637ns  (46.9% logic, 53.1% route), 12 logic levels.
+
+ Constraint Details:
+
+     11.637ns physical path delay RAM/SLICE_680 to CPU/SLICE_271 exceeds
+      (delay constraint based on source clock period of 4.950ns and destination clock period of 9.414ns)
+      0.090ns delay constraint less
+      0.166ns DIN_SET requirement (totaling -0.076ns) by 11.713ns
+
+ Physical Path Details:
+
+      Data path RAM/SLICE_680 to CPU/SLICE_271:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452 *SLICE_680.CLK to */SLICE_680.Q1 RAM/SLICE_680 (from CPU/we_N_63)
+ROUTE         1   e 1.234 */SLICE_680.Q1 to */SLICE_292.B1 RAM/mem_62_0
+CTOOFX_DEL  ---     0.721 */SLICE_292.B1 to *LICE_292.OFX0 RAM/i1946/SLICE_292
+ROUTE         1   e 0.001 *LICE_292.OFX0 to *SLICE_292.FXB RAM/n2079
+FXTOOFX_DE  ---     0.241 *SLICE_292.FXB to *LICE_292.OFX1 RAM/i1946/SLICE_292
+ROUTE         1   e 0.001 *LICE_292.OFX1 to *SLICE_280.FXB RAM/n2083
+FXTOOFX_DE  ---     0.241 *SLICE_280.FXB to *LICE_280.OFX1 RAM/i1945/SLICE_280
+ROUTE         1   e 1.234 *LICE_280.OFX1 to */SLICE_279.C1 RAM/n2085
+CTOOFX_DEL  ---     0.721 */SLICE_279.C1 to *LICE_279.OFX0 RAM/i117911_i1/SLICE_279
+ROUTE         2   e 1.234 *LICE_279.OFX0 to   SLICE_448.A0 RAM/data_7_N_66_0
+CTOF_DEL    ---     0.495   SLICE_448.A0 to   SLICE_448.F0 SLICE_448
+ROUTE         1   e 1.234   SLICE_448.F0 to CPU/SLICE_4.C0 CPU/akku_o_8_N_36_0
+C0TOFCO_DE  ---     1.023 CPU/SLICE_4.C0 to *U/SLICE_4.FCO CPU/SLICE_4
+ROUTE         1   e 0.001 *U/SLICE_4.FCO to *U/SLICE_3.FCI CPU/n1539
+FCITOFCO_D  ---     0.162 *U/SLICE_3.FCI to *U/SLICE_3.FCO CPU/SLICE_3
+ROUTE         1   e 0.001 *U/SLICE_3.FCO to *U/SLICE_2.FCI CPU/n1540
+FCITOFCO_D  ---     0.162 *U/SLICE_2.FCI to *U/SLICE_2.FCO CPU/SLICE_2
+ROUTE         1   e 0.001 *U/SLICE_2.FCO to *U/SLICE_1.FCI CPU/n1541
+FCITOFCO_D  ---     0.162 *U/SLICE_1.FCI to *U/SLICE_1.FCO CPU/SLICE_1
+ROUTE         1   e 0.001 *U/SLICE_1.FCO to    SLICE_0.FCI CPU/n1542
+FCITOF0_DE  ---     0.585    SLICE_0.FCI to     SLICE_0.F0 SLICE_0
+ROUTE         1   e 1.234     SLICE_0.F0 to */SLICE_271.A0 CPU/akku_o_8_N_44_8
+CTOF_DEL    ---     0.495 */SLICE_271.A0 to */SLICE_271.F0 CPU/SLICE_271
+ROUTE         1   e 0.001 */SLICE_271.F0 to *SLICE_271.DI0 CPU/akku_o_8_N_11_8 (to clk_c)
+                  --------
+                   11.637   (46.9% logic, 53.1% route), 12 logic levels.
+
+Warning:   0.810MHz is the maximum frequency for this preference.
+
+
+================================================================================
+Preference: FREQUENCY NET "CPU/we_N_63" 202.020000 MHz ;
+            4096 items scored, 4096 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error: The following path exceeds requirements by 7.671ns (weighted slack = -78.131ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              CPU/adreg_i1  (from clk_c +)
+   Destination:    FF         Data in        RAM/mem_60__i0_i6  (to CPU/we_N_63 +)
+
+   Delay:               7.809ns  (36.8% logic, 63.2% route), 6 logic levels.
+
+ Constraint Details:
+
+      7.809ns physical path delay CPU/SLICE_268 to RAM/SLICE_675 exceeds
+      (delay constraint based on source clock period of 9.414ns and destination clock period of 4.950ns)
+      0.486ns delay constraint less
+      0.348ns M_SET requirement (totaling 0.138ns) by 7.671ns
+
+ Physical Path Details:
+
+      Data path CPU/SLICE_268 to RAM/SLICE_675:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452 *SLICE_268.CLK to */SLICE_268.Q0 CPU/SLICE_268 (from clk_c)
+ROUTE       265   e 1.234 */SLICE_268.Q0 to */SLICE_310.C0 adrram_0
+CTOOFX_DEL  ---     0.721 */SLICE_310.C0 to *LICE_310.OFX0 RAM/i1755/SLICE_310
+ROUTE         1   e 0.001 *LICE_310.OFX0 to *SLICE_311.FXA RAM/n1888
+FXTOOFX_DE  ---     0.241 *SLICE_311.FXA to *LICE_311.OFX1 RAM/i1756/SLICE_311
+ROUTE         1   e 0.001 *LICE_311.OFX1 to *SLICE_310.FXB RAM/n1895
+FXTOOFX_DE  ---     0.241 *SLICE_310.FXB to *LICE_310.OFX1 RAM/i1755/SLICE_310
+ROUTE         1   e 1.234 *LICE_310.OFX1 to */SLICE_273.B1 RAM/n1898
+CTOOFX_DEL  ---     0.721 */SLICE_273.B1 to *LICE_273.OFX0 RAM/i121529_i1/SLICE_273
+ROUTE         2   e 1.234 *LICE_273.OFX0 to *M/SLICE_15.A0 RAM/data_7_N_66_6
+CTOF_DEL    ---     0.495 *M/SLICE_15.A0 to *M/SLICE_15.F0 RAM/SLICE_15
+ROUTE        68   e 1.234 *M/SLICE_15.F0 to */SLICE_675.M1 data_6 (to CPU/we_N_63)
+                  --------
+                    7.809   (36.8% logic, 63.2% route), 6 logic levels.
+
+Warning:  12.037MHz is the maximum frequency for this preference.
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference                              |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "clk_c" 106.225000 MHz ;  |  106.225 MHz|    0.810 MHz|  12 *
+                                        |             |             |
+FREQUENCY NET "CPU/we_N_63" 202.020000  |             |             |
+MHz ;                                   |  202.020 MHz|   12.037 MHz|   6 *
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+2 preferences(marked by "*" above) not met.
+
+----------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+----------------------------------------------------------------------------
+adrram_0                                |     265|    4096|     50.00%
+                                        |        |        |
+CPU/n1540                               |       1|    2560|     31.25%
+                                        |        |        |
+CPU/n1541                               |       1|    2176|     26.56%
+                                        |        |        |
+CPU/n1539                               |       1|    1792|     21.88%
+                                        |        |        |
+RAM/data_7_N_66_1                       |       2|    1672|     20.41%
+                                        |        |        |
+RAM/data_7_N_66_2                       |       2|    1664|     20.31%
+                                        |        |        |
+RAM/data_7_N_66_3                       |       2|    1540|     18.80%
+                                        |        |        |
+data_2                                  |      66|    1344|     16.41%
+                                        |        |        |
+RAM/data_7_N_66_0                       |       2|    1300|     15.87%
+                                        |        |        |
+data_1                                  |      66|    1224|     14.94%
+                                        |        |        |
+data_3                                  |      66|    1220|     14.89%
+                                        |        |        |
+CPU/n1542                               |       1|    1024|     12.50%
+                                        |        |        |
+CPU/akku_o_8_N_44_8                     |       1|    1024|     12.50%
+                                        |        |        |
+CPU/akku_o_8_N_11_8                     |       1|    1024|     12.50%
+                                        |        |        |
+data_0                                  |      66|     852|     10.40%
+                                        |        |        |
+RAM/data_7_N_66_7                       |       3|     844|     10.30%
+                                        |        |        |
+----------------------------------------------------------------------------
+
+
+Clock Domains Analysis
+------------------------
+
+Found 2 clocks:
+
+Clock Domain: CPU/we_N_63   Source: SLICE_412.F0   Loads: 256
+   No transfer within this clock domain is found
+
+   Data transfers from:
+   Clock Domain: clk_c   Source: clk.PAD
+      Covered under: FREQUENCY NET "CPU/we_N_63" 202.020000 MHz ;   Transfers: 17
+
+Clock Domain: clk_c   Source: clk.PAD   Loads: 16
+   Covered under: FREQUENCY NET "clk_c" 106.225000 MHz ;
+
+   Data transfers from:
+   Clock Domain: CPU/we_N_63   Source: SLICE_412.F0
+      Covered under: FREQUENCY NET "clk_c" 106.225000 MHz ;   Transfers: 500
+
+   Clock Domain: CPU/we_N_63   Source: SLICE_412.F0
+      Covered under: FREQUENCY NET "clk_c" 106.225000 MHz ;   Transfers: 2
+
+   Clock Domain: CPU/we_N_63   Source: SLICE_412.F0
+      Covered under: FREQUENCY NET "clk_c" 106.225000 MHz ;   Transfers: 10
+
+
+Timing summary (Setup):
+---------------
+
+Timing errors: 8192  Score: 4294967295
+Cumulative negative slack: 4294967295
+
+Constraints cover 83108 paths, 43 nets, and 2763 connections (99.28% coverage)
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.10.0.111.2
+Wed Dec 09 16:43:35 2020
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o CPU_impl1.tw1 -gui -msgset C:/Users/70735/Desktop/CPU/promote.xml CPU_impl1_map.ncd CPU_impl1.prf 
+Design file:     cpu_impl1_map.ncd
+Preference file: cpu_impl1.prf
+Device,speed:    LCMXO2-4000HC,M
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Preference: FREQUENCY NET "clk_c" 106.225000 MHz ;
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.447ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              CPU/akku_i8  (from clk_c +)
+   Destination:    FF         Data in        CPU/akku_i8  (to clk_c +)
+
+   Delay:               0.434ns  (53.9% logic, 46.1% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.434ns physical path delay CPU/SLICE_1 to CPU/SLICE_1 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint requirement (totaling -0.013ns) by 0.447ns
+
+ Physical Path Details:
+
+      Data path CPU/SLICE_1 to CPU/SLICE_1:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133 *U/SLICE_1.CLK to CPU/SLICE_1.Q1 CPU/SLICE_1 (from clk_c)
+ROUTE         5   e 0.199 CPU/SLICE_1.Q1 to CPU/SLICE_1.D1 akku_o_c_7
+CTOF_DEL    ---     0.101 CPU/SLICE_1.D1 to CPU/SLICE_1.F1 CPU/SLICE_1
+ROUTE         1   e 0.001 CPU/SLICE_1.F1 to *U/SLICE_1.DI1 CPU/akku_o_8_N_44_7 (to clk_c)
+                  --------
+                    0.434   (53.9% logic, 46.1% route), 2 logic levels.
+
+
+================================================================================
+Preference: FREQUENCY NET "CPU/we_N_63" 202.020000 MHz ;
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.763ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              CPU/akku_i8  (from clk_c +)
+   Destination:    FF         Data in        RAM/mem_0__i0_i7  (to CPU/we_N_63 +)
+
+   Delay:               0.750ns  (31.2% logic, 68.8% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.750ns physical path delay CPU/SLICE_1 to RAM/SLICE_15 meets
+      (delay constraint based on source clock period of 9.414ns and destination clock period of 4.950ns)
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint requirement (totaling -0.013ns) by 0.763ns
+
+ Physical Path Details:
+
+      Data path CPU/SLICE_1 to RAM/SLICE_15:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133 *U/SLICE_1.CLK to CPU/SLICE_1.Q1 CPU/SLICE_1 (from clk_c)
+ROUTE         5   e 0.515 CPU/SLICE_1.Q1 to *M/SLICE_15.B1 akku_o_c_7
+CTOF_DEL    ---     0.101 *M/SLICE_15.B1 to *M/SLICE_15.F1 RAM/SLICE_15
+ROUTE        68   e 0.001 *M/SLICE_15.F1 to */SLICE_15.DI1 data_7 (to CPU/we_N_63)
+                  --------
+                    0.750   (31.2% logic, 68.8% route), 2 logic levels.
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference(MIN Delays)                  |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "clk_c" 106.225000 MHz ;  |     0.000 ns|     0.447 ns|   2  
+                                        |             |             |
+FREQUENCY NET "CPU/we_N_63" 202.020000  |             |             |
+MHz ;                                   |     0.000 ns|     0.763 ns|   2  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+Clock Domains Analysis
+------------------------
+
+Found 2 clocks:
+
+Clock Domain: CPU/we_N_63   Source: SLICE_412.F0   Loads: 256
+   No transfer within this clock domain is found
+
+   Data transfers from:
+   Clock Domain: clk_c   Source: clk.PAD
+      Covered under: FREQUENCY NET "CPU/we_N_63" 202.020000 MHz ;   Transfers: 17
+
+Clock Domain: clk_c   Source: clk.PAD   Loads: 16
+   Covered under: FREQUENCY NET "clk_c" 106.225000 MHz ;
+
+   Data transfers from:
+   Clock Domain: CPU/we_N_63   Source: SLICE_412.F0
+      Covered under: FREQUENCY NET "clk_c" 106.225000 MHz ;   Transfers: 500
+
+   Clock Domain: CPU/we_N_63   Source: SLICE_412.F0
+      Covered under: FREQUENCY NET "clk_c" 106.225000 MHz ;   Transfers: 2
+
+   Clock Domain: CPU/we_N_63   Source: SLICE_412.F0
+      Covered under: FREQUENCY NET "clk_c" 106.225000 MHz ;   Transfers: 10
+
+
+Timing summary (Hold):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 83108 paths, 43 nets, and 2771 connections (99.57% coverage)
+
+
+
+Timing summary (Setup and Hold):
+---------------
+
+Timing errors: 8192 (setup), 0 (hold)
+Score: 4294967295 (setup), 0 (hold)
+Cumulative negative slack: 4294967295 (4294967295+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+

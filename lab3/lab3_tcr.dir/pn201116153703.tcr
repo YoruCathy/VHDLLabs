@@ -1,0 +1,8 @@
+#Start recording tcl command: 11/16/2020 15:36:24
+#Project Location: C:/Users/onion/Desktop/FPGA-LABS/AAC_RE_CODE/lab3; Project name: lab3
+prj_project new -name "lab3" -impl "impl1" -dev LCMXO2-4000HC-4MG132C -synthesis "lse"
+file copy -force -- "C:/Users/onion/Desktop/FPGA-LABS/AAC_RE_CODE/lab3/lab3.vhd" "C:/Users/onion/Desktop/FPGA-LABS/AAC_RE_CODE/lab3/impl1/source"
+prj_src add "C:/Users/onion/Desktop/FPGA-LABS/AAC_RE_CODE/lab3/impl1/source/lab3.vhd"
+prj_project save
+prj_run Export -impl impl1
+#Stop recording: 11/16/2020 15:37:03

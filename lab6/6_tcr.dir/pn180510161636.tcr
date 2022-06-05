@@ -1,0 +1,8 @@
+#Start recording tcl command: 5/10/2018 16:11:25
+#Project Location: C:/Users/dell/Desktop/VHDL_final/lab_6; Project name: 6
+prj_project open "C:/Users/dell/Desktop/VHDL_final/lab_6/6.ldf"
+pgr_project close
+pgr_project open "C:/Users/dell/Desktop/VHDL_final/lab_6/impltp/impltp.xcf"
+pgr_program run
+prj_project close
+#Stop recording: 5/10/2018 16:16:36

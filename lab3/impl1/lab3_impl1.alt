@@ -1,0 +1,40 @@
+NOTE Copyright (C), 1992-2010, Lattice Semiconductor Corporation *
+NOTE All Rights Reserved *
+NOTE DATE CREATED: Wed Dec 09 21:43:25 2020 *
+NOTE DESIGN NAME: Lab3 *
+NOTE DEVICE NAME: LCMXO2-4000HC-4CSBGA132 *
+NOTE PIN ASSIGNMENTS *
+NOTE PINS row[1] : P8 : out *
+NOTE PINS seven_segment_disp_left[6] : B9 : out *
+NOTE PINS row[0] : N8 : out *
+NOTE PINS row[2] : N7 : out *
+NOTE PINS row[3] : P7 : out *
+NOTE PINS seven_segment_disp_left[5] : A9 : out *
+NOTE PINS seven_segment_disp_left[4] : E2 : out *
+NOTE PINS seven_segment_disp_left[3] : E1 : out *
+NOTE PINS seven_segment_disp_left[2] : F2 : out *
+NOTE PINS seven_segment_disp_left[1] : C11 : out *
+NOTE PINS seven_segment_disp_left[0] : A10 : out *
+NOTE PINS seven_segment_disp_right[6] : A11 : out *
+NOTE PINS seven_segment_disp_right[5] : B12 : out *
+NOTE PINS seven_segment_disp_right[4] : H2 : out *
+NOTE PINS seven_segment_disp_right[3] : H1 : out *
+NOTE PINS seven_segment_disp_right[2] : J1 : out *
+NOTE PINS seven_segment_disp_right[1] : B14 : out *
+NOTE PINS seven_segment_disp_right[0] : C12 : out *
+NOTE PINS led[5] : P4 : out *
+NOTE PINS led[4] : N3 : out *
+NOTE PINS led[3] : M3 : out *
+NOTE PINS led[2] : P2 : out *
+NOTE PINS led[1] : N2 : out *
+NOTE PINS led[0] : M2 : out *
+NOTE PINS dig1 : C9 : out *
+NOTE PINS dig2 : A12 : out *
+NOTE PINS clk : C1 : in *
+NOTE PINS key_in[2] : M14 : in *
+NOTE PINS key_in[1] : M13 : in *
+NOTE PINS key_in[0] : L14 : in *
+NOTE PINS rst : N14 : in *
+NOTE PINS column : L3 : in *
+NOTE CONFIGURATION MODE: NONE *
+NOTE COMPRESSION: on *

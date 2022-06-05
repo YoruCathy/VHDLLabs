@@ -1,0 +1,430 @@
+<HTML>
+<HEAD><TITLE>Project Summary</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Mrp"></A>
+             Lattice Mapping Report File for Design Module 'Lab3'
+
+
+
+<A name="mrp_di"></A><B><U><big>Design Information</big></U></B>
+
+Command line:   map -a MachXO2 -p LCMXO2-4000HC -t CSBGA132 -s 4 -oc Commercial
+     lab3_impl1.ngd -o lab3_impl1_map.ncd -pr lab3_impl1.prf -mp lab3_impl1.mrp
+     -lpf C:/Users/70735/Desktop/lab3/impl1/lab3_impl1.lpf -lpf
+     C:/Users/70735/Desktop/lab3/lab3.lpf -c 0 -gui -msgset
+     C:/Users/70735/Desktop/lab3/promote.xml 
+Target Vendor:  LATTICE
+Target Device:  LCMXO2-4000HCCSBGA132
+Target Performance:   4
+Mapper:  xo2c00,  version:  Diamond (64-bit) 3.10.0.111.2
+Mapped on:  12/09/20  21:40:57
+
+
+<A name="mrp_ds"></A><B><U><big>Design Summary</big></U></B>
+   Number of registers:     56 out of  4635 (1%)
+      PFU registers:           56 out of  4320 (1%)
+      PIO registers:            0 out of   315 (0%)
+   Number of SLICEs:        69 out of  2160 (3%)
+      SLICEs as Logic/ROM:     69 out of  2160 (3%)
+      SLICEs as RAM:            0 out of  1620 (0%)
+      SLICEs as Carry:         25 out of  2160 (1%)
+   Number of LUT4s:        137 out of  4320 (3%)
+      Number used as logic LUTs:         87
+      Number used as distributed RAM:     0
+      Number used as ripple logic:       50
+      Number used as shift registers:     0
+   Number of PIO sites used: 32 + 4(JTAG) out of 105 (34%)
+   Number of block RAMs:  0 out of 10 (0%)
+   Number of GSRs:  1 out of 1 (100%)
+   EFB used :       No
+   JTAG used :      No
+   Readback used :  No
+   Oscillator used :  No
+   Startup used :   No
+   POR :            On
+   Bandgap :        On
+   Number of Power Controller:  0 out of 1 (0%)
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 6 (0%)
+   Number of Dynamic Bank Controller (BCLVDSO):  0 out of 1 (0%)
+   Number of DCCA:  0 out of 8 (0%)
+   Number of DCMA:  0 out of 2 (0%)
+   Number of PLLs:  0 out of 2 (0%)
+   Number of DQSDLLs:  0 out of 2 (0%)
+   Number of CLKDIVC:  0 out of 4 (0%)
+   Number of ECLKSYNCA:  0 out of 4 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
+     distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and
+     ripple logic.
+   Number of clocks:  6
+     Net clk_c: 16 loads, 16 rising, 0 falling (Driver: PIO clk )
+     Net clk_1000ms: 3 loads, 3 rising, 0 falling (Driver: clk_1000ms_408 )
+     Net seven_segment_disp_right_6__N_20: 4 loads, 4 rising, 0 falling (Driver:
+
+     i1_2_lut_3_lut )
+     Net led_5__N_40: 8 loads, 8 rising, 0 falling (Driver: i1274_4_lut_4_lut )
+     Net current_state_1__N_80: 2 loads, 2 rising, 0 falling (Driver:
+     i1753_4_lut )
+     Net column_c_derived_3: 2 loads, 2 rising, 0 falling (Driver:
+     i1_4_lut_rep_29 )
+   Number of Clock Enables:  2
+     Net clk_c_enable_3: 1 loads, 1 LSLICEs
+     Net clk_c_enable_2: 1 loads, 1 LSLICEs
+   Number of LSRs:  6
+     Net cnt_1s_23__N_203: 13 loads, 13 LSLICEs
+     Net n2621: 1 loads, 1 LSLICEs
+     Net led_5__N_26: 2 loads, 2 LSLICEs
+     Net column_c: 2 loads, 2 LSLICEs
+     Net n2622: 3 loads, 3 LSLICEs
+     Net n1817: 3 loads, 3 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net cnt_1s_23__N_203: 14 loads
+     Net led_5__N_26: 14 loads
+     Net counter_seconds_main_1: 13 loads
+     Net counter_seconds_main_4: 12 loads
+     Net current_state_0: 12 loads
+     Net disp_number_0: 11 loads
+     Net mode_0: 11 loads
+     Net mode_1: 11 loads
+     Net mode_2: 11 loads
+     Net ones_place_1: 11 loads
+
+
+
+
+   Number of warnings:  0
+   Number of errors:    0
+     
+
+
+
+
+<A name="mrp_dwe"></A><B><U><big>Design Errors/Warnings</big></U></B>
+
+   No errors or warnings present.
+
+
+
+<A name="mrp_ioa"></A><B><U><big>IO (PIO) Attributes</big></U></B>
+
++---------------------+-----------+-----------+------------+
+| IO Name             | Direction | Levelmode | IO         |
+|                     |           |  IO_TYPE  | Register   |
++---------------------+-----------+-----------+------------+
+| row[1]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| seven_segment_disp_left[6]| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| row[0]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| row[2]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+
+| row[3]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| seven_segment_disp_left[5]| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| seven_segment_disp_left[4]| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| seven_segment_disp_left[3]| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| seven_segment_disp_left[2]| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| seven_segment_disp_left[1]| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| seven_segment_disp_left[0]| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| seven_segment_disp_right[6]| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| seven_segment_disp_right[5]| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| seven_segment_disp_right[4]| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| seven_segment_disp_right[3]| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| seven_segment_disp_right[2]| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| seven_segment_disp_right[1]| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| seven_segment_disp_right[0]| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led[5]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led[4]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led[3]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led[2]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led[1]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led[0]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| dig1                | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| dig2                | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| clk                 | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| key_in[2]           | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| key_in[1]           | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| key_in[0]           | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| rst                 | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| column              | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+
+
+
+
+<A name="mrp_rm"></A><B><U><big>Removed logic</big></U></B>
+
+Signal column_N_148 was merged into signal column_c
+Signal counter_seconds_main_688_689_add_4_5/CO undriven or does not drive
+     anything - clipped.
+Signal add_641_1/S1 undriven or does not drive anything - clipped.
+Signal add_641_1/S0 undriven or does not drive anything - clipped.
+Signal add_641_1/CI undriven or does not drive anything - clipped.
+Signal counter_seconds_main_688_689_add_4_1/S0 undriven or does not drive
+     anything - clipped.
+Signal counter_seconds_main_688_689_add_4_1/CI undriven or does not drive
+     anything - clipped.
+Signal add_641_9/S1 undriven or does not drive anything - clipped.
+Signal add_641_9/CO undriven or does not drive anything - clipped.
+Signal cnt_1s_686_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal cnt_1s_686_add_4_1/CI undriven or does not drive anything - clipped.
+Signal cnt_1s_686_add_4_25/S1 undriven or does not drive anything - clipped.
+Signal cnt_1s_686_add_4_25/CO undriven or does not drive anything - clipped.
+Signal add_645_2/S0 undriven or does not drive anything - clipped.
+Signal add_645_2/CI undriven or does not drive anything - clipped.
+Signal add_645_8/S1 undriven or does not drive anything - clipped.
+Signal add_645_8/CO undriven or does not drive anything - clipped.
+Block column_I_0_1_lut was optimized away.
+
+
+
+<A name="mrp_mem"></A><B><U><big>Memory Usage</big></U></B>
+
+
+     
+
+
+
+<A name="mrp_gsr"></A><B><U><big>GSR Usage</big></U></B>
+---------
+
+GSR Component:
+   The Global Set Reset (GSR) resource has been used to implement a global reset
+        of the design. The reset signal used for GSR control is 'n1815'.
+        
+
+     GSR Property:
+   The design components with GSR property set to ENABLED will respond to global
+        set reset while the components with GSR property set to DISABLED will
+        not.
+        
+
+     Components with disabled GSR Property
+-------------------------------------
+
+     These components have the GSR property set to DISABLED. The components will
+     not respond to the reset signal 'n1815' via the GSR component.
+
+     Type and number of components of the type: 
+   Register = 26 
+
+     Type and instance name of component: 
+   Register : disp_number_6__I_34_i1
+   Register : current_state_1__I_10_i1
+
+   Register : led_5__I_0_i1
+   Register : seven_segment_disp_right_6__I_0_i1
+   Register : mode_2__I_0_i1
+   Register : mode_i1
+   Register : mode_i2
+   Register : disp_number_6__I_34_i3
+   Register : disp_number_6__I_34_i2
+   Register : disp_number_6__I_34_i4
+   Register : disp_number_6__I_34_i5
+   Register : disp_number_6__I_34_i6
+   Register : disp_number_6__I_34_i7
+   Register : current_state_1__I_10_i2
+   Register : led_5__I_0_i2
+   Register : led_5__I_0_i4
+   Register : led_5__I_0_i5
+   Register : seven_segment_disp_right_6__I_0_i2
+   Register : seven_segment_disp_right_6__I_0_i3
+   Register : seven_segment_disp_right_6__I_0_i4
+   Register : seven_segment_disp_right_6__I_0_i5
+   Register : seven_segment_disp_right_6__I_0_i6
+   Register : seven_segment_disp_right_6__I_0_i7
+   Register : mode_2__I_0_i2
+   Register : mode_2__I_0_i3
+   Register : mode_i0
+
+     Components with synchronous local reset also reset by asynchronous GSR
+----------------------------------------------------------------------
+
+     These components have the GSR property set to ENABLED and the local reset
+     is synchronous. The components will respond to the synchronous local reset
+     and to the unrelated asynchronous reset signal 'n1815' via the GSR
+     component.
+
+     Type and number of components of the type: 
+   Register = 29 
+
+     Type and instance name of component: 
+   Register : counter_seconds_main_688_689__i1
+   Register : cnt_1s_686__i4
+   Register : counter_seconds_main_688_689__i5
+   Register : counter_seconds_main_688_689__i4
+   Register : counter_seconds_main_688_689__i3
+   Register : counter_seconds_main_688_689__i2
+   Register : cnt_1s_686__i3
+   Register : cnt_1s_686__i2
+   Register : cnt_1s_686__i1
+   Register : cnt_1s_686__i23
+   Register : cnt_1s_686__i0
+   Register : cnt_1s_686__i22
+   Register : cnt_1s_686__i21
+   Register : cnt_1s_686__i20
+   Register : cnt_1s_686__i19
+   Register : cnt_1s_686__i18
+   Register : cnt_1s_686__i17
+   Register : cnt_1s_686__i16
+   Register : cnt_1s_686__i15
+
+   Register : cnt_1s_686__i14
+   Register : cnt_1s_686__i13
+   Register : cnt_1s_686__i12
+   Register : cnt_1s_686__i11
+   Register : cnt_1s_686__i10
+   Register : cnt_1s_686__i9
+   Register : cnt_1s_686__i8
+   Register : cnt_1s_686__i7
+   Register : cnt_1s_686__i6
+   Register : cnt_1s_686__i5
+
+
+
+<A name="mrp_runtime"></A><B><U><big>Run Time and Memory Usage</big></U></B>
+-------------------------
+
+   Total CPU Time: 2 secs  
+   Total REAL Time: 3 secs  
+   Peak Memory Usage: 50 MB
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+     Copyright (c) 1995 AT&T Corp.   All rights reserved.
+     Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+     Copyright (c) 2001 Agere Systems   All rights reserved.
+     Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights
+     reserved.
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

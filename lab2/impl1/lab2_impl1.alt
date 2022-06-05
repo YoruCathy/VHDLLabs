@@ -1,0 +1,14 @@
+NOTE Copyright (C), 1992-2010, Lattice Semiconductor Corporation *
+NOTE All Rights Reserved *
+NOTE DATE CREATED: Wed Dec 09 21:43:32 2020 *
+NOTE DESIGN NAME: Lab2 *
+NOTE DEVICE NAME: LCMXO2-4000HC-4CSBGA132 *
+NOTE PIN ASSIGNMENTS *
+NOTE PINS speed_up_in : M14 : in *
+NOTE PINS clrin : L14 : in *
+NOTE PINS clk : C1 : in *
+NOTE PINS LED_SIG : P9 : out *
+NOTE PINS brightness_in : N14 : in *
+NOTE PINS speed_down_in : M13 : in *
+NOTE CONFIGURATION MODE: NONE *
+NOTE COMPRESSION: on *

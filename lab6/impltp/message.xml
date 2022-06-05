@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BaliMessageLog>
+    <Task name="MapVerilogSimFile">
+        <Message>
+            <ID>35400250</ID>
+            <Severity>Info</Severity>
+            <Dynamic>0</Dynamic>
+        </Message>
+    </Task>
+    <Task name="MapVHDLSimFile">
+        <Message>
+            <ID>35400250</ID>
+            <Severity>Info</Severity>
+            <Dynamic>0</Dynamic>
+        </Message>
+    </Task>
+    <Task name="IBIS">
+        <Message>
+            <ID>1191031</ID>
+            <Severity>Info</Severity>
+        </Message>
+    </Task>
+    <Task name="Lattice_Synthesis">
+        <Message>
+            <ID>35002000</ID>
+            <Severity>Info</Severity>
+        </Message>
+        <Message>
+            <ID>35001781</ID>
+            <Severity>Info</Severity>
+        </Message>
+        <Message>
+            <ID>35001200</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>ds18B20</Dynamic>
+        </Message>
+        <Message>
+            <ID>35921504</ID>
+            <Severity>Info</Severity>
+            <Dynamic></Dynamic>
+            <Dynamic>D:/lab_6/impltp</Dynamic>
+        </Message>
+        <Message>
+            <ID>35921012</ID>
+            <Severity>Info</Severity>
+            <Dynamic>d:/lab_6/temperature.vhd(9): </Dynamic>
+            <Dynamic>ds18b20</Dynamic>
+            <Navigation>d:/lab_6/temperature.vhd</Navigation>
+            <Navigation>9</Navigation>
+        </Message>
+        <Message>
+            <ID>35921010</ID>
+            <Severity>Info</Severity>
+            <Dynamic>d:/lab_6/temperature.vhd(20): </Dynamic>
+            <Dynamic>behavioral</Dynamic>
+            <Navigation>d:/lab_6/temperature.vhd</Navigation>
+            <Navigation>20</Navigation>
+        </Message>
+        <Message>
+            <ID>35921012</ID>
+            <Severity>Info</Severity>
+            <Dynamic>d:/lab_6/temperature.vhd(9): </Dynamic>
+            <Dynamic>ds18b20</Dynamic>
+            <Navigation>d:/lab_6/temperature.vhd</Navigation>
+            <Navigation>9</Navigation>
+        </Message>
+        <Message>
+            <ID>35921010</ID>
+            <Severity>Info</Severity>
+            <Dynamic>d:/lab_6/temperature.vhd(20): </Dynamic>
+            <Dynamic>behavioral</Dynamic>
+            <Navigation>d:/lab_6/temperature.vhd</Navigation>
+            <Navigation>20</Navigation>
+        </Message>
+        <Message>
+            <ID>35921172</ID>
+            <Severity>Info</Severity>
+            <Dynamic>d:/lab_6/temperature.vhd(71): </Dynamic>
+            <Navigation>d:/lab_6/temperature.vhd</Navigation>
+            <Navigation>71</Navigation>
+        </Message>
+        <Message>
+            <ID>35921172</ID>
+            <Severity>Info</Severity>
+            <Dynamic>d:/lab_6/temperature.vhd(73): </Dynamic>
+            <Navigation>d:/lab_6/temperature.vhd</Navigation>
+            <Navigation>73</Navigation>
+        </Message>
+        <Message>
+            <ID>35921172</ID>
+            <Severity>Info</Severity>
+            <Dynamic>d:/lab_6/temperature.vhd(183): </Dynamic>
+            <Navigation>d:/lab_6/temperature.vhd</Navigation>
+            <Navigation>183</Navigation>
+        </Message>
+        <Message>
+            <ID>35921172</ID>
+            <Severity>Info</Severity>
+            <Dynamic>d:/lab_6/temperature.vhd(206): </Dynamic>
+            <Navigation>d:/lab_6/temperature.vhd</Navigation>
+            <Navigation>206</Navigation>
+        </Message>
+        <Message>
+            <ID>35921172</ID>
+            <Severity>Info</Severity>
+            <Dynamic>d:/lab_6/temperature.vhd(254): </Dynamic>
+            <Navigation>d:/lab_6/temperature.vhd</Navigation>
+            <Navigation>254</Navigation>
+        </Message>
+        <Message>
+            <ID>35921251</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/lab_6/temperature.vhd(302): </Dynamic>
+            <Dynamic>tmp</Dynamic>
+            <Navigation>d:/lab_6/temperature.vhd</Navigation>
+            <Navigation>302</Navigation>
+        </Message>
+        <Message>
+            <ID>35921251</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/lab_6/temperature.vhd(303): </Dynamic>
+            <Dynamic>tmp</Dynamic>
+            <Navigation>d:/lab_6/temperature.vhd</Navigation>
+            <Navigation>303</Navigation>
+        </Message>
+        <Message>
+            <ID>35921251</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/lab_6/temperature.vhd(304): </Dynamic>
+            <Dynamic>tmp</Dynamic>
+            <Navigation>d:/lab_6/temperature.vhd</Navigation>
+            <Navigation>304</Navigation>
+        </Message>
+        <Message>
+            <ID>35921251</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/lab_6/temperature.vhd(305): </Dynamic>
+            <Dynamic>tmp</Dynamic>
+            <Navigation>d:/lab_6/temperature.vhd</Navigation>
+            <Navigation>305</Navigation>
+        </Message>
+        <Message>
+            <ID>35921251</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/lab_6/temperature.vhd(306): </Dynamic>
+            <Dynamic>tmp</Dynamic>
+            <Navigation>d:/lab_6/temperature.vhd</Navigation>
+            <Navigation>306</Navigation>
+        </Message>
+        <Message>
+            <ID>35921251</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/lab_6/temperature.vhd(307): </Dynamic>
+            <Dynamic>tmp</Dynamic>
+            <Navigation>d:/lab_6/temperature.vhd</Navigation>
+            <Navigation>307</Navigation>
+        </Message>
+        <Message>
+            <ID>35921251</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/lab_6/temperature.vhd(308): </Dynamic>
+            <Dynamic>tmp</Dynamic>
+            <Navigation>d:/lab_6/temperature.vhd</Navigation>
+            <Navigation>308</Navigation>
+        </Message>
+        <Message>
+            <ID>35921251</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/lab_6/temperature.vhd(310): </Dynamic>
+            <Dynamic>tmp</Dynamic>
+            <Navigation>d:/lab_6/temperature.vhd</Navigation>
+            <Navigation>310</Navigation>
+        </Message>
+        <Message>
+            <ID>35921251</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/lab_6/temperature.vhd(311): </Dynamic>
+            <Dynamic>tmp</Dynamic>
+            <Navigation>d:/lab_6/temperature.vhd</Navigation>
+            <Navigation>311</Navigation>
+        </Message>
+        <Message>
+            <ID>35921251</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/lab_6/temperature.vhd(312): </Dynamic>
+            <Dynamic>tmp</Dynamic>
+            <Navigation>d:/lab_6/temperature.vhd</Navigation>
+            <Navigation>312</Navigation>
+        </Message>
+        <Message>
+            <ID>35921251</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/lab_6/temperature.vhd(313): </Dynamic>
+            <Dynamic>tmp</Dynamic>
+            <Navigation>d:/lab_6/temperature.vhd</Navigation>
+            <Navigation>313</Navigation>
+        </Message>
+        <Message>
+            <ID>35921251</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/lab_6/temperature.vhd(317): </Dynamic>
+            <Dynamic>mode</Dynamic>
+            <Navigation>d:/lab_6/temperature.vhd</Navigation>
+            <Navigation>317</Navigation>
+        </Message>
+        <Message>
+            <ID>35921251</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/lab_6/temperature.vhd(325): </Dynamic>
+            <Dynamic>mode</Dynamic>
+            <Navigation>d:/lab_6/temperature.vhd</Navigation>
+            <Navigation>325</Navigation>
+        </Message>
+        <Message>
+            <ID>35921613</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/lab_6/temperature.vhd(353): </Dynamic>
+            <Navigation>d:/lab_6/temperature.vhd</Navigation>
+            <Navigation>353</Navigation>
+        </Message>
+        <Message>
+            <ID>35921251</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/lab_6/temperature.vhd(360): </Dynamic>
+            <Dynamic>segcnt_div</Dynamic>
+            <Navigation>d:/lab_6/temperature.vhd</Navigation>
+            <Navigation>360</Navigation>
+        </Message>
+        <Message>
+            <ID>35921613</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/lab_6/temperature.vhd(361): </Dynamic>
+            <Navigation>d:/lab_6/temperature.vhd</Navigation>
+            <Navigation>361</Navigation>
+        </Message>
+        <Message>
+            <ID>1009991</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/lab_6/temperature.vhd(353): Transparent Latch ones[3] gate is stuck at One
+</Dynamic>
+        </Message>
+        <Message>
+            <ID>1009991</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/lab_6/temperature.vhd(353): Transparent Latch ones[2] gate is stuck at One
+</Dynamic>
+        </Message>
+        <Message>
+            <ID>1009991</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/lab_6/temperature.vhd(353): Transparent Latch ones[1] gate is stuck at One
+</Dynamic>
+        </Message>
+        <Message>
+            <ID>1009991</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/lab_6/temperature.vhd(353): Transparent Latch ones[0] gate is stuck at One
+</Dynamic>
+        </Message>
+        <Message>
+            <ID>1009991</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/lab_6/temperature.vhd(353): Transparent Latch tens[3] gate is stuck at One
+</Dynamic>
+        </Message>
+        <Message>
+            <ID>1009991</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/lab_6/temperature.vhd(353): Transparent Latch tens[2] gate is stuck at One
+</Dynamic>
+        </Message>
+        <Message>
+            <ID>1009991</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/lab_6/temperature.vhd(353): Transparent Latch tens[1] gate is stuck at One
+</Dynamic>
+        </Message>
+        <Message>
+            <ID>1009991</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/lab_6/temperature.vhd(353): Transparent Latch tens[0] gate is stuck at One
+</Dynamic>
+        </Message>
+        <Message>
+            <ID>1009991</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/lab_6/temperature.vhd(353): Transparent Latch zpzone[3] gate is stuck at One
+</Dynamic>
+        </Message>
+        <Message>
+            <ID>1009991</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/lab_6/temperature.vhd(353): Transparent Latch zpzone[2] gate is stuck at One
+</Dynamic>
+        </Message>
+        <Message>
+            <ID>1009991</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/lab_6/temperature.vhd(353): Transparent Latch zpzone[1] gate is stuck at One
+</Dynamic>
+        </Message>
+        <Message>
+            <ID>1009991</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/lab_6/temperature.vhd(353): Transparent Latch zpzone[0] gate is stuck at One
+</Dynamic>
+        </Message>
+        <Message>
+            <ID>1009991</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/lab_6/temperature.vhd(353): Transparent Latch zpone[3] gate is stuck at One
+</Dynamic>
+        </Message>
+        <Message>
+            <ID>1009991</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/lab_6/temperature.vhd(353): Transparent Latch zpone[2] gate is stuck at One
+</Dynamic>
+        </Message>
+        <Message>
+            <ID>1009991</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/lab_6/temperature.vhd(353): Transparent Latch zpone[1] gate is stuck at One
+</Dynamic>
+        </Message>
+        <Message>
+            <ID>1009991</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/lab_6/temperature.vhd(353): Transparent Latch zpone[0] gate is stuck at One
+</Dynamic>
+        </Message>
+        <Message>
+            <ID>35931002</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/lab_6/temperature.vhd(51): </Dynamic>
+            <Dynamic>cycledata[87]</Dynamic>
+            <Navigation>d:/lab_6/temperature.vhd</Navigation>
+            <Navigation>51</Navigation>
+        </Message>
+        <Message>
+            <ID>35921205</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/lab_6/temperature.vhd(18): </Dynamic>
+            <Dynamic>ds18B20</Dynamic>
+            <Dynamic>Behavioral</Dynamic>
+            <Navigation>d:/lab_6/temperature.vhd</Navigation>
+            <Navigation>18</Navigation>
+        </Message>
+        <Message>
+            <ID>35935013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/lab_6/temperature.vhd(284): </Dynamic>
+            <Dynamic>write_temp_i0_i0</Dynamic>
+            <Navigation>d:/lab_6/temperature.vhd</Navigation>
+            <Navigation>284</Navigation>
+        </Message>
+        <Message>
+            <ID>35001779</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>placecnt_i0</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001779</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>placecnt_i1</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001779</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>placecnt_i2</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001779</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>placecnt_i3</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001779</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>placecnt_i4</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001611</ID>
+            <Severity>Warning</Severity>
+        </Message>
+    </Task>
+    <Task name="PAR">
+        <Message>
+            <ID>61001101</ID>
+            <Severity>Warning</Severity>
+        </Message>
+        <Message>
+            <ID>61061008</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>clk_c</Dynamic>
+            <Dynamic>Primary</Dynamic>
+            <Dynamic>clk</Dynamic>
+            <Dynamic>C1</Dynamic>
+            <Dynamic>Primary</Dynamic>
+        </Message>
+        <Message>
+            <ID>66011008</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>
+   Signal=clk_temp loads=13 clock_loads=3</Dynamic>
+        </Message>
+        <Message>
+            <ID>66011008</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>
+   Signal=clk_temp loads=13 clock_loads=3</Dynamic>
+        </Message>
+    </Task>
+    <Task name="TimingSimFileVHD">
+        <Message>
+            <ID>35400250</ID>
+            <Severity>Info</Severity>
+            <Dynamic>0</Dynamic>
+        </Message>
+    </Task>
+    <Task name="TimingSimFileVlg">
+        <Message>
+            <ID>35400250</ID>
+            <Severity>Info</Severity>
+            <Dynamic>0</Dynamic>
+        </Message>
+    </Task>
+</BaliMessageLog>

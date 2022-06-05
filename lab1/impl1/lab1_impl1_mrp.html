@@ -1,0 +1,426 @@
+<HTML>
+<HEAD><TITLE>Project Summary</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Mrp"></A>
+             Lattice Mapping Report File for Design Module 'Lab1'
+
+
+
+<A name="mrp_di"></A><B><U><big>Design Information</big></U></B>
+
+Command line:   map -a MachXO2 -p LCMXO2-4000HC -t CSBGA132 -s 4 -oc Commercial
+     lab1_impl1.ngd -o lab1_impl1_map.ncd -pr lab1_impl1.prf -mp lab1_impl1.mrp
+     -lpf C:/Users/70735/Desktop/lab1/impl1/lab1_impl1.lpf -lpf
+     C:/Users/70735/Desktop/lab1/lab1.lpf -c 0 -gui -msgset
+     C:/Users/70735/Desktop/lab1/promote.xml 
+Target Vendor:  LATTICE
+Target Device:  LCMXO2-4000HCCSBGA132
+Target Performance:   4
+Mapper:  xo2c00,  version:  Diamond (64-bit) 3.10.0.111.2
+Mapped on:  12/09/20  21:38:59
+
+
+<A name="mrp_ds"></A><B><U><big>Design Summary</big></U></B>
+   Number of registers:    130 out of  4635 (3%)
+      PFU registers:          130 out of  4320 (3%)
+      PIO registers:            0 out of   315 (0%)
+   Number of SLICEs:       245 out of  2160 (11%)
+      SLICEs as Logic/ROM:    245 out of  2160 (11%)
+      SLICEs as RAM:            0 out of  1620 (0%)
+      SLICEs as Carry:         95 out of  2160 (4%)
+   Number of LUT4s:        486 out of  4320 (11%)
+      Number used as logic LUTs:        296
+      Number used as distributed RAM:     0
+      Number used as ripple logic:      190
+      Number used as shift registers:     0
+   Number of PIO sites used: 32 + 4(JTAG) out of 105 (34%)
+   Number of block RAMs:  0 out of 10 (0%)
+   Number of GSRs:  0 out of 1 (0%)
+   EFB used :       No
+   JTAG used :      No
+   Readback used :  No
+   Oscillator used :  No
+   Startup used :   No
+   POR :            On
+   Bandgap :        On
+   Number of Power Controller:  0 out of 1 (0%)
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 6 (0%)
+   Number of Dynamic Bank Controller (BCLVDSO):  0 out of 1 (0%)
+   Number of DCCA:  0 out of 8 (0%)
+   Number of DCMA:  0 out of 2 (0%)
+   Number of PLLs:  0 out of 2 (0%)
+   Number of DQSDLLs:  0 out of 2 (0%)
+   Number of CLKDIVC:  0 out of 4 (0%)
+   Number of ECLKSYNCA:  0 out of 4 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
+     distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and
+     ripple logic.
+   Number of clocks:  2
+     Net sck_c_c: 75 loads, 56 rising, 19 falling (Driver: PIO clk )
+     Net state_clk: 2 loads, 2 rising, 0 falling (Driver: state_clk_259 )
+   Number of Clock Enables:  18
+
+     Net clk_N_600_enable_3: 1 loads, 1 LSLICEs
+     Net sck_c_c_enable_63: 9 loads, 9 LSLICEs
+     Net button_flag: 9 loads, 9 LSLICEs
+     Net button_flag_N_784: 1 loads, 1 LSLICEs
+     Net sck_c_c_enable_16: 2 loads, 2 LSLICEs
+     Net sck_c_c_enable_15: 2 loads, 2 LSLICEs
+     Net sck_c_c_enable_5: 1 loads, 1 LSLICEs
+     Net clk_N_600_enable_1: 1 loads, 1 LSLICEs
+     Net clk_N_600_enable_2: 1 loads, 1 LSLICEs
+     Net sck_c_c_enable_61: 8 loads, 8 LSLICEs
+     Net sck_c_c_enable_11: 1 loads, 1 LSLICEs
+     Net sck_c_c_enable_12: 1 loads, 1 LSLICEs
+     Net sck_c_c_enable_57: 10 loads, 10 LSLICEs
+     Net sck_c_c_enable_62: 1 loads, 1 LSLICEs
+     Net sck_c_c_enable_43: 1 loads, 1 LSLICEs
+     Net sck_c_c_enable_44: 1 loads, 1 LSLICEs
+     Net sck_c_c_enable_59: 1 loads, 1 LSLICEs
+     Net sck_c_c_enable_60: 1 loads, 1 LSLICEs
+   Number of LSRs:  7
+     Net n5097: 9 loads, 9 LSLICEs
+     Net scan_state_1: 2 loads, 2 LSLICEs
+     Net sck_c_c_enable_61: 10 loads, 10 LSLICEs
+     Net n5098: 10 loads, 10 LSLICEs
+     Net n3766: 1 loads, 1 LSLICEs
+     Net n5096: 4 loads, 4 LSLICEs
+     Net n5133: 2 loads, 2 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net n8240: 94 loads
+     Net n63: 59 loads
+     Net segment_switch_flag_0: 40 loads
+     Net n8237: 33 loads
+     Net n8239: 33 loads
+     Net row_now_3_N_36_3: 32 loads
+     Net row_c_1: 28 loads
+     Net row_c_0: 25 loads
+     Net row_c_2: 25 loads
+     Net row_now_3: 22 loads
+
+
+
+
+   Number of warnings:  0
+   Number of errors:    0
+     
+
+
+
+
+<A name="mrp_dwe"></A><B><U><big>Design Errors/Warnings</big></U></B>
+
+   No errors or warnings present.
+
+
+
+<A name="mrp_ioa"></A><B><U><big>IO (PIO) Attributes</big></U></B>
+
++---------------------+-----------+-----------+------------+
+| IO Name             | Direction | Levelmode | IO         |
+
+|                     |           |  IO_TYPE  | Register   |
++---------------------+-----------+-----------+------------+
+| row[2]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| row[3]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| din                 | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| rck                 | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| sck                 | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| column[0]           | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| column[1]           | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| column[2]           | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| column[3]           | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| button[0]           | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| button[1]           | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| button[2]           | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| button[3]           | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| clk                 | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| seven_segment_disp_dp[0]| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| seven_segment_disp_dp[1]| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| seven_segment_disp_right[0]| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| seven_segment_disp_right[1]| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| seven_segment_disp_right[2]| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| seven_segment_disp_right[3]| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| seven_segment_disp_right[4]| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| seven_segment_disp_right[5]| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| seven_segment_disp_right[6]| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| seven_segment_disp_left[0]| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| seven_segment_disp_left[1]| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| seven_segment_disp_left[2]| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| seven_segment_disp_left[3]| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+
+| seven_segment_disp_left[4]| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| seven_segment_disp_left[5]| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| seven_segment_disp_left[6]| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| row[0]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| row[1]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+
+
+
+<A name="mrp_rm"></A><B><U><big>Removed logic</big></U></B>
+
+Block i2 undriven or does not drive anything - clipped.
+Block GSR_INST undriven or does not drive anything - clipped.
+Signal clk_N_600 was merged into signal sck_c_c
+Signal n18_adj_22 was merged into signal row_now_3_N_36_3
+Signal n8279 was merged into signal row_c_0
+Signal n5094 was merged into signal scan_state_1
+Signal VCC_net undriven or does not drive anything - clipped.
+Signal add_217_33/S1 undriven or does not drive anything - clipped.
+Signal add_217_33/CO undriven or does not drive anything - clipped.
+Signal cnt_debounce_1025_1026_add_4_17/CO undriven or does not drive anything -
+     clipped.
+Signal add_237_1/S0 undriven or does not drive anything - clipped.
+Signal add_237_1/CI undriven or does not drive anything - clipped.
+Signal cnt_100_1023_1024_add_4_1/S0 undriven or does not drive anything -
+     clipped.
+Signal cnt_100_1023_1024_add_4_1/CI undriven or does not drive anything -
+     clipped.
+Signal cnt_100_1023_1024_add_4_7/CO undriven or does not drive anything -
+     clipped.
+Signal add_4266_1/S1 undriven or does not drive anything - clipped.
+Signal add_4266_1/S0 undriven or does not drive anything - clipped.
+Signal add_4266_1/CI undriven or does not drive anything - clipped.
+Signal add_4266_3/S1 undriven or does not drive anything - clipped.
+Signal add_4266_3/S0 undriven or does not drive anything - clipped.
+Signal add_4266_5/S1 undriven or does not drive anything - clipped.
+Signal add_4266_5/S0 undriven or does not drive anything - clipped.
+Signal add_4266_7/S1 undriven or does not drive anything - clipped.
+Signal add_4266_7/S0 undriven or does not drive anything - clipped.
+Signal add_4266_9/S1 undriven or does not drive anything - clipped.
+Signal add_4266_9/S0 undriven or does not drive anything - clipped.
+Signal add_4266_11/S1 undriven or does not drive anything - clipped.
+Signal add_4266_11/S0 undriven or does not drive anything - clipped.
+Signal add_4266_13/S1 undriven or does not drive anything - clipped.
+Signal add_4266_13/S0 undriven or does not drive anything - clipped.
+Signal add_4266_15/S1 undriven or does not drive anything - clipped.
+Signal add_4266_15/S0 undriven or does not drive anything - clipped.
+Signal add_4266_17/S1 undriven or does not drive anything - clipped.
+Signal add_4266_17/S0 undriven or does not drive anything - clipped.
+Signal cnt_debounce2_1027_1028_add_4_19/CO undriven or does not drive anything -
+     clipped.
+Signal add_4266_19/S1 undriven or does not drive anything - clipped.
+Signal add_4266_19/S0 undriven or does not drive anything - clipped.
+
+Signal add_4266_21/S1 undriven or does not drive anything - clipped.
+Signal add_4266_21/S0 undriven or does not drive anything - clipped.
+Signal add_4266_23/S1 undriven or does not drive anything - clipped.
+Signal add_4266_23/S0 undriven or does not drive anything - clipped.
+Signal add_4266_25/S1 undriven or does not drive anything - clipped.
+Signal add_4266_25/S0 undriven or does not drive anything - clipped.
+Signal add_217_1/S0 undriven or does not drive anything - clipped.
+Signal add_217_1/CI undriven or does not drive anything - clipped.
+Signal add_4266_27/S1 undriven or does not drive anything - clipped.
+Signal add_4266_27/S0 undriven or does not drive anything - clipped.
+Signal add_4266_29/S0 undriven or does not drive anything - clipped.
+Signal add_4266_29/CO undriven or does not drive anything - clipped.
+Signal add_4267_2/S1 undriven or does not drive anything - clipped.
+Signal add_4267_2/S0 undriven or does not drive anything - clipped.
+Signal add_4267_2/CI undriven or does not drive anything - clipped.
+Signal add_4267_4/S1 undriven or does not drive anything - clipped.
+Signal add_4267_4/S0 undriven or does not drive anything - clipped.
+Signal add_4267_6/S1 undriven or does not drive anything - clipped.
+Signal add_4267_6/S0 undriven or does not drive anything - clipped.
+Signal add_4267_8/S1 undriven or does not drive anything - clipped.
+Signal add_4267_8/S0 undriven or does not drive anything - clipped.
+Signal add_4267_10/S1 undriven or does not drive anything - clipped.
+Signal add_4267_10/S0 undriven or does not drive anything - clipped.
+Signal add_4267_12/S1 undriven or does not drive anything - clipped.
+Signal add_4267_12/S0 undriven or does not drive anything - clipped.
+Signal add_4267_14/S1 undriven or does not drive anything - clipped.
+Signal add_4267_14/S0 undriven or does not drive anything - clipped.
+Signal add_4267_16/S1 undriven or does not drive anything - clipped.
+Signal add_4267_16/S0 undriven or does not drive anything - clipped.
+Signal add_4267_18/S1 undriven or does not drive anything - clipped.
+Signal add_4267_18/S0 undriven or does not drive anything - clipped.
+Signal add_237_33/S1 undriven or does not drive anything - clipped.
+Signal add_237_33/CO undriven or does not drive anything - clipped.
+Signal add_4267_20/S1 undriven or does not drive anything - clipped.
+Signal add_4267_20/S0 undriven or does not drive anything - clipped.
+Signal cnt_disp_1ms_1021_1022_add_4_1/S0 undriven or does not drive anything -
+     clipped.
+Signal cnt_disp_1ms_1021_1022_add_4_1/CI undriven or does not drive anything -
+     clipped.
+Signal add_4267_22/S1 undriven or does not drive anything - clipped.
+Signal add_4267_22/S0 undriven or does not drive anything - clipped.
+Signal add_4267_24/S1 undriven or does not drive anything - clipped.
+Signal add_4267_24/S0 undriven or does not drive anything - clipped.
+Signal add_4267_26/S1 undriven or does not drive anything - clipped.
+Signal add_4267_26/S0 undriven or does not drive anything - clipped.
+Signal add_4267_28/S0 undriven or does not drive anything - clipped.
+Signal add_4267_28/CO undriven or does not drive anything - clipped.
+Signal cnt_debounce2_1027_1028_add_4_1/S0 undriven or does not drive anything -
+     clipped.
+Signal cnt_debounce2_1027_1028_add_4_1/CI undriven or does not drive anything -
+     clipped.
+Signal cnt_disp_1ms_1021_1022_add_4_17/CO undriven or does not drive anything -
+     clipped.
+Signal cnt_debounce_1025_1026_add_4_1/S0 undriven or does not drive anything -
+     clipped.
+Signal cnt_debounce_1025_1026_add_4_1/CI undriven or does not drive anything -
+
+     clipped.
+Block i5213 was optimized away.
+Block i2556_1_lut was optimized away.
+Block i10_1_lut_rep_178 was optimized away.
+Block i2355_1_lut was optimized away.
+
+
+
+<A name="mrp_mem"></A><B><U><big>Memory Usage</big></U></B>
+
+
+     
+
+
+
+<A name="mrp_runtime"></A><B><U><big>Run Time and Memory Usage</big></U></B>
+-------------------------
+
+   Total CPU Time: 3 secs  
+   Total REAL Time: 6 secs  
+   Peak Memory Usage: 52 MB
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+     Copyright (c) 1995 AT&T Corp.   All rights reserved.
+     Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+     Copyright (c) 2001 Agere Systems   All rights reserved.
+     Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights
+     reserved.
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

@@ -1,0 +1,8 @@
+#Start recording tcl command: 12/3/2020 17:59:46
+#Project Location: C:/Users/70735/Desktop/CPU; Project name: CPU
+prj_project open "C:/Users/70735/Desktop/CPU/CPU.ldf"
+prj_run Synthesis -impl impl1
+prj_run Export -impl impl1
+prj_project save
+prj_project close
+#Stop recording: 12/3/2020 18:10:57

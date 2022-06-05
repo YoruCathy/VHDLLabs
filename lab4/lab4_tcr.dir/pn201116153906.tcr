@@ -1,0 +1,9 @@
+#Start recording tcl command: 11/16/2020 15:38:37
+#Project Location: C:/Users/onion/Desktop/FPGA-LABS/AAC_RE_CODE/lab4; Project name: lab4
+prj_project new -name "lab4" -impl "impl1" -dev LCMXO2-4000HC-4MG132C -synthesis "lse"
+file copy -force -- "C:/Users/onion/Desktop/FPGA-LABS/AAC_RE_CODE/lab4/Clock_Div.vhd" "C:/Users/onion/Desktop/FPGA-LABS/AAC_RE_CODE/lab4/Clock_logic.vhd" "C:/Users/onion/Desktop/FPGA-LABS/AAC_RE_CODE/lab4/Clock_top.vhd" "C:/Users/onion/Desktop/FPGA-LABS/AAC_RE_CODE/lab4/Key_Board.vhd" "C:/Users/onion/Desktop/FPGA-LABS/AAC_RE_CODE/lab4/Number_to_Segnumber.vhd" "C:/Users/onion/Desktop/FPGA-LABS/AAC_RE_CODE/lab4/impl1/source"
+file copy -force -- "C:/Users/onion/Desktop/FPGA-LABS/AAC_RE_CODE/lab4/Segment_Display.vhd" "C:/Users/onion/Desktop/FPGA-LABS/AAC_RE_CODE/lab4/impl1/source"
+prj_src add "C:/Users/onion/Desktop/FPGA-LABS/AAC_RE_CODE/lab4/impl1/source/Clock_Div.vhd" "C:/Users/onion/Desktop/FPGA-LABS/AAC_RE_CODE/lab4/impl1/source/Clock_logic.vhd" "C:/Users/onion/Desktop/FPGA-LABS/AAC_RE_CODE/lab4/impl1/source/Clock_top.vhd" "C:/Users/onion/Desktop/FPGA-LABS/AAC_RE_CODE/lab4/impl1/source/Key_Board.vhd" "C:/Users/onion/Desktop/FPGA-LABS/AAC_RE_CODE/lab4/impl1/source/Number_to_Segnumber.vhd" "C:/Users/onion/Desktop/FPGA-LABS/AAC_RE_CODE/lab4/impl1/source/Segment_Display.vhd"
+prj_project save
+prj_run Export -impl impl1
+#Stop recording: 11/16/2020 15:39:06

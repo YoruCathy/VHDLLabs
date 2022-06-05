@@ -1,0 +1,1433 @@
+<HTML>
+<HEAD><TITLE>Lattice Map TRACE Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Map_Twr"></A><B><U><big>Map TRACE Report</big></U></B>
+
+Loading design for application trce from file 6_impltp_map.ncd.
+Design name: ds18B20
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-4000HC
+Package:     CSBGA132
+Performance: 4
+Loading device for application trce from file 'xo2c4000.nph' in environment: D:/lscc/diamond/3.11_x64/ispfpga.
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 34.4.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+<A name="Map_Twr_setup"></A><B><U><big>Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.11.0.396.4</big></U></B>
+Thu Dec 10 10:47:04 2020
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+
+<A name="mtw1_set_ri"></A><B><U><big>Report Information</big></U></B>
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o 6_impltp.tw1 -gui -msgset D:/lab_6/promote.xml 6_impltp_map.ncd 6_impltp.prf 
+Design file:     6_impltp_map.ncd
+Preference file: 6_impltp.prf
+Device,speed:    LCMXO2-4000HC,4
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+<A name="mtw1_set_ps"></A><B><U><big>Preference Summary</big></U></B>
+
+<FONT COLOR=red><LI><A href='#map_twr_pref_0_0' Target='right'><FONT COLOR=red>FREQUENCY NET "clk_c" 95.157000 MHz (1229 errors)</FONT></A></LI>
+</FONT>            3530 items scored, 1229 timing errors detected.
+Warning:   1.797MHz is the maximum frequency for this preference.
+
+<FONT COLOR=red><LI><A href='#map_twr_pref_0_1' Target='right'><FONT COLOR=red>FREQUENCY NET "clk_temp" 158.983000 MHz (93 errors)</FONT></A></LI>
+</FONT>            93 items scored, 93 timing errors detected.
+Warning:  26.838MHz is the maximum frequency for this preference.
+
+<FONT COLOR=red><LI><A href='#map_twr_pref_0_2' Target='right'><FONT COLOR=red>FREQUENCY NET "sck_c_1" 2.492000 MHz (4096 errors)</FONT></A></LI>
+</FONT>            4096 items scored, 4096 timing errors detected.
+Warning:   0.007MHz is the maximum frequency for this preference.
+
+Report Type:     based on TRACE automatically generated preferences
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+<A name="map_twr_pref_0_0"></A>Preference: FREQUENCY NET "clk_c" 95.157000 MHz ;
+            3530 items scored, 1229 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error: The following path exceeds requirements by 4.000ns (weighted slack = -545.922ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              tmp_bit_429  (from clk_temp +)
+   Destination:    FF         Data in        TMP_i0_i4  (to clk_c +)
+
+   Delay:               3.911ns  (36.9% logic, 63.1% route), 3 logic levels.
+
+ Constraint Details:
+
+      3.911ns physical path delay SLICE_451 to SLICE_445 exceeds
+      (delay constraint based on source clock period of 6.290ns and destination clock period of 10.509ns)
+      0.077ns delay constraint less
+      0.166ns DIN_SET requirement (totaling -0.089ns) by 4.000ns
+
+ Physical Path Details:
+
+      Data path SLICE_451 to SLICE_445:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452  SLICE_451.CLK to   SLICE_451.Q0 SLICE_451 (from clk_temp)
+ROUTE        11   e 1.234   SLICE_451.Q0 to  SLICE_1058.A1 tmp_bit
+CTOF_DEL    ---     0.495  SLICE_1058.A1 to  SLICE_1058.F1 SLICE_1058
+ROUTE         1   e 1.234  SLICE_1058.F1 to   SLICE_445.A0 n825
+CTOF_DEL    ---     0.495   SLICE_445.A0 to   SLICE_445.F0 SLICE_445
+ROUTE         1   e 0.001   SLICE_445.F0 to  SLICE_445.DI0 n13516 (to clk_c)
+                  --------
+                    3.911   (36.9% logic, 63.1% route), 3 logic levels.
+
+Warning:   1.797MHz is the maximum frequency for this preference.
+
+
+================================================================================
+<A name="map_twr_pref_0_1"></A>Preference: FREQUENCY NET "clk_temp" 158.983000 MHz ;
+            93 items scored, 93 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error: The following path exceeds requirements by 9.820ns (weighted slack = -30.977ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              cnt_1139__i14  (from clk_c +)
+   Destination:    FF         Data in        i231_432  (to clk_temp +)
+
+   Delay:              11.532ns  (31.6% logic, 68.4% route), 7 logic levels.
+
+ Constraint Details:
+
+     11.532ns physical path delay SLICE_181 to SLICE_434 exceeds
+      (delay constraint based on source clock period of 10.509ns and destination clock period of 6.290ns)
+      1.994ns delay constraint less
+      0.282ns CE_SET requirement (totaling 1.712ns) by 9.820ns
+
+ Physical Path Details:
+
+      Data path SLICE_181 to SLICE_434:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452  SLICE_181.CLK to   SLICE_181.Q1 SLICE_181 (from clk_c)
+ROUTE         2   e 1.234   SLICE_181.Q1 to   SLICE_433.B0 cnt_14
+CTOF_DEL    ---     0.495   SLICE_433.B0 to   SLICE_433.F0 SLICE_433
+ROUTE         1   e 1.234   SLICE_433.F0 to   SLICE_805.D0 n6_adj_672
+CTOF_DEL    ---     0.495   SLICE_805.D0 to   SLICE_805.F0 SLICE_805
+ROUTE         3   e 0.480   SLICE_805.F0 to   SLICE_805.C1 n13489
+CTOF_DEL    ---     0.495   SLICE_805.C1 to   SLICE_805.F1 SLICE_805
+ROUTE         2   e 1.234   SLICE_805.F1 to */SLICE_467.C0 n28575
+CTOOFX_DEL  ---     0.721 */SLICE_467.C0 to *LICE_467.OFX0 STATE_3__I_0_496_i3/SLICE_467
+ROUTE         1   e 1.234 *LICE_467.OFX0 to   SLICE_663.A1 n3_adj_386
+CTOF_DEL    ---     0.495   SLICE_663.A1 to   SLICE_663.F1 SLICE_663
+ROUTE         1   e 1.234   SLICE_663.F1 to  SLICE_1097.B1 n7_adj_384
+CTOF_DEL    ---     0.495  SLICE_1097.B1 to  SLICE_1097.F1 SLICE_1097
+ROUTE         2   e 1.234  SLICE_1097.F1 to   SLICE_434.CE dq_N_403 (to clk_temp)
+                  --------
+                   11.532   (31.6% logic, 68.4% route), 7 logic levels.
+
+Warning:  26.838MHz is the maximum frequency for this preference.
+
+
+================================================================================
+<A name="map_twr_pref_0_2"></A>Preference: FREQUENCY NET "sck_c_1" 2.492000 MHz ;
+            4096 items scored, 4096 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error: The following path exceeds requirements by 347.734ns (weighted slack = -143707.611ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              TMP_i0_i0  (from clk_c +)
+   Destination:    FF         Data in        ser_452  (to sck_c_1 -)
+
+   Delay:             348.539ns  (33.4% logic, 66.6% route), 233 logic levels.
+
+ Constraint Details:
+
+    348.539ns physical path delay SLICE_424 to SLICE_444 exceeds
+      0.971ns delay constraint less
+      0.166ns DIN_SET requirement (totaling 0.805ns) by 347.734ns
+
+ Physical Path Details:
+
+      Data path SLICE_424 to SLICE_444:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452  SLICE_424.CLK to   SLICE_424.Q0 SLICE_424 (from clk_c)
+ROUTE        26   e 1.234   SLICE_424.Q0 to   SLICE_653.A1 TMP_0
+CTOF_DEL    ---     0.495   SLICE_653.A1 to   SLICE_653.F1 SLICE_653
+ROUTE         4   e 1.234   SLICE_653.F1 to   SLICE_171.B1 n28573
+C1TOFCO_DE  ---     0.889   SLICE_171.B1 to  SLICE_171.FCO SLICE_171
+ROUTE         1   e 0.001  SLICE_171.FCO to  SLICE_168.FCI n24019
+FCITOF1_DE  ---     0.643  SLICE_168.FCI to   SLICE_168.F1 SLICE_168
+ROUTE         1   e 1.234   SLICE_168.F1 to   SLICE_283.B0 n3574
+C0TOFCO_DE  ---     1.023   SLICE_283.B0 to  SLICE_283.FCO SLICE_283
+ROUTE         1   e 0.001  SLICE_283.FCO to  SLICE_257.FCI n24002
+FCITOF0_DE  ---     0.585  SLICE_257.FCI to   SLICE_257.F0 SLICE_257
+ROUTE         2   e 1.234   SLICE_257.F0 to   SLICE_116.B0 n3041
+C0TOFCO_DE  ---     1.023   SLICE_116.B0 to  SLICE_116.FCO SLICE_116
+ROUTE         1   e 0.001  SLICE_116.FCO to  SLICE_115.FCI n24027
+FCITOF1_DE  ---     0.643  SLICE_115.FCI to   SLICE_115.F1 SLICE_115
+ROUTE         1   e 1.234   SLICE_115.F1 to   SLICE_324.A0 n3481
+C0TOFCO_DE  ---     1.023   SLICE_324.A0 to  SLICE_324.FCO SLICE_324
+ROUTE         1   e 0.001  SLICE_324.FCO to  SLICE_322.FCI n23992
+FCITOF1_DE  ---     0.643  SLICE_322.FCI to   SLICE_322.F1 SLICE_322
+ROUTE         4   e 1.234   SLICE_322.F1 to  SLICE_1009.C1 n173
+CTOF_DEL    ---     0.495  SLICE_1009.C1 to  SLICE_1009.F1 SLICE_1009
+ROUTE         6   e 1.234  SLICE_1009.F1 to   SLICE_647.B1 n28539
+CTOF_DEL    ---     0.495   SLICE_647.B1 to   SLICE_647.F1 SLICE_647
+ROUTE         2   e 1.234   SLICE_647.F1 to  SLICE_1007.A0 n28538
+CTOF_DEL    ---     0.495  SLICE_1007.A0 to  SLICE_1007.F0 SLICE_1007
+ROUTE         1   e 1.234  SLICE_1007.F0 to   SLICE_522.B1 n28_adj_427
+CTOF_DEL    ---     0.495   SLICE_522.B1 to   SLICE_522.F1 SLICE_522
+ROUTE        11   e 1.234   SLICE_522.F1 to   SLICE_521.C1 n28531
+CTOF_DEL    ---     0.495   SLICE_521.C1 to   SLICE_521.F1 SLICE_521
+ROUTE         8   e 1.234   SLICE_521.F1 to  SLICE_1096.C0 n28523
+CTOF_DEL    ---     0.495  SLICE_1096.C0 to  SLICE_1096.F0 SLICE_1096
+ROUTE         2   e 1.234  SLICE_1096.F0 to   SLICE_997.B0 n28507
+CTOF_DEL    ---     0.495   SLICE_997.B0 to   SLICE_997.F0 SLICE_997
+ROUTE         3   e 1.234   SLICE_997.F0 to   SLICE_634.A1 n447
+CTOF_DEL    ---     0.495   SLICE_634.A1 to   SLICE_634.F1 SLICE_634
+ROUTE        14   e 1.234   SLICE_634.F1 to   SLICE_633.C1 n13081
+CTOF_DEL    ---     0.495   SLICE_633.C1 to   SLICE_633.F1 SLICE_633
+ROUTE         3   e 1.234   SLICE_633.F1 to   SLICE_977.C0 n28490
+CTOF_DEL    ---     0.495   SLICE_977.C0 to   SLICE_977.F0 SLICE_977
+ROUTE         1   e 1.234   SLICE_977.F0 to   SLICE_627.D1 n6_adj_682
+CTOF_DEL    ---     0.495   SLICE_627.D1 to   SLICE_627.F1 SLICE_627
+ROUTE        17   e 1.234   SLICE_627.F1 to   SLICE_934.B1 n13082
+CTOF_DEL    ---     0.495   SLICE_934.B1 to   SLICE_934.F1 SLICE_934
+ROUTE         3   e 1.234   SLICE_934.F1 to   SLICE_812.D0 n557
+CTOF_DEL    ---     0.495   SLICE_812.D0 to   SLICE_812.F0 SLICE_812
+ROUTE         1   e 1.234   SLICE_812.F0 to   SLICE_574.B0 n10_adj_683
+CTOF_DEL    ---     0.495   SLICE_574.B0 to   SLICE_574.F0 SLICE_574
+ROUTE        19   e 1.234   SLICE_574.F0 to   SLICE_917.B1 n13087
+CTOF_DEL    ---     0.495   SLICE_917.B1 to   SLICE_917.F1 SLICE_917
+ROUTE         3   e 1.234   SLICE_917.F1 to   SLICE_891.B0 n613
+CTOF_DEL    ---     0.495   SLICE_891.B0 to   SLICE_891.F0 SLICE_891
+ROUTE         1   e 1.234   SLICE_891.F0 to   SLICE_602.B0 n12_adj_615
+CTOF_DEL    ---     0.495   SLICE_602.B0 to   SLICE_602.F0 SLICE_602
+ROUTE        21   e 1.234   SLICE_602.F0 to   SLICE_614.C1 n13091
+CTOF_DEL    ---     0.495   SLICE_614.C1 to   SLICE_614.F1 SLICE_614
+ROUTE         2   e 1.234   SLICE_614.F1 to   SLICE_913.C0 n28443
+CTOF_DEL    ---     0.495   SLICE_913.C0 to   SLICE_913.F0 SLICE_913
+ROUTE         1   e 1.234   SLICE_913.F0 to   SLICE_601.C0 n10_adj_17
+CTOF_DEL    ---     0.495   SLICE_601.C0 to   SLICE_601.F0 SLICE_601
+ROUTE        23   e 1.234   SLICE_601.F0 to   SLICE_904.B1 n13092
+CTOF_DEL    ---     0.495   SLICE_904.B1 to   SLICE_904.F1 SLICE_904
+ROUTE         4   e 1.234   SLICE_904.F1 to   SLICE_886.B0 n717
+CTOF_DEL    ---     0.495   SLICE_886.B0 to   SLICE_886.F0 SLICE_886
+ROUTE         1   e 1.234   SLICE_886.F0 to   SLICE_598.C0 n14_adj_670
+CTOF_DEL    ---     0.495   SLICE_598.C0 to   SLICE_598.F0 SLICE_598
+ROUTE        25   e 1.234   SLICE_598.F0 to   SLICE_608.C1 n13058
+CTOF_DEL    ---     0.495   SLICE_608.C1 to   SLICE_608.F1 SLICE_608
+ROUTE         2   e 1.234   SLICE_608.F1 to   SLICE_904.C0 n28429
+CTOF_DEL    ---     0.495   SLICE_904.C0 to   SLICE_904.F0 SLICE_904
+ROUTE         1   e 1.234   SLICE_904.F0 to   SLICE_596.C0 n13_adj_391
+CTOF_DEL    ---     0.495   SLICE_596.C0 to   SLICE_596.F0 SLICE_596
+ROUTE        26   e 1.234   SLICE_596.F0 to   SLICE_606.C1 n13059
+CTOF_DEL    ---     0.495   SLICE_606.C1 to   SLICE_606.F1 SLICE_606
+ROUTE         3   e 1.234   SLICE_606.F1 to  SLICE_1063.C0 n28424
+CTOF_DEL    ---     0.495  SLICE_1063.C0 to  SLICE_1063.F0 SLICE_1063
+ROUTE         1   e 1.234  SLICE_1063.F0 to   SLICE_880.D0 n10_adj_650
+CTOF_DEL    ---     0.495   SLICE_880.D0 to   SLICE_880.F0 SLICE_880
+ROUTE         1   e 1.234   SLICE_880.F0 to   SLICE_594.C0 n16_adj_646
+CTOF_DEL    ---     0.495   SLICE_594.C0 to   SLICE_594.F0 SLICE_594
+ROUTE        29   e 1.234   SLICE_594.F0 to   SLICE_385.A0 n13065
+C0TOFCO_DE  ---     1.023   SLICE_385.A0 to  SLICE_385.FCO SLICE_385
+ROUTE         1   e 0.001  SLICE_385.FCO to  SLICE_383.FCI n24320
+FCITOFCO_D  ---     0.162  SLICE_383.FCI to  SLICE_383.FCO SLICE_383
+ROUTE         1   e 0.001  SLICE_383.FCO to  SLICE_377.FCI n24321
+FCITOFCO_D  ---     0.162  SLICE_377.FCI to  SLICE_377.FCO SLICE_377
+ROUTE         1   e 0.001  SLICE_377.FCO to  SLICE_375.FCI n24322
+FCITOFCO_D  ---     0.162  SLICE_375.FCI to  SLICE_375.FCO SLICE_375
+ROUTE         1   e 0.001  SLICE_375.FCO to  SLICE_374.FCI n24323
+FCITOFCO_D  ---     0.162  SLICE_374.FCI to  SLICE_374.FCO SLICE_374
+ROUTE         1   e 0.001  SLICE_374.FCO to  SLICE_369.FCI n24324
+FCITOF0_DE  ---     0.585  SLICE_369.FCI to   SLICE_369.F0 SLICE_369
+ROUTE         1   e 1.234   SLICE_369.F0 to   SLICE_439.D1 n918_adj_409
+CTOF_DEL    ---     0.495   SLICE_439.D1 to   SLICE_439.F1 SLICE_439
+ROUTE         1   e 1.234   SLICE_439.F1 to   SLICE_715.A0 n27260
+CTOF_DEL    ---     0.495   SLICE_715.A0 to   SLICE_715.F0 SLICE_715
+ROUTE         1   e 1.234   SLICE_715.F0 to */SLICE_489.B1 n27320
+CTOOFX_DEL  ---     0.721 */SLICE_489.B1 to *LICE_489.OFX0 i45/SLICE_489
+ROUTE         3   e 1.234 *LICE_489.OFX0 to  SLICE_1030.D0 n27356
+CTOF_DEL    ---     0.495  SLICE_1030.D0 to  SLICE_1030.F0 SLICE_1030
+ROUTE         1   e 1.234  SLICE_1030.F0 to   SLICE_239.B1 n950_adj_393
+C1TOFCO_DE  ---     0.889   SLICE_239.B1 to  SLICE_239.FCO SLICE_239
+ROUTE         1   e 0.001  SLICE_239.FCO to  SLICE_221.FCI n23975
+FCITOF0_DE  ---     0.585  SLICE_221.FCI to   SLICE_221.F0 SLICE_221
+ROUTE         2   e 1.234   SLICE_221.F0 to   SLICE_197.A0 n1530
+C0TOFCO_DE  ---     1.023   SLICE_197.A0 to  SLICE_197.FCO SLICE_197
+ROUTE         1   e 0.001  SLICE_197.FCO to  SLICE_195.FCI n24246
+FCITOFCO_D  ---     0.162  SLICE_195.FCI to  SLICE_195.FCO SLICE_195
+ROUTE         1   e 0.001  SLICE_195.FCO to  SLICE_194.FCI n24247
+FCITOFCO_D  ---     0.162  SLICE_194.FCI to  SLICE_194.FCO SLICE_194
+ROUTE         1   e 0.001  SLICE_194.FCO to  SLICE_192.FCI n24248
+FCITOFCO_D  ---     0.162  SLICE_192.FCI to  SLICE_192.FCO SLICE_192
+ROUTE         1   e 0.001  SLICE_192.FCO to  SLICE_190.FCI n24249
+FCITOFCO_D  ---     0.162  SLICE_190.FCI to  SLICE_190.FCO SLICE_190
+ROUTE         1   e 0.001  SLICE_190.FCO to  SLICE_186.FCI n24250
+FCITOFCO_D  ---     0.162  SLICE_186.FCI to  SLICE_186.FCO SLICE_186
+ROUTE         1   e 0.001  SLICE_186.FCO to  SLICE_185.FCI n24251
+FCITOFCO_D  ---     0.162  SLICE_185.FCI to  SLICE_185.FCO SLICE_185
+ROUTE         1   e 0.001  SLICE_185.FCO to  SLICE_183.FCI n24252
+FCITOF1_DE  ---     0.643  SLICE_183.FCI to   SLICE_183.F1 SLICE_183
+ROUTE         6   e 1.234   SLICE_183.F1 to  SLICE_1060.A0 n2_adj_82
+CTOF_DEL    ---     0.495  SLICE_1060.A0 to  SLICE_1060.F0 SLICE_1060
+ROUTE         4   e 1.234  SLICE_1060.F0 to   SLICE_585.B1 n28411
+CTOF_DEL    ---     0.495   SLICE_585.B1 to   SLICE_585.F1 SLICE_585
+ROUTE         4   e 1.234   SLICE_585.F1 to   SLICE_827.A1 n28404
+CTOF_DEL    ---     0.495   SLICE_827.A1 to   SLICE_827.F1 SLICE_827
+ROUTE         5   e 1.234   SLICE_827.F1 to   SLICE_580.C1 n26981
+CTOF_DEL    ---     0.495   SLICE_580.C1 to   SLICE_580.F1 SLICE_580
+ROUTE        10   e 1.234   SLICE_580.F1 to   SLICE_590.C0 n32_adj_446
+CTOF_DEL    ---     0.495   SLICE_590.C0 to   SLICE_590.F0 SLICE_590
+ROUTE         5   e 1.234   SLICE_590.F0 to   SLICE_570.B1 n28397
+CTOF_DEL    ---     0.495   SLICE_570.B1 to   SLICE_570.F1 SLICE_570
+ROUTE        10   e 1.234   SLICE_570.F1 to   SLICE_503.D1 n28391
+CTOF_DEL    ---     0.495   SLICE_503.D1 to   SLICE_503.F1 SLICE_503
+ROUTE         6   e 1.234   SLICE_503.F1 to   SLICE_780.C1 n28388
+CTOF_DEL    ---     0.495   SLICE_780.C1 to   SLICE_780.F1 SLICE_780
+ROUTE         5   e 1.234   SLICE_780.F1 to   SLICE_348.A0 n537
+C0TOFCO_DE  ---     1.023   SLICE_348.A0 to  SLICE_348.FCO SLICE_348
+ROUTE         1   e 0.001  SLICE_348.FCO to  SLICE_347.FCI n24081
+FCITOF0_DE  ---     0.585  SLICE_347.FCI to   SLICE_347.F0 SLICE_347
+ROUTE         2   e 1.234   SLICE_347.F0 to   SLICE_785.C0 n574
+CTOF_DEL    ---     0.495   SLICE_785.C0 to   SLICE_785.F0 SLICE_785
+ROUTE         3   e 1.234   SLICE_785.F0 to   SLICE_780.D0 n592_adj_118
+CTOF_DEL    ---     0.495   SLICE_780.D0 to   SLICE_780.F0 SLICE_780
+ROUTE         1   e 1.234   SLICE_780.F0 to   SLICE_556.D1 n6_adj_8
+CTOF_DEL    ---     0.495   SLICE_556.D1 to   SLICE_556.F1 SLICE_556
+ROUTE        21   e 1.234   SLICE_556.F1 to   SLICE_743.D1 n13061
+CTOF_DEL    ---     0.495   SLICE_743.D1 to   SLICE_743.F1 SLICE_743
+ROUTE         3   e 1.234   SLICE_743.F1 to   SLICE_761.C1 n653_adj_127
+CTOF_DEL    ---     0.495   SLICE_761.C1 to   SLICE_761.F1 SLICE_761
+ROUTE         1   e 1.234   SLICE_761.F1 to   SLICE_526.B0 n10_adj_115
+CTOF_DEL    ---     0.495   SLICE_526.B0 to   SLICE_526.F0 SLICE_526
+ROUTE        23   e 1.234   SLICE_526.F0 to   SLICE_744.B0 n13033
+CTOF_DEL    ---     0.495   SLICE_744.B0 to   SLICE_744.F0 SLICE_744
+ROUTE         3   e 1.234   SLICE_744.F0 to   SLICE_707.B0 n707_adj_132
+CTOF_DEL    ---     0.495   SLICE_707.B0 to   SLICE_707.F0 SLICE_707
+ROUTE         1   e 1.234   SLICE_707.F0 to   SLICE_537.B0 n12_adj_613
+CTOF_DEL    ---     0.495   SLICE_537.B0 to   SLICE_537.F0 SLICE_537
+ROUTE        25   e 1.234   SLICE_537.F0 to   SLICE_692.B1 n13090
+CTOF_DEL    ---     0.495   SLICE_692.B1 to   SLICE_692.F1 SLICE_692
+ROUTE         3   e 1.234   SLICE_692.F1 to   SLICE_682.C0 n766
+CTOF_DEL    ---     0.495   SLICE_682.C0 to   SLICE_682.F0 SLICE_682
+ROUTE         1   e 1.234   SLICE_682.F0 to   SLICE_532.B0 n14_adj_661
+CTOF_DEL    ---     0.495   SLICE_532.B0 to   SLICE_532.F0 SLICE_532
+ROUTE        26   e 1.234   SLICE_532.F0 to   SLICE_696.B0 n13072
+CTOF_DEL    ---     0.495   SLICE_696.B0 to   SLICE_696.F0 SLICE_696
+ROUTE         3   e 1.234   SLICE_696.F0 to  SLICE_1100.D0 n825_adj_156
+CTOF_DEL    ---     0.495  SLICE_1100.D0 to  SLICE_1100.F0 SLICE_1100
+ROUTE         1   e 1.234  SLICE_1100.F0 to   SLICE_657.A0 n15_adj_631
+CTOF_DEL    ---     0.495   SLICE_657.A0 to   SLICE_657.F0 SLICE_657
+ROUTE        28   e 1.234   SLICE_657.F0 to   SLICE_688.B1 n13056
+CTOF_DEL    ---     0.495   SLICE_688.B1 to   SLICE_688.F1 SLICE_688
+ROUTE         3   e 1.234   SLICE_688.F1 to  SLICE_1086.A0 n881
+CTOF_DEL    ---     0.495  SLICE_1086.A0 to  SLICE_1086.F0 SLICE_1086
+ROUTE         1   e 1.234  SLICE_1086.F0 to   SLICE_550.A0 n15_adj_620
+CTOF_DEL    ---     0.495   SLICE_550.A0 to   SLICE_550.F0 SLICE_550
+ROUTE        30   e 1.234   SLICE_550.F0 to   SLICE_658.C1 n13079
+CTOF_DEL    ---     0.495   SLICE_658.C1 to   SLICE_658.F1 SLICE_658
+ROUTE         2   e 1.234   SLICE_658.F1 to  SLICE_1086.C1 n28353
+CTOF_DEL    ---     0.495  SLICE_1086.C1 to  SLICE_1086.F1 SLICE_1086
+ROUTE         1   e 1.234  SLICE_1086.F1 to   SLICE_738.D0 n10_adj_586
+CTOF_DEL    ---     0.495   SLICE_738.D0 to   SLICE_738.F0 SLICE_738
+ROUTE         1   e 1.234   SLICE_738.F0 to   SLICE_523.C1 n16_adj_426
+CTOF_DEL    ---     0.495   SLICE_523.C1 to   SLICE_523.F1 SLICE_523
+ROUTE        32   e 1.234   SLICE_523.F1 to   SLICE_638.C0 n13057
+CTOF_DEL    ---     0.495   SLICE_638.C0 to   SLICE_638.F0 SLICE_638
+ROUTE         3   e 1.234   SLICE_638.F0 to  SLICE_1023.C0 n28348
+CTOF_DEL    ---     0.495  SLICE_1023.C0 to  SLICE_1023.F0 SLICE_1023
+ROUTE         1   e 1.234  SLICE_1023.F0 to   SLICE_773.C0 n14_adj_44
+CTOF_DEL    ---     0.495   SLICE_773.C0 to   SLICE_773.F0 SLICE_773
+ROUTE         1   e 1.234   SLICE_773.F0 to   SLICE_560.B0 n22
+CTOF_DEL    ---     0.495   SLICE_560.B0 to   SLICE_560.F0 SLICE_560
+ROUTE        33   e 1.234   SLICE_560.F0 to  SLICE_1076.B0 n13097
+CTOF_DEL    ---     0.495  SLICE_1076.B0 to  SLICE_1076.F0 SLICE_1076
+ROUTE         2   e 1.234  SLICE_1076.F0 to   SLICE_792.A0 n1057
+CTOF_DEL    ---     0.495   SLICE_792.A0 to   SLICE_792.F0 SLICE_792
+ROUTE         1   e 1.234   SLICE_792.F0 to   SLICE_791.B0 n18_adj_591
+CTOF_DEL    ---     0.495   SLICE_791.B0 to   SLICE_791.F0 SLICE_791
+ROUTE         1   e 1.234   SLICE_791.F0 to   SLICE_789.C0 n20_adj_587
+CTOF_DEL    ---     0.495   SLICE_789.C0 to   SLICE_789.F0 SLICE_789
+ROUTE         5   e 1.234   SLICE_789.F0 to   SLICE_650.B0 n13073
+CTOF_DEL    ---     0.495   SLICE_650.B0 to   SLICE_650.F0 SLICE_650
+ROUTE         2   e 1.234   SLICE_650.F0 to  SLICE_1014.C0 n5_adj_468
+CTOF_DEL    ---     0.495  SLICE_1014.C0 to  SLICE_1014.F0 SLICE_1014
+ROUTE         1   e 1.234  SLICE_1014.F0 to   SLICE_140.A1 n28338
+C1TOFCO_DE  ---     0.889   SLICE_140.A1 to  SLICE_140.FCO SLICE_140
+ROUTE         1   e 0.001  SLICE_140.FCO to  SLICE_137.FCI n24139
+FCITOFCO_D  ---     0.162  SLICE_137.FCI to  SLICE_137.FCO SLICE_137
+ROUTE         1   e 0.001  SLICE_137.FCO to  SLICE_134.FCI n24140
+FCITOFCO_D  ---     0.162  SLICE_134.FCI to  SLICE_134.FCO SLICE_134
+ROUTE         1   e 0.001  SLICE_134.FCO to  SLICE_133.FCI n24141
+FCITOFCO_D  ---     0.162  SLICE_133.FCI to  SLICE_133.FCO SLICE_133
+ROUTE         1   e 0.001  SLICE_133.FCO to  SLICE_132.FCI n24142
+FCITOFCO_D  ---     0.162  SLICE_132.FCI to  SLICE_132.FCO SLICE_132
+ROUTE         1   e 0.001  SLICE_132.FCO to  SLICE_130.FCI n24143
+FCITOFCO_D  ---     0.162  SLICE_130.FCI to  SLICE_130.FCO SLICE_130
+ROUTE         1   e 0.001  SLICE_130.FCO to  SLICE_128.FCI n24144
+FCITOF1_DE  ---     0.643  SLICE_128.FCI to   SLICE_128.F1 SLICE_128
+ROUTE         4   e 1.234   SLICE_128.F1 to   SLICE_581.D0 n4499
+CTOF_DEL    ---     0.495   SLICE_581.D0 to   SLICE_581.F0 SLICE_581
+ROUTE         4   e 0.480   SLICE_581.F0 to   SLICE_581.A1 n28334
+CTOF_DEL    ---     0.495   SLICE_581.A1 to   SLICE_581.F1 SLICE_581
+ROUTE         2   e 1.234   SLICE_581.F1 to   SLICE_591.B1 n28_adj_571
+CTOF_DEL    ---     0.495   SLICE_591.B1 to   SLICE_591.F1 SLICE_591
+ROUTE         4   e 1.234   SLICE_591.F1 to   SLICE_888.C1 n30_adj_570
+CTOF_DEL    ---     0.495   SLICE_888.C1 to   SLICE_888.F1 SLICE_888
+ROUTE         5   e 0.480   SLICE_888.F1 to   SLICE_888.A0 n28333
+CTOF_DEL    ---     0.495   SLICE_888.A0 to   SLICE_888.F0 SLICE_888
+ROUTE         1   e 1.234   SLICE_888.F0 to   SLICE_866.B0 n27800
+CTOF_DEL    ---     0.495   SLICE_866.B0 to   SLICE_866.F0 SLICE_866
+ROUTE         3   e 0.480   SLICE_866.F0 to   SLICE_866.C1 n503_adj_583
+CTOF_DEL    ---     0.495   SLICE_866.C1 to   SLICE_866.F1 SLICE_866
+ROUTE         9   e 1.234   SLICE_866.F1 to  SLICE_1043.B1 n6_adj_144
+CTOF_DEL    ---     0.495  SLICE_1043.B1 to  SLICE_1043.F1 SLICE_1043
+ROUTE         9   e 1.234  SLICE_1043.F1 to   SLICE_993.A1 n28329
+CTOF_DEL    ---     0.495   SLICE_993.A1 to   SLICE_993.F1 SLICE_993
+ROUTE         3   e 1.234   SLICE_993.F1 to   SLICE_912.B0 n558_adj_579
+CTOF_DEL    ---     0.495   SLICE_912.B0 to   SLICE_912.F0 SLICE_912
+ROUTE         9   e 1.234   SLICE_912.F0 to   SLICE_639.D0 n20409
+CTOF_DEL    ---     0.495   SLICE_639.D0 to   SLICE_639.F0 SLICE_639
+ROUTE         9   e 1.234   SLICE_639.F0 to   SLICE_991.C0 n28320
+CTOF_DEL    ---     0.495   SLICE_991.C0 to   SLICE_991.F0 SLICE_991
+ROUTE         3   e 1.234   SLICE_991.F0 to   SLICE_628.A0 n611_adj_568
+CTOF_DEL    ---     0.495   SLICE_628.A0 to   SLICE_628.F0 SLICE_628
+ROUTE        17   e 1.234   SLICE_628.F0 to   SLICE_988.D0 n20389
+CTOF_DEL    ---     0.495   SLICE_988.D0 to   SLICE_988.F0 SLICE_988
+ROUTE         1   e 1.234   SLICE_988.F0 to   SLICE_747.C1 n28315
+CTOF_DEL    ---     0.495   SLICE_747.C1 to   SLICE_747.F1 SLICE_747
+ROUTE         1   e 1.234   SLICE_747.F1 to   SLICE_631.D1 n4_adj_94
+CTOF_DEL    ---     0.495   SLICE_631.D1 to   SLICE_631.F1 SLICE_631
+ROUTE        19   e 1.234   SLICE_631.F1 to  SLICE_1072.A0 n20383
+CTOF_DEL    ---     0.495  SLICE_1072.A0 to  SLICE_1072.F0 SLICE_1072
+ROUTE         2   e 1.234  SLICE_1072.F0 to   SLICE_734.C1 n28313
+CTOF_DEL    ---     0.495   SLICE_734.C1 to   SLICE_734.F1 SLICE_734
+ROUTE         1   e 1.234   SLICE_734.F1 to   SLICE_544.D0 n4_adj_18
+CTOF_DEL    ---     0.495   SLICE_544.D0 to   SLICE_544.F0 SLICE_544
+ROUTE        21   e 1.234   SLICE_544.F0 to  SLICE_1109.A1 n20275
+CTOF_DEL    ---     0.495  SLICE_1109.A1 to  SLICE_1109.F1 SLICE_1109
+ROUTE         1   e 1.234  SLICE_1109.F1 to   SLICE_702.C1 n28310
+CTOF_DEL    ---     0.495   SLICE_702.C1 to   SLICE_702.F1 SLICE_702
+ROUTE         1   e 1.234   SLICE_702.F1 to   SLICE_543.D0 n4_adj_664
+CTOF_DEL    ---     0.495   SLICE_543.D0 to   SLICE_543.F0 SLICE_543
+ROUTE        23   e 1.234   SLICE_543.F0 to   SLICE_963.A0 n20164
+CTOF_DEL    ---     0.495   SLICE_963.A0 to   SLICE_963.F0 SLICE_963
+ROUTE         3   e 1.234   SLICE_963.F0 to   SLICE_724.A0 n830_adj_498
+CTOF_DEL    ---     0.495   SLICE_724.A0 to   SLICE_724.F0 SLICE_724
+ROUTE         1   e 1.234   SLICE_724.F0 to   SLICE_542.B0 n12_adj_628
+CTOF_DEL    ---     0.495   SLICE_542.B0 to   SLICE_542.F0 SLICE_542
+ROUTE        25   e 1.234   SLICE_542.F0 to   SLICE_953.B1 n13106
+CTOF_DEL    ---     0.495   SLICE_953.B1 to   SLICE_953.F1 SLICE_953
+ROUTE         2   e 1.234   SLICE_953.F1 to   SLICE_954.C0 n28305
+CTOF_DEL    ---     0.495   SLICE_954.C0 to   SLICE_954.F0 SLICE_954
+ROUTE         1   e 1.234   SLICE_954.F0 to   SLICE_527.D0 n4_adj_5
+CTOF_DEL    ---     0.495   SLICE_527.D0 to   SLICE_527.F0 SLICE_527
+ROUTE        27   e 1.234   SLICE_527.F0 to  SLICE_1070.A0 n20571
+CTOF_DEL    ---     0.495  SLICE_1070.A0 to  SLICE_1070.F0 SLICE_1070
+ROUTE         2   e 1.234  SLICE_1070.F0 to   SLICE_941.C0 n28302
+CTOF_DEL    ---     0.495   SLICE_941.C0 to   SLICE_941.F0 SLICE_941
+ROUTE         1   e 1.234   SLICE_941.F0 to   SLICE_662.B0 n12_adj_656
+CTOF_DEL    ---     0.495   SLICE_662.B0 to   SLICE_662.F0 SLICE_662
+ROUTE         1   e 0.480   SLICE_662.F0 to   SLICE_662.C1 n16_adj_655
+CTOF_DEL    ---     0.495   SLICE_662.C1 to   SLICE_662.F1 SLICE_662
+ROUTE         7   e 1.234   SLICE_662.F1 to   SLICE_935.C1 n950_adj_461
+CTOF_DEL    ---     0.495   SLICE_935.C1 to   SLICE_935.F1 SLICE_935
+ROUTE         7   e 1.234   SLICE_935.F1 to  SLICE_1110.B0 n28299
+CTOF_DEL    ---     0.495  SLICE_1110.B0 to  SLICE_1110.F0 SLICE_1110
+ROUTE         2   e 1.234  SLICE_1110.F0 to   SLICE_565.B0 n28296
+CTOF_DEL    ---     0.495   SLICE_565.B0 to   SLICE_565.F0 SLICE_565
+ROUTE         9   e 1.234   SLICE_565.F0 to  SLICE_1082.D1 n1004_adj_447
+CTOF_DEL    ---     0.495  SLICE_1082.D1 to  SLICE_1082.F1 SLICE_1082
+ROUTE         7   e 1.234  SLICE_1082.F1 to   SLICE_286.A1 n28292
+C1TOFCO_DE  ---     0.889   SLICE_286.A1 to  SLICE_286.FCO SLICE_286
+ROUTE         1   e 0.001  SLICE_286.FCO to  SLICE_285.FCI n24353
+FCITOF0_DE  ---     0.585  SLICE_285.FCI to   SLICE_285.F0 SLICE_285
+ROUTE         2   e 1.234   SLICE_285.F0 to   SLICE_176.A0 n1576
+C0TOFCO_DE  ---     1.023   SLICE_176.A0 to  SLICE_176.FCO SLICE_176
+ROUTE         1   e 0.001  SLICE_176.FCO to  SLICE_175.FCI n24255
+FCITOFCO_D  ---     0.162  SLICE_175.FCI to  SLICE_175.FCO SLICE_175
+ROUTE         1   e 0.001  SLICE_175.FCO to  SLICE_172.FCI n24256
+FCITOFCO_D  ---     0.162  SLICE_172.FCI to  SLICE_172.FCO SLICE_172
+ROUTE         1   e 0.001  SLICE_172.FCO to  SLICE_169.FCI n24257
+FCITOFCO_D  ---     0.162  SLICE_169.FCI to  SLICE_169.FCO SLICE_169
+ROUTE         1   e 0.001  SLICE_169.FCO to  SLICE_165.FCI n24258
+FCITOFCO_D  ---     0.162  SLICE_165.FCI to  SLICE_165.FCO SLICE_165
+ROUTE         1   e 0.001  SLICE_165.FCO to  SLICE_161.FCI n24259
+FCITOFCO_D  ---     0.162  SLICE_161.FCI to  SLICE_161.FCO SLICE_161
+ROUTE         1   e 0.001  SLICE_161.FCO to  SLICE_157.FCI n24260
+FCITOF1_DE  ---     0.643  SLICE_157.FCI to   SLICE_157.F1 SLICE_157
+ROUTE         2   e 1.234   SLICE_157.F1 to   SLICE_879.B1 n3_adj_185
+CTOF_DEL    ---     0.495   SLICE_879.B1 to   SLICE_879.F1 SLICE_879
+ROUTE        10   e 1.234   SLICE_879.F1 to   SLICE_509.C1 n28282
+CTOF_DEL    ---     0.495   SLICE_509.C1 to   SLICE_509.F1 SLICE_509
+ROUTE         2   e 0.480   SLICE_509.F1 to   SLICE_509.B0 n28277
+CTOF_DEL    ---     0.495   SLICE_509.B0 to   SLICE_509.F0 SLICE_509
+ROUTE         3   e 1.234   SLICE_509.F0 to   SLICE_868.D0 n606
+CTOF_DEL    ---     0.495   SLICE_868.D0 to   SLICE_868.F0 SLICE_868
+ROUTE         3   e 1.234   SLICE_868.F0 to   SLICE_589.B1 n20627
+CTOF_DEL    ---     0.495   SLICE_589.B1 to   SLICE_589.F1 SLICE_589
+ROUTE        10   e 1.234   SLICE_589.F1 to   SLICE_864.A0 n28265
+CTOF_DEL    ---     0.495   SLICE_864.A0 to   SLICE_864.F0 SLICE_864
+ROUTE         3   e 1.234   SLICE_864.F0 to   SLICE_863.B1 n664_adj_229
+CTOF_DEL    ---     0.495   SLICE_863.B1 to   SLICE_863.F1 SLICE_863
+ROUTE        10   e 1.234   SLICE_863.F1 to   SLICE_846.D1 n20635
+CTOF_DEL    ---     0.495   SLICE_846.D1 to   SLICE_846.F1 SLICE_846
+ROUTE         8   e 1.234   SLICE_846.F1 to   SLICE_830.C1 n28255
+CTOF_DEL    ---     0.495   SLICE_830.C1 to   SLICE_830.F1 SLICE_830
+ROUTE         3   e 1.234   SLICE_830.F1 to   SLICE_577.A1 n720_adj_238
+CTOF_DEL    ---     0.495   SLICE_577.A1 to   SLICE_577.F1 SLICE_577
+ROUTE        20   e 1.234   SLICE_577.F1 to   SLICE_835.D0 n20643
+CTOF_DEL    ---     0.495   SLICE_835.D0 to   SLICE_835.F0 SLICE_835
+ROUTE         1   e 1.234   SLICE_835.F0 to   SLICE_753.C1 n28245
+CTOF_DEL    ---     0.495   SLICE_753.C1 to   SLICE_753.F1 SLICE_753
+ROUTE         1   e 1.234   SLICE_753.F1 to   SLICE_573.D1 n4_adj_671
+CTOF_DEL    ---     0.495   SLICE_573.D1 to   SLICE_573.F1 SLICE_573
+ROUTE        22   e 1.234   SLICE_573.F1 to   SLICE_808.A1 n20298
+CTOF_DEL    ---     0.495   SLICE_808.A1 to   SLICE_808.F1 SLICE_808
+ROUTE         2   e 1.234   SLICE_808.F1 to  SLICE_1105.C0 n28241
+CTOF_DEL    ---     0.495  SLICE_1105.C0 to  SLICE_1105.F0 SLICE_1105
+ROUTE         1   e 1.234  SLICE_1105.F0 to   SLICE_568.D1 n6_adj_630
+CTOF_DEL    ---     0.495   SLICE_568.D1 to   SLICE_568.F1 SLICE_568
+ROUTE        24   e 1.234   SLICE_568.F1 to  SLICE_1056.B0 n13124
+CTOF_DEL    ---     0.495  SLICE_1056.B0 to  SLICE_1056.F0 SLICE_1056
+ROUTE         1   e 1.234  SLICE_1056.F0 to   SLICE_795.C0 n28236
+CTOF_DEL    ---     0.495   SLICE_795.C0 to   SLICE_795.F0 SLICE_795
+ROUTE         1   e 1.234   SLICE_795.F0 to   SLICE_562.D1 n4_adj_675
+CTOF_DEL    ---     0.495   SLICE_562.D1 to   SLICE_562.F1 SLICE_562
+ROUTE        26   e 1.234   SLICE_562.F1 to   SLICE_787.D0 n20399
+CTOF_DEL    ---     0.495   SLICE_787.D0 to   SLICE_787.F0 SLICE_787
+ROUTE         1   e 1.234   SLICE_787.F0 to   SLICE_771.C0 n28233
+CTOF_DEL    ---     0.495   SLICE_771.C0 to   SLICE_771.F0 SLICE_771
+ROUTE         1   e 1.234   SLICE_771.F0 to   SLICE_558.D1 n4_adj_639
+CTOF_DEL    ---     0.495   SLICE_558.D1 to   SLICE_558.F1 SLICE_558
+ROUTE        28   e 1.234   SLICE_558.F1 to  SLICE_1054.A0 n20407
+CTOF_DEL    ---     0.495  SLICE_1054.A0 to  SLICE_1054.F0 SLICE_1054
+ROUTE         3   e 1.234  SLICE_1054.F0 to   SLICE_755.C0 n28231
+CTOF_DEL    ---     0.495   SLICE_755.C0 to   SLICE_755.F0 SLICE_755
+ROUTE         1   e 1.234   SLICE_755.F0 to   SLICE_551.D1 n4_adj_640
+CTOF_DEL    ---     0.495   SLICE_551.D1 to   SLICE_551.F1 SLICE_551
+ROUTE        30   e 1.234   SLICE_551.F1 to  SLICE_1052.A0 n20423
+CTOF_DEL    ---     0.495  SLICE_1052.A0 to  SLICE_1052.F0 SLICE_1052
+ROUTE         2   e 1.234  SLICE_1052.F0 to   SLICE_739.C0 n28228
+CTOF_DEL    ---     0.495   SLICE_739.C0 to   SLICE_739.F0 SLICE_739
+ROUTE         1   e 1.234   SLICE_739.F0 to   SLICE_540.D1 n4_adj_657
+CTOF_DEL    ---     0.495   SLICE_540.D1 to   SLICE_540.F1 SLICE_540
+ROUTE        32   e 1.234   SLICE_540.F1 to  SLICE_1048.A0 n20449
+CTOF_DEL    ---     0.495  SLICE_1048.A0 to  SLICE_1048.F0 SLICE_1048
+ROUTE         4   e 1.234  SLICE_1048.F0 to   SLICE_680.C0 n28226
+CTOF_DEL    ---     0.495   SLICE_680.C0 to   SLICE_680.F0 SLICE_680
+ROUTE         1   e 1.234   SLICE_680.F0 to   SLICE_693.D1 n4_adj_651
+CTOF_DEL    ---     0.495   SLICE_693.D1 to   SLICE_693.F1 SLICE_693
+ROUTE         3   e 1.234   SLICE_693.F1 to   SLICE_676.A0 n20475
+CTOF_DEL    ---     0.495   SLICE_676.A0 to   SLICE_676.F0 SLICE_676
+ROUTE         4   e 1.234   SLICE_676.F0 to */SLICE_492.M0 n28222
+MTOOFX_DEL  ---     0.376 */SLICE_492.M0 to *LICE_492.OFX0 i24243/SLICE_492
+ROUTE         3   e 1.234 *LICE_492.OFX0 to   SLICE_290.A1 n27246
+C1TOFCO_DE  ---     0.889   SLICE_290.A1 to  SLICE_290.FCO SLICE_290
+ROUTE         1   e 0.001  SLICE_290.FCO to  SLICE_288.FCI n24212
+FCITOFCO_D  ---     0.162  SLICE_288.FCI to  SLICE_288.FCO SLICE_288
+ROUTE         1   e 0.001  SLICE_288.FCO to  SLICE_287.FCI n24213
+FCITOFCO_D  ---     0.162  SLICE_287.FCI to  SLICE_287.FCO SLICE_287
+ROUTE         1   e 0.001  SLICE_287.FCO to  SLICE_280.FCI n24214
+FCITOFCO_D  ---     0.162  SLICE_280.FCI to  SLICE_280.FCO SLICE_280
+ROUTE         1   e 0.001  SLICE_280.FCO to  SLICE_273.FCI n24215
+FCITOF1_DE  ---     0.643  SLICE_273.FCI to   SLICE_273.F1 SLICE_273
+ROUTE         2   e 1.234   SLICE_273.F1 to   SLICE_829.D0 n4694
+CTOF_DEL    ---     0.495   SLICE_829.D0 to   SLICE_829.F0 SLICE_829
+ROUTE         4   e 1.234   SLICE_829.F0 to   SLICE_824.C1 ones_3_N_314_8
+CTOF_DEL    ---     0.495   SLICE_824.C1 to   SLICE_824.F1 SLICE_824
+ROUTE         7   e 1.234   SLICE_824.F1 to   SLICE_783.D1 n172
+CTOF_DEL    ---     0.495   SLICE_783.D1 to   SLICE_783.F1 SLICE_783
+ROUTE         4   e 1.234   SLICE_783.F1 to   SLICE_504.D1 n28210
+CTOF_DEL    ---     0.495   SLICE_504.D1 to   SLICE_504.F1 SLICE_504
+ROUTE         9   e 1.234   SLICE_504.F1 to   SLICE_916.C1 n211
+CTOF_DEL    ---     0.495   SLICE_916.C1 to   SLICE_916.F1 SLICE_916
+ROUTE         6   e 1.234   SLICE_916.F1 to   SLICE_615.A0 n28207
+CTOF_DEL    ---     0.495   SLICE_615.A0 to   SLICE_615.F0 SLICE_615
+ROUTE         9   e 1.234   SLICE_615.F0 to   SLICE_605.B1 n28203
+CTOF_DEL    ---     0.495   SLICE_605.B1 to   SLICE_605.F1 SLICE_605
+ROUTE         2   e 1.234   SLICE_605.F1 to  SLICE_1093.C0 n28202
+CTOF_DEL    ---     0.495  SLICE_1093.C0 to  SLICE_1093.F0 SLICE_1093
+ROUTE         2   e 1.234  SLICE_1093.F0 to   SLICE_612.B1 n262
+CTOF_DEL    ---     0.495   SLICE_612.B1 to   SLICE_612.F1 SLICE_612
+ROUTE         7   e 1.234   SLICE_612.F1 to   SLICE_893.C1 n272_adj_441
+CTOF_DEL    ---     0.495   SLICE_893.C1 to   SLICE_893.F1 SLICE_893
+ROUTE         3   e 1.234   SLICE_893.F1 to   SLICE_894.B0 n28194
+CTOF_DEL    ---     0.495   SLICE_894.B0 to   SLICE_894.F0 SLICE_894
+ROUTE         1   e 0.480   SLICE_894.F0 to   SLICE_894.A1 n20501
+CTOF_DEL    ---     0.495   SLICE_894.A1 to   SLICE_894.F1 SLICE_894
+ROUTE         1   e 1.234   SLICE_894.F1 to   SLICE_675.B1 n7_adj_643
+CTOF_DEL    ---     0.495   SLICE_675.B1 to   SLICE_675.F1 SLICE_675
+ROUTE         3   e 1.234   SLICE_675.F1 to   SLICE_678.C1 n302_adj_432
+CTOF_DEL    ---     0.495   SLICE_678.C1 to   SLICE_678.F1 SLICE_678
+ROUTE         4   e 1.234   SLICE_678.F1 to   SLICE_236.A1 ones_3_N_238_2
+C1TOFCO_DE  ---     0.889   SLICE_236.A1 to  SLICE_236.FCO SLICE_236
+ROUTE         1   e 0.001  SLICE_236.FCO to  SLICE_226.FCI n24006
+FCITOF1_DE  ---     0.643  SLICE_226.FCI to   SLICE_226.F1 SLICE_226
+ROUTE         3   e 1.234   SLICE_226.F1 to     SLICE_2.A0 tens_3_N_323_4
+C0TOFCO_DE  ---     1.023     SLICE_2.A0 to    SLICE_2.FCO SLICE_2
+ROUTE         1   e 0.001    SLICE_2.FCO to    SLICE_1.FCI n24312
+FCITOFCO_D  ---     0.162    SLICE_1.FCI to    SLICE_1.FCO SLICE_1
+ROUTE         1   e 0.001    SLICE_1.FCO to  SLICE_414.FCI n24313
+FCITOF0_DE  ---     0.585  SLICE_414.FCI to   SLICE_414.F0 SLICE_414
+ROUTE         2   e 1.234   SLICE_414.F0 to   SLICE_586.B1 n3_adj_324
+CTOF_DEL    ---     0.495   SLICE_586.B1 to   SLICE_586.F1 SLICE_586
+ROUTE         3   e 1.234   SLICE_586.F1 to   SLICE_587.D0 n161
+CTOF_DEL    ---     0.495   SLICE_587.D0 to   SLICE_587.F0 SLICE_587
+ROUTE         6   e 1.234   SLICE_587.F0 to  SLICE_1029.A0 n28187
+CTOF_DEL    ---     0.495  SLICE_1029.A0 to  SLICE_1029.F0 SLICE_1029
+ROUTE         2   e 1.234  SLICE_1029.F0 to   SLICE_498.A1 n268_adj_340
+CTOF_DEL    ---     0.495   SLICE_498.A1 to   SLICE_498.F1 SLICE_498
+ROUTE         9   e 1.234   SLICE_498.F1 to   SLICE_623.C0 n278_adj_342
+CTOF_DEL    ---     0.495   SLICE_623.C0 to   SLICE_623.F0 SLICE_623
+ROUTE         4   e 1.234   SLICE_623.F0 to   SLICE_576.A1 n301_adj_343
+CTOF_DEL    ---     0.495   SLICE_576.A1 to   SLICE_576.F1 SLICE_576
+ROUTE        10   e 1.234   SLICE_576.F1 to   SLICE_507.B1 n13117
+CTOF_DEL    ---     0.495   SLICE_507.B1 to   SLICE_507.F1 SLICE_507
+ROUTE         5   e 1.234   SLICE_507.F1 to   SLICE_721.C0 n28177
+CTOF_DEL    ---     0.495   SLICE_721.C0 to   SLICE_721.F0 SLICE_721
+ROUTE         3   e 1.234   SLICE_721.F0 to   SLICE_534.B1 n334_adj_347
+CTOF_DEL    ---     0.495   SLICE_534.B1 to   SLICE_534.F1 SLICE_534
+ROUTE        14   e 1.234   SLICE_534.F1 to   SLICE_815.B1 n13116
+CTOF_DEL    ---     0.495   SLICE_815.B1 to   SLICE_815.F1 SLICE_815
+ROUTE         2   e 1.234   SLICE_815.F1 to   SLICE_685.B1 n368_adj_359
+CTOF_DEL    ---     0.495   SLICE_685.B1 to   SLICE_685.F1 SLICE_685
+ROUTE         1   e 1.234   SLICE_685.F1 to   SLICE_684.B1 n7_adj_634
+CTOF_DEL    ---     0.495   SLICE_684.B1 to   SLICE_684.F1 SLICE_684
+ROUTE         9   e 1.234   SLICE_684.F1 to   SLICE_655.C1 n378_adj_363
+CTOF_DEL    ---     0.495   SLICE_655.C1 to   SLICE_655.F1 SLICE_655
+ROUTE         1   e 0.480   SLICE_655.F1 to   SLICE_655.B0 n11_adj_596
+CTOF_DEL    ---     0.495   SLICE_655.B0 to   SLICE_655.F0 SLICE_655
+ROUTE         1   e 1.234   SLICE_655.F0 to   SLICE_955.B1 n9_adj_668
+CTOF_DEL    ---     0.495   SLICE_955.B1 to   SLICE_955.F1 SLICE_955
+ROUTE         4   e 0.480   SLICE_955.F1 to   SLICE_955.B0 tens_3_N_230_0
+CTOF_DEL    ---     0.495   SLICE_955.B0 to   SLICE_955.F0 SLICE_955
+ROUTE         1   e 1.234   SLICE_955.F0 to */SLICE_470.A1 n28162
+CTOOFX_DEL  ---     0.721 */SLICE_470.A1 to *LICE_470.OFX0 i24294/SLICE_470
+ROUTE         4   e 1.234 *LICE_470.OFX0 to */SLICE_474.D0 cycledata_63_N_66_3
+CTOOFX_DEL  ---     0.721 */SLICE_474.D0 to *LICE_474.OFX0 ser_I_0_i57/SLICE_474
+ROUTE         1   e 1.234 *LICE_474.OFX0 to */SLICE_473.D1 n57
+CTOOFX_DEL  ---     0.721 */SLICE_473.D1 to *LICE_473.OFX0 ser_I_0_i60/SLICE_473
+ROUTE         1   e 1.234 *LICE_473.OFX0 to */SLICE_472.C1 n60
+CTOOFX_DEL  ---     0.721 */SLICE_472.C1 to *LICE_472.OFX0 i23987/SLICE_472
+ROUTE         1   e 0.001 *LICE_472.OFX0 to *SLICE_472.FXB n27399
+FXTOOFX_DE  ---     0.241 *SLICE_472.FXB to *LICE_472.OFX1 i23987/SLICE_472
+ROUTE         1   e 1.234 *LICE_472.OFX1 to   SLICE_444.A0 n27400
+CTOF_DEL    ---     0.495   SLICE_444.A0 to   SLICE_444.F0 SLICE_444
+ROUTE         1   e 0.001   SLICE_444.F0 to  SLICE_444.DI0 ser_N_379 (to sck_c_1)
+                  --------
+                  348.539   (33.4% logic, 66.6% route), 233 logic levels.
+
+Warning:   0.007MHz is the maximum frequency for this preference.
+
+<A name="mtw1_set_rs"></A><B><U><big>Report Summary</big></U></B>
+--------------
+----------------------------------------------------------------------------
+Preference                              |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "clk_c" 95.157000 MHz ;   |   95.157 MHz|    1.797 MHz|   3 *
+                                        |             |             |
+FREQUENCY NET "clk_temp" 158.983000 MHz |             |             |
+;                                       |  158.983 MHz|   26.838 MHz|   7 *
+                                        |             |             |
+FREQUENCY NET "sck_c_1" 2.492000 MHz ;  |    2.492 MHz|    0.007 MHz| 233 *
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+3 preferences(marked by "*" above) not met.
+
+----------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+----------------------------------------------------------------------------
+n5_adj_468                              |       2|    4096|     75.60%
+                                        |        |        |
+n28538                                  |       2|    4096|     75.60%
+                                        |        |        |
+n28_adj_427                             |       1|    4096|     75.60%
+                                        |        |        |
+n28531                                  |      11|    4096|     75.60%
+                                        |        |        |
+n4_adj_94                               |       1|    4096|     75.60%
+                                        |        |        |
+n28315                                  |       1|    4096|     75.60%
+                                        |        |        |
+n6_adj_682                              |       1|    4096|     75.60%
+                                        |        |        |
+n57                                     |       1|    4096|     75.60%
+                                        |        |        |
+n60                                     |       1|    4096|     75.60%
+                                        |        |        |
+n27399                                  |       1|    4096|     75.60%
+                                        |        |        |
+n7_adj_643                              |       1|    4096|     75.60%
+                                        |        |        |
+n24320                                  |       1|    4096|     75.60%
+                                        |        |        |
+n13081                                  |      14|    4096|     75.60%
+                                        |        |        |
+n24321                                  |       1|    4096|     75.60%
+                                        |        |        |
+n24322                                  |       1|    4096|     75.60%
+                                        |        |        |
+n24323                                  |       1|    4096|     75.60%
+                                        |        |        |
+n24324                                  |       1|    4096|     75.60%
+                                        |        |        |
+n272_adj_441                            |       7|    4096|     75.60%
+                                        |        |        |
+n20501                                  |       1|    4096|     75.60%
+                                        |        |        |
+n27356                                  |       3|    4096|     75.60%
+                                        |        |        |
+n12_adj_615                             |       1|    4096|     75.60%
+                                        |        |        |
+n24081                                  |       1|    4096|     75.60%
+                                        |        |        |
+n13059                                  |      26|    4096|     75.60%
+                                        |        |        |
+n10_adj_650                             |       1|    4096|     75.60%
+                                        |        |        |
+n13065                                  |      29|    4096|     75.60%
+                                        |        |        |
+n16_adj_646                             |       1|    4096|     75.60%
+                                        |        |        |
+n28277                                  |       2|    4096|     75.60%
+                                        |        |        |
+n30_adj_570                             |       4|    4096|     75.60%
+                                        |        |        |
+n27800                                  |       1|    4096|     75.60%
+                                        |        |        |
+n3_adj_324                              |       2|    4096|     75.60%
+                                        |        |        |
+n27400                                  |       1|    4096|     75.60%
+                                        |        |        |
+n13058                                  |      25|    4096|     75.60%
+                                        |        |        |
+n173                                    |       4|    4096|     75.60%
+                                        |        |        |
+n23992                                  |       1|    4096|     75.60%
+                                        |        |        |
+n28333                                  |       5|    4096|     75.60%
+                                        |        |        |
+n28_adj_571                             |       2|    4096|     75.60%
+                                        |        |        |
+n161                                    |       3|    4096|     75.60%
+                                        |        |        |
+n28255                                  |       8|    4096|     75.60%
+                                        |        |        |
+n28334                                  |       4|    4096|     75.60%
+                                        |        |        |
+n28162                                  |       1|    4096|     75.60%
+                                        |        |        |
+n13092                                  |      23|    4096|     75.60%
+                                        |        |        |
+ones_3_N_314_8                          |       4|    4096|     75.60%
+                                        |        |        |
+n4_adj_671                              |       1|    4096|     75.60%
+                                        |        |        |
+n28245                                  |       1|    4096|     75.60%
+                                        |        |        |
+tens_3_N_230_0                          |       4|    4096|     75.60%
+                                        |        |        |
+n378_adj_363                            |       9|    4096|     75.60%
+                                        |        |        |
+n10_adj_683                             |       1|    4096|     75.60%
+                                        |        |        |
+n6_adj_630                              |       1|    4096|     75.60%
+                                        |        |        |
+n28388                                  |       6|    4096|     75.60%
+                                        |        |        |
+n18_adj_591                             |       1|    4096|     75.60%
+                                        |        |        |
+n20_adj_587                             |       1|    4096|     75.60%
+                                        |        |        |
+n28296                                  |       2|    4096|     75.60%
+                                        |        |        |
+n574                                    |       2|    4096|     75.60%
+                                        |        |        |
+n13091                                  |      21|    4096|     75.60%
+                                        |        |        |
+n28187                                  |       6|    4096|     75.60%
+                                        |        |        |
+n24212                                  |       1|    4096|     75.60%
+                                        |        |        |
+n24213                                  |       1|    4096|     75.60%
+                                        |        |        |
+n28292                                  |       7|    4096|     75.60%
+                                        |        |        |
+n24353                                  |       1|    4096|     75.60%
+                                        |        |        |
+n6_adj_8                                |       1|    4096|     75.60%
+                                        |        |        |
+n537                                    |       5|    4096|     75.60%
+                                        |        |        |
+n24214                                  |       1|    4096|     75.60%
+                                        |        |        |
+n22                                     |       1|    4096|     75.60%
+                                        |        |        |
+n950_adj_461                            |       7|    4096|     75.60%
+                                        |        |        |
+n32_adj_446                             |      10|    4096|     75.60%
+                                        |        |        |
+n28391                                  |      10|    4096|     75.60%
+                                        |        |        |
+n592_adj_118                            |       3|    4096|     75.60%
+                                        |        |        |
+n28404                                  |       4|    4096|     75.60%
+                                        |        |        |
+n24215                                  |       1|    4096|     75.60%
+                                        |        |        |
+n13117                                  |      10|    4096|     75.60%
+                                        |        |        |
+n10_adj_586                             |       1|    4096|     75.60%
+                                        |        |        |
+n16_adj_426                             |       1|    4096|     75.60%
+                                        |        |        |
+n12_adj_628                             |       1|    4096|     75.60%
+                                        |        |        |
+n28177                                  |       5|    4096|     75.60%
+                                        |        |        |
+n918_adj_409                            |       1|    4096|     75.60%
+                                        |        |        |
+n27320                                  |       1|    4096|     75.60%
+                                        |        |        |
+n27260                                  |       1|    4096|     75.60%
+                                        |        |        |
+n24002                                  |       1|    4096|     75.60%
+                                        |        |        |
+n12_adj_613                             |       1|    4096|     75.60%
+                                        |        |        |
+n13116                                  |      14|    4096|     75.60%
+                                        |        |        |
+n4_adj_651                              |       1|    4096|     75.60%
+                                        |        |        |
+n20475                                  |       3|    4096|     75.60%
+                                        |        |        |
+n302_adj_432                            |       3|    4096|     75.60%
+                                        |        |        |
+n211                                    |       9|    4096|     75.60%
+                                        |        |        |
+n278_adj_342                            |       9|    4096|     75.60%
+                                        |        |        |
+cycledata_63_N_66_3                     |       4|    4096|     75.60%
+                                        |        |        |
+n950_adj_393                            |       1|    4096|     75.60%
+                                        |        |        |
+n28226                                  |       4|    4096|     75.60%
+                                        |        |        |
+ones_3_N_238_2                          |       4|    4096|     75.60%
+                                        |        |        |
+n28222                                  |       4|    4096|     75.60%
+                                        |        |        |
+n24006                                  |       1|    4096|     75.60%
+                                        |        |        |
+n23975                                  |       1|    4096|     75.60%
+                                        |        |        |
+n4694                                   |       2|    4096|     75.60%
+                                        |        |        |
+n24248                                  |       1|    4096|     75.60%
+                                        |        |        |
+n24249                                  |       1|    4096|     75.60%
+                                        |        |        |
+n24250                                  |       1|    4096|     75.60%
+                                        |        |        |
+n24251                                  |       1|    4096|     75.60%
+                                        |        |        |
+n2_adj_82                               |       6|    4096|     75.60%
+                                        |        |        |
+n24252                                  |       1|    4096|     75.60%
+                                        |        |        |
+n28573                                  |       4|    4096|     75.60%
+                                        |        |        |
+n24257                                  |       1|    4096|     75.60%
+                                        |        |        |
+n3574                                   |       1|    4096|     75.60%
+                                        |        |        |
+n24019                                  |       1|    4096|     75.60%
+                                        |        |        |
+n24258                                  |       1|    4096|     75.60%
+                                        |        |        |
+n24259                                  |       1|    4096|     75.60%
+                                        |        |        |
+n3_adj_185                              |       2|    4096|     75.60%
+                                        |        |        |
+n24260                                  |       1|    4096|     75.60%
+                                        |        |        |
+n28203                                  |       9|    4096|     75.60%
+                                        |        |        |
+n28338                                  |       1|    4096|     75.60%
+                                        |        |        |
+n24139                                  |       1|    4096|     75.60%
+                                        |        |        |
+n13097                                  |      33|    4096|     75.60%
+                                        |        |        |
+n13073                                  |       5|    4096|     75.60%
+                                        |        |        |
+n24140                                  |       1|    4096|     75.60%
+                                        |        |        |
+n24141                                  |       1|    4096|     75.60%
+                                        |        |        |
+n24142                                  |       1|    4096|     75.60%
+                                        |        |        |
+n24143                                  |       1|    4096|     75.60%
+                                        |        |        |
+n4499                                   |       4|    4096|     75.60%
+                                        |        |        |
+n24144                                  |       1|    4096|     75.60%
+                                        |        |        |
+n26981                                  |       5|    4096|     75.60%
+                                        |        |        |
+n28411                                  |       4|    4096|     75.60%
+                                        |        |        |
+n13079                                  |      30|    4096|     75.60%
+                                        |        |        |
+n10_adj_115                             |       1|    4096|     75.60%
+                                        |        |        |
+n3481                                   |       1|    4096|     75.60%
+                                        |        |        |
+n24027                                  |       1|    4096|     75.60%
+                                        |        |        |
+n3041                                   |       2|    4096|     75.60%
+                                        |        |        |
+n13106                                  |      25|    4096|     75.60%
+                                        |        |        |
+n13056                                  |      28|    4096|     75.60%
+                                        |        |        |
+n28282                                  |      10|    4096|     75.60%
+                                        |        |        |
+n13087                                  |      19|    4096|     75.60%
+                                        |        |        |
+n606                                    |       3|    4096|     75.60%
+                                        |        |        |
+n13072                                  |      26|    4096|     75.60%
+                                        |        |        |
+n20627                                  |       3|    4096|     75.60%
+                                        |        |        |
+n20635                                  |      10|    4096|     75.60%
+                                        |        |        |
+n13090                                  |      25|    4096|     75.60%
+                                        |        |        |
+n1004_adj_447                           |       9|    4096|     75.60%
+                                        |        |        |
+n20643                                  |      20|    4096|     75.60%
+                                        |        |        |
+n20383                                  |      19|    4096|     75.60%
+                                        |        |        |
+n13033                                  |      23|    4096|     75.60%
+                                        |        |        |
+n13082                                  |      17|    4096|     75.60%
+                                        |        |        |
+n20298                                  |      22|    4096|     75.60%
+                                        |        |        |
+n20389                                  |      17|    4096|     75.60%
+                                        |        |        |
+n13061                                  |      21|    4096|     75.60%
+                                        |        |        |
+n28320                                  |       9|    4096|     75.60%
+                                        |        |        |
+n20409                                  |       9|    4096|     75.60%
+                                        |        |        |
+n13057                                  |      32|    4096|     75.60%
+                                        |        |        |
+ser_N_379                               |       1|    4096|     75.60%
+                                        |        |        |
+n503_adj_583                            |       3|    4096|     75.60%
+                                        |        |        |
+n6_adj_144                              |       9|    4096|     75.60%
+                                        |        |        |
+n28329                                  |       9|    4096|     75.60%
+                                        |        |        |
+n16_adj_655                             |       1|    4096|     75.60%
+                                        |        |        |
+n24313                                  |       1|    4096|     75.60%
+                                        |        |        |
+n13124                                  |      24|    4096|     75.60%
+                                        |        |        |
+n28539                                  |       6|    4095|     75.58%
+                                        |        |        |
+n28490                                  |       3|    4095|     75.58%
+                                        |        |        |
+n447                                    |       3|    4095|     75.58%
+                                        |        |        |
+n613                                    |       3|    4095|     75.58%
+                                        |        |        |
+n24247                                  |       1|    4095|     75.58%
+                                        |        |        |
+n24256                                  |       1|    4095|     75.58%
+                                        |        |        |
+n557                                    |       3|    4095|     75.58%
+                                        |        |        |
+n28443                                  |       2|    4094|     75.56%
+                                        |        |        |
+n10_adj_17                              |       1|    4094|     75.56%
+                                        |        |        |
+TMP_0                                   |      26|    4094|     75.56%
+                                        |        |        |
+n28523                                  |       8|    4093|     75.54%
+                                        |        |        |
+n28507                                  |       2|    4092|     75.53%
+                                        |        |        |
+n15_adj_669                             |       1|    4079|     75.29%
+                                        |        |        |
+n719                                    |       3|    4078|     75.27%
+                                        |        |        |
+n28313                                  |       2|    4006|     73.94%
+                                        |        |        |
+n14_adj_661                             |       1|    4006|     73.94%
+                                        |        |        |
+n28353                                  |       2|    4005|     73.92%
+                                        |        |        |
+n7_adj_634                              |       1|    4005|     73.92%
+                                        |        |        |
+n28424                                  |       3|    4005|     73.92%
+                                        |        |        |
+n28397                                  |       5|    4005|     73.92%
+                                        |        |        |
+n28241                                  |       2|    4005|     73.92%
+                                        |        |        |
+n653_adj_127                            |       3|    4005|     73.92%
+                                        |        |        |
+n707_adj_132                            |       3|    4005|     73.92%
+                                        |        |        |
+n27246                                  |       3|    4005|     73.92%
+                                        |        |        |
+n28265                                  |      10|    4005|     73.92%
+                                        |        |        |
+n664_adj_229                            |       3|    4005|     73.92%
+                                        |        |        |
+n28299                                  |       7|    4005|     73.92%
+                                        |        |        |
+n11_adj_596                             |       1|    4004|     73.90%
+                                        |        |        |
+n9_adj_668                              |       1|    4004|     73.90%
+                                        |        |        |
+n28194                                  |       3|    4004|     73.90%
+                                        |        |        |
+n301_adj_343                            |       4|    4004|     73.90%
+                                        |        |        |
+n334_adj_347                            |       3|    4004|     73.90%
+                                        |        |        |
+n1530                                   |       2|    4004|     73.90%
+                                        |        |        |
+n24246                                  |       1|    4004|     73.90%
+                                        |        |        |
+n1576                                   |       2|    4004|     73.90%
+                                        |        |        |
+n24255                                  |       1|    4004|     73.90%
+                                        |        |        |
+n28207                                  |       6|    4004|     73.90%
+                                        |        |        |
+tens_3_N_323_4                          |       3|    4004|     73.90%
+                                        |        |        |
+n24312                                  |       1|    4004|     73.90%
+                                        |        |        |
+n172                                    |       7|    3920|     72.35%
+                                        |        |        |
+n830_adj_498                            |       3|    3919|     72.33%
+                                        |        |        |
+n14_adj_44                              |       1|    3918|     72.31%
+                                        |        |        |
+n1057                                   |       2|    3916|     72.28%
+                                        |        |        |
+n4_adj_18                               |       1|    3916|     72.28%
+                                        |        |        |
+n766                                    |       3|    3916|     72.28%
+                                        |        |        |
+n20275                                  |      21|    3916|     72.28%
+                                        |        |        |
+n720_adj_238                            |       3|    3916|     72.28%
+                                        |        |        |
+n558_adj_579                            |       3|    3916|     72.28%
+                                        |        |        |
+n368_adj_359                            |       2|    3914|     72.24%
+                                        |        |        |
+n268_adj_340                            |       2|    3914|     72.24%
+                                        |        |        |
+n4_adj_675                              |       1|    3838|     70.84%
+                                        |        |        |
+n28236                                  |       1|    3838|     70.84%
+                                        |        |        |
+n20399                                  |      26|    3838|     70.84%
+                                        |        |        |
+n15_adj_631                             |       1|    3835|     70.78%
+                                        |        |        |
+n28310                                  |       1|    3832|     70.73%
+                                        |        |        |
+n4_adj_664                              |       1|    3832|     70.73%
+                                        |        |        |
+n20164                                  |      23|    3832|     70.73%
+                                        |        |        |
+n12_adj_656                             |       1|    3832|     70.73%
+                                        |        |        |
+n28348                                  |       3|    3829|     70.67%
+                                        |        |        |
+n28305                                  |       2|    3829|     70.67%
+                                        |        |        |
+n20571                                  |      27|    3829|     70.67%
+                                        |        |        |
+n4_adj_5                                |       1|    3829|     70.67%
+                                        |        |        |
+n611_adj_568                            |       3|    3829|     70.67%
+                                        |        |        |
+n262                                    |       2|    3826|     70.62%
+                                        |        |        |
+n28202                                  |       2|    3826|     70.62%
+                                        |        |        |
+n28231                                  |       3|    3758|     69.36%
+                                        |        |        |
+n15_adj_620                             |       1|    3752|     69.25%
+                                        |        |        |
+n13_adj_391                             |       1|    3748|     69.18%
+                                        |        |        |
+n202                                    |       2|    3745|     69.12%
+                                        |        |        |
+n28302                                  |       2|    3744|     69.10%
+                                        |        |        |
+n4_adj_640                              |       1|    3672|     67.77%
+                                        |        |        |
+n20423                                  |      30|    3672|     67.77%
+                                        |        |        |
+n28429                                  |       2|    3661|     67.57%
+                                        |        |        |
+n825_adj_156                            |       3|    3661|     67.57%
+                                        |        |        |
+n4_adj_657                              |       1|    3585|     66.17%
+                                        |        |        |
+n28228                                  |       2|    3585|     66.17%
+                                        |        |        |
+n20449                                  |      32|    3585|     66.17%
+                                        |        |        |
+n4_adj_639                              |       1|    3583|     66.13%
+                                        |        |        |
+n28233                                  |       1|    3583|     66.13%
+                                        |        |        |
+n20407                                  |      28|    3583|     66.13%
+                                        |        |        |
+n881                                    |       3|    3580|     66.08%
+                                        |        |        |
+n73                                     |       1|    1062|     19.60%
+                                        |        |        |
+n27498                                  |       1|    1062|     19.60%
+                                        |        |        |
+n13772                                  |       9|    1062|     19.60%
+                                        |        |        |
+n26795                                  |       3|     556|     10.26%
+                                        |        |        |
+----------------------------------------------------------------------------
+
+
+<A name="mtw1_set_clkda"></A><B><U><big>Clock Domains Analysis</big></U></B>
+------------------------
+
+Found 3 clocks:
+
+Clock Domain: sck_c_1   Source: SLICE_439.Q0   Loads: 9
+   Covered under: FREQUENCY NET "sck_c_1" 2.492000 MHz ;
+
+   Data transfers from:
+   Clock Domain: clk_c   Source: clk.PAD
+      Covered under: FREQUENCY NET "sck_c_1" 2.492000 MHz ;   Transfers: 12
+
+Clock Domain: clk_temp   Source: SLICE_432.Q0   Loads: 13
+   No transfer within this clock domain is found
+
+   Data transfers from:
+   Clock Domain: clk_c   Source: clk.PAD
+      Covered under: FREQUENCY NET "clk_temp" 158.983000 MHz ;   Transfers: 26
+
+Clock Domain: clk_c   Source: clk.PAD   Loads: 54
+   Covered under: FREQUENCY NET "clk_c" 95.157000 MHz ;
+
+   Data transfers from:
+   Clock Domain: clk_temp   Source: SLICE_432.Q0
+      Covered under: FREQUENCY NET "clk_c" 95.157000 MHz ;   Transfers: 1
+
+
+<A name="mtw1_set_ts"></A><B><U><big>Timing summary (Setup):</big></U></B>
+---------------
+
+Timing errors: 5418  Score: 4294967295
+Cumulative negative slack: 4294967295
+
+Constraints cover 2147483647 paths, 33 nets, and 7974 connections (99.59% coverage)
+
+--------------------------------------------------------------------------------
+<A name="Map_Twr_hold"></A><B><U><big>Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.11.0.396.4</big></U></B>
+Thu Dec 10 10:47:05 2020
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+
+<A name="mtw1_hold_ri"></A><B><U><big>Report Information</big></U></B>
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o 6_impltp.tw1 -gui -msgset D:/lab_6/promote.xml 6_impltp_map.ncd 6_impltp.prf 
+Design file:     6_impltp_map.ncd
+Preference file: 6_impltp.prf
+Device,speed:    LCMXO2-4000HC,M
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+<A name="mtw1_hold_ps"></A><B><U><big>Preference Summary</big></U></B>
+
+<LI><A href='#map_twr_pref_1_0' Target='right'>FREQUENCY NET "clk_c" 95.157000 MHz (0 errors)</A></LI>            3530 items scored, 0 timing errors detected.
+
+<LI><A href='#map_twr_pref_1_1' Target='right'>FREQUENCY NET "clk_temp" 158.983000 MHz (0 errors)</A></LI>            93 items scored, 0 timing errors detected.
+
+<LI><A href='#map_twr_pref_1_2' Target='right'>FREQUENCY NET "sck_c_1" 2.492000 MHz (0 errors)</A></LI>            4096 items scored, 0 timing errors detected.
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+<A name="map_twr_pref_1_0"></A>Preference: FREQUENCY NET "clk_c" 95.157000 MHz ;
+            3530 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.351ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              WRITE_HIGH_CNT_i0_i0  (from clk_c +)
+   Destination:    FF         Data in        WRITE_HIGH_CNT_i0_i1  (to clk_c +)
+
+   Delay:               0.332ns  (40.1% logic, 59.9% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.332ns physical path delay SLICE_429 to SLICE_429 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint requirement (totaling -0.019ns) by 0.351ns
+
+ Physical Path Details:
+
+      Data path SLICE_429 to SLICE_429:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133  SLICE_429.CLK to   SLICE_429.Q0 SLICE_429 (from clk_c)
+ROUTE         7   e 0.199   SLICE_429.Q0 to   SLICE_429.M1 WRITE_HIGH_CNT_0 (to clk_c)
+                  --------
+                    0.332   (40.1% logic, 59.9% route), 1 logic levels.
+
+
+================================================================================
+<A name="map_twr_pref_1_1"></A>Preference: FREQUENCY NET "clk_temp" 158.983000 MHz ;
+            93 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.763ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              STATE__i2  (from clk_c +)
+   Destination:    FF         Data in        i231_432  (to clk_temp +)
+
+   Delay:               0.750ns  (31.2% logic, 68.8% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.750ns physical path delay SLICE_422 to SLICE_434 meets
+      (delay constraint based on source clock period of 10.509ns and destination clock period of 6.290ns)
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint requirement (totaling -0.013ns) by 0.763ns
+
+ Physical Path Details:
+
+      Data path SLICE_422 to SLICE_434:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133  SLICE_422.CLK to   SLICE_422.Q0 SLICE_422 (from clk_c)
+ROUTE        30   e 0.515   SLICE_422.Q0 to   SLICE_434.D0 STATE_2
+CTOF_DEL    ---     0.101   SLICE_434.D0 to   SLICE_434.F0 SLICE_434
+ROUTE         1   e 0.001   SLICE_434.F0 to  SLICE_434.DI0 dq_N_413 (to clk_temp)
+                  --------
+                    0.750   (31.2% logic, 68.8% route), 2 logic levels.
+
+
+================================================================================
+<A name="map_twr_pref_1_2"></A>Preference: FREQUENCY NET "sck_c_1" 2.492000 MHz ;
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.447ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              placecnt_i4  (from sck_c_1 -)
+   Destination:    FF         Data in        placecnt_i4  (to sck_c_1 -)
+
+   Delay:               0.434ns  (53.9% logic, 46.1% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.434ns physical path delay SLICE_437 to SLICE_437 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint requirement (totaling -0.013ns) by 0.447ns
+
+ Physical Path Details:
+
+      Data path SLICE_437 to SLICE_437:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133  SLICE_437.CLK to   SLICE_437.Q0 SLICE_437 (from sck_c_1)
+ROUTE         7   e 0.199   SLICE_437.Q0 to   SLICE_437.D0 placecnt_4
+CTOF_DEL    ---     0.101   SLICE_437.D0 to   SLICE_437.F0 SLICE_437
+ROUTE         1   e 0.001   SLICE_437.F0 to  SLICE_437.DI0 placecnt_4_N_367_4 (to sck_c_1)
+                  --------
+                    0.434   (53.9% logic, 46.1% route), 2 logic levels.
+
+<A name="mtw1_hold_rs"></A><B><U><big>Report Summary</big></U></B>
+--------------
+----------------------------------------------------------------------------
+Preference(MIN Delays)                  |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "clk_c" 95.157000 MHz ;   |     0.000 ns|     0.351 ns|   1  
+                                        |             |             |
+FREQUENCY NET "clk_temp" 158.983000 MHz |             |             |
+;                                       |     0.000 ns|     0.763 ns|   2  
+                                        |             |             |
+FREQUENCY NET "sck_c_1" 2.492000 MHz ;  |     0.000 ns|     0.447 ns|   2  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+<A name="mtw1_hold_clkda"></A><B><U><big>Clock Domains Analysis</big></U></B>
+------------------------
+
+Found 3 clocks:
+
+Clock Domain: sck_c_1   Source: SLICE_439.Q0   Loads: 9
+   Covered under: FREQUENCY NET "sck_c_1" 2.492000 MHz ;
+
+   Data transfers from:
+   Clock Domain: clk_c   Source: clk.PAD
+      Covered under: FREQUENCY NET "sck_c_1" 2.492000 MHz ;   Transfers: 12
+
+Clock Domain: clk_temp   Source: SLICE_432.Q0   Loads: 13
+   No transfer within this clock domain is found
+
+   Data transfers from:
+   Clock Domain: clk_c   Source: clk.PAD
+      Covered under: FREQUENCY NET "clk_temp" 158.983000 MHz ;   Transfers: 26
+
+Clock Domain: clk_c   Source: clk.PAD   Loads: 54
+   Covered under: FREQUENCY NET "clk_c" 95.157000 MHz ;
+
+   Data transfers from:
+   Clock Domain: clk_temp   Source: SLICE_432.Q0
+      Covered under: FREQUENCY NET "clk_c" 95.157000 MHz ;   Transfers: 1
+
+
+<A name="mtw1_hold_ts"></A><B><U><big>Timing summary (Hold):</big></U></B>
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 2147483647 paths, 33 nets, and 7980 connections (99.66% coverage)
+
+
+
+<A name="mtw1_ts"></A><B><U><big>Timing summary (Setup and Hold):</big></U></B>
+---------------
+
+Timing errors: 5418 (setup), 0 (hold)
+Score: 4294967295 (setup), 0 (hold)
+Cumulative negative slack: 4294967295 (4294967295+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

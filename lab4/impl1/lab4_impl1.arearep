@@ -1,0 +1,87 @@
+----------------------------------------------------------------------
+Report for cell TOP.TECH
+Register bits:  266 of 4635 (5.739%)
+I/O cells:      22
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        84          100.0
+                            FD1P3AX        93          100.0
+                            FD1P3AY         2          100.0
+                            FD1P3IX        78          100.0
+                            FD1P3JX         2          100.0
+                            FD1S3AX        23          100.0
+                            FD1S3AY         1          100.0
+                            FD1S3DX        18          100.0
+                            FD1S3IX        49          100.0
+                                GSR         1          100.0
+                                 IB         7          100.0
+                                INV         1          100.0
+                               LUT4       395          100.0
+                                 OB        15          100.0
+                              PFUMX        14          100.0
+                        VERIFIC_PWR         1          100.0
+SUB MODULES
+                          Clock_Div         1
+                        Clock_Logic         1
+                Code_shape_provider         1
+                            Display         1
+                Matrix_button_input         1
+                              TOTAL       789
+----------------------------------------------------------------------
+Report for cell Code_shape_provider.v1
+Instance Path : U3
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3AX        10           10.8
+                            FD1P3JX         2          100.0
+                               LUT4         8            2.0
+                              TOTAL        20
+----------------------------------------------------------------------
+Report for cell Clock_Logic.v1
+Instance Path : U2
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        57           67.9
+                            FD1P3AX        17           18.3
+                            FD1P3AY         1           50.0
+                            FD1P3IX        44           56.4
+                            FD1S3AX         1            4.3
+                            FD1S3DX        18          100.0
+                            FD1S3IX        24           49.0
+                               LUT4       178           45.1
+                              PFUMX         6           42.9
+                              TOTAL       346
+----------------------------------------------------------------------
+Report for cell Display.v1
+Instance Path : U4
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3AX        32           34.4
+                            FD1P3AY         1           50.0
+                            FD1P3IX         7            9.0
+                            FD1S3AX         2            8.7
+                               LUT4        29            7.3
+                              TOTAL        71
+----------------------------------------------------------------------
+Report for cell Clock_Div.v1
+Instance Path : U5
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         8            9.5
+                            FD1S3AX         2            8.7
+                            FD1S3IX        18           36.7
+                               LUT4        12            3.0
+                              TOTAL        40
+----------------------------------------------------------------------
+Report for cell Matrix_button_input.v1
+Instance Path : U1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        19           22.6
+                            FD1P3AX        22           23.7
+                            FD1P3IX        27           34.6
+                            FD1S3AX        17           73.9
+                            FD1S3IX         7           14.3
+                               LUT4       120           30.4
+                              PFUMX         4           28.6
+                              TOTAL       216

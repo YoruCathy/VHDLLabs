@@ -1,0 +1,19 @@
+NOTE Copyright (C), 1992-2010, Lattice Semiconductor Corporation *
+NOTE All Rights Reserved *
+NOTE DATE CREATED: Wed Dec 09 16:55:57 2020 *
+NOTE DESIGN NAME: cpu2system *
+NOTE DEVICE NAME: LCMXO2-4000HC-4CSBGA132 *
+NOTE PIN ASSIGNMENTS *
+NOTE PINS reset : L14 : in *
+NOTE PINS clk : C1 : in *
+NOTE PINS akku_o[0] : A10 : out *
+NOTE PINS akku_o[1] : C11 : out *
+NOTE PINS akku_o[2] : F2 : out *
+NOTE PINS akku_o[3] : E1 : out *
+NOTE PINS akku_o[4] : E2 : out *
+NOTE PINS akku_o[5] : A9 : out *
+NOTE PINS akku_o[6] : B9 : out *
+NOTE PINS akku_o[7] : F1 : out *
+NOTE PINS akku_o[8] : C9 : out *
+NOTE CONFIGURATION MODE: NONE *
+NOTE COMPRESSION: on *

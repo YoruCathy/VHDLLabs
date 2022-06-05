@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BaliMessageLog>
+    <Task name="MapVerilogSimFile">
+        <Message>
+            <ID>35400250</ID>
+            <Severity>Info</Severity>
+            <Dynamic>0</Dynamic>
+        </Message>
+    </Task>
+    <Task name="MapVHDLSimFile">
+        <Message>
+            <ID>35400250</ID>
+            <Severity>Info</Severity>
+            <Dynamic>0</Dynamic>
+        </Message>
+    </Task>
+    <Task name="IBIS">
+        <Message>
+            <ID>1191031</ID>
+            <Severity>Info</Severity>
+        </Message>
+    </Task>
+    <Task name="Lattice_Synthesis">
+        <Message>
+            <ID>35002000</ID>
+            <Severity>Info</Severity>
+        </Message>
+        <Message>
+            <ID>35001781</ID>
+            <Severity>Info</Severity>
+        </Message>
+        <Message>
+            <ID>35921504</ID>
+            <Severity>Info</Severity>
+            <Dynamic></Dynamic>
+            <Dynamic>C:/Users/70735/Desktop/lab3/impl1</Dynamic>
+        </Message>
+        <Message>
+            <ID>35921012</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/70735/desktop/lab3/impl1/source/lab3.vhd(4): </Dynamic>
+            <Dynamic>lab3</Dynamic>
+            <Navigation>c:/users/70735/desktop/lab3/impl1/source/lab3.vhd</Navigation>
+            <Navigation>4</Navigation>
+        </Message>
+        <Message>
+            <ID>35921010</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/70735/desktop/lab3/impl1/source/lab3.vhd(17): </Dynamic>
+            <Dynamic>default_arch</Dynamic>
+            <Navigation>c:/users/70735/desktop/lab3/impl1/source/lab3.vhd</Navigation>
+            <Navigation>17</Navigation>
+        </Message>
+        <Message>
+            <ID>35921251</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/70735/desktop/lab3/impl1/source/lab3.vhd(52): </Dynamic>
+            <Dynamic>rst</Dynamic>
+            <Navigation>c:/users/70735/desktop/lab3/impl1/source/lab3.vhd</Navigation>
+            <Navigation>52</Navigation>
+        </Message>
+        <Message>
+            <ID>35921251</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/70735/desktop/lab3/impl1/source/lab3.vhd(52): </Dynamic>
+            <Dynamic>mode_last</Dynamic>
+            <Navigation>c:/users/70735/desktop/lab3/impl1/source/lab3.vhd</Navigation>
+            <Navigation>52</Navigation>
+        </Message>
+        <Message>
+            <ID>35921251</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/70735/desktop/lab3/impl1/source/lab3.vhd(52): </Dynamic>
+            <Dynamic>mode</Dynamic>
+            <Navigation>c:/users/70735/desktop/lab3/impl1/source/lab3.vhd</Navigation>
+            <Navigation>52</Navigation>
+        </Message>
+        <Message>
+            <ID>35921251</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/70735/desktop/lab3/impl1/source/lab3.vhd(52): </Dynamic>
+            <Dynamic>column</Dynamic>
+            <Navigation>c:/users/70735/desktop/lab3/impl1/source/lab3.vhd</Navigation>
+            <Navigation>52</Navigation>
+        </Message>
+        <Message>
+            <ID>35921613</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/70735/desktop/lab3/impl1/source/lab3.vhd(66): </Dynamic>
+            <Navigation>c:/users/70735/desktop/lab3/impl1/source/lab3.vhd</Navigation>
+            <Navigation>66</Navigation>
+        </Message>
+        <Message>
+            <ID>35921251</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/70735/desktop/lab3/impl1/source/lab3.vhd(71): </Dynamic>
+            <Dynamic>mode_last</Dynamic>
+            <Navigation>c:/users/70735/desktop/lab3/impl1/source/lab3.vhd</Navigation>
+            <Navigation>71</Navigation>
+        </Message>
+        <Message>
+            <ID>35921251</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/70735/desktop/lab3/impl1/source/lab3.vhd(71): </Dynamic>
+            <Dynamic>mode</Dynamic>
+            <Navigation>c:/users/70735/desktop/lab3/impl1/source/lab3.vhd</Navigation>
+            <Navigation>71</Navigation>
+        </Message>
+        <Message>
+            <ID>35921251</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/70735/desktop/lab3/impl1/source/lab3.vhd(71): </Dynamic>
+            <Dynamic>column</Dynamic>
+            <Navigation>c:/users/70735/desktop/lab3/impl1/source/lab3.vhd</Navigation>
+            <Navigation>71</Navigation>
+        </Message>
+        <Message>
+            <ID>35921251</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/70735/desktop/lab3/impl1/source/lab3.vhd(73): </Dynamic>
+            <Dynamic>mode</Dynamic>
+            <Navigation>c:/users/70735/desktop/lab3/impl1/source/lab3.vhd</Navigation>
+            <Navigation>73</Navigation>
+        </Message>
+        <Message>
+            <ID>35921613</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/70735/desktop/lab3/impl1/source/lab3.vhd(83): </Dynamic>
+            <Navigation>c:/users/70735/desktop/lab3/impl1/source/lab3.vhd</Navigation>
+            <Navigation>83</Navigation>
+        </Message>
+        <Message>
+            <ID>35921172</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/70735/desktop/lab3/impl1/source/lab3.vhd(108): </Dynamic>
+            <Navigation>c:/users/70735/desktop/lab3/impl1/source/lab3.vhd</Navigation>
+            <Navigation>108</Navigation>
+        </Message>
+        <Message>
+            <ID>35921172</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/70735/desktop/lab3/impl1/source/lab3.vhd(127): </Dynamic>
+            <Navigation>c:/users/70735/desktop/lab3/impl1/source/lab3.vhd</Navigation>
+            <Navigation>127</Navigation>
+        </Message>
+        <Message>
+            <ID>35921172</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/70735/desktop/lab3/impl1/source/lab3.vhd(168): </Dynamic>
+            <Navigation>c:/users/70735/desktop/lab3/impl1/source/lab3.vhd</Navigation>
+            <Navigation>168</Navigation>
+        </Message>
+        <Message>
+            <ID>35921205</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/70735/desktop/lab3/impl1/source/lab3.vhd(15): </Dynamic>
+            <Dynamic>Lab3</Dynamic>
+            <Dynamic>Default_arch</Dynamic>
+            <Navigation>c:/users/70735/desktop/lab3/impl1/source/lab3.vhd</Navigation>
+            <Navigation>15</Navigation>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>n136</Dynamic>
+        </Message>
+        <Message>
+            <ID>1009991</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/70735/desktop/lab3/impl1/source/lab3.vhd(145): Latch led_5__I_0_i6 input is stuck at One
+</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001611</ID>
+            <Severity>Warning</Severity>
+        </Message>
+    </Task>
+    <Task name="PAR">
+        <Message>
+            <ID>61001101</ID>
+            <Severity>Warning</Severity>
+        </Message>
+        <Message>
+            <ID>61061008</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>clk_c</Dynamic>
+            <Dynamic>Primary</Dynamic>
+            <Dynamic>clk</Dynamic>
+            <Dynamic>C1</Dynamic>
+            <Dynamic>Primary</Dynamic>
+        </Message>
+        <Message>
+            <ID>66011008</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>
+   Signal=clk_1000ms loads=3 clock_loads=3
+   Signal=seven_segment_disp_right_6__N_20 loads=5 clock_loads=4
+   Signal=current_state_1__N_80 loads=2 clock_loads=2
+   Signal=column_c_derived_3 loads=2 clock_loads=2</Dynamic>
+        </Message>
+        <Message>
+            <ID>66011008</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>
+   Signal=clk_1000ms loads=3 clock_loads=3
+   Signal=seven_segment_disp_right_6__N_20 loads=5 clock_loads=4
+   Signal=current_state_1__N_80 loads=2 clock_loads=2
+   Signal=column_c_derived_3 loads=2 clock_loads=2</Dynamic>
+        </Message>
+    </Task>
+    <Task name="TimingSimFileVHD">
+        <Message>
+            <ID>35400250</ID>
+            <Severity>Info</Severity>
+            <Dynamic>0</Dynamic>
+        </Message>
+    </Task>
+    <Task name="TimingSimFileVlg">
+        <Message>
+            <ID>35400250</ID>
+            <Severity>Info</Severity>
+            <Dynamic>0</Dynamic>
+        </Message>
+    </Task>
+</BaliMessageLog>

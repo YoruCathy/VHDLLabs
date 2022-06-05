@@ -1,0 +1,139 @@
+<HTML>
+<HEAD><TITLE>I/O Timing Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Top"></A><B><U><big>I/O Timing Report</big></U></B>
+Loading design for application iotiming from file lab1_impl1.ncd.
+Design name: Lab1
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-4000HC
+Package:     CSBGA132
+Performance: 5
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 34.4.
+Loading design for application iotiming from file lab1_impl1.ncd.
+Design name: Lab1
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-4000HC
+Package:     CSBGA132
+Performance: 6
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 34.4.
+Loading design for application iotiming from file lab1_impl1.ncd.
+Design name: Lab1
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-4000HC
+Package:     CSBGA132
+Performance: M
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 34.4.
+// Design: Lab1
+// Package: CSBGA132
+// ncd File: lab1_impl1.ncd
+// Version: Diamond (64-bit) 3.10.0.111.2
+// Written on Wed Dec 09 21:40:20 2020
+// M: Minimum Performance Grade
+// iotiming lab1_impl1.ncd lab1_impl1.prf -gui -msgset C:/Users/70735/Desktop/lab1/promote.xml
+
+I/O Timing Report (All units are in ns)
+
+Worst Case Results across Performance Grades (M, 6, 5, 4):
+
+// Input Setup and Hold Times
+
+Port      Clock Edge  Setup Performance_Grade  Hold Performance_Grade
+----------------------------------------------------------------------
+button[0] clk   R     4.780      4       1.133     4
+button[1] clk   R     4.196      4       1.263     4
+button[2] clk   R     3.920      4       0.683     6
+button[3] clk   R     5.226      4       0.834     6
+column[0] clk   R     6.437      4       0.221     M
+column[1] clk   R     6.161      4       0.055     M
+column[2] clk   R     7.435      4       0.146     M
+column[3] clk   R     7.105      4      -0.076     M
+
+
+// Clock to Output Delay
+
+Port                        Clock Edge  Max_Delay Performance_Grade  Min_Delay Performance_Grade
+------------------------------------------------------------------------
+din                         clk   F    10.091         4        3.220          M
+rck                         clk   F     8.765         4        2.852          M
+row[0]                      clk   R    10.483         4        3.301          M
+row[1]                      clk   R    12.218         4        3.733          M
+row[2]                      clk   R    10.450         4        3.263          M
+row[3]                      clk   R    10.324         4        3.236          M
+seven_segment_disp_left[1]  clk   R    10.974         4        3.468          M
+seven_segment_disp_left[2]  clk   R    12.365         4        3.833          M
+seven_segment_disp_right[0] clk   R    10.190         4        3.228          M
+seven_segment_disp_right[1] clk   R    10.219         4        3.202          M
+seven_segment_disp_right[2] clk   R    10.761         4        3.412          M
+seven_segment_disp_right[3] clk   R    10.082         4        3.217          M
+seven_segment_disp_right[4] clk   R     9.896         4        3.174          M
+seven_segment_disp_right[5] clk   R     9.763         4        3.123          M
+seven_segment_disp_right[6] clk   R    10.190         4        3.228          M
+WARNING: you must also run trce with hold speed: 4
+WARNING: you must also run trce with hold speed: 6
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

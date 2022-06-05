@@ -1,0 +1,43 @@
+----------------------------------------------------------------------
+Report for cell cpu2system.TECH
+Register bits:  536 of 4635 (11.564%)
+I/O cells:      20
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         6          100.0
+                            FD1P3AX       431          100.0
+                            FD1P3AY        96          100.0
+                            FD1S3AX         6          100.0
+                            FD1S3IX         3          100.0
+                                GSR         1          100.0
+                                 IB         2          100.0
+                            L6MUX21        96          100.0
+                               LUT4       386          100.0
+                                 OB        18          100.0
+                              PFUMX       136          100.0
+SUB MODULES
+                           CPU8BIT2         1
+                          sram64kx8         1
+                              TOTAL      1183
+----------------------------------------------------------------------
+Report for cell CPU8BIT2.v1
+Instance Path : CPU
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         6          100.0
+                            FD1P3AX        15            3.5
+                            FD1S3AX         6          100.0
+                            FD1S3IX         3          100.0
+                               LUT4        37            9.6
+                              TOTAL        67
+----------------------------------------------------------------------
+Report for cell sram64kx8.v1
+Instance Path : RAM
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3AX       416           96.5
+                            FD1P3AY        96          100.0
+                            L6MUX21        96          100.0
+                               LUT4       349           90.4
+                              PFUMX       136          100.0
+                              TOTAL      1093

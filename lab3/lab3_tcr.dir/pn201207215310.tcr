@@ -1,0 +1,7 @@
+#Start recording tcl command: 12/7/2020 21:52:55
+#Project Location: C:/Users/onion/Desktop/FPGA-LABS/AAC_RE_CODE_Refined_rec/lab3; Project name: lab3
+prj_project open "C:/Users/onion/Desktop/FPGA-LABS/AAC_RE_CODE_Refined_rec/lab3/lab3.ldf"
+prj_run Synthesis -impl impl1 -task Lattice_Synthesis
+prj_run PAR -impl impl1 -task PARTrace
+prj_run Export -impl impl1 -task Jedecgen
+#Stop recording: 12/7/2020 21:53:10

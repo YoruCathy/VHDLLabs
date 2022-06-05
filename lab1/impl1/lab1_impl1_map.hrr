@@ -1,0 +1,10 @@
+---------------------------------------------------
+Report for cell Lab1
+   Instance path: Lab1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     245.00        100.0
+                                  LUT4	     296.00        100.0
+                                 IOBUF	         32        100.0
+                                PFUREG	        130        100.0
+                                RIPPLE	         95        100.0

@@ -1,0 +1,534 @@
+
+           Lattice Mapping Report File for Design Module 'ds18B20'
+
+
+Design Information
+------------------
+
+Command line:   map -a MachXO2 -p LCMXO2-4000HC -t CSBGA132 -s 4 -oc Commercial
+     6_impltp.ngd -o 6_impltp_map.ncd -pr 6_impltp.prf -mp 6_impltp.mrp -lpf
+     D:/lab_6/impltp/6_impltp.lpf -lpf D:/lab_6/6.lpf -c 0 -gui -msgset
+     D:/lab_6/promote.xml 
+Target Vendor:  LATTICE
+Target Device:  LCMXO2-4000HCCSBGA132
+Target Performance:   4
+Mapper:  xo2c00,  version:  Diamond (64-bit) 3.11.0.396.4
+Mapped on:  12/10/20  10:47:02
+
+Design Summary
+--------------
+
+   Number of registers:     96 out of  4635 (2%)
+      PFU registers:           96 out of  4320 (2%)
+      PIO registers:            0 out of   315 (0%)
+   Number of SLICEs:      1121 out of  2160 (52%)
+      SLICEs as Logic/ROM:   1121 out of  2160 (52%)
+      SLICEs as RAM:            0 out of  1620 (0%)
+      SLICEs as Carry:        415 out of  2160 (19%)
+   Number of LUT4s:        2241 out of  4320 (52%)
+      Number used as logic LUTs:        1411
+      Number used as distributed RAM:     0
+      Number used as ripple logic:      830
+      Number used as shift registers:     0
+   Number of PIO sites used: 9 + 4(JTAG) out of 105 (12%)
+   Number of block RAMs:  0 out of 10 (0%)
+   Number of GSRs:        0 out of 1 (0%)
+   EFB used :        No
+   JTAG used :       No
+   Readback used :   No
+   Oscillator used : No
+   Startup used :    No
+   POR :             On
+   Bandgap :         On
+   Number of Power Controller:  0 out of 1 (0%)
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 6 (0%)
+   Number of Dynamic Bank Controller (BCLVDSO):  0 out of 1 (0%)
+   Number of DCCA:  0 out of 8 (0%)
+   Number of DCMA:  0 out of 2 (0%)
+   Number of PLLs:  0 out of 2 (0%)
+   Number of DQSDLLs:  0 out of 2 (0%)
+   Number of CLKDIVC:  0 out of 4 (0%)
+   Number of ECLKSYNCA:  0 out of 4 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
+     distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and
+     ripple logic.
+   Number of clocks:  3
+     Net clk_c: 54 loads, 52 rising, 2 falling (Driver: PIO clk )
+     Net clk_temp: 3 loads, 3 rising, 0 falling (Driver: clk_temp_417 )
+     Net sck_c_1: 7 loads, 0 rising, 7 falling (Driver: segcnt_div_1140__i1 )
+   Number of Clock Enables:  17
+
+                                    Page 1
+
+
+
+
+Design:  ds18B20                                       Date:  12/10/20  10:47:02
+
+Design Summary (cont)
+---------------------
+     Net sck_N_88_enable_3: 2 loads, 2 LSLICEs
+     Net clk_c_enable_35: 3 loads, 3 LSLICEs
+     Net clk_c_enable_53: 9 loads, 9 LSLICEs
+     Net dq_N_403: 1 loads, 1 LSLICEs
+     Net clk_c_enable_41: 10 loads, 10 LSLICEs
+     Net clk_c_enable_6: 1 loads, 1 LSLICEs
+     Net clk_c_enable_51: 2 loads, 2 LSLICEs
+     Net clk_c_enable_13: 1 loads, 1 LSLICEs
+     Net clk_c_enable_14: 1 loads, 1 LSLICEs
+     Net clk_c_enable_50: 1 loads, 1 LSLICEs
+     Net clk_c_enable_45: 1 loads, 1 LSLICEs
+     Net clk_c_enable_33: 1 loads, 1 LSLICEs
+     Net clk_c_enable_37: 1 loads, 1 LSLICEs
+     Net clk_c_enable_49: 2 loads, 2 LSLICEs
+     Net clk_c_enable_43: 1 loads, 1 LSLICEs
+     Net clk_c_enable_48: 1 loads, 1 LSLICEs
+     Net clk_temp_enable_1: 1 loads, 1 LSLICEs
+   Number of LSRs:  10
+     Net key_div_19__N_136: 11 loads, 11 LSLICEs
+     Net sck_N_88_enable_3: 3 loads, 3 LSLICEs
+     Net n13760: 2 loads, 2 LSLICEs
+     Net n13772: 9 loads, 9 LSLICEs
+     Net dq_N_403: 1 loads, 1 LSLICEs
+     Net n3092: 4 loads, 4 LSLICEs
+     Net n24718: 1 loads, 1 LSLICEs
+     Net n24719: 1 loads, 1 LSLICEs
+     Net n28584: 4 loads, 4 LSLICEs
+     Net n13768: 2 loads, 2 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net n1179: 73 loads
+     Net n1248: 41 loads
+     Net STATE_0: 38 loads
+     Net n13097: 33 loads
+     Net n13057: 32 loads
+     Net n13120: 32 loads
+     Net n20449: 32 loads
+     Net temp2_8_N_286_3: 32 loads
+     Net n13079: 30 loads
+     Net n28343: 30 loads
+
+
+
+
+   Number of warnings:  0
+   Number of errors:    0
+     
+
+Design Errors/Warnings
+----------------------
+
+   No errors or warnings present.
+
+
+
+
+
+                                    Page 2
+
+
+
+
+Design:  ds18B20                                       Date:  12/10/20  10:47:02
+
+IO (PIO) Attributes
+-------------------
+
++---------------------+-----------+-----------+------------+
+| IO Name             | Direction | Levelmode | IO         |
+|                     |           |  IO_TYPE  | Register   |
++---------------------+-----------+-----------+------------+
+| rst                 | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| clk                 | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| led[0]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| led[1]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| led[2]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| ser                 | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| rck                 | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| sck                 | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| dq                  | BIDIR     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+
+Removed logic
+-------------
+
+Block GSR_INST undriven or does not drive anything - clipped.
+Signal clk_N_92 was merged into signal clk_c
+Signal sck_N_88 was merged into signal sck_c_1
+Signal n3529 was merged into signal dq_N_377
+Signal GND_net undriven or does not drive anything - clipped.
+Signal tens_3__I_19_unary_minus_2_add_3_10/CO undriven or does not drive
+     anything - clipped.
+Signal zpone_3__I_17_add_255_1/S0 undriven or does not drive anything - clipped.
+     
+Signal zpone_3__I_17_add_255_1/CI undriven or does not drive anything - clipped.
+     
+Signal div_276_add_605_13/S1 undriven or does not drive anything - clipped.
+Signal div_276_add_605_13/CO undriven or does not drive anything - clipped.
+Signal zpone_3__I_21_unary_minus_2_add_3_2/S0 undriven or does not drive
+     anything - clipped.
+Signal zpone_3__I_21_unary_minus_2_add_3_2/CI undriven or does not drive
+     anything - clipped.
+Signal div_276_add_644_1/S1 undriven or does not drive anything - clipped.
+Signal div_276_add_644_1/S0 undriven or does not drive anything - clipped.
+Signal div_276_add_644_1/CI undriven or does not drive anything - clipped.
+Signal zpone_3__I_17_add_255_9/S1 undriven or does not drive anything - clipped.
+     
+Signal zpone_3__I_17_add_255_9/CO undriven or does not drive anything - clipped.
+     
+Signal mod_271_add_374_1/S0 undriven or does not drive anything - clipped.
+Signal mod_271_add_374_1/CI undriven or does not drive anything - clipped.
+Signal zpone_3__I_21_unary_minus_2_add_3_8/CO undriven or does not drive
+     anything - clipped.
+Signal div_276_add_644_13/CO undriven or does not drive anything - clipped.
+
+                                    Page 3
+
+
+
+
+Design:  ds18B20                                       Date:  12/10/20  10:47:02
+
+Removed logic (cont)
+--------------------
+Signal mod_271_add_633_1/S0 undriven or does not drive anything - clipped.
+Signal mod_271_add_633_1/CI undriven or does not drive anything - clipped.
+Signal div_276_add_683_1/S1 undriven or does not drive anything - clipped.
+Signal div_276_add_683_1/S0 undriven or does not drive anything - clipped.
+Signal div_276_add_683_1/CI undriven or does not drive anything - clipped.
+Signal sub_272_add_2_18/CO undriven or does not drive anything - clipped.
+Signal sub_265_add_2_1/S1 undriven or does not drive anything - clipped.
+Signal sub_265_add_2_1/S0 undriven or does not drive anything - clipped.
+Signal sub_265_add_2_1/CI undriven or does not drive anything - clipped.
+Signal mod_271_add_374_9/S1 undriven or does not drive anything - clipped.
+Signal mod_271_add_374_9/CO undriven or does not drive anything - clipped.
+Signal mod_271_add_337_1/S0 undriven or does not drive anything - clipped.
+Signal mod_271_add_337_1/CI undriven or does not drive anything - clipped.
+Signal mod_271_add_337_7/CO undriven or does not drive anything - clipped.
+Signal mod_271_add_633_15/CO undriven or does not drive anything - clipped.
+Signal div_273_add_368_1/S0 undriven or does not drive anything - clipped.
+Signal div_273_add_368_1/CI undriven or does not drive anything - clipped.
+Signal mod_271_add_596_1/S0 undriven or does not drive anything - clipped.
+Signal mod_271_add_596_1/CI undriven or does not drive anything - clipped.
+Signal div_276_add_683_15/S1 undriven or does not drive anything - clipped.
+Signal div_276_add_683_15/CO undriven or does not drive anything - clipped.
+Signal div_276_add_722_1/S1 undriven or does not drive anything - clipped.
+Signal div_276_add_722_1/S0 undriven or does not drive anything - clipped.
+Signal div_276_add_722_1/CI undriven or does not drive anything - clipped.
+Signal mod_271_add_596_15/S1 undriven or does not drive anything - clipped.
+Signal mod_271_add_596_15/CO undriven or does not drive anything - clipped.
+Signal mod_271_add_559_1/S0 undriven or does not drive anything - clipped.
+Signal mod_271_add_559_1/CI undriven or does not drive anything - clipped.
+Signal div_273_add_368_7/CO undriven or does not drive anything - clipped.
+Signal div_273_add_407_1/S0 undriven or does not drive anything - clipped.
+Signal div_273_add_407_1/CI undriven or does not drive anything - clipped.
+Signal div_276_add_722_15/CO undriven or does not drive anything - clipped.
+Signal div_276_add_761_1/S1 undriven or does not drive anything - clipped.
+Signal div_276_add_761_1/S0 undriven or does not drive anything - clipped.
+Signal div_276_add_761_1/CI undriven or does not drive anything - clipped.
+Signal mod_271_add_559_13/CO undriven or does not drive anything - clipped.
+Signal mod_271_add_522_1/S0 undriven or does not drive anything - clipped.
+Signal mod_271_add_522_1/CI undriven or does not drive anything - clipped.
+Signal sub_265_add_2_9/CO undriven or does not drive anything - clipped.
+Signal add_502_1/S0 undriven or does not drive anything - clipped.
+Signal add_502_1/CI undriven or does not drive anything - clipped.
+Signal add_502_9/CO undriven or does not drive anything - clipped.
+Signal sub_262_add_2_1/S1 undriven or does not drive anything - clipped.
+Signal sub_262_add_2_1/S0 undriven or does not drive anything - clipped.
+Signal sub_262_add_2_1/CI undriven or does not drive anything - clipped.
+Signal div_273_add_407_9/S1 undriven or does not drive anything - clipped.
+Signal div_273_add_407_9/CO undriven or does not drive anything - clipped.
+Signal div_273_add_446_1/S0 undriven or does not drive anything - clipped.
+Signal div_273_add_446_1/CI undriven or does not drive anything - clipped.
+Signal mod_271_add_522_13/S1 undriven or does not drive anything - clipped.
+Signal mod_271_add_522_13/CO undriven or does not drive anything - clipped.
+Signal sub_262_add_2_9/CO undriven or does not drive anything - clipped.
+Signal mod_271_add_485_1/S0 undriven or does not drive anything - clipped.
+Signal mod_271_add_485_1/CI undriven or does not drive anything - clipped.
+Signal div_273_add_446_9/CO undriven or does not drive anything - clipped.
+Signal div_273_add_485_1/S0 undriven or does not drive anything - clipped.
+
+                                    Page 4
+
+
+
+
+Design:  ds18B20                                       Date:  12/10/20  10:47:02
+
+Removed logic (cont)
+--------------------
+Signal div_273_add_485_1/CI undriven or does not drive anything - clipped.
+Signal div_276_add_761_17/S1 undriven or does not drive anything - clipped.
+Signal div_276_add_761_17/CO undriven or does not drive anything - clipped.
+Signal add_1404_add_3_1/S0 undriven or does not drive anything - clipped.
+Signal add_1404_add_3_1/CI undriven or does not drive anything - clipped.
+Signal add_2190_1/S0 undriven or does not drive anything - clipped.
+Signal add_2190_1/CI undriven or does not drive anything - clipped.
+Signal mod_271_add_485_11/CO undriven or does not drive anything - clipped.
+Signal sub_275_add_2_1/S0 undriven or does not drive anything - clipped.
+Signal sub_275_add_2_1/CI undriven or does not drive anything - clipped.
+Signal sub_275_add_2_17/S1 undriven or does not drive anything - clipped.
+Signal sub_275_add_2_17/CO undriven or does not drive anything - clipped.
+Signal add_2190_9/CO undriven or does not drive anything - clipped.
+Signal tens_3__I_19_add_232_1/S0 undriven or does not drive anything - clipped.
+Signal tens_3__I_19_add_232_1/CI undriven or does not drive anything - clipped.
+Signal div_273_add_485_11/S1 undriven or does not drive anything - clipped.
+Signal div_273_add_485_11/CO undriven or does not drive anything - clipped.
+Signal tens_3__I_19_add_232_7/CO undriven or does not drive anything - clipped.
+Signal div_273_add_524_1/S0 undriven or does not drive anything - clipped.
+Signal div_273_add_524_1/CI undriven or does not drive anything - clipped.
+Signal tens_3__I_19_add_255_1/S0 undriven or does not drive anything - clipped.
+Signal tens_3__I_19_add_255_1/CI undriven or does not drive anything - clipped.
+Signal tens_3__I_19_add_255_9/S1 undriven or does not drive anything - clipped.
+Signal tens_3__I_19_add_255_9/CO undriven or does not drive anything - clipped.
+Signal key_div_1136_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal key_div_1136_add_4_1/CI undriven or does not drive anything - clipped.
+Signal div_273_add_524_11/CO undriven or does not drive anything - clipped.
+Signal div_273_add_563_1/S0 undriven or does not drive anything - clipped.
+Signal div_273_add_563_1/CI undriven or does not drive anything - clipped.
+Signal add_1404_add_3_13/CO undriven or does not drive anything - clipped.
+Signal sub_272_add_2_2/S0 undriven or does not drive anything - clipped.
+Signal sub_272_add_2_2/CI undriven or does not drive anything - clipped.
+Signal sub_278_add_2_1/S1 undriven or does not drive anything - clipped.
+Signal sub_278_add_2_1/S0 undriven or does not drive anything - clipped.
+Signal sub_278_add_2_1/CI undriven or does not drive anything - clipped.
+Signal key_div_1136_add_4_21/S1 undriven or does not drive anything - clipped.
+Signal key_div_1136_add_4_21/CO undriven or does not drive anything - clipped.
+Signal tens_3__I_16_unary_minus_2_add_3_2/S0 undriven or does not drive anything
+     - clipped.
+Signal tens_3__I_16_unary_minus_2_add_3_2/CI undriven or does not drive anything
+     - clipped.
+Signal div_273_add_563_13/S1 undriven or does not drive anything - clipped.
+Signal div_273_add_563_13/CO undriven or does not drive anything - clipped.
+Signal div_273_add_602_1/S0 undriven or does not drive anything - clipped.
+Signal div_273_add_602_1/CI undriven or does not drive anything - clipped.
+Signal tens_3__I_16_unary_minus_2_add_3_10/CO undriven or does not drive
+     anything - clipped.
+Signal zpone_3__I_17_unary_minus_2_add_3_2/S0 undriven or does not drive
+     anything - clipped.
+Signal zpone_3__I_17_unary_minus_2_add_3_2/CI undriven or does not drive
+     anything - clipped.
+Signal sub_278_add_2_11/S1 undriven or does not drive anything - clipped.
+Signal sub_278_add_2_11/CO undriven or does not drive anything - clipped.
+Signal cnt_1139_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal cnt_1139_add_4_1/CI undriven or does not drive anything - clipped.
+Signal div_273_add_602_13/CO undriven or does not drive anything - clipped.
+
+                                    Page 5
+
+
+
+
+Design:  ds18B20                                       Date:  12/10/20  10:47:02
+
+Removed logic (cont)
+--------------------
+Signal zpone_3__I_17_unary_minus_2_add_3_10/CO undriven or does not drive
+     anything - clipped.
+Signal div_273_add_641_1/S0 undriven or does not drive anything - clipped.
+Signal div_273_add_641_1/CI undriven or does not drive anything - clipped.
+Signal div_273_unary_minus_2_add_3_2/S0 undriven or does not drive anything -
+     clipped.
+Signal div_273_unary_minus_2_add_3_2/CI undriven or does not drive anything -
+     clipped.
+Signal div_273_unary_minus_2_add_3_18/CO undriven or does not drive anything -
+     clipped.
+Signal div_273_add_641_15/S1 undriven or does not drive anything - clipped.
+Signal div_273_add_641_15/CO undriven or does not drive anything - clipped.
+Signal div_276_unary_minus_2_add_3_1/S0 undriven or does not drive anything -
+     clipped.
+Signal div_276_unary_minus_2_add_3_1/CI undriven or does not drive anything -
+     clipped.
+Signal div_273_add_680_1/S0 undriven or does not drive anything - clipped.
+Signal div_273_add_680_1/CI undriven or does not drive anything - clipped.
+Signal cnt_1139_add_4_17/CO undriven or does not drive anything - clipped.
+Signal add_1461_1/S0 undriven or does not drive anything - clipped.
+Signal add_1461_1/CI undriven or does not drive anything - clipped.
+Signal div_273_add_680_15/CO undriven or does not drive anything - clipped.
+Signal add_1461_cout/S1 undriven or does not drive anything - clipped.
+Signal add_1461_cout/CO undriven or does not drive anything - clipped.
+Signal div_273_add_719_1/S0 undriven or does not drive anything - clipped.
+Signal div_273_add_719_1/CI undriven or does not drive anything - clipped.
+Signal div_276_unary_minus_2_add_3_17/S1 undriven or does not drive anything -
+     clipped.
+Signal div_276_unary_minus_2_add_3_17/CO undriven or does not drive anything -
+     clipped.
+Signal ones_3__I_18_add_201_1/S0 undriven or does not drive anything - clipped.
+Signal ones_3__I_18_add_201_1/CI undriven or does not drive anything - clipped.
+Signal add_1414_2/S0 undriven or does not drive anything - clipped.
+Signal add_1414_2/CI undriven or does not drive anything - clipped.
+Signal div_273_add_719_17/S1 undriven or does not drive anything - clipped.
+Signal div_273_add_719_17/CO undriven or does not drive anything - clipped.
+Signal ones_3__I_18_add_201_7/CO undriven or does not drive anything - clipped.
+Signal mod_274_add_669_1/S0 undriven or does not drive anything - clipped.
+Signal mod_274_add_669_1/CI undriven or does not drive anything - clipped.
+Signal add_2161_1/S0 undriven or does not drive anything - clipped.
+Signal add_2161_1/CI undriven or does not drive anything - clipped.
+Signal mod_274_add_669_15/S1 undriven or does not drive anything - clipped.
+Signal mod_274_add_669_15/CO undriven or does not drive anything - clipped.
+Signal add_2161_17/CO undriven or does not drive anything - clipped.
+Signal mod_274_add_632_1/S0 undriven or does not drive anything - clipped.
+Signal mod_274_add_632_1/CI undriven or does not drive anything - clipped.
+Signal tens_3__I_16_add_232_1/S0 undriven or does not drive anything - clipped.
+Signal tens_3__I_16_add_232_1/CI undriven or does not drive anything - clipped.
+Signal temp2_8__I_0_add_201_1/S0 undriven or does not drive anything - clipped.
+Signal temp2_8__I_0_add_201_1/CI undriven or does not drive anything - clipped.
+Signal add_1414_14/S1 undriven or does not drive anything - clipped.
+Signal add_1414_14/CO undriven or does not drive anything - clipped.
+Signal temp2_8__I_0_add_201_7/CO undriven or does not drive anything - clipped.
+Signal add_1404_add_1_2/S0 undriven or does not drive anything - clipped.
+Signal add_1404_add_1_2/CI undriven or does not drive anything - clipped.
+Signal mod_274_add_632_13/CO undriven or does not drive anything - clipped.
+
+                                    Page 6
+
+
+
+
+Design:  ds18B20                                       Date:  12/10/20  10:47:02
+
+Removed logic (cont)
+--------------------
+Signal mod_271_add_448_11/S1 undriven or does not drive anything - clipped.
+Signal mod_271_add_448_11/CO undriven or does not drive anything - clipped.
+Signal mod_274_add_595_1/S0 undriven or does not drive anything - clipped.
+Signal mod_274_add_595_1/CI undriven or does not drive anything - clipped.
+Signal div_276_add_410_1/S1 undriven or does not drive anything - clipped.
+Signal div_276_add_410_1/S0 undriven or does not drive anything - clipped.
+Signal div_276_add_410_1/CI undriven or does not drive anything - clipped.
+Signal add_1404_add_1_8/CO undriven or does not drive anything - clipped.
+Signal sub_281_add_2_1/S1 undriven or does not drive anything - clipped.
+Signal sub_281_add_2_1/S0 undriven or does not drive anything - clipped.
+Signal sub_281_add_2_1/CI undriven or does not drive anything - clipped.
+Signal div_276_add_410_7/CO undriven or does not drive anything - clipped.
+Signal div_276_add_449_1/S1 undriven or does not drive anything - clipped.
+Signal div_276_add_449_1/S0 undriven or does not drive anything - clipped.
+Signal div_276_add_449_1/CI undriven or does not drive anything - clipped.
+Signal mod_274_add_595_13/S1 undriven or does not drive anything - clipped.
+Signal mod_274_add_595_13/CO undriven or does not drive anything - clipped.
+Signal mod_274_add_558_1/S0 undriven or does not drive anything - clipped.
+Signal mod_274_add_558_1/CI undriven or does not drive anything - clipped.
+Signal div_276_add_449_9/S1 undriven or does not drive anything - clipped.
+Signal div_276_add_449_9/CO undriven or does not drive anything - clipped.
+Signal div_276_add_488_1/S1 undriven or does not drive anything - clipped.
+Signal div_276_add_488_1/S0 undriven or does not drive anything - clipped.
+Signal div_276_add_488_1/CI undriven or does not drive anything - clipped.
+Signal tens_3__I_16_add_232_7/CO undriven or does not drive anything - clipped.
+Signal tens_3__I_16_add_255_1/S0 undriven or does not drive anything - clipped.
+Signal tens_3__I_16_add_255_1/CI undriven or does not drive anything - clipped.
+Signal div_276_add_488_9/CO undriven or does not drive anything - clipped.
+Signal mod_274_add_558_11/CO undriven or does not drive anything - clipped.
+Signal mod_274_add_521_1/S0 undriven or does not drive anything - clipped.
+Signal mod_274_add_521_1/CI undriven or does not drive anything - clipped.
+Signal div_276_add_527_1/S1 undriven or does not drive anything - clipped.
+Signal div_276_add_527_1/S0 undriven or does not drive anything - clipped.
+Signal div_276_add_527_1/CI undriven or does not drive anything - clipped.
+Signal sub_281_add_2_9/S1 undriven or does not drive anything - clipped.
+Signal sub_281_add_2_9/CO undriven or does not drive anything - clipped.
+Signal count_1137_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal count_1137_add_4_1/CI undriven or does not drive anything - clipped.
+Signal tens_3__I_16_add_255_9/S1 undriven or does not drive anything - clipped.
+Signal tens_3__I_16_add_255_9/CO undriven or does not drive anything - clipped.
+Signal div_276_add_527_11/S1 undriven or does not drive anything - clipped.
+Signal div_276_add_527_11/CO undriven or does not drive anything - clipped.
+Signal mod_271_add_411_1/S0 undriven or does not drive anything - clipped.
+Signal mod_271_add_411_1/CI undriven or does not drive anything - clipped.
+Signal div_276_add_566_1/S1 undriven or does not drive anything - clipped.
+Signal div_276_add_566_1/S0 undriven or does not drive anything - clipped.
+Signal div_276_add_566_1/CI undriven or does not drive anything - clipped.
+Signal mod_274_add_521_11/S1 undriven or does not drive anything - clipped.
+Signal mod_274_add_521_11/CO undriven or does not drive anything - clipped.
+Signal mod_274_add_484_1/S0 undriven or does not drive anything - clipped.
+Signal mod_274_add_484_1/CI undriven or does not drive anything - clipped.
+Signal mod_271_add_411_9/CO undriven or does not drive anything - clipped.
+Signal div_276_add_566_11/CO undriven or does not drive anything - clipped.
+Signal mod_274_add_484_9/CO undriven or does not drive anything - clipped.
+Signal count_1137_add_4_7/S1 undriven or does not drive anything - clipped.
+Signal count_1137_add_4_7/CO undriven or does not drive anything - clipped.
+
+                                    Page 7
+
+
+
+
+Design:  ds18B20                                       Date:  12/10/20  10:47:02
+
+Removed logic (cont)
+--------------------
+Signal mod_274_add_447_1/S0 undriven or does not drive anything - clipped.
+Signal mod_274_add_447_1/CI undriven or does not drive anything - clipped.
+Signal mod_274_add_447_9/S1 undriven or does not drive anything - clipped.
+Signal mod_274_add_447_9/CO undriven or does not drive anything - clipped.
+Signal temp1_8__I_0_add_201_1/S0 undriven or does not drive anything - clipped.
+Signal temp1_8__I_0_add_201_1/CI undriven or does not drive anything - clipped.
+Signal zpone_3__I_17_add_232_1/S0 undriven or does not drive anything - clipped.
+     
+Signal zpone_3__I_17_add_232_1/CI undriven or does not drive anything - clipped.
+     
+Signal div_276_add_605_1/S1 undriven or does not drive anything - clipped.
+Signal div_276_add_605_1/S0 undriven or does not drive anything - clipped.
+Signal div_276_add_605_1/CI undriven or does not drive anything - clipped.
+Signal mod_274_add_410_1/S0 undriven or does not drive anything - clipped.
+Signal mod_274_add_410_1/CI undriven or does not drive anything - clipped.
+Signal temp1_8__I_0_add_201_7/CO undriven or does not drive anything - clipped.
+Signal mod_271_add_448_1/S0 undriven or does not drive anything - clipped.
+Signal mod_271_add_448_1/CI undriven or does not drive anything - clipped.
+Signal mod_274_add_410_7/CO undriven or does not drive anything - clipped.
+Signal zpone_3__I_17_add_232_7/CO undriven or does not drive anything - clipped.
+     
+Signal tens_3__I_19_unary_minus_2_add_3_2/S0 undriven or does not drive anything
+     - clipped.
+Signal tens_3__I_19_unary_minus_2_add_3_2/CI undriven or does not drive anything
+     - clipped.
+Block i24587 was optimized away.
+Block i24588 was optimized away.
+Block i1424_1_lut was optimized away.
+Block i1 was optimized away.
+
+     
+
+Run Time and Memory Usage
+-------------------------
+
+   Total CPU Time: 0 secs  
+   Total REAL Time: 0 secs  
+   Peak Memory Usage: 61 MB
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                    Page 8
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+     Copyright (c) 1995 AT&T Corp.   All rights reserved.
+     Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+     Copyright (c) 2001 Agere Systems   All rights reserved.
+     Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights
+     reserved.
